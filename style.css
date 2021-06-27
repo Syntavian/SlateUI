@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    background: #fafafa;
+}
+
+/*Flex container definitions*/
+
+/*Sets a flexbox container in the column orientation*/
+.fbc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*Sets a flexbox container in the row orientation*/
+.fbr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Centers items in a flexbox container on both axes*/
+.fc {
+    justify-content: center;
+    align-items: center;
+}
+
+.fs {
+    justify-content: start;
+    align-items: baseline;
+}
+
+.header {
+    width: 100%;
+    background: #fcfcfc;
+    padding: 0.5em 1em;
+}
+
+.navbar {
+    margin: 0.5em 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 5em;
+    background: #fcfcfc;
+}
+
+.content {
+    flex-grow: 2;
+}
+
+.column {
+    padding: 10px
+}
+
+.main {
+    flex-grow: 7;
+}
+
+.main.small {
+    flex-grow: 5;
+}
+
+.main.large {
+    flex-grow: 9;
+}
+
+.sidebar {
+    flex-grow: 2;
+}
+
+.sidebar.small {
+    flex-grow: 1;
+}
+
+.sidebar.large {
+    flex-grow: 3;
+}
+
+.box {
+    margin: 0.5em;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 3px;
+}
+
+/*** Padding ***/
+
+/* Pad All */
+.pas {
+    padding: 1em;
+}
+
+.pam {
+    padding: 2em;
+}
+
+.pal {
+    padding: 3em;
+}
+
+.pax {
+    padding: 4em;
+}
+
+/* Pad Verticle */
+.pvs {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pvm {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.pvl {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.pvx {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+/* Pad Horizontal */
+.phs {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.phm {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.phl {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.phx {
+    padding-right: 4em;
+    padding-left: 4em;
+}
+
+/* Pad Top */
+.pts {
+    padding-top: 1em;
+}
+
+.ptm {
+    padding-top: 2em;
+}
+
+.ptl {
+    padding-top: 3em;
+}
+
+.ptx {
+    padding-top: 4em;
+}
+
+/* Pad Bottom */
+.pbs {
+    padding-bottom: 1em;
+}
+
+.pbm {
+    padding-bottom: 2em;
+}
+
+.pbl {
+    padding-bottom: 3em;
+}
+
+.pbx {
+    padding-bottom: 4em;
+}
+
+/* Pad Right */
+.prs {
+    padding-right: 1em;
+}
+
+.prm {
+    padding-right: 2em;
+}
+
+.prl {
+    padding-right: 3em;
+}
+
+.prx {
+    padding-right: 4em;
+}
+
+/* Pad Left */
+.pls {
+    padding-left: 1em;
+}
+
+.plm {
+    padding-left: 2em;
+}
+
+.pll {
+    padding-left: 3em;
+}
+
+.plx {
+    padding-left: 4em;
+}
+
+/* Margins */
+.mars {
+    margin: 1em;
+}
+
+.marm {
+    margin: 2em;
+}
+
+.marl {
+    margin: 3em;
+}
+
+.marxl {
+    margin: 4em;
+}
+
+/* Shadow */
+.shadow-down {
+    box-shadow: #999 0px 1px 3px 0px;
+    position: relative;
+}
+
+.shadow-up {
+    box-shadow: #999 0px -1px 3px 0px;
+    position: relative;
+}
+
+/* Text */
+.list {
+    padding-left: 30px;
+}
+
+.list.no-style {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.list-item {
+    margin: 10px 0px 10px 0px;
+}
+
+.list-item.inline {
+    display: inline;
+    margin: 0px 20px 0px 0px;
+}
+
+/* .link {
+
+} */
+
+.link.no-style {
+    color: #000;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.header-text {
+    margin: 0.5em 1.5em 0.5em 0px;
+    font-size: 1.5em;
+}
+
+.heading-text {
+    margin: 10px 0px 10px 0px;
+    font-size: 1.5em;
+}
+
+.text {
+    margin: 5px 0px 5px 0px;
+}
+
+.text.good {
+    color: #0f0;
+}
+
+.text.bad {
+    color: #f00;
+}
+
+.inline {
+    display: inline;
+}
+
+/* Buttons */
+
+.button {
+    width: 140px;
+    height: 40px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 18px;
+    background-color: #fff;
+    border: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    box-shadow: 0px 1px 3px 0px #aaa;
+    margin: 0px 10px 0px 10px;
+    border-radius: 3px;
+}
+
+.button:hover {
+    box-shadow: 0px 1px 2px 0px #aaa;
+}
+
+.button:active {
+    box-shadow: inset 0px 1px 2px 0px #aaa;
+}
+
+.button.clicked {
+    box-shadow: inset 0px 2px 3px 0px #aaa;
+}
+
+.button.clicked:hover {
+    box-shadow: inset 0px 1px 3px 1px #aaa;
+}
+
+.button.clicked:active {
+    box-shadow: inset 0px 3px 4px 1px #aaa;
+}

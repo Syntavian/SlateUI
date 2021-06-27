@@ -1,0 +1,32 @@
+/*Flex container definitions*/
+
+%flex {
+    display: flex;
+}
+
+/*Sets a flexbox container in the column orientation*/
+.fbc {
+    @extend %flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*Sets a flexbox container in the row orientation*/
+.fbr {
+    @extend %flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Centers items in a flexbox container on both axes*/
+.fc {
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fs {
+    @extend %flex;
+    justify-content: start;
+    align-items: baseline;
+}
