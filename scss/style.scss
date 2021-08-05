@@ -1,5 +1,5 @@
-@use 'flex';
-@use 'offsets';
+@import '_flex';
+@import '_offsets';
 
 $fonts: "Century Gothic", Arial, sans-serif;
 
