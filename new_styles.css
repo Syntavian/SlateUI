@@ -1,0 +1,505 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#bg-canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#page-content {
+    width: 100vw;
+    background: linear-gradient(#ffffff00, #ffffff);
+}
+
+#page-content.dark-mode {
+    background: linear-gradient(#ffffff00, #000000);
+}
+
+#theme-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    border-radius: 2em;
+}
+
+#theme-button-image {
+    margin: 0.25em;
+}
+
+#top-button-container {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 2em;
+}
+
+img.light-image.light-mode {
+    filter: invert(1);
+}
+
+img.dark-image.dark-mode {
+    filter: invert(1);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.transparent.light-mode {
+    background-color: rgba(252, 252, 252, 0.7);
+}
+
+.transparent.dark-mode {
+    background-color: rgba(3, 3, 3, 0.7);
+}
+
+.transparent-white {
+    background-color: rgba(252, 252, 252, 0.7);
+}
+
+.transparent-black {
+    background-color: rgba(3, 3, 3, 0.7);
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    justify-content: start;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.page-spacer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-banner-content-container {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-banner-content-container :first-child {
+    flex: 1;
+}
+
+.title-banner-content-container :last-child {
+    flex: 1;
+}
+
+.banner-content-container {
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    box-shadow: #999 0px 0px 5px 0px;
+    margin: 2.5em 0px;
+    padding: 1em;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    min-height: 20em;
+    min-width: 75%;
+    max-width: 75%;
+    padding: 2em;
+    margin: 4em;
+    border-radius: 3px;
+    box-shadow: #999 0px 0px 5px 0px;
+}
+
+.content-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.image-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.h1-text {
+    margin-bottom: 0.5em;
+    font-size: 3.5rem;
+}
+
+.h2-text {
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+}
+
+.h3-text {
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+}
+
+.h4-text {
+    margin-bottom: 0.5em;
+    font-size: 1.75rem;
+}
+
+.text-content {
+    margin: 1em 0px;
+}
+
+.text {
+    margin: 5px 0px 5px 0px;
+    font-size: 1rem;
+}
+
+.h1-text.dark-mode {
+    color: white;
+}
+
+.h2-text.dark-mode {
+    color: white;
+}
+
+.h3-text.dark-mode {
+    color: white;
+}
+
+.h4-text.dark-mode {
+    color: white;
+}
+
+.text.dark-mode {
+    color: white;
+}
+
+.banner-content-container .h1-text {
+    margin: 0px;
+}
+
+.banner-content-container .h2-text {
+    margin: 0px;
+}
+
+.banner-content-container .h3-text {
+    margin: 0px;
+}
+
+.image {
+    margin: -4em 2em 0px 2em;
+    min-width: 15em;
+    min-height: 15em;
+    border-radius: 3px;
+    box-shadow: #999 0px 0px 5px 0px;
+}
+
+.after-image {
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .h1-text {
+        font-size: 3rem;
+    }
+    
+    .h2-text {
+        font-size: 2.5rem;
+    }
+    
+    .h3-text {
+        font-size: 1.75rem;
+    }
+
+    .h4-text {
+        font-size: 1.5rem;
+    }
+
+    .content-box {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .image {
+        min-height: 10em;
+        min-width: 10em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .h1-text {
+        font-size: 2.75rem;
+    }
+    
+    .h2-text {
+        font-size: 2.25rem;
+    }
+    
+    .h3-text {
+        font-size: 1.5rem;
+    }
+
+    .link-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    .content-box :first-child {
+        flex-direction: column;
+    }
+
+    .image {
+        margin-left: 1em;
+    }
+
+    .after-image {
+        margin: 1rem 1rem;
+    }
+}
+
+.image-carousel * {
+    margin: 0px -1em;
+}
+
+.fas.light-mode {
+    font-size: 4em; display: flex; justify-content: center; align-items: center; filter: opacity(50%); cursor: pointer;
+}
+
+.fas.dark-mode {
+    font-size: 4em; display: flex; justify-content: center; align-items: center; filter: opacity(50%) invert(100%); cursor: pointer;
+}
+
+.interactable-gradient.dark-mode {
+    background: linear-gradient(135deg, #ffffff00, #161616 25%, #ffffff00);
+    background-size: 200% 200%;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.interactable-gradient.dark-mode:hover {
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.interactable-gradient {
+    background: linear-gradient(135deg, #ffffff00, #e9e9e980 25%, #ffffff00);
+    box-shadow: #999 0px 0px 3px 0px;
+    background-size: 200% 200%;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.interactable-gradient:hover {
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.button-new {
+    cursor: pointer;
+}
+
+.link.dark-mode {
+    background: linear-gradient(135deg, #ffffff00, #161616 25%, #ffffff00);
+    color: rgb(195, 195, 195);
+    background-size: 200% 200%;
+    transition: margin 0.2s, width 0.2s, height 0.2s;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.link.dark-mode:hover {
+    color: white;
+    transition: width 0.2s, height 0.2s;
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.link-row {
+    display: flex;
+}
+
+.link-row-group {
+    display: flex;
+    align-items: center;
+}
+
+.link-row-group * {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.link {
+    padding: 0.5em;
+    min-width: 5em;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 18pt;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffffff00, #e9e9e980 25%, #ffffff00);
+    box-shadow: #999 0px 0px 3px 0px;
+    background-size: 200% 200%;
+    transition: width 0.2s, height 0.2s;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.link:hover {
+    color: black;
+    text-decoration: none;
+    transition: width 0.2s, height 0.2s;
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.icon-row-group * {
+    margin-right: 1em;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(135deg, #ffffff00, #e9e9e980 25%, #ffffff00);
+    box-shadow: #999 0px 0px 3px 0px;
+    background-size: 200% 200%;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.icon:hover {
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.icon.dark-mode {
+    background: linear-gradient(135deg, #ffffff00, #161616 25%, #ffffff00);
+    background-size: 200% 200%;
+}
+
+.icon :first-child {
+    font-size: 4em;
+    filter: opacity(85%);
+}
+
+.link-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(135deg, #ffffff00, #e9e9e980 25%, #ffffff00);
+    box-shadow: #999 0px 0px 3px 0px;
+    background-size: 200% 200%;
+    transition: margin 0.2s, width 0.2s, height 0.2s;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+.link-icon:hover {
+    margin: -0.25em 0.75em -0.25em -0.25em;
+    width: 5.5em;
+    height: 5.5em;
+    transition: margin 0.2s, width 0.2s, height 0.2s;
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
+}
+
+.link-icon.dark-mode {
+    background: linear-gradient(135deg, #ffffff00, #161616 25%, #ffffff00);
+    background-size: 200% 200%;
+}
+
+@-webkit-keyframes animation-forward {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+@-moz-keyframes animation-forward {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+@keyframes animation-forward { 
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+
+@-webkit-keyframes animation-back {
+    0%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+@-moz-keyframes animation-back {
+    0%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+@keyframes animation-back {
+    0%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
