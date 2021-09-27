@@ -171,6 +171,50 @@
   margin: 4em;
 }
 
+h1.dark-mode, .h1-text.dark-mode, h1, .h1-text {
+  font-size: 3.5rem;
+  margin: 0.25em 0px;
+  color: black;
+  font-weight: normal;
+}
+
+h2.dark-mode, .h2-text.dark-mode, h2, .h2-text {
+  font-size: 2.5rem;
+  margin: 0.25em 0px;
+  color: black;
+  font-weight: normal;
+}
+
+h3.dark-mode, .h3-text.dark-mode, h3, .h3-text {
+  font-size: 1.75rem;
+  margin: 0.25em 0px;
+  color: black;
+  font-weight: normal;
+}
+
+h4.dark-mode, .h4-text.dark-mode, h4, .h4-text {
+  font-size: 1.25rem;
+  margin: 0.25em 0px;
+  color: black;
+  font-weight: normal;
+}
+
+h1.dark-mode, .h1-text.dark-mode {
+  color: white;
+}
+
+h2.dark-mode, .h2-text.dark-mode {
+  color: white;
+}
+
+h3.dark-mode, .h3-text.dark-mode {
+  color: white;
+}
+
+h4.dark-mode, .h4-text.dark-mode {
+  color: white;
+}
+
 * {
   box-sizing: border-box;
 }

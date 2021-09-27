@@ -1,12 +1,11 @@
-@import '_flex';
-@import '_offsets';
+@use 'flex';
+@use 'offsets';
+@use 'headers';
 
 $fonts: "Century Gothic", Arial, sans-serif;
 
 $primary: #fcfcfc;
 $secondary: #fafafa;
-
-
 
 * {
     box-sizing: border-box;

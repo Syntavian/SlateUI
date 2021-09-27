@@ -1,0 +1,68 @@
+@use 'variables';
+
+$h1-size: 3.5rem;
+$h2-size: 2.5rem;
+$h3-size: 1.75rem;
+$h4-size: 1.25rem;
+
+@mixin text($size, $margin: 0.25em 0px, $color: black, $weight: normal) {
+    font-size: $size;
+    margin: $margin;
+    color: $color;
+    font-weight: $weight;
+}
+
+%h1 {
+    @include text($h1-size)
+}
+
+%h2 {
+    @include text($h2-size)
+}
+
+%h3 {
+    @include text($h3-size)
+}
+
+%h4 {
+    @include text($h4-size)
+}
+
+h1, .h1-text {
+    @extend %h1;
+}
+
+h1.dark-mode, .h1-text.dark-mode {
+    @extend %h1;
+    color: white;
+}
+
+
+h2, .h2-text {
+    @extend %h2;
+}
+
+h2.dark-mode, .h2-text.dark-mode {
+    @extend %h2;
+    color: white;
+}
+
+
+h3, .h3-text {
+    @extend %h3;
+}
+
+h3.dark-mode, .h3-text.dark-mode {
+    @extend %h3;
+    color: white;
+}
+
+
+h4, .h4-text {
+    @extend %h4;
+}
+
+h4.dark-mode, .h4-text.dark-mode {
+    @extend %h4;
+    color: white;
+}
