@@ -1,10 +1,5 @@
 @use 'variables';
 
-$h1-size: 3.5rem;
-$h2-size: 2.5rem;
-$h3-size: 1.75rem;
-$h4-size: 1.25rem;
-
 @mixin text($size, $margin: 0.25em 0px, $color: black, $weight: normal) {
     font-size: $size;
     margin: $margin;
@@ -13,19 +8,19 @@ $h4-size: 1.25rem;
 }
 
 %h1 {
-    @include text($h1-size)
+    @include text(variables.$h1-size)
 }
 
 %h2 {
-    @include text($h2-size)
+    @include text(variables.$h2-size)
 }
 
 %h3 {
-    @include text($h3-size)
+    @include text(variables.$h3-size)
 }
 
 %h4 {
-    @include text($h4-size)
+    @include text(variables.$h4-size)
 }
 
 h1, .h1-text {
