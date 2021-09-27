@@ -199,6 +199,93 @@ h4.dark-mode, .h4-text.dark-mode, h4, .h4-text {
   font-weight: normal;
 }
 
+@media screen and (max-width: 1200px) {
+  h1.dark-mode, .h1-text.dark-mode, h1, .h1-text {
+    font-size: 3.15rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h2.dark-mode, .h2-text.dark-mode, h2, .h2-text {
+    font-size: 2.25rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h3.dark-mode, .h3-text.dark-mode, h3, .h3-text {
+    font-size: 1.575rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h4.dark-mode, .h4-text.dark-mode, h4, .h4-text {
+    font-size: 1.125rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 900px) {
+  h1.dark-mode, .h1-text.dark-mode, h1, .h1-text {
+    font-size: 2.625rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h2.dark-mode, .h2-text.dark-mode, h2, .h2-text {
+    font-size: 1.875rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h3.dark-mode, .h3-text.dark-mode, h3, .h3-text {
+    font-size: 1.3125rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h4.dark-mode, .h4-text.dark-mode, h4, .h4-text {
+    font-size: 0.9375rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1.dark-mode, .h1-text.dark-mode, h1, .h1-text {
+    font-size: 1.75rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h2.dark-mode, .h2-text.dark-mode, h2, .h2-text {
+    font-size: 1.25rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h3.dark-mode, .h3-text.dark-mode, h3, .h3-text {
+    font-size: 0.875rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+
+  h4.dark-mode, .h4-text.dark-mode, h4, .h4-text {
+    font-size: 0.625rem;
+    margin: 0.25em 0px;
+    color: black;
+    font-weight: normal;
+  }
+}
 h1.dark-mode, .h1-text.dark-mode {
   color: white;
 }

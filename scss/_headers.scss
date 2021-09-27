@@ -7,20 +7,36 @@
     font-weight: $weight;
 }
 
-%h1 {
-    @include text(variables.$h1-size)
+@mixin headers($scalar) {
+    %h1 {
+        @include text(variables.$h1-size * $scalar)
+    }
+    
+    %h2 {
+        @include text(variables.$h2-size * $scalar)
+    }
+    
+    %h3 {
+        @include text(variables.$h3-size * $scalar)
+    }
+    
+    %h4 {
+        @include text(variables.$h4-size * $scalar)
+    }
 }
 
-%h2 {
-    @include text(variables.$h2-size)
+@include headers(1);
+
+@media screen and (max-width: variables.$screen-width-large) {
+    @include headers(0.9);
 }
 
-%h3 {
-    @include text(variables.$h3-size)
+@media screen and (max-width: variables.$screen-width-medium) {
+    @include headers(0.75);
 }
 
-%h4 {
-    @include text(variables.$h4-size)
+@media screen and (max-width: variables.$screen-width-small) {
+    @include headers(0.5);
 }
 
 h1, .h1-text {
