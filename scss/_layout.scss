@@ -1,0 +1,95 @@
+@use 'variables';
+
+@mixin flex($direction, $justify, $align, $grow: 1) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-grow: $grow;
+}
+
+.flex, .center {
+    @include flex(column, center, center);
+}
+
+.flex-column {
+    @include flex(column, space-between, center);
+
+    &-start {
+        @include flex(column, flex-start, center);
+
+        &-left {
+            @include flex(column, flex-start, flex-start);
+        }
+    
+        &-right {
+            @include flex(column, flex-start, flex-end);
+        }
+    }
+
+    &-center {
+        @include flex(column, center, center);
+
+        &-left {
+            @include flex(column, center, flex-start);
+        }
+    
+        &-right {
+            @include flex(column, center, flex-end);
+        }
+    }
+
+    &-end {
+        @include flex(column, flex-end, center);
+
+        &-left {
+            @include flex(column, flex-end, flex-start);
+        }
+    
+        &-right {
+            @include flex(column, flex-end, flex-end);
+        }
+    }
+
+    &-left {
+        @include flex(column, space-between, flex-start);
+    }
+
+    &-right {
+        @include flex(column, space-between, flex-end);
+    }
+}
+
+.flex-row {
+    @include flex(row, space-between, center);
+
+    &-start {
+        @include flex(row, flex-start, center);
+    }
+
+    &-top {
+        @include flex(row, space-between, flex-start);
+    }
+
+    &-bottom {
+        @include flex(row, space-between, flex-end);
+    }
+}
+
+.content-column {
+    height: 100%;
+    background-color: variables.$primary;
+
+    &.dark {
+        background-color: variables.$secondary;
+    }
+}
+
+.content-row {
+    width: 100%;
+    background-color: variables.$primary;
+
+    &.dark {
+        background-color: variables.$secondary;
+    }
+}
