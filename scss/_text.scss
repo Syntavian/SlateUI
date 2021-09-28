@@ -5,7 +5,8 @@
     margin: $margin;
     color: $color;
     font-weight: $weight;
-    &.dark-mode {
+
+    &.dark {
         color: variables.$secondary-text;
     }
 }

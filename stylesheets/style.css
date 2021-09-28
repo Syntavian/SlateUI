@@ -1,31 +1,3 @@
-/*Flex container definitions*/
-.fs, .fc, .fbr, .fbc {
-  display: flex;
-}
-
-/*Sets a flexbox container in the column orientation*/
-.fbc {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/*Sets a flexbox container in the row orientation*/
-.fbr {
-  flex-direction: row;
-  justify-content: center;
-}
-
-/*Centers items in a flexbox container on both axes*/
-.fc {
-  justify-content: center;
-  align-items: center;
-}
-
-.fs {
-  justify-content: start;
-  align-items: baseline;
-}
-
 .padding-top-s {
   padding-top: 0.25em;
 }
@@ -266,13 +238,41 @@
   margin: 1.5em;
 }
 
+.flex-column, .content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-row, .content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-column {
+  background-color: #fafafa;
+}
+.content-column.dark {
+  background-color: #050505;
+}
+
+.content-row {
+  background-color: #fafafa;
+}
+.content-row.dark {
+  background-color: #050505;
+}
+
 p, .text {
   font-size: 1rem;
   margin: 0.25em 0em;
   color: #000000;
   font-weight: normal;
 }
-p.dark-mode, .text.dark-mode {
+p.dark, .text.dark {
   color: white;
 }
 
@@ -282,7 +282,7 @@ h1, .h1-text {
   color: #000000;
   font-weight: normal;
 }
-h1.dark-mode, .h1-text.dark-mode {
+h1.dark, .h1-text.dark {
   color: white;
 }
 
@@ -292,7 +292,7 @@ h2, .h2-text {
   color: #000000;
   font-weight: normal;
 }
-h2.dark-mode, .h2-text.dark-mode {
+h2.dark, .h2-text.dark {
   color: white;
 }
 
@@ -302,7 +302,7 @@ h3, .h3-text {
   color: #000000;
   font-weight: normal;
 }
-h3.dark-mode, .h3-text.dark-mode {
+h3.dark, .h3-text.dark {
   color: white;
 }
 
@@ -312,7 +312,7 @@ h4, .h4-text {
   color: #000000;
   font-weight: normal;
 }
-h4.dark-mode, .h4-text.dark-mode {
+h4.dark, .h4-text.dark {
   color: white;
 }
 
@@ -323,7 +323,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  p.dark-mode, .text.dark-mode {
+  p.dark, .text.dark {
     color: white;
   }
 
@@ -333,7 +333,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h1.dark-mode, .h1-text.dark-mode {
+  h1.dark, .h1-text.dark {
     color: white;
   }
 
@@ -343,7 +343,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h2.dark-mode, .h2-text.dark-mode {
+  h2.dark, .h2-text.dark {
     color: white;
   }
 
@@ -353,7 +353,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h3.dark-mode, .h3-text.dark-mode {
+  h3.dark, .h3-text.dark {
     color: white;
   }
 
@@ -363,7 +363,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h4.dark-mode, .h4-text.dark-mode {
+  h4.dark, .h4-text.dark {
     color: white;
   }
 }
@@ -374,7 +374,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  p.dark-mode, .text.dark-mode {
+  p.dark, .text.dark {
     color: white;
   }
 
@@ -384,7 +384,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h1.dark-mode, .h1-text.dark-mode {
+  h1.dark, .h1-text.dark {
     color: white;
   }
 
@@ -394,7 +394,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h2.dark-mode, .h2-text.dark-mode {
+  h2.dark, .h2-text.dark {
     color: white;
   }
 
@@ -404,7 +404,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h3.dark-mode, .h3-text.dark-mode {
+  h3.dark, .h3-text.dark {
     color: white;
   }
 
@@ -414,7 +414,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h4.dark-mode, .h4-text.dark-mode {
+  h4.dark, .h4-text.dark {
     color: white;
   }
 }
@@ -425,7 +425,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  p.dark-mode, .text.dark-mode {
+  p.dark, .text.dark {
     color: white;
   }
 
@@ -435,7 +435,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h1.dark-mode, .h1-text.dark-mode {
+  h1.dark, .h1-text.dark {
     color: white;
   }
 
@@ -445,7 +445,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h2.dark-mode, .h2-text.dark-mode {
+  h2.dark, .h2-text.dark {
     color: white;
   }
 
@@ -455,7 +455,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h3.dark-mode, .h3-text.dark-mode {
+  h3.dark, .h3-text.dark {
     color: white;
   }
 
@@ -465,7 +465,7 @@ h4.dark-mode, .h4-text.dark-mode {
     color: #000000;
     font-weight: normal;
   }
-  h4.dark-mode, .h4-text.dark-mode {
+  h4.dark, .h4-text.dark {
     color: white;
   }
 }

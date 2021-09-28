@@ -1,32 +1,32 @@
-/*Flex container definitions*/
+@use 'variables';
 
-%flex {
+@mixin flex($direction, $justify, $align) {
     display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }
 
-/*Sets a flexbox container in the column orientation*/
-.fbc {
-    @extend %flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.flex-column {
+    @include flex(column, flex-start, center);
 }
 
-/*Sets a flexbox container in the row orientation*/
-.fbr {
-    @extend %flex;
-    flex-direction: row;
-    justify-content: center;
+.flex-row {
+    @include flex(row, flex-start, center);
 }
 
-/*Centers items in a flexbox container on both axes*/
-.fc {
-    @extend %flex;
-    justify-content: center;
-    align-items: center;
+.content-column {
+    @extend .flex-column;
+    background-color: variables.$primary;
+    &.dark {
+        background-color: variables.$secondary;
+    }
 }
 
-.fs {
-    @extend %flex;
-    justify-content: start;
-    align-items: baseline;
+.content-row {
+    @extend .flex-row;
+    background-color: variables.$primary;
+    &.dark {
+        background-color: variables.$secondary;
+    }
 }
