@@ -2,12 +2,23 @@ $screen-width-large: 1200px;
 $screen-width-medium: 900px;
 $screen-width-small: 600px;
 
+$n-offset: 0em;
 $s-offset: 0.25em;
 $m-offset: 0.5em;
 $l-offset: 1em;
 $xl-offset: 1.5em;
 
+$fonts: "Century Gothic", Arial, sans-serif;
+
+$font-size: 1rem;
+
 $h1-size: 3.5rem;
 $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
+
+$primary: #fafafa;
+$secondary: invert($primary);
+
+$primary-text: #000000;
+$secondary-text: invert($primary-text);

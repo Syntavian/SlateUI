@@ -1,0 +1,47 @@
+@use 'variables';
+
+@mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $color: variables.$primary-text, $weight: normal) {
+    font-size: $size;
+    margin: $margin;
+    color: $color;
+    font-weight: $weight;
+    &.dark-mode {
+        color: variables.$secondary-text;
+    }
+}
+
+@mixin text-levels($scalar) {
+    p, .text {
+        @include text(variables.$font-size * $scalar);
+    }
+
+    h1, .h1-text {
+        @include text(variables.$h1-size * $scalar)
+    }
+    
+    h2, .h2-text {
+        @include text(variables.$h2-size * $scalar)
+    }
+    
+    h3, .h3-text {
+        @include text(variables.$h3-size * $scalar)
+    }
+    
+    h4, .h4-text {
+        @include text(variables.$h4-size * $scalar)
+    }
+}
+
+@include text-levels(1);
+
+@media screen and (max-width: variables.$screen-width-large) {
+    @include text-levels(0.9);
+}
+
+@media screen and (max-width: variables.$screen-width-medium) {
+    @include text-levels(0.75);
+}
+
+@media screen and (max-width: variables.$screen-width-small) {
+    @include text-levels(0.5);
+}
