@@ -246,11 +246,11 @@
   background-color: #050505;
 }
 
-.content-row, .flex-row-bottom, .flex-row-top, .flex-row-end-bottom, .flex-row-end-top, .flex-row-end, .flex-row-center-bottom, .flex-row-center-top, .flex-row-center, .flex-row-start, .flex-row {
+.content-row, .flex-row-bottom, .flex-row-top, .flex-row-end-bottom, .flex-row-end-top, .flex-row-end, .flex-row-center-bottom, .flex-row-center-top, .flex-row-center, .flex-row-start-bottom, .flex-row-start-top, .flex-row-start, .flex-row {
   width: 100%;
   background-color: #fafafa;
 }
-.content-row.dark, .dark.flex-row-bottom, .dark.flex-row-top, .dark.flex-row-end-bottom, .dark.flex-row-end-top, .dark.flex-row-end, .dark.flex-row-center-bottom, .dark.flex-row-center-top, .dark.flex-row-center, .dark.flex-row-start, .dark.flex-row {
+.content-row.dark, .dark.flex-row-bottom, .dark.flex-row-top, .dark.flex-row-end-bottom, .dark.flex-row-end-top, .dark.flex-row-end, .dark.flex-row-center-bottom, .dark.flex-row-center-top, .dark.flex-row-center, .dark.flex-row-start-bottom, .dark.flex-row-start-top, .dark.flex-row-start, .dark.flex-row {
   background-color: #050505;
 }
 
@@ -359,6 +359,20 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-grow: 1;
+}
+.flex-row-start-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.flex-row-start-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
   flex-grow: 1;
 }
 .flex-row-center {

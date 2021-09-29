@@ -93,6 +93,14 @@
 
     &-start {
         @include flex-row(flex-start, center);
+
+        &-top {
+            @include flex-row(flex-start, flex-start);
+        }
+    
+        &-bottom {
+            @include flex-row(flex-start, flex-end);
+        }
     }
 
     &-center {
