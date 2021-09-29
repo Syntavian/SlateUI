@@ -645,6 +645,106 @@ h4.dark, .h4-text.dark {
     color: white;
   }
 }
+.shadow-1 {
+  box-shadow: gray 0px 0px 3px 0px;
+}
+
+.shadow-up-1 {
+  box-shadow: gray 0px -1px 3px 0px;
+}
+
+.shadow-down-1 {
+  box-shadow: gray 0px 1px 3px 0px;
+}
+
+.shadow-right-1 {
+  box-shadow: gray 1px 0px 3px 0px;
+}
+
+.shadow-left-1 {
+  box-shadow: gray -1px 0px 3px 0px;
+}
+
+.shadow-2 {
+  box-shadow: gray 0px 0px 4px 0px;
+}
+
+.shadow-up-2 {
+  box-shadow: gray 0px -2px 4px 0px;
+}
+
+.shadow-down-2 {
+  box-shadow: gray 0px 2px 4px 0px;
+}
+
+.shadow-right-2 {
+  box-shadow: gray 2px 0px 4px 0px;
+}
+
+.shadow-left-2 {
+  box-shadow: gray -2px 0px 4px 0px;
+}
+
+.shadow-3 {
+  box-shadow: gray 0px 0px 5px 0px;
+}
+
+.shadow-up-3 {
+  box-shadow: gray 0px -3px 5px 0px;
+}
+
+.shadow-down-3 {
+  box-shadow: gray 0px 3px 5px 0px;
+}
+
+.shadow-right-3 {
+  box-shadow: gray 3px 0px 5px 0px;
+}
+
+.shadow-left-3 {
+  box-shadow: gray -3px 0px 5px 0px;
+}
+
+.shadow-4 {
+  box-shadow: gray 0px 0px 6px 0px;
+}
+
+.shadow-up-4 {
+  box-shadow: gray 0px -4px 6px 0px;
+}
+
+.shadow-down-4 {
+  box-shadow: gray 0px 4px 6px 0px;
+}
+
+.shadow-right-4 {
+  box-shadow: gray 4px 0px 6px 0px;
+}
+
+.shadow-left-4 {
+  box-shadow: gray -4px 0px 6px 0px;
+}
+
+.shadow-5 {
+  box-shadow: gray 0px 0px 7px 0px;
+}
+
+.shadow-up-5 {
+  box-shadow: gray 0px -5px 7px 0px;
+}
+
+.shadow-down-5 {
+  box-shadow: gray 0px 5px 7px 0px;
+}
+
+.shadow-right-5 {
+  box-shadow: gray 5px 0px 7px 0px;
+}
+
+.shadow-left-5 {
+  box-shadow: gray -5px 0px 7px 0px;
+}
+
 * {
   box-sizing: border-box;
 }

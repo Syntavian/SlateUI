@@ -1,0 +1,25 @@
+@use 'variables';
+
+@each $value in 1, 2, 3, 4, 5 {
+    .shadow-#{$value} {
+        box-shadow: hsl(0%, 0%, 50%) 0px 0px ($value + 2px) 0px;
+    }
+    
+    .shadow-up-#{$value} {
+        box-shadow: hsl(0%, 0%, 50%) 0px -#{$value}px ($value + 2px) 0px;
+    }
+    
+    .shadow-down-#{$value} {
+        box-shadow: hsl(0%, 0%, 50%) 0px #{$value}px ($value + 2px) 0px;
+    }
+    
+    .shadow-right-#{$value} {
+        box-shadow: hsl(0%, 0%, 50%) #{$value}px 0px ($value + 2px) 0px;
+    }
+    
+    .shadow-left-#{$value} {
+        box-shadow: hsl(0%, 0%, 50%) -#{$value}px 0px ($value + 2px) 0px;
+    }
+}
+
+
