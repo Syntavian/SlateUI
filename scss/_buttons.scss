@@ -1,0 +1,36 @@
+@use 'shadow';
+@use 'gradients';
+
+.button {
+    @extend .shadow-3;
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.button:hover {
+    @extend .shadow-5;
+}
+
+.button-expand { 
+    @extend .button;
+    position: relative;
+    animation: animation-shrink 0.2s ease forwards;
+} 
+
+.button-expand:hover {
+    animation: animation-expand 0.2s ease forwards;
+}
+
+
+@keyframes animation-expand {
+    0%{width:5em; height: 5em; top: 0em; left: 0em;}
+    100%{width:7em; height: 7em; top: -1em; left: -1em;}
+}
+
+@keyframes animation-shrink {
+    0%{width:7em; height: 7em; top: -1em; left: -1em;}
+    100%{width:5em; height: 5em; top: 0em; left: 0em;}
+}

@@ -2,6 +2,7 @@
 @use 'offsets';
 @use 'layout';
 @use 'text';
+@use 'buttons';
 @use 'shadow';
 @use 'gradients';
 
@@ -22,6 +23,11 @@ body {
     min-height: 100%;
     margin: 0px;
     background: variables.$primary;
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
 }
 
 .no-scrollbar {

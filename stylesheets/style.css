@@ -999,7 +999,7 @@ h4.dark, .h4-text.dark {
   box-shadow: gray -2px 0px 4px 0px;
 }
 
-.shadow-3 {
+.shadow-3, .button, .button-expand {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
@@ -1039,7 +1039,7 @@ h4.dark, .h4-text.dark {
   box-shadow: gray -4px 0px 6px 0px;
 }
 
-.shadow-5 {
+.shadow-5, .button:hover, .button-expand:hover {
   box-shadow: gray 0px 0px 7px 0px;
 }
 
@@ -1130,6 +1130,51 @@ h4.dark, .h4-text.dark {
     background-position: 0% 0%;
   }
 }
+.button, .button-expand {
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.button-expand {
+  position: relative;
+  animation: animation-shrink 0.2s ease forwards;
+}
+
+.button-expand:hover {
+  animation: animation-expand 0.2s ease forwards;
+}
+
+@keyframes animation-expand {
+  0% {
+    width: 5em;
+    height: 5em;
+    top: 0em;
+    left: 0em;
+  }
+  100% {
+    width: 7em;
+    height: 7em;
+    top: -1em;
+    left: -1em;
+  }
+}
+@keyframes animation-shrink {
+  0% {
+    width: 7em;
+    height: 7em;
+    top: -1em;
+    left: -1em;
+  }
+  100% {
+    width: 5em;
+    height: 5em;
+    top: 0em;
+    left: 0em;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -1147,6 +1192,11 @@ body {
   min-height: 100%;
   margin: 0px;
   background: #fafafa;
+}
+
+.container {
+  width: fit-content;
+  height: fit-content;
 }
 
 .no-scrollbar {
