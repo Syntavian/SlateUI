@@ -3,6 +3,7 @@
 $types: padding, margin;
 $directions: top, bottom, left, right;
 $offsets: ("s": variables.$s-offset, "m": variables.$m-offset, "l": variables.$l-offset, "xl": variables.$xl-offset);
+$increments: 1, 2, 3, 4, 5;
 
 @each $type in $types {
     @each $level, $value in $offsets {
@@ -28,6 +29,32 @@ $offsets: ("s": variables.$s-offset, "m": variables.$m-offset, "l": variables.$l
 
         .#{$type}-#{$level} {
             #{$type}: $value;
+        }
+    }
+
+    @each $increment in $increments {
+        @each $direction in $directions {
+            .#{$type}-#{$direction}-#{$increment} {
+                #{$type}-#{$direction}: #{$increment}em;
+            }
+        }
+
+        .#{$type}-horizontal-#{$increment} {
+            #{$type}: {
+                left: #{$increment}em;
+                right: #{$increment}em;
+            }
+        }
+
+        .#{$type}-vertical-#{$increment} {
+            #{$type}: {
+                top: #{$increment}em;
+                bottom: #{$increment}em;
+            }
+        }
+
+        .#{$type}-#{$increment} {
+            #{$type}: #{$increment}em;
         }
     }
 }
