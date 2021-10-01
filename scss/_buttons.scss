@@ -1,13 +1,13 @@
+@use 'variables';
 @use 'shadow';
 @use 'gradients';
 
 .button {
     @extend .shadow-3;
+    @extend %clickable;
+    @include variables.border-radius();
     width: 5em;
     height: 5em;
-    cursor: pointer;
-    border: 0px;
-    border-radius: 3px;
 }
 
 .button:hover {

@@ -22,3 +22,12 @@ $secondary: invert($primary);
 
 $primary-text: #000000;
 $secondary-text: invert($primary-text);
+
+%clickable {
+    cursor: pointer;
+}
+
+@mixin border-radius($radius: 3px) {
+    border: 0px;
+    border-radius: $radius;
+}
