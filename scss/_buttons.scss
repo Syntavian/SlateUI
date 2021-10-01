@@ -8,10 +8,22 @@
     @include variables.border-radius();
     width: 5em;
     height: 5em;
+
+    &.active {
+        @extend .shadow-inset-3;
+    }
 }
 
 .button:hover {
     @extend .shadow-5;
+
+    &.active {
+        @extend .shadow-inset-5;
+    }
+}
+
+.button:active {
+    @extend .shadow-inset-3;
 }
 
 .button-expand { 

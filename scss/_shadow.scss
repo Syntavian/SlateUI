@@ -21,3 +21,25 @@
         box-shadow: gray -#{$value}px 0px ($value + 2px) 0px;
     }
 }
+
+@each $value in 1, 2, 3, 4, 5 {
+    .shadow-inset-#{$value} {
+        box-shadow: gray 0px 0px ($value + 2px) 0px inset;
+    }
+    
+    .shadow-inset-up-#{$value} {
+        box-shadow: gray 0px -#{$value}px ($value + 2px) 0px inset;
+    }
+    
+    .shadow-inset-down-#{$value} {
+        box-shadow: gray 0px #{$value}px ($value + 2px) 0px inset;
+    }
+    
+    .shadow-inset-right-#{$value} {
+        box-shadow: gray #{$value}px 0px ($value + 2px) 0px inset;
+    }
+    
+    .shadow-inset-left-#{$value} {
+        box-shadow: gray -#{$value}px 0px ($value + 2px) 0px inset;
+    }
+}
