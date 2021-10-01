@@ -1,4 +1,4 @@
-.button, .button-expand {
+.scroll-handle, .button, .button-expand {
   cursor: pointer;
 }
 
@@ -760,13 +760,13 @@
   flex-grow: 5;
 }
 
-p, .text {
+p, .text, .link {
   font-size: 1rem;
   margin: 0.5em 0em;
   color: #000000;
   font-weight: normal;
 }
-p.dark, .text.dark {
+p.dark, .text.dark, .link.dark {
   color: white;
 }
 
@@ -811,13 +811,13 @@ h4.dark, .h4-text.dark {
 }
 
 @media screen and (max-width: 1200px) {
-  p, .text {
+  p, .text, .link {
     font-size: 0.9rem;
     margin: 0.5em 0em;
     color: #000000;
     font-weight: normal;
   }
-  p.dark, .text.dark {
+  p.dark, .text.dark, .link.dark {
     color: white;
   }
 
@@ -862,13 +862,13 @@ h4.dark, .h4-text.dark {
   }
 }
 @media screen and (max-width: 900px) {
-  p, .text {
+  p, .text, .link {
     font-size: 0.75rem;
     margin: 0.5em 0em;
     color: #000000;
     font-weight: normal;
   }
-  p.dark, .text.dark {
+  p.dark, .text.dark, .link.dark {
     color: white;
   }
 
@@ -913,13 +913,13 @@ h4.dark, .h4-text.dark {
   }
 }
 @media screen and (max-width: 600px) {
-  p, .text {
+  p, .text, .link {
     font-size: 0.5rem;
     margin: 0.5em 0em;
     color: #000000;
     font-weight: normal;
   }
-  p.dark, .text.dark {
+  p.dark, .text.dark, .link.dark {
     color: white;
   }
 
@@ -1236,7 +1236,7 @@ h4.dark, .h4-text.dark {
 }
 .button, .button-expand {
   border: 0px;
-  border-radius: 3px;
+  border-radius: 0.25em;
   width: 5em;
   height: 5em;
 }
@@ -1365,6 +1365,39 @@ body {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-bar {
+  position: fixed;
+  top: 0.1em;
+  right: 0.1em;
+  width: 0.5em;
+  height: calc(100vh - 0.2em);
+}
+
+.scroll-handle {
+  border: 0px;
+  border-radius: 0.25em;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 10em;
+  background-color: rgba(127, 127, 127, 0.7);
+}
+
+.background-canvas {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.screen-fade {
+  width: 100vw;
+  background: linear-gradient(#ffffff00, #ffffff);
+}
+.screen-fade.dark {
+  background: linear-gradient(#ffffff00, #000000);
 }
 
 /*# sourceMappingURL=style.css.map */

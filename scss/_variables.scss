@@ -27,7 +27,7 @@ $secondary-text: invert($primary-text);
     cursor: pointer;
 }
 
-@mixin border-radius($radius: 3px) {
+@mixin border-radius($radius: 0.25em) {
     border: 0px;
     border-radius: $radius;
 }

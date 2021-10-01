@@ -38,3 +38,37 @@ body {
         display: none;
     }
 }
+
+.scroll-bar {
+    position: fixed;
+    top: 0.1em;
+    right: 0.1em;
+    width: 0.5em;
+    height: calc(100vh - 0.2em);
+}
+
+.scroll-handle {
+    @extend %clickable;
+    @include variables.border-radius();
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 10em;
+    background-color: rgba(127, 127, 127, 0.7);
+}
+
+.background-canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.screen-fade {
+    width: 100vw;
+    background: linear-gradient(#ffffff00, #ffffff);
+
+    &.dark {
+        background: linear-gradient(#ffffff00, #000000);
+    }
+}

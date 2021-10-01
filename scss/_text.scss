@@ -12,7 +12,7 @@
 }
 
 @mixin text-levels($scalar) {
-    p, .text {
+    p, .text, .link {
         @include text(variables.$font-size * $scalar);
     }
 
