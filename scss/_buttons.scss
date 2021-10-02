@@ -6,8 +6,6 @@
     @extend .shadow-3;
     @extend %clickable;
     @include variables.border-radius();
-    width: 5em;
-    height: 5em;
 
     &.active {
         @extend .shadow-inset-3;
@@ -26,23 +24,25 @@
     @extend .shadow-inset-3;
 }
 
-.button-expand { 
-    @extend .button;
-    position: relative;
+.button-expand {
     animation: animation-shrink 0.2s ease forwards;
-} 
+
+    * { 
+        height: 100%;
+        width: 100%;
+    } 
+}
 
 .button-expand:hover {
     animation: animation-expand 0.2s ease forwards;
 }
 
-
-@keyframes animation-expand {
-    0%{width:5em; height: 5em; top: 0em; left: 0em;}
-    100%{width:7em; height: 7em; top: -1em; left: -1em;}
+@keyframes animation-shrink {
+    0%{padding: 0em;}
+    100%{padding: 1em;}
 }
 
-@keyframes animation-shrink {
-    0%{width:7em; height: 7em; top: -1em; left: -1em;}
-    100%{width:5em; height: 5em; top: 0em; left: 0em;}
+@keyframes animation-expand {
+    0%{padding: 1em;}
+    100%{padding: 0em;}
 }
