@@ -1,17 +1,50 @@
 @use 'variables';
+@use 'links';
+@use 'gradients';
+
+%transparent-dark {
+    background-color: rgba(variables.$primary-dark, .9);
+}
 
 .bg-primary {
-    background: variables.$primary;
+    background-color: variables.$primary;
+    color: variables.$primary-text;
 
-    &.transparent {
-        background: rgba(variables.$primary, .9);
+    *.link {
+        @extend .link;
+    }
+
+    *.gradient {
+        @extend .gradient;
+    }
+
+    *.gradient-hover-animation {
+        @extend .gradient-hover-animation;
+    }
+
+    *.transparent {
+        @extend .transparent;
     }
 
     &.dark {
-        background: variables.$primary-dark;
+        background-color: variables.$primary-dark;
+        color: variables.$primary-text-dark;
 
-        &.transparent {
-            background: rgba(variables.$primary-dark, .9);
+        *.link:not(.bg-primary) {
+            @extend %link-dark;
+        }
+
+        *.gradient:not(.bg-primary) {
+            @extend %gradient-dark;
+        }
+    
+        *.gradient-hover-animation:not(.bg-primary) {
+            @extend %gradient-hover-animation-dark;
+            @extend .gradient-hover-animation;
+        }
+
+        *.transparent:not(.bg-primary) {
+            @extend %transparent-dark;
         }
     }
 }

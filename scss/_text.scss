@@ -5,10 +5,6 @@
     margin: $margin;
     color: $color;
     font-weight: $weight;
-
-    &.dark {
-        color: variables.$primary-text-dark;
-    }
 }
 
 @mixin text-levels($scalar) {

@@ -17,11 +17,16 @@ $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
-$primary: #fafafa;
+$primary: #f7f7f7;
+$secondary: #d7d7d7;
 $primary-dark: invert($primary);
+$secondary-dark: invert($secondary);
 
 $primary-text: #000000;
 $primary-text-dark: invert($primary-text);
+
+$alpha: #ffffff00;
+$alpha-dark: #00000000;
 
 %clickable {
     cursor: pointer;
