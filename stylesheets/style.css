@@ -1239,6 +1239,7 @@ h4.dark, .h4-text.dark {
   border-radius: 0.25em;
   min-width: 2em;
   min-height: 2em;
+  padding: 0.5em;
 }
 .button.dark {
   color: white;
@@ -1247,8 +1248,14 @@ h4.dark, .h4-text.dark {
 .button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
 @keyframes animation-expand-1 {
@@ -1271,11 +1278,41 @@ h4.dark, .h4-text.dark {
     padding: 0.5em;
   }
 }
+@keyframes animation-expand-gradient-1 {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-shrink-gradient-1 {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+}
 .button-expand-2 > * {
   animation: animation-shrink-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
 @keyframes animation-expand-2 {
@@ -1298,11 +1335,41 @@ h4.dark, .h4-text.dark {
     padding: 1em;
   }
 }
+@keyframes animation-expand-gradient-2 {
+  0% {
+    margin: 0em;
+    padding: 1em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -1em;
+    padding: 2em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-shrink-gradient-2 {
+  0% {
+    margin: -1em;
+    padding: 2em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 1em;
+    background-position: 0% 0%;
+  }
+}
 .button-expand-3 > * {
   animation: animation-shrink-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
 @keyframes animation-expand-3 {
@@ -1323,6 +1390,30 @@ h4.dark, .h4-text.dark {
   100% {
     margin: 0em;
     padding: 1.5em;
+  }
+}
+@keyframes animation-expand-gradient-3 {
+  0% {
+    margin: 0em;
+    padding: 1.5em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -1.5em;
+    padding: 3em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-shrink-gradient-3 {
+  0% {
+    margin: -1.5em;
+    padding: 3em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 1.5em;
+    background-position: 0% 0%;
   }
 }
 .link {
