@@ -8,36 +8,20 @@
     flex-grow: $grow;
 }
 
-.content-column {
-    height: 100%;
-    background-color: variables.$primary;
-
-    &.dark {
-        background-color: variables.$secondary;
-    }
-}
-
-.content-row {
-    width: 100%;
-    background-color: variables.$primary;
-
-    &.dark {
-        background-color: variables.$secondary;
-    }
-}
-
 @mixin flex-column($justify, $align, $grow: 1) {
     @include flex(column, $justify, $align, $grow);
-    @extend .content-column;
+    height: 100%;
 }
 
 @mixin flex-row($justify, $align, $grow: 1) {
     @include flex(row, $justify, $align, $grow);
-    @extend .content-row;
+    width: 100%;
 }
 
 .flex, .center {
     @include flex(column, center, center);
+    width: 100%;
+    height: 100%;
 }
 
 .flex-column {

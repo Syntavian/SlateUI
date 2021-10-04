@@ -1,0 +1,9 @@
+@use 'variables';
+
+.bg-primary {
+    background: variables.$primary;
+
+    &.dark {
+        background: invert(variables.$primary);
+    }
+}

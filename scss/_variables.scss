@@ -18,10 +18,10 @@ $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
 $primary: #fafafa;
-$secondary: invert($primary);
+$primary-dark: invert($primary);
 
 $primary-text: #000000;
-$secondary-text: invert($primary-text);
+$primary-text-dark: invert($primary-text);
 
 %clickable {
     cursor: pointer;
