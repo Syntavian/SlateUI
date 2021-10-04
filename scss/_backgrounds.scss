@@ -3,7 +3,15 @@
 .bg-primary {
     background: variables.$primary;
 
+    &.transparent {
+        background: rgba(variables.$primary, .9);
+    }
+
     &.dark {
-        background: invert(variables.$primary);
+        background: variables.$primary-dark;
+
+        &.transparent {
+            background: rgba(variables.$primary-dark, .9);
+        }
     }
 }

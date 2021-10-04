@@ -1487,8 +1487,14 @@ h4.dark, .h4-text.dark {
 .bg-primary {
   background: #fafafa;
 }
+.bg-primary.transparent {
+  background: rgba(250, 250, 250, 0.9);
+}
 .bg-primary.dark {
   background: #050505;
+}
+.bg-primary.dark.transparent {
+  background: rgba(5, 5, 5, 0.9);
 }
 
 * {
