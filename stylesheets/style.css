@@ -558,7 +558,7 @@
   background-color: #050505;
 }
 
-.flex, .link-row, .center {
+.flex, .link-row, .center, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1240,14 +1240,11 @@ h4.dark, .h4-text.dark {
   min-width: 2em;
   min-height: 2em;
 }
-.button-expand-1 {
-  width: min-content;
-  height: min-content;
-  padding: 0.5em;
+.button.dark {
+  color: white;
 }
+
 .button-expand-1 > * {
-  height: 100%;
-  width: 100%;
   animation: animation-shrink-1 0.2s ease forwards;
 }
 .button-expand-1:hover > * {
@@ -1256,36 +1253,25 @@ h4.dark, .h4-text.dark {
 
 @keyframes animation-expand-1 {
   0% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 0.5em;
   }
   100% {
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-    width: calc(100% + 1em);
+    margin: -0.5em;
+    padding: 1em;
   }
 }
 @keyframes animation-shrink-1 {
   0% {
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-    width: calc(100% + 1em);
+    margin: -0.5em;
+    padding: 1em;
   }
   100% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 0.5em;
   }
 }
-.button-expand-2 {
-  width: min-content;
-  height: min-content;
-  padding: 1em;
-}
 .button-expand-2 > * {
-  height: 100%;
-  width: 100%;
   animation: animation-shrink-2 0.2s ease forwards;
 }
 .button-expand-2:hover > * {
@@ -1294,36 +1280,25 @@ h4.dark, .h4-text.dark {
 
 @keyframes animation-expand-2 {
   0% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 1em;
   }
   100% {
-    margin-top: -1em;
-    margin-left: -1em;
-    width: calc(100% + 2em);
+    margin: -1em;
+    padding: 2em;
   }
 }
 @keyframes animation-shrink-2 {
   0% {
-    margin-top: -1em;
-    margin-left: -1em;
-    width: calc(100% + 2em);
+    margin: -1em;
+    padding: 2em;
   }
   100% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 1em;
   }
 }
-.button-expand-3 {
-  width: min-content;
-  height: min-content;
-  padding: 1.5em;
-}
 .button-expand-3 > * {
-  height: 100%;
-  width: 100%;
   animation: animation-shrink-3 0.2s ease forwards;
 }
 .button-expand-3:hover > * {
@@ -1332,26 +1307,22 @@ h4.dark, .h4-text.dark {
 
 @keyframes animation-expand-3 {
   0% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 1.5em;
   }
   100% {
-    margin-top: -1.5em;
-    margin-left: -1.5em;
-    width: calc(100% + 3em);
+    margin: -1.5em;
+    padding: 3em;
   }
 }
 @keyframes animation-shrink-3 {
   0% {
-    margin-top: -1.5em;
-    margin-left: -1.5em;
-    width: calc(100% + 3em);
+    margin: -1.5em;
+    padding: 3em;
   }
   100% {
-    margin-top: 0em;
-    margin-left: 0em;
-    width: 100%;
+    margin: 0em;
+    padding: 1.5em;
   }
 }
 .link {

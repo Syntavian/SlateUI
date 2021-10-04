@@ -1,8 +1,10 @@
 @use 'variables';
 @use 'shadow';
 @use 'gradients';
+@use 'layout';
 
 .button {
+    @extend .center;
     @extend .shadow-3;
     @extend %clickable;
     @include variables.border-radius();
@@ -29,26 +31,22 @@
     &:active {
         @extend .shadow-inset-3;
     }
+
+    &.dark {
+        color: variables.$secondary-text;
+    }
 }
 
 @each $value in 1, 2, 3 {
+    
     .button-expand-#{$value} {
-        width: min-content;
-        height: min-content;
-        padding: $value * 0.5em;
-
-        // animation: animation-shrink-outer-#{$value} 0.2s ease forwards;
-
+        @extend .center;
+        
         > * { 
-            height: 100%;
-            width: 100%;
             animation: animation-shrink-#{$value} 0.2s ease forwards;
         } 
     
         &:hover {
-
-            // animation: animation-expand-outer-#{$value} 0.2s ease forwards;
-
             > * { 
                 animation: animation-expand-#{$value} 0.2s ease forwards;
             } 
@@ -56,22 +54,12 @@
     }
     
     @keyframes animation-expand-#{$value} {
-        0%{margin-top: 0em; margin-left: 0em; width: 100%;}
-        100%{margin-top: $value * -0.5em; margin-left: $value * -0.5em; width: calc(100% + #{$value * 1em});}
+        0%{margin: 0em; padding: #{$value * 0.5em};}
+        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2};}
     }
     
     @keyframes animation-shrink-#{$value} {
-        0%{margin-top: $value * -0.5em; margin-left: $value * -0.5em; width: calc(100% + #{$value * 1em});}
-        100%{margin-top: 0em; margin-left: 0em; width: 100%;}
+        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2};}
+        100%{margin: 0em; padding: #{$value * 0.5em};}
     }
-
-    // @keyframes animation-expand-outer-#{$value} {
-    //     0%{padding: $value * 0.5em;}
-    //     100%{padding: 0em;}
-    // }
-    
-    // @keyframes animation-shrink-outer-#{$value} {
-    //     0%{padding: 0em;}
-    //     100%{padding: $value * 0.5em;}
-    // }
 }
