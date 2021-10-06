@@ -1,2 +1,11 @@
 @use 'variables';
+@use 'shadow';
+@use 'gradients';
+@use 'layout';
 
+.banner {
+    @extend .center;
+    @extend .shadow-3;
+    width: 100%;
+    height: min-content;
+}

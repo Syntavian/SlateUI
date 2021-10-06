@@ -7,6 +7,7 @@
 @use 'shadow';
 @use 'backgrounds';
 @use 'gradients';
+@use 'banners';
 
 * {
     box-sizing: border-box;
@@ -17,6 +18,7 @@ html {
     height: 100%;
     font-family: variables.$fonts;
     font-size: variables.$font-size;
+    background-color: black;
 }
 
 body {
@@ -64,11 +66,22 @@ body {
     z-index: -1;
 }
 
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
 .screen-fade {
     width: 100vw;
-    background: linear-gradient(#ffffff00, #ffffff);
+    background: linear-gradient(variables.$alpha, variables.$primary);
 
     &.dark {
-        background: linear-gradient(#ffffff00, #000000);
+        background: linear-gradient(variables.$alpha-dark, variables.$primary-dark);
     }
+}
+
+.screen-overlay {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
 }

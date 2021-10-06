@@ -542,14 +542,12 @@
   margin: 5em;
 }
 
-.flex, .link-row, .center, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
+.flex, .link-row, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
+  flex-grow: 0;
 }
 
 .flex-column {
@@ -953,7 +951,7 @@ h4, .h4-text {
   box-shadow: gray -2px 0px 4px 0px;
 }
 
-.shadow-3, .button {
+.shadow-3, .banner, .button {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
@@ -1113,29 +1111,29 @@ h4, .h4-text {
   box-shadow: gray -5px 0px 7px 0px inset;
 }
 
-.gradient, .bg-primary *.gradient, .gradient-hover-animation, .bg-primary *.gradient-hover-animation, .bg-primary.dark .gradient-hover-animation:not(.bg-primary) {
+.gradient, .gradient-hover-animation, .dark.gradient-hover-animation:not(.button) {
   background: linear-gradient(135deg, #ffffff00, #d7d7d7 25%, #ffffff00);
 }
 
-.bg-primary.dark *.gradient:not(.bg-primary), .bg-primary.dark *.gradient-hover-animation:not(.bg-primary) {
+.dark.gradient, .button-expand-1 > *.gradient-hover-animation.dark, .button-expand-2 > *.gradient-hover-animation.dark, .button-expand-3 > *.gradient-hover-animation.dark, .dark.gradient-hover-animation:not(.button) {
   background: linear-gradient(135deg, #00000000, #282828 25%, #00000000);
 }
 
-.gradient-hover-animation, .bg-primary *.gradient-hover-animation, .bg-primary.dark .gradient-hover-animation:not(.bg-primary) {
+.gradient-hover-animation, .dark.gradient-hover-animation:not(.button) {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
   animation: animation-back 0.2s ease forwards;
 }
 
-.bg-primary.dark *.gradient-hover-animation:not(.bg-primary) {
+.dark.gradient-hover-animation:not(.button) {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
   animation: animation-back 0.2s ease forwards;
 }
 
-.gradient-hover-animation:hover, .bg-primary.dark .gradient-hover-animation:hover:not(.bg-primary) {
+.gradient-hover-animation:hover, .dark.gradient-hover-animation:hover:not(.button) {
   -webkit-animation: animation-forward 0.2s ease forwards;
   -moz-animation: animation-forward 0.2s ease forwards;
   animation: animation-forward 0.2s ease forwards;
@@ -1192,19 +1190,18 @@ h4, .h4-text {
 .button {
   border: 0px;
   border-radius: 0.25em;
-  min-width: 2em;
-  min-height: 2em;
+  min-width: min-content;
+  min-height: min-content;
   padding: 0.5em;
 }
-.button.dark {
-  color: white;
-}
-
 .button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
 .button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation.dark {
+  background-size: 200% 200%;
 }
 .button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
@@ -1263,6 +1260,9 @@ h4, .h4-text {
 .button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.dark {
+  background-size: 200% 200%;
+}
 .button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
@@ -1277,13 +1277,13 @@ h4, .h4-text {
   }
   100% {
     margin: -1em;
-    padding: 2em;
+    padding: 1.5em;
   }
 }
 @keyframes animation-shrink-2 {
   0% {
     margin: -1em;
-    padding: 2em;
+    padding: 1.5em;
   }
   100% {
     margin: 0em;
@@ -1298,14 +1298,14 @@ h4, .h4-text {
   }
   100% {
     margin: -1em;
-    padding: 2em;
+    padding: 1.5em;
     background-position: 100% 100%;
   }
 }
 @keyframes animation-shrink-gradient-2 {
   0% {
     margin: -1em;
-    padding: 2em;
+    padding: 1.5em;
     background-position: 100% 100%;
   }
   100% {
@@ -1319,6 +1319,9 @@ h4, .h4-text {
 }
 .button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation.dark {
+  background-size: 200% 200%;
 }
 .button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
@@ -1334,13 +1337,13 @@ h4, .h4-text {
   }
   100% {
     margin: -1.5em;
-    padding: 3em;
+    padding: 2em;
   }
 }
 @keyframes animation-shrink-3 {
   0% {
     margin: -1.5em;
-    padding: 3em;
+    padding: 2em;
   }
   100% {
     margin: 0em;
@@ -1355,14 +1358,14 @@ h4, .h4-text {
   }
   100% {
     margin: -1.5em;
-    padding: 3em;
+    padding: 2em;
     background-position: 100% 100%;
   }
 }
 @keyframes animation-shrink-gradient-3 {
   0% {
     margin: -1.5em;
-    padding: 3em;
+    padding: 2em;
     background-position: 100% 100%;
   }
   100% {
@@ -1371,7 +1374,7 @@ h4, .h4-text {
     background-position: 0% 0%;
   }
 }
-.bg-primary.dark *.link:not(.bg-primary) {
+.dark.link {
   background: linear-gradient(135deg, #ffffff00, #16161680 25%, #ffffff00);
   color: #c3c3c3;
   background-size: 200% 200%;
@@ -1380,7 +1383,7 @@ h4, .h4-text {
   -moz-animation: animation-back 0.2s ease forwards;
   animation: animation-back 0.2s ease forwards;
 }
-.bg-primary.dark .link:hover:not(.bg-primary) {
+.dark.link:hover {
   color: white;
   transition: width 0.2s, height 0.2s;
   -webkit-animation: animation-forward 0.2s ease forwards;
@@ -1388,7 +1391,7 @@ h4, .h4-text {
   animation: animation-forward 0.2s ease forwards;
 }
 
-.link, .bg-primary *.link {
+.link {
   padding: 0.25em;
   min-width: 5em;
   text-align: center;
@@ -1430,18 +1433,30 @@ h4, .h4-text {
   background: #16161680;
 }
 
-.bg-primary.dark *.transparent:not(.bg-primary) {
-  background-color: rgba(8, 8, 8, 0.9);
+.dark.transparent {
+  background-color: rgba(8, 8, 8, 0.7);
 }
 
-.bg-primary {
+body, .primary {
   background-color: #f7f7f7;
   color: #000000;
 }
-.bg-primary.dark {
+body *, .primary * {
+  color: #000000;
+}
+body.transparent, .primary.transparent {
+  background-color: rgba(247, 247, 247, 0.7);
+}
+
+.dark {
   background-color: #080808;
   color: white;
 }
+.banner {
+  width: 100%;
+  height: min-content;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1451,6 +1466,7 @@ html {
   height: 100%;
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1rem;
+  background-color: black;
 }
 
 body {
@@ -1498,12 +1514,23 @@ body {
   z-index: -1;
 }
 
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
 .screen-fade {
   width: 100vw;
-  background: linear-gradient(#ffffff00, #ffffff);
+  background: linear-gradient(#ffffff00, #f7f7f7);
 }
 .screen-fade.dark {
-  background: linear-gradient(#ffffff00, #000000);
+  background: linear-gradient(#00000000, #080808);
+}
+
+.screen-overlay {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

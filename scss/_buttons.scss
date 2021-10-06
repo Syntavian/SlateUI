@@ -9,8 +9,8 @@
     @extend %clickable;
     @include variables.border-radius();
 
-    min-width: 2em;
-    min-height: 2em;
+    min-width: min-content;
+    min-height: min-content;
     padding: 0.5em;
 
     &.active {
@@ -32,10 +32,6 @@
     &:active {
         @extend .shadow-inset-3;
     }
-
-    &.dark {
-        color: variables.$primary-text-dark;
-    }
 }
 
 @each $value in 1, 2, 3 {
@@ -48,6 +44,11 @@
 
             &.gradient-hover-animation {
                 animation: animation-shrink-gradient-#{$value} 0.2s ease forwards;
+
+                &.dark {
+                    @extend %gradient-dark;
+                    background-size: 200% 200%;
+                }
             }
         } 
     
@@ -64,21 +65,21 @@
     
     @keyframes animation-expand-#{$value} {
         0%{margin: 0em; padding: #{$value * 0.5em};}
-        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2};}
+        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em};}
     }
     
     @keyframes animation-shrink-#{$value} {
-        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2};}
+        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em};}
         100%{margin: 0em; padding: #{$value * 0.5em};}
     }
 
     @keyframes animation-expand-gradient-#{$value} {
         0%{margin: 0em; padding: #{$value * 0.5em}; background-position: 0% 0%;}
-        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2}; background-position: 100% 100%;}
+        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em}; background-position: 100% 100%;}
     }
     
     @keyframes animation-shrink-gradient-#{$value} {
-        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em * 2}; background-position: 100% 100%;}
+        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em}; background-position: 100% 100%;}
         100%{margin: 0em; padding: #{$value * 0.5em}; background-position: 0% 0%;}
     }
 }

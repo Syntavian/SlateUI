@@ -3,48 +3,44 @@
 @use 'gradients';
 
 %transparent-dark {
-    background-color: rgba(variables.$primary-dark, .9);
+    background-color: rgba(variables.$primary-dark, .7);
 }
 
-.bg-primary {
+body, .primary {
     background-color: variables.$primary;
     color: variables.$primary-text;
 
-    *.link {
-        @extend .link;
+    * {
+        color: variables.$primary-text;
     }
 
-    *.gradient {
-        @extend .gradient;
+    &.transparent {
+        background-color: rgba(variables.$primary, .7);
+    }
+}
+
+.dark {
+    background-color: variables.$primary-dark;
+    color: variables.$primary-text-dark;
+
+    &.link {
+        @extend %link-dark;
     }
 
-    *.gradient-hover-animation {
+    &.gradient {
+        @extend %gradient-dark;
+    }
+
+    &.gradient-hover-animation:not(.button) {
+        @extend %gradient-hover-animation-dark;
         @extend .gradient-hover-animation;
     }
 
-    *.transparent {
-        @extend .transparent;
+    &.transparent {
+        @extend %transparent-dark;
     }
 
-    &.dark {
-        background-color: variables.$primary-dark;
-        color: variables.$primary-text-dark;
-
-        *.link:not(.bg-primary) {
-            @extend %link-dark;
-        }
-
-        *.gradient:not(.bg-primary) {
-            @extend %gradient-dark;
-        }
-    
-        *.gradient-hover-animation:not(.bg-primary) {
-            @extend %gradient-hover-animation-dark;
-            @extend .gradient-hover-animation;
-        }
-
-        *.transparent:not(.bg-primary) {
-            @extend %transparent-dark;
-        }
+    &.button {
+        @extend .button;
     }
 }
