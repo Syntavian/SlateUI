@@ -1,19 +1,3 @@
-#bg-canvas {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
-
-#page-content {
-    width: 100vw;
-    background: linear-gradient(#ffffff00, #ffffff);
-}
-
-#page-content.dark-mode {
-    background: linear-gradient(#ffffff00, #000000);
-}
-
 #theme-button-container {
     display: flex;
     justify-content: center;

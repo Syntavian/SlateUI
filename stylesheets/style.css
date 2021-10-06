@@ -542,7 +542,7 @@
   margin: 5em;
 }
 
-.flex, .link-row, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
+.flex, .box, .link-row, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -911,7 +911,7 @@ h4, .h4-text {
     font-weight: normal;
   }
 }
-.shadow-1 {
+.shadow-1, .box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -1554,6 +1554,16 @@ body {
   position: absolute;
   width: 100vw;
   min-height: 100vh;
+}
+
+.box {
+  min-width: 5em;
+  min-height: 5em;
+  border-radius: 3px;
+}
+
+.no-shadow {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */

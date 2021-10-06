@@ -85,3 +85,15 @@ body {
     width: 100vw;
     min-height: 100vh;
 }
+
+.box {
+    @extend .flex;
+    @extend .shadow-1;
+    min-width: 5em;
+    min-height: 5em;
+    border-radius: 3px;
+}
+
+.no-shadow {
+    box-shadow: none;
+}
