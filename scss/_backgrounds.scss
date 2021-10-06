@@ -6,13 +6,9 @@
     background-color: rgba(variables.$primary-dark, .7);
 }
 
-body, .primary {
+.primary {
     background-color: variables.$primary;
     color: variables.$primary-text;
-
-    * {
-        color: variables.$primary-text;
-    }
 
     &.transparent {
         background-color: rgba(variables.$primary, .7);
