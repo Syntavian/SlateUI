@@ -8,6 +8,7 @@
 @use 'backgrounds';
 @use 'gradients';
 @use 'banners';
+@use 'z-index';
 
 * {
     box-sizing: border-box;
@@ -58,11 +59,11 @@ body {
     background-color: rgba(127, 127, 127, 0.7);
 }
 
-.background-canvas {
+.background {
+    @extend .z-1;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
 }
 
 .full-screen {

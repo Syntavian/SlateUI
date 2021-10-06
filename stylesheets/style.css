@@ -1454,6 +1454,34 @@ h4, .h4-text {
   height: min-content;
 }
 
+.z-1, .background {
+  z-index: -1;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z4 {
+  z-index: 4;
+}
+
+.z5 {
+  z-index: 5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1503,11 +1531,10 @@ body {
   background-color: rgba(127, 127, 127, 0.7);
 }
 
-.background-canvas {
+.background {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
 }
 
 .full-screen {
