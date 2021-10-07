@@ -1,0 +1,8 @@
+@use 'variables';
+@use 'layout';
+@use 'offsets';
+
+.image {
+    @extend .box;
+    @extend %padding-3;
+}

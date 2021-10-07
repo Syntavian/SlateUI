@@ -6,32 +6,35 @@ $offsets: ("s": variables.$s-offset, "m": variables.$m-offset, "l": variables.$l
 $increments: 1, 2, 3, 4, 5;
 
 @each $type in $types {
-    @each $level, $value in $offsets {
+
+    //Generate extendable offset styles that can be later overridden.
+    @each $increment in $increments {
         @each $direction in $directions {
-            .#{$type}-#{$direction}-#{$level} {
-                #{$type}-#{$direction}: $value;
+            %#{$type}-#{$direction}-#{$increment} {
+                #{$type}-#{$direction}: #{$increment}em;
             }
         }
 
-        .#{$type}-horizontal-#{$level} {
+        %#{$type}-horizontal-#{$increment} {
             #{$type}: {
-                left: $value;
-                right: $value;
+                left: #{$increment}em;
+                right: #{$increment}em;
             }
         }
 
-        .#{$type}-vertical-#{$level} {
+        %#{$type}-vertical-#{$increment} {
             #{$type}: {
-                top: $value;
-                bottom: $value;
+                top: #{$increment}em;
+                bottom: #{$increment}em;
             }
         }
 
-        .#{$type}-#{$level} {
-            #{$type}: $value;
+        %#{$type}-#{$increment} {
+            #{$type}: #{$increment}em;
         }
     }
 
+    //Generate offsets of fixed em value amounts.
     @each $increment in $increments {
         @each $direction in $directions {
             .#{$type}-#{$direction}-#{$increment} {
@@ -55,6 +58,33 @@ $increments: 1, 2, 3, 4, 5;
 
         .#{$type}-#{$increment} {
             #{$type}: #{$increment}em;
+        }
+    }
+
+    //Generate offsets of preset variable amounts.
+    @each $level, $value in $offsets {
+        @each $direction in $directions {
+            .#{$type}-#{$direction}-#{$level} {
+                #{$type}-#{$direction}: $value;
+            }
+        }
+
+        .#{$type}-horizontal-#{$level} {
+            #{$type}: {
+                left: $value;
+                right: $value;
+            }
+        }
+
+        .#{$type}-vertical-#{$level} {
+            #{$type}: {
+                top: $value;
+                bottom: $value;
+            }
+        }
+
+        .#{$type}-#{$level} {
+            #{$type}: $value;
         }
     }
 }
