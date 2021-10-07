@@ -31,7 +31,7 @@
     @extend .flex;
 
     * {
-        @extend .margin-horizontal-s;
+        @extend %margin-horizontal-1;
     }
 }
 
