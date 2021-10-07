@@ -1,15 +1,16 @@
 @use 'variables';
 @use 'offsets';
+@use 'shadow';
 @use 'layout';
+@use 'z-index';
+@use 'gradients';
+@use 'images';
 @use 'text';
 @use 'buttons';
 @use 'links';
-@use 'shadow';
 @use 'backgrounds';
-@use 'gradients';
 @use 'banners';
-@use 'z-index';
-@use 'images';
+
 
 * {
     box-sizing: border-box;
@@ -61,7 +62,7 @@ body {
 }
 
 .background {
-    @extend .z-1;
+    @extend %z-1;
     position: fixed;
     width: 100vw;
     height: 100vh;

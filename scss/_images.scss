@@ -1,8 +1,10 @@
 @use 'variables';
-@use 'layout';
 @use 'offsets';
+@use 'shadow';
+@use 'layout';
+@use 'z-index';
 
 .image {
-    @extend .box;
     @extend %padding-3;
+    @extend .box;
 }

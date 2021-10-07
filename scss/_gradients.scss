@@ -1,4 +1,8 @@
 @use 'variables';
+@use 'offsets';
+@use 'shadow';
+@use 'layout';
+@use 'z-index';
 
 %gradient {
     background: linear-gradient(135deg, variables.$alpha, variables.$secondary 25%, variables.$alpha);

@@ -551,7 +551,11 @@
   margin: 2em;
 }
 
-.shadow-1, .box, .inline-box, .image, .link, .dark.link {
+.box, .inline-box, .link, .dark.link, .image {
+  box-shadow: gray 0px 0px 3px 0px;
+}
+
+.shadow-1 {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -751,7 +755,7 @@
   box-shadow: gray -5px 0px 7px 0px inset;
 }
 
-.flex, .link-row, .inline-box, .link, .dark.link, .box, .image, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
+.flex, .link-row, .box, .image, .inline-box, .link, .dark.link, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -977,18 +981,125 @@
   flex-grow: 5;
 }
 
-.box, .image {
+.box, .image, .inline-box, .link, .dark.link {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
 }
 
 .inline-box, .link, .dark.link {
-  min-width: 5em;
+  display: inline-flex;
   min-height: fit-content;
-  border-radius: 3px;
 }
 
+.background {
+  z-index: -1;
+}
+
+.z-1 {
+  z-index: -1;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z4 {
+  z-index: 4;
+}
+
+.z5 {
+  z-index: 5;
+}
+
+.gradient, .gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
+  background: linear-gradient(135deg, #ffffff00, #d7d7d7 25%, #ffffff00);
+}
+
+.dark.gradient, .button-expand-1 > *.gradient-hover-animation.dark, .button-expand-2 > *.gradient-hover-animation.dark, .button-expand-3 > *.gradient-hover-animation.dark, .dark.gradient-hover-animation:not(.button), .dark.link {
+  background: linear-gradient(135deg, #00000000, #282828 25%, #00000000);
+}
+
+.gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.dark.gradient-hover-animation:not(.button), .dark.link {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.gradient-hover-animation:hover, .dark.gradient-hover-animation:hover:not(.button), .link:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+@-webkit-keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@-moz-keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@-webkit-keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 p, .text, .link {
   font-size: 1rem;
   margin: 0.5em 0em;
@@ -1130,82 +1241,6 @@ h4, .h4-text {
     margin: 0.5em 0em;
     color: #000000;
     font-weight: normal;
-  }
-}
-.gradient, .gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
-  background: linear-gradient(135deg, #ffffff00, #d7d7d7 25%, #ffffff00);
-}
-
-.dark.gradient, .button-expand-1 > *.gradient-hover-animation.dark, .button-expand-2 > *.gradient-hover-animation.dark, .button-expand-3 > *.gradient-hover-animation.dark, .dark.gradient-hover-animation:not(.button), .dark.link {
-  background: linear-gradient(135deg, #00000000, #282828 25%, #00000000);
-}
-
-.gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
-  background-size: 200% 200%;
-  -webkit-animation: animation-back 0.2s ease forwards;
-  -moz-animation: animation-back 0.2s ease forwards;
-  animation: animation-back 0.2s ease forwards;
-}
-
-.dark.gradient-hover-animation:not(.button), .dark.link {
-  background-size: 200% 200%;
-  -webkit-animation: animation-back 0.2s ease forwards;
-  -moz-animation: animation-back 0.2s ease forwards;
-  animation: animation-back 0.2s ease forwards;
-}
-
-.gradient-hover-animation:hover, .dark.gradient-hover-animation:hover:not(.button), .link:hover {
-  -webkit-animation: animation-forward 0.2s ease forwards;
-  -moz-animation: animation-forward 0.2s ease forwards;
-  animation: animation-forward 0.2s ease forwards;
-}
-
-@-webkit-keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@-moz-keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@-webkit-keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-@-moz-keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-@keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
   }
 }
 .button {
@@ -1449,34 +1484,6 @@ h4, .h4-text {
 .banner {
   width: 100%;
   height: min-content;
-}
-
-.z-1, .background {
-  z-index: -1;
-}
-
-.z0 {
-  z-index: 0;
-}
-
-.z1 {
-  z-index: 1;
-}
-
-.z2 {
-  z-index: 2;
-}
-
-.z3 {
-  z-index: 3;
-}
-
-.z4 {
-  z-index: 4;
-}
-
-.z5 {
-  z-index: 5;
 }
 
 * {

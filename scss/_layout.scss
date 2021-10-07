@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'offsets';
 @use 'shadow';
 
 @mixin flex($direction, $justify, $align, $grow: 1) {
@@ -120,23 +121,27 @@
 }
 
 @each $value in 0, 1, 2, 3, 4, 5 {
+    %flex-grow-#{$value} {
+        flex-grow: #{$value};
+    }
+}
+
+@each $value in 0, 1, 2, 3, 4, 5 {
     .flex-grow-#{$value} {
         flex-grow: #{$value};
     }
 }
 
 .box {
+    @extend %shadow-1 !optional;
     @extend .flex;
-    @extend .shadow-1;
     min-width: 5em;
     min-height: 5em;
     border-radius: 3px;
 }
 
 .inline-box {
-    @extend .flex;
-    @extend .shadow-1;
-    min-width: 5em;
+    @extend .box;
+    display: inline-flex;
     min-height: fit-content;
-    border-radius: 3px;
 }
