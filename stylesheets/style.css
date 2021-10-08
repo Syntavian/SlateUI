@@ -1,4 +1,4 @@
-.scroll-handle, .button {
+.scroll-handle, .button, .button-round-1, .button-round-2, .button-round-3 {
   cursor: pointer;
 }
 
@@ -595,7 +595,7 @@
   box-shadow: gray -2px 0px 4px 0px;
 }
 
-.shadow-3, .banner, .button {
+.shadow-3, .banner, .button, .button-round-1, .button-round-2, .button-round-3 {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
@@ -635,7 +635,7 @@
   box-shadow: gray -4px 0px 6px 0px;
 }
 
-.shadow-5, .button:hover {
+.shadow-5, .button:hover, .button-round-1:hover, .button-round-2:hover, .button-round-3:hover {
   box-shadow: gray 0px 0px 7px 0px;
 }
 
@@ -695,7 +695,7 @@
   box-shadow: gray -2px 0px 4px 0px inset;
 }
 
-.shadow-inset-3, .button.active, .button:active {
+.shadow-inset-3, .button.active, .button:active, .active.button-round-1, .button-round-1:active, .active.button-round-2, .button-round-2:active, .active.button-round-3, .button-round-3:active {
   box-shadow: gray 0px 0px 5px 0px inset;
 }
 
@@ -735,7 +735,7 @@
   box-shadow: gray -4px 0px 6px 0px inset;
 }
 
-.shadow-inset-5, .button.active:hover {
+.shadow-inset-5, .button.active:hover, .active.button-round-1:hover, .active.button-round-2:hover, .active.button-round-3:hover {
   box-shadow: gray 0px 0px 7px 0px inset;
 }
 
@@ -755,7 +755,7 @@
   box-shadow: gray -5px 0px 7px 0px inset;
 }
 
-.flex, .link-row, .box, .image, .inline-box, .link, .dark.link, .center, .banner, .button, .button-expand-1, .button-expand-2, .button-expand-3 {
+.flex, .link-row, .box, .image, .inline-box, .link, .dark.link, .center, .banner, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1243,13 +1243,19 @@ h4, .h4-text {
     font-weight: normal;
   }
 }
-.button {
+.button, .button-round-3, .button-round-2, .button-round-1 {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
 }
+.button-round-1 {
+  min-width: 1.5em;
+  min-height: 1.5em;
+  border-radius: 1.5em;
+}
+
 .button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
@@ -1310,6 +1316,12 @@ h4, .h4-text {
     background-position: 0% 0%;
   }
 }
+.button-round-2 {
+  min-width: 2.5em;
+  min-height: 2.5em;
+  border-radius: 2em;
+}
+
 .button-expand-2 > * {
   animation: animation-shrink-2 0.2s ease forwards;
 }
@@ -1370,6 +1382,12 @@ h4, .h4-text {
     background-position: 0% 0%;
   }
 }
+.button-round-3 {
+  min-width: 3.5em;
+  min-height: 3.5em;
+  border-radius: 2.5em;
+}
+
 .button-expand-3 > * {
   animation: animation-shrink-3 0.2s ease forwards;
 }

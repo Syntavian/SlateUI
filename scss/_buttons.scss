@@ -36,6 +36,13 @@
 
 @each $value in 1, 2, 3 {
     
+    .button-round-#{$value} {
+        @extend .button ;
+        min-width: #{$value + 0.5}em;
+        min-height: #{$value + 0.5}em;
+        border-radius: #{$value / 2 + 1}em;
+    }
+
     .button-expand-#{$value} {
         @extend .center;
         
