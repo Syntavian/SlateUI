@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $screen-width-large: 1200px;
 $screen-width-medium: 900px;
 $screen-width-small: 600px;
@@ -17,10 +19,14 @@ $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
-$primary: #f7f7f7;
+$themes: ("default": #f7f7f7);
+
+$primary: map.get($themes, "default");
 $secondary: #d7d7d7;
 $primary-dark: invert($primary);
 $secondary-dark: invert($secondary);
+
+@debug $primary-dark;
 
 $primary-text: #000000;
 $primary-text-dark: invert($primary-text);

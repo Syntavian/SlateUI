@@ -276,7 +276,7 @@
   padding: 2em;
 }
 
-.link-row * {
+.link-row > * {
   margin-left: 1em;
   margin-right: 1em;
 }

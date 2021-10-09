@@ -30,7 +30,7 @@
 .link-row {
     @extend .flex;
 
-    * {
+    > * {
         @extend %margin-horizontal-1;
     }
 }
