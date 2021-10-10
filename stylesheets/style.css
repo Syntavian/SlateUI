@@ -551,6 +551,126 @@
   margin: 2em;
 }
 
+.fixed-tl-1 {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+.fixed-tr-1 {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
+.fixed-bl-1 {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+}
+
+.fixed-br-1 {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.fixed-tl-2 {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+}
+
+.fixed-tr-2 {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+}
+
+.fixed-bl-2 {
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+}
+
+.fixed-br-2 {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+.fixed-tl-3 {
+  position: fixed;
+  top: 3em;
+  left: 3em;
+}
+
+.fixed-tr-3 {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+}
+
+.fixed-bl-3 {
+  position: fixed;
+  bottom: 3em;
+  left: 3em;
+}
+
+.fixed-br-3 {
+  position: fixed;
+  bottom: 3em;
+  right: 3em;
+}
+
+.fixed-tl-4 {
+  position: fixed;
+  top: 4em;
+  left: 4em;
+}
+
+.fixed-tr-4 {
+  position: fixed;
+  top: 4em;
+  right: 4em;
+}
+
+.fixed-bl-4 {
+  position: fixed;
+  bottom: 4em;
+  left: 4em;
+}
+
+.fixed-br-4 {
+  position: fixed;
+  bottom: 4em;
+  right: 4em;
+}
+
+.fixed-tl-5 {
+  position: fixed;
+  top: 5em;
+  left: 5em;
+}
+
+.fixed-tr-5 {
+  position: fixed;
+  top: 5em;
+  right: 5em;
+}
+
+.fixed-bl-5 {
+  position: fixed;
+  bottom: 5em;
+  left: 5em;
+}
+
+.fixed-br-5 {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+}
+
 .box, .inline-box, .link, .dark.link, .image {
   box-shadow: gray 0px 0px 3px 0px;
 }

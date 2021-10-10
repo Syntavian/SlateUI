@@ -1,0 +1,27 @@
+@use 'variables';
+
+@each $value in 1, 2, 3, 4, 5 {
+    .fixed-tl-#{$value} {
+        position: fixed;
+        top: #{$value}em;
+        left: #{$value}em;
+    }
+
+    .fixed-tr-#{$value} {
+        position: fixed;
+        top: #{$value}em;
+        right: #{$value}em;
+    }
+
+    .fixed-bl-#{$value} {
+        position: fixed;
+        bottom: #{$value}em;
+        left: #{$value}em;
+    }
+
+    .fixed-br-#{$value} {
+        position: fixed;
+        bottom: #{$value}em;
+        right: #{$value}em;
+    }
+}
