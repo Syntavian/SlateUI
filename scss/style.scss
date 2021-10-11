@@ -13,7 +13,6 @@
 @use 'banners';
 @use 'forms';
 
-
 * {
     box-sizing: border-box;
 }
@@ -92,4 +91,8 @@ body {
 
 .no-shadow {
     box-shadow: none;
+}
+
+.dark {
+    color: variables.$primary-text-dark;
 }

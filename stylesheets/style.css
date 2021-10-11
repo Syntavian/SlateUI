@@ -1616,7 +1616,6 @@ h4, .h4-text {
 }
 
 .dark {
-  background-color: #080808;
   color: white;
 }
 .banner {
@@ -1728,6 +1727,10 @@ body {
 
 .no-shadow {
   box-shadow: none;
+}
+
+.dark {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

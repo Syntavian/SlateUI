@@ -117,34 +117,6 @@ img.dark-image.dark-mode {
     margin-left: 1em;
 }
 
-.form {
-    width: 40%;
-    margin: 2em;
-    padding: 1em;
-    border-radius: 3px;
-    box-shadow: #999 0px 0px 5px 0px;
-}
-
-.form-row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 2em;
-}
-
-.form-label {
-    min-width: 7em;
-    max-width: 7em;
-    margin: 0.25em 0.5em 0.25em 0px;
-    font-size: 1rem;
-}
-
-.form-input {
-    margin: 0.25em 0px;
-}
-
 @media screen and (max-width: 1800px) {
 
     .content-box {
