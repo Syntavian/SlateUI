@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.form {
+  padding: 2em;
+}
+
 .image {
   padding: 3em;
 }
@@ -279,6 +283,10 @@
 .link-row > * {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.form {
+  margin: 2em;
 }
 
 .margin-top-1 {
@@ -671,7 +679,7 @@
   right: 5em;
 }
 
-.box, .inline-box, .link, .dark.link, .image {
+.box, .inline-box, .form, .image, .link, .dark.link {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -875,7 +883,7 @@
   box-shadow: gray -5px 0px 7px 0px inset;
 }
 
-.flex, .link-row, .box, .image, .inline-box, .link, .dark.link, .center, .banner, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3 {
+.flex, .link-row, .box, .form, .image, .inline-box, .link, .dark.link, .center, .banner, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1101,7 +1109,7 @@
   flex-grow: 5;
 }
 
-.box, .image, .inline-box, .link, .dark.link {
+.box, .form, .image, .inline-box, .link, .dark.link {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
@@ -1623,32 +1631,22 @@ h4, .h4-text {
   height: min-content;
 }
 
-.form {
-  width: 40%;
-  margin: 2em;
-  padding: 1em;
-  border-radius: 3px;
-  box-shadow: #999 0px 0px 5px 0px;
-}
-
 .form-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
   width: 100%;
-  min-height: 2em;
+  width: 100%;
 }
 
 .form-label {
-  min-width: 7em;
-  max-width: 7em;
-  margin: 0.25em 0.5em 0.25em 0px;
-  font-size: 1rem;
+  max-width: 50%;
 }
 
 .form-input {
-  margin: 0.25em 0px;
+  max-width: 50%;
 }
 
 * {
