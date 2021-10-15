@@ -5,18 +5,21 @@
 .form {
     @extend .box;
     @extend %margin-2;
-    @extend %padding-2;
+    @extend %padding-1;
 }
 
 .form-row {
     @include layout.flex-row(space-between, flex-start);
+    @extend %margin-s;
     width: 100%;
 }
 
 .form-label {
-    max-width: 50%;
+    max-width: 33%;
+    @extend %margin-right-s; 
 }
 
 .form-input {
-    max-width: 50%;
+    max-width: 67%;
+    resize: vertical;
 }

@@ -34,6 +34,33 @@ $increments: 1, 2, 3, 4, 5;
         }
     }
 
+    //Generate extendable offsets of preset variable amounts that can be later overridden.
+    @each $level, $value in $offsets {
+        @each $direction in $directions {
+            %#{$type}-#{$direction}-#{$level} {
+                #{$type}-#{$direction}: $value;
+            }
+        }
+
+        %#{$type}-horizontal-#{$level} {
+            #{$type}: {
+                left: $value;
+                right: $value;
+            }
+        }
+
+        %#{$type}-vertical-#{$level} {
+            #{$type}: {
+                top: $value;
+                bottom: $value;
+            }
+        }
+
+        %#{$type}-#{$level} {
+            #{$type}: $value;
+        }
+    }
+
     //Generate offsets of fixed em value amounts.
     @each $increment in $increments {
         @each $direction in $directions {
