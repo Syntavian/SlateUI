@@ -4,22 +4,22 @@
 
 .form {
     @extend .box;
-    @extend %margin-2;
     @extend %padding-1;
+    @extend %width-5;
 }
 
 .form-row {
     @include layout.flex-row(space-between, flex-start);
     @extend %margin-s;
-    width: 100%;
+    @extend %width-10;
 }
 
 .form-label {
-    max-width: 33%;
+    @extend %width-3;
     @extend %margin-right-s; 
 }
 
 .form-input {
-    max-width: 67%;
+    @extend %width-7;
     resize: vertical;
 }
