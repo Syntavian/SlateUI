@@ -4,9 +4,9 @@
 @use 'layout';
 
 .button {
-    @extend .center;
-    @extend .shadow-3;
-    @extend %clickable;
+    @extend .center !optional;
+    @extend .shadow-3 !optional;
+    @extend %clickable !optional;
     @include variables.border-radius();
 
     min-width: min-content;
@@ -14,23 +14,23 @@
     padding: 0.5em;
 
     &.active {
-        @extend .shadow-inset-3;
+        @extend .shadow-inset-3 !optional;
 
         &:hover {
-            @extend .shadow-inset-5;
+            @extend .shadow-inset-5 !optional;
         }
     }
 
     &:hover {
-        @extend .shadow-5;
+        @extend .shadow-5 !optional;
 
         &.active {
-            @extend .shadow-inset-5;
+            @extend .shadow-inset-5 !optional;
         }
     }
 
     &:active {
-        @extend .shadow-inset-3;
+        @extend .shadow-inset-3 !optional;
     }
 }
 
@@ -38,8 +38,6 @@
     
     .button-round-#{$value} {
         @extend .button ;
-        min-width: #{$value + 0.5}em;
-        min-height: #{$value + 0.5}em;
         border-radius: #{$value / 2 + 1}em;
     }
 

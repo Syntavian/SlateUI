@@ -19,10 +19,10 @@ $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
-$themes: ("default": #f7f7f7);
+$themes: ("default": #f7f7f7, "default-dark": #080808);
 
 $primary: map.get($themes, "default");
-$secondary: #d7d7d7;
+$secondary: #efefef;
 $primary-dark: invert($primary);
 $secondary-dark: invert($secondary);
 

@@ -1253,11 +1253,11 @@
 }
 
 .gradient, .gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
-  background: linear-gradient(135deg, #ffffff00, #d7d7d7 25%, #ffffff00);
+  background: linear-gradient(135deg, #ffffff00, #efefef 25%, #ffffff00);
 }
 
 .dark.gradient, .button-expand-1 > *.gradient-hover-animation.dark, .button-expand-2 > *.gradient-hover-animation.dark, .button-expand-3 > *.gradient-hover-animation.dark, .dark.gradient-hover-animation:not(.button), .dark.link {
-  background: linear-gradient(135deg, #00000000, #282828 25%, #00000000);
+  background: linear-gradient(135deg, #00000000, #101010 25%, #00000000);
 }
 
 .gradient-hover-animation, .dark.gradient-hover-animation:not(.button), .link, .dark.link {
@@ -1479,8 +1479,6 @@ h4, .h4-text {
   padding: 0.5em;
 }
 .button-round-1 {
-  min-width: 1.5em;
-  min-height: 1.5em;
   border-radius: 1.5em;
 }
 
@@ -1545,8 +1543,6 @@ h4, .h4-text {
   }
 }
 .button-round-2 {
-  min-width: 2.5em;
-  min-height: 2.5em;
   border-radius: 2em;
 }
 
@@ -1611,8 +1607,6 @@ h4, .h4-text {
   }
 }
 .button-round-3 {
-  min-width: 3.5em;
-  min-height: 3.5em;
   border-radius: 2.5em;
 }
 
@@ -1816,6 +1810,35 @@ body {
   position: absolute;
   width: 100vw;
   min-height: 100vh;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("default": #f7f7f7, "default-dark": #080808)';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: black;
+}
+.theme-selector:hover span {
+  color: white;
 }
 
 .no-shadow {
