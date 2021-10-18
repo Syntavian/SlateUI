@@ -33,6 +33,7 @@ function initialiseThemeSwitcher(button) {
         let text = theme.split(':')[0];
         text = text[0].toUpperCase() + text.slice(1);
         option.textContent = text;
+        option.value = text;
         select.appendChild(option);
     }
 
@@ -40,6 +41,7 @@ function initialiseThemeSwitcher(button) {
     button.appendChild(select);
 
     button.addEventListener("mouseleave", e => {select.blur();});
+    select.addEventListener("change", e => {console.log(select.value);});
 
     console.log(themes);
 }
