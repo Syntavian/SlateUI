@@ -2,6 +2,10 @@ let switchButtons = document.querySelectorAll(".active,.inactive");
 
 let themeSwitchers = document.querySelectorAll(".theme-selector");
 
+let themedElements = document.querySelectorAll(".themed,.background,.link,.gradient,.gradient-hover-animation");
+
+let currentTheme = "";
+
 function switchClicked(button) {
     if (button.classList.contains("active") || button.classList.contains("inactive")) {
         button.classList.toggle("active");
@@ -11,6 +15,15 @@ function switchClicked(button) {
 
 function initialiseSwitch(button) {
     button.addEventListener("click", e => switchClicked(button));
+}
+
+function switchElementThemes(newTheme) {
+    for (let element of themedElements) {
+        element.classList.remove(currentTheme);
+        element.classList.add(newTheme);
+    }
+
+    currentTheme = newTheme;
 }
 
 function initialiseThemeSwitcher(button) {
@@ -31,17 +44,23 @@ function initialiseThemeSwitcher(button) {
     for (let theme of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll('(', '').replaceAll(')', '').replaceAll(' ', '').split(',')) {
         let option = document.createElement("option");
         let text = theme.split(':')[0];
+        if (currentTheme === "") {
+            currentTheme = text;
+        }
         text = text[0].toUpperCase() + text.slice(1);
         option.textContent = text;
         option.value = text;
         select.appendChild(option);
     }
 
-    
     button.appendChild(select);
 
+    for (let element of themedElements) {
+        element.classList.add(currentTheme);
+    }
+
     button.addEventListener("mouseleave", e => {select.blur();});
-    select.addEventListener("change", e => {console.log(select.value);});
+    select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
 
     console.log(themes);
 }
