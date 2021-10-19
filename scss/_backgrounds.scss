@@ -6,6 +6,12 @@
     background-color: rgba(variables.$primary-dark, .7);
 }
 
+@each $theme, $value in variables.$themes {
+    .fill.#{$theme} {
+        background-color: $value;
+    }
+}
+
 .primary {
     background-color: variables.$primary;
     color: variables.$primary-text;

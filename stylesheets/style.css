@@ -1709,6 +1709,14 @@ h4, .h4-text {
   background-color: rgba(8, 8, 8, 0.7);
 }
 
+.fill.default {
+  background-color: #f7f7f7;
+}
+
+.fill.default-dark {
+  background-color: #080808;
+}
+
 .primary {
   background-color: #f7f7f7;
   color: #000000;
