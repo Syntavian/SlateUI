@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:color";
 
 $screen-width-large: 1200px;
 $screen-width-medium: 900px;
@@ -19,17 +20,24 @@ $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
-$themes: ("default": #f7f7f7, "default-dark": #080808);
+$themes: ("default": #f7f7f7, "dark": #080808);
 
-$primary: map.get($themes, "default");
-$secondary: #efefef;
-$primary-dark: invert($primary);
-$secondary-dark: invert($secondary);
-
-@debug $primary-dark;
-
-$primary-text: #000000;
-$primary-text-dark: invert($primary-text);
+@each $theme, $value in $themes {
+    .#{$theme} .primary {
+        background-color: $value;
+    } 
+    .#{$theme} .secondary {
+        background-color: darken($value, 15%);
+    } 
+    .#{$theme} .text {
+        @if color.blackness($value) > 50% {
+            color: white;
+        }
+        @else {
+            color: black;
+        }
+    } 
+}
 
 $alpha: #ffffff00;
 $alpha-dark: #00000000;
