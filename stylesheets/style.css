@@ -1,10 +1,12 @@
 /* Error: Undefined variable.
  *   ,
- * 8 |     background: linear-gradient(135deg, variables.$alpha, variables.$secondary 25%, variables.$alpha);
- *   |                                                           ^^^^^^^^^^^^^^^^^^^^
+ * 3 | @mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $color: variables.$primary-text, $weight: normal) {
+ *   |                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^
  *   '
- *   scss\_gradients.scss 8:59  @use
- *   scss\style.scss 7:1        root stylesheet */
+ *   scss\_text.scss 3:100  text()
+ *   scss\_text.scss 12:9   text-levels()
+ *   scss\_text.scss 32:1   @use
+ *   scss\style.scss 9:1    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 8 \2502      background: linear-gradient(135deg, variables.$alpha, variables.$secondary 25%, variables.$alpha);\d\a   \2502                                                            ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\_gradients.scss 8:59  @use\a   scss\\style.scss 7:1        root stylesheet";
+  content: "Error: Undefined variable.\a   \2577 \a 3 \2502  @mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $color: variables.$primary-text, $weight: normal) {\d\a   \2502                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\_text.scss 3:100  text()\a   scss\\_text.scss 12:9   text-levels()\a   scss\\_text.scss 32:1   @use\a   scss\\style.scss 9:1    root stylesheet";
 }
