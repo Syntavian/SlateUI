@@ -20,6 +20,12 @@ $h2-size: 2.5rem;
 $h3-size: 1.75rem;
 $h4-size: 1.25rem;
 
+$white: #ffffff;
+$black: #000000;
+
+$alpha: #ffffff00;
+$alpha-dark: #00000000;
+
 $themes: ("default": #f7f7f7, "dark": #080808);
 
 @each $theme, $value in $themes {
@@ -38,9 +44,6 @@ $themes: ("default": #f7f7f7, "dark": #080808);
         }
     } 
 }
-
-$alpha: #ffffff00;
-$alpha-dark: #00000000;
 
 %clickable {
     cursor: pointer;

@@ -76,10 +76,10 @@ body {
 
 .screen-fade {
     width: 100vw;
-    background: linear-gradient(variables.$alpha, variables.$primary);
+    background: linear-gradient(variables.$alpha, variables.$white);
 
     &.dark {
-        background: linear-gradient(variables.$alpha-dark, variables.$primary-dark);
+        background: linear-gradient(variables.$alpha-dark, variables.$black);
     }
 }
 
@@ -129,8 +129,4 @@ body {
 
 .no-shadow {
     box-shadow: none;
-}
-
-.dark {
-    color: variables.$primary-text-dark;
 }

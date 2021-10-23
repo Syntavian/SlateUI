@@ -49,11 +49,6 @@
 
             &.gradient-hover-animation {
                 animation: animation-shrink-gradient-#{$value} 0.2s ease forwards;
-
-                &.dark {
-                    @extend %gradient-dark;
-                    background-size: 200% 200%;
-                }
             }
         } 
     

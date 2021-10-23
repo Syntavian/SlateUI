@@ -2,46 +2,8 @@
 @use 'links';
 @use 'gradients';
 
-%transparent-dark {
-    background-color: rgba(variables.$primary-dark, .7);
-}
-
 @each $theme, $value in variables.$themes {
     .fill.#{$theme} {
         background-color: $value;
-    }
-}
-
-.primary {
-    background-color: variables.$primary;
-    color: variables.$primary-text;
-
-    &.transparent {
-        background-color: rgba(variables.$primary, .7);
-    }
-}
-
-.dark {
-    color: variables.$primary-text-dark;
-
-    &.link {
-        @extend %link-dark;
-    }
-
-    &.gradient {
-        @extend %gradient-dark;
-    }
-
-    &.gradient-hover-animation:not(.button) {
-        @extend %gradient-hover-animation-dark;
-        @extend .gradient-hover-animation;
-    }
-
-    &.transparent {
-        @extend %transparent-dark;
-    }
-
-    &.button {
-        @extend .button;
     }
 }

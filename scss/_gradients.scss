@@ -5,31 +5,31 @@
 @use 'z-index';
 
 @each $theme, $value in variables.$themes {
-    %gradient {
+    %#{$theme}-gradient {
         background: linear-gradient(135deg, variables.$alpha, darken($value, 15%) 25%, variables.$alpha);
     }
     
-    %gradient-hover-animation {
-        @extend %gradient;
+    %#{$theme}-gradient-hover-animation {
+        @extend %#{$theme}-gradient;
         background-size: 200% 200%;
         -webkit-animation: animation-back 0.2s ease forwards;
         -moz-animation: animation-back 0.2s ease forwards;
         animation: animation-back 0.2s ease forwards;
     }
     
-    .gradient {
-        @extend %gradient;
+    .gradient.#{$theme} {
+        @extend %#{$theme}-gradient;
     }
     
-    .gradient-hover-animation {
-        @extend %gradient-hover-animation;
+    .gradient-hover-animation.#{$theme}{
+        @extend %#{$theme}-gradient-hover-animation;
     }
-    
-    .gradient-hover-animation:hover {
-        -webkit-animation: animation-forward 0.2s ease forwards;
-        -moz-animation: animation-forward 0.2s ease forwards;
-        animation: animation-forward 0.2s ease forwards;
-    }
+}
+
+.gradient-hover-animation:hover {
+    -webkit-animation: animation-forward 0.2s ease forwards;
+    -moz-animation: animation-forward 0.2s ease forwards;
+    animation: animation-forward 0.2s ease forwards;
 }
 
 @-webkit-keyframes animation-forward {
