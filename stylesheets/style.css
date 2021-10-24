@@ -1,25 +1,9 @@
-.default .primary {
-  background-color: #f7f7f7;
+p.default.text, span.default.text, a.default.text, h1.default.text, h2.default.text, h3.default.text, h4.default.text, h5.default.text, h6.default.text {
+  color: #000000;
 }
 
-.default .secondary {
-  background-color: #d1d1d1;
-}
-
-.default .text {
-  color: black;
-}
-
-.dark .primary {
-  background-color: #080808;
-}
-
-.dark .secondary {
-  background-color: black;
-}
-
-.dark .text {
-  color: white;
+p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.text, h4.dark.text, h5.dark.text, h6.dark.text {
+  color: #ffffff;
 }
 
 .scroll-handle, .button, .button-round-1, .button-round-2, .button-round-3 {
@@ -1355,35 +1339,30 @@
 p, .text, .link {
   font-size: 1rem;
   margin: 0.5em 0em;
-  color: black;
   font-weight: normal;
 }
 
 h1, .h1-text {
   font-size: 3.5rem;
   margin: 0.5em 0em;
-  color: black;
   font-weight: normal;
 }
 
 h2, .h2-text {
   font-size: 2.5rem;
   margin: 0.5em 0em;
-  color: black;
   font-weight: normal;
 }
 
 h3, .h3-text {
   font-size: 1.75rem;
   margin: 0.5em 0em;
-  color: black;
   font-weight: normal;
 }
 
 h4, .h4-text {
   font-size: 1.25rem;
   margin: 0.5em 0em;
-  color: black;
   font-weight: normal;
 }
 
@@ -1391,35 +1370,30 @@ h4, .h4-text {
   p, .text, .link {
     font-size: 0.9rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h1, .h1-text {
     font-size: 3.15rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h2, .h2-text {
     font-size: 2.25rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h3, .h3-text {
     font-size: 1.575rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h4, .h4-text {
     font-size: 1.125rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 }
@@ -1427,35 +1401,30 @@ h4, .h4-text {
   p, .text, .link {
     font-size: 0.75rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h1, .h1-text {
     font-size: 2.625rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h2, .h2-text {
     font-size: 1.875rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h3, .h3-text {
     font-size: 1.3125rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h4, .h4-text {
     font-size: 0.9375rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 }
@@ -1463,35 +1432,30 @@ h4, .h4-text {
   p, .text, .link {
     font-size: 0.5rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h1, .h1-text {
     font-size: 1.75rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h2, .h2-text {
     font-size: 1.25rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h3, .h3-text {
     font-size: 0.875rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 
   h4, .h4-text {
     font-size: 0.625rem;
     margin: 0.5em 0em;
-    color: black;
     font-weight: normal;
   }
 }
@@ -1689,11 +1653,9 @@ h4, .h4-text {
   padding: 0.25em;
   text-align: center;
   text-decoration: none;
-  color: #3c3c3c;
   cursor: pointer;
 }
 .link:hover {
-  color: black;
   text-decoration: none;
 }
 
@@ -1710,12 +1672,24 @@ h4, .h4-text {
   border-radius: 0.25em;
 }
 
-.fill.default {
+.default.fill.primary {
   background-color: #f7f7f7;
+  color: #000000;
 }
 
-.fill.dark {
+.default.fill.secondary {
+  background-color: #eaeaea;
+  color: #000000;
+}
+
+.dark.fill.primary {
   background-color: #080808;
+  color: #ffffff;
+}
+
+.dark.fill.secondary {
+  background-color: #151515;
+  color: #ffffff;
 }
 
 .banner {
@@ -1815,7 +1789,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("default": #f7f7f7, "dark": #080808)';
+  content: '("default": ("primary": #f7f7f7, "text": #000000), "dark": ("primary": #080808, "text": #ffffff))';
   display: none;
 }
 .theme-selector span {

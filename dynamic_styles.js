@@ -41,9 +41,12 @@ function initialiseThemeSwitcher(button) {
     select.style.width = style.width;
     select.style.height = style.height;
 
-    for (let theme of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll('(', '').replaceAll(')', '').replaceAll(' ', '').split(',')) {
+    console.log(themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').split('),'));
+
+    for (let theme of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').split('),')) {
         let option = document.createElement("option");
-        let text = theme.split(':')[0];
+        let text = theme.replaceAll('(', '').replaceAll(')', '').split(':')[0];
+        console.log(text);
         if (currentTheme === "") {
             currentTheme = text;
         }

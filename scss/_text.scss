@@ -1,9 +1,8 @@
 @use 'variables';
 
-@mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $color: black, $weight: normal) {
+@mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $weight: normal) {
     font-size: $size;
     margin: $margin;
-    color: $color;
     font-weight: $weight;
 }
 
