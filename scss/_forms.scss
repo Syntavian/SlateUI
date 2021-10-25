@@ -1,6 +1,7 @@
 @use 'variables';
 @use 'layout';
 @use 'offsets';
+@use 'box';
 
 .form {
     @extend .box;

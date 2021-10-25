@@ -1,0 +1,34 @@
+@use "sass:map";
+@use "sass:color";
+@use 'variables';
+@use 'offsets';
+@use 'fixed';
+@use 'shadow';
+@use 'layout';
+@use 'z-index';
+@use 'gradients';
+
+%box {
+    @extend %shadow-1 !optional;
+    @extend .flex !optional;
+    min-width: 5em;
+    min-height: 5em;
+    border-radius: 3px;
+}
+
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text");
+
+    .#{$name}.box {
+        @extend %box;
+        background-color: $primary;
+        color: $text;
+    }
+    
+    .#{$name}.inline-box {
+        @extend %box;
+        display: inline-flex;
+        min-height: fit-content;
+    }
+}

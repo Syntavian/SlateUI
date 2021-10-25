@@ -3,8 +3,9 @@
 @use 'shadow';
 @use 'layout';
 @use 'z-index';
+@use 'box';
 
 .image {
     @extend %padding-3;
-    @extend .box;
+    @extend %box;
 }

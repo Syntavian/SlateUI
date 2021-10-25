@@ -6,6 +6,6 @@
 .banner {
     @extend .center;
     @extend .shadow-3;
-    width: 100%;
+    @extend .width-10;
     height: min-content;
 }

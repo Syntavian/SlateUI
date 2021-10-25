@@ -1,14 +1,15 @@
 @use 'layout';
 @use 'offsets';
 @use 'gradients';
+@use 'box';
 
 %link {
     @extend .inline-box;
     @extend .gradient-hover-animation;
+    @extend %clickable;
     padding: 0.25em;
     text-align: center;
     text-decoration: none;
-    cursor: pointer;
 
     &:hover {
         text-decoration: none;

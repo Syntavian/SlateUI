@@ -1,29 +1,38 @@
 @use "sass:map";
+@use "sass:color";
 @use 'variables';
 @use 'offsets';
 @use 'shadow';
 @use 'layout';
 @use 'z-index';
 
-@each $theme, $value in variables.$themes {
-    %#{$theme}-gradient {
-        background: linear-gradient(135deg, variables.$alpha, darken(map.get($value, "primary"), 15%) 25%, variables.$alpha);
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text");
+
+    %#{$name}-gradient {
+        @if color.blackness($primary) > 50% {
+            background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
+        }
+        @else {
+            background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
+        }
     }
     
-    %#{$theme}-gradient-hover-animation {
-        @extend %#{$theme}-gradient;
+    %#{$name}-gradient-hover-animation {
+        @extend %#{$name}-gradient;
         background-size: 200% 200%;
         -webkit-animation: animation-back 0.2s ease forwards;
         -moz-animation: animation-back 0.2s ease forwards;
         animation: animation-back 0.2s ease forwards;
     }
     
-    .gradient.#{$theme} {
-        @extend %#{$theme}-gradient;
+    .gradient.#{$name} {
+        @extend %#{$name}-gradient;
     }
     
-    .gradient-hover-animation.#{$theme}{
-        @extend %#{$theme}-gradient-hover-animation;
+    .gradient-hover-animation.#{$name}{
+        @extend %#{$name}-gradient-hover-animation;
     }
 }
 

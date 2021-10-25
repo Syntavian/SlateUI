@@ -15,10 +15,12 @@ $fonts: "Century Gothic", Arial, sans-serif;
 
 $font-size: 1rem;
 
-$h1-size: 3.5rem;
-$h2-size: 2.5rem;
-$h3-size: 1.75rem;
-$h4-size: 1.25rem;
+$h1-size: $font-size * 4.0;
+$h2-size: $font-size * 2.5;
+$h3-size: $font-size * 2.0;
+$h4-size: $font-size * 1.75;
+$h5-size: $font-size * 1.5;
+$h6-size: $font-size * 1.25;
 
 $white: #ffffff;
 $black: #000000;
@@ -36,18 +38,6 @@ $themes: (
         "text": $white
     )
 );
-
-@each $name, $theme in $themes {
-
-    $primary: map.get($theme, "primary");
-    $text: map.get($theme, "text");
-
-    p, span, a, h1, h2, h3, h4, h5, h6 {
-        &.#{$name}.text {
-            color: $text;
-        }
-    }
-}
 
 %clickable {
     cursor: pointer;

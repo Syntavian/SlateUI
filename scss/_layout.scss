@@ -131,17 +131,3 @@
         flex-grow: #{$value};
     }
 }
-
-.box {
-    @extend %shadow-1 !optional;
-    @extend .flex;
-    min-width: 5em;
-    min-height: 5em;
-    border-radius: 3px;
-}
-
-.inline-box {
-    @extend .box;
-    display: inline-flex;
-    min-height: fit-content;
-}

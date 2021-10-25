@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
 
 @mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $weight: normal) {
@@ -7,9 +9,9 @@
 }
 
 @mixin text-levels($scalar) {
-    p, .text, .link {
+    body, div, p, span, a, .text, .link {
         @include text(variables.$font-size * $scalar);
-    }
+    } 
 
     h1, .h1-text {
         @include text(variables.$h1-size * $scalar)
@@ -25,6 +27,25 @@
     
     h4, .h4-text {
         @include text(variables.$h4-size * $scalar)
+    }
+
+    h5, .h5-text {
+        @include text(variables.$h5-size * $scalar)
+    }
+
+    h6, .h6-text {
+        @include text(variables.$h6-size * $scalar)
+    }
+}
+
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text");
+
+    p, span, a, h1, h2, h3, h4, h5, h6 {
+        &.#{$name}.text {
+            color: $text;
+        }
     }
 }
 

@@ -1,12 +1,4 @@
-p.default.text, span.default.text, a.default.text, h1.default.text, h2.default.text, h3.default.text, h4.default.text, h5.default.text, h6.default.text {
-  color: #000000;
-}
-
-p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.text, h4.dark.text, h5.dark.text, h6.dark.text {
-  color: #ffffff;
-}
-
-.scroll-handle, .button, .button-round-1, .button-round-2, .button-round-3 {
+.scroll-handle, .link, .button, .button-round-1, .button-round-2, .button-round-3 {
   cursor: pointer;
 }
 
@@ -98,7 +90,7 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
   width: 90%;
 }
 
-.width-10 {
+.width-10, .banner {
   width: 100%;
 }
 
@@ -787,7 +779,7 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
   right: 5em;
 }
 
-.box, .inline-box, .form, .image, .link {
+.default.box, .default.inline-box, .dark.box, .dark.inline-box, .default.form, .dark.form, .default.link, .dark.link, .image {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -991,7 +983,7 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
   box-shadow: gray -5px 0px 7px 0px inset;
 }
 
-.flex, .link-row, .box, .form, .image, .inline-box, .link, .center, .banner, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3 {
+.flex, .link-row, .default.box, .default.inline-box, .dark.box, .dark.inline-box, .default.form, .dark.form, .default.link, .dark.link, .image, .center, .banner, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1217,17 +1209,6 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
   flex-grow: 5;
 }
 
-.box, .form, .image, .inline-box, .link {
-  min-width: 5em;
-  min-height: 5em;
-  border-radius: 3px;
-}
-
-.inline-box, .link {
-  display: inline-flex;
-  min-height: fit-content;
-}
-
 .background {
   z-index: -1;
 }
@@ -1261,7 +1242,7 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
 }
 
 .gradient.default, .gradient-hover-animation.default, .default.link {
-  background: linear-gradient(135deg, #ffffff00, #d1d1d1 25%, #ffffff00);
+  background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
 }
 
 .gradient-hover-animation.default, .default.link {
@@ -1272,7 +1253,7 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
 }
 
 .gradient.dark, .gradient-hover-animation.dark, .dark.link {
-  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
+  background: linear-gradient(135deg, #00000000, #222222 25%, #00000000);
 }
 
 .gradient-hover-animation.dark, .dark.link {
@@ -1336,14 +1317,48 @@ p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.te
     background-position: 0% 0%;
   }
 }
-p, .text, .link {
+.image, .dark.inline-box, .dark.link, .dark.box, .dark.form, .default.inline-box, .default.link, .default.box, .default.form {
+  min-width: 5em;
+  min-height: 5em;
+  border-radius: 3px;
+}
+
+.default.box, .default.form {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
+.default.inline-box, .default.link {
+  display: inline-flex;
+  min-height: fit-content;
+}
+
+.dark.box, .dark.form {
+  background-color: #080808;
+  color: #ffffff;
+}
+
+.dark.inline-box, .dark.link {
+  display: inline-flex;
+  min-height: fit-content;
+}
+
+p.default.text, span.default.text, a.default.text, h1.default.text, h2.default.text, h3.default.text, h4.default.text, h5.default.text, h6.default.text {
+  color: #000000;
+}
+
+p.dark.text, span.dark.text, a.dark.text, h1.dark.text, h2.dark.text, h3.dark.text, h4.dark.text, h5.dark.text, h6.dark.text {
+  color: #ffffff;
+}
+
+body, div, p, span, a, .text, .link {
   font-size: 1rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
 
 h1, .h1-text {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
@@ -1355,26 +1370,38 @@ h2, .h2-text {
 }
 
 h3, .h3-text {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
 
 h4, .h4-text {
+  font-size: 1.75rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+
+h6, .h6-text {
   font-size: 1.25rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
 
 @media screen and (max-width: 1200px) {
-  p, .text, .link {
+  body, div, p, span, a, .text, .link {
     font-size: 0.9rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h1, .h1-text {
-    font-size: 3.15rem;
+    font-size: 3.6rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
@@ -1386,26 +1413,38 @@ h4, .h4-text {
   }
 
   h3, .h3-text {
-    font-size: 1.575rem;
+    font-size: 1.8rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h4, .h4-text {
+    font-size: 1.575rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h6, .h6-text {
     font-size: 1.125rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 }
 @media screen and (max-width: 900px) {
-  p, .text, .link {
+  body, div, p, span, a, .text, .link {
     font-size: 0.75rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h1, .h1-text {
-    font-size: 2.625rem;
+    font-size: 3rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
@@ -1417,26 +1456,38 @@ h4, .h4-text {
   }
 
   h3, .h3-text {
-    font-size: 1.3125rem;
+    font-size: 1.5rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h4, .h4-text {
+    font-size: 1.3125rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h6, .h6-text {
     font-size: 0.9375rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 }
 @media screen and (max-width: 600px) {
-  p, .text, .link {
+  body, div, p, span, a, .text, .link {
     font-size: 0.5rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h1, .h1-text {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
@@ -1448,12 +1499,24 @@ h4, .h4-text {
   }
 
   h3, .h3-text {
-    font-size: 0.875rem;
+    font-size: 1rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
 
   h4, .h4-text {
+    font-size: 0.875rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+
+  h6, .h6-text {
     font-size: 0.625rem;
     margin: 0.5em 0em;
     font-weight: normal;
@@ -1653,7 +1716,6 @@ h4, .h4-text {
   padding: 0.25em;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
 }
 .link:hover {
   text-decoration: none;
@@ -1693,7 +1755,6 @@ h4, .h4-text {
 }
 
 .banner {
-  width: 100%;
   height: min-content;
 }
 
