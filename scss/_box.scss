@@ -18,7 +18,7 @@
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
-    $text: map.get($theme, "text");
+    $text: map.get($theme, "text-colour");
 
     .#{$name}.box {
         @extend %box;

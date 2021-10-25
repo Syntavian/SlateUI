@@ -2,15 +2,10 @@
 @use 'offsets';
 @use 'shadow';
 @use 'layout';
-
-@each $value in -1, 0, 1, 2, 3, 4, 5 {
-    %z#{$value} {
-        z-index: $value;
-    }
-}
+@use 'prototypes';
 
 @each $value in -1, 0, 1, 2, 3, 4, 5 {
     .z#{$value} {
-        z-index: $value;
+        @extend %z#{$value};
     }
 }

@@ -48,12 +48,3 @@ $themes: (
         "rounding": 0.25em,
     )
 );
-
-%clickable {
-    cursor: pointer;
-}
-
-@mixin border-radius($radius: 0.25em) {
-    border: 0px;
-    border-radius: $radius;
-}
