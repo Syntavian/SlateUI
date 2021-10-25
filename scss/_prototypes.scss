@@ -1,11 +1,5 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'offsets';
-@use 'fixed';
-@use 'shadow';
-@use 'layout';
-@use 'z-index';
 
 @each $value in -1, 0, 1, 2, 3, 4, 5 {
     %z#{$value} {

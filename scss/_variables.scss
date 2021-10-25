@@ -32,7 +32,7 @@ $themes: (
     "default": (
         "primary": #f7f7f7, 
         "text-colour": $black,
-        "fonts": "Century Gothic", Arial, sans-serif,
+        "fonts": $fonts,
         "font-size": $font-size,
         "padding": $s-offset,
         "margin": $s-offset,
@@ -41,7 +41,7 @@ $themes: (
     "dark": ( 
         "primary": #080808, 
         "text-colour": $white,
-        "fonts": "Century Gothic", Arial, sans-serif,
+        "fonts": $fonts,
         "font-size": $font-size,
         "padding": $s-offset,
         "margin": $s-offset,

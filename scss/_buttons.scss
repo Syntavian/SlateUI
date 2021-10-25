@@ -2,12 +2,13 @@
 @use 'shadow';
 @use 'gradients';
 @use 'layout';
+@use 'prototypes';
 
 .button {
     @extend .center !optional;
     @extend .shadow-3 !optional;
     @extend %clickable !optional;
-    @include variables.border-radius();
+    @include prototypes.border-radius();
 
     min-width: min-content;
     min-height: min-content;

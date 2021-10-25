@@ -3,6 +3,7 @@
 @use 'fixed';
 @use 'shadow';
 @use 'layout';
+@use 'prototypes';
 @use 'z-index';
 @use 'gradients';
 @use 'box';
@@ -55,7 +56,7 @@ body {
 
 .scroll-handle {
     @extend %clickable;
-    @include variables.border-radius();
+    @include prototypes.border-radius();
     position: absolute;
     top: 0px;
     width: 100%;
