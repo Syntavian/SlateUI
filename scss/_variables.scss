@@ -31,11 +31,21 @@ $alpha-dark: #00000000;
 $themes: (
     "default": (
         "primary": #f7f7f7, 
-        "text": $black
+        "text-colour": $black,
+        "fonts": "Century Gothic", Arial, sans-serif,
+        "font-size": $font-size,
+        "padding": $s-offset,
+        "margin": $s-offset,
+        "rounding": 0.25em,
     ), 
     "dark": ( 
         "primary": #080808, 
-        "text": $white
+        "text-colour": $white,
+        "fonts": "Century Gothic", Arial, sans-serif,
+        "font-size": $font-size,
+        "padding": $s-offset,
+        "margin": $s-offset,
+        "rounding": 0.25em,
     )
 );
 
