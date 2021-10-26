@@ -1,4 +1,7 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
+@use 'prototypes';
 
 $types: padding, margin;
 $directions: top, bottom, left, right;

@@ -1,8 +1,7 @@
-@use 'layout';
-@use 'offsets';
-@use 'prototypes';
-@use 'gradients';
-@use 'box';
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
 
 %link {
     @extend .inline-box;

@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "sass:color";
 @use 'variables';
+@use 'prototypes';
 
 @mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $weight: normal) {
     font-size: $size;

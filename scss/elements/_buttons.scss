@@ -1,8 +1,7 @@
-@use 'variables';
-@use 'shadow';
-@use 'gradients';
-@use 'layout';
-@use 'prototypes';
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
 
 .button {
     @extend .center !optional;

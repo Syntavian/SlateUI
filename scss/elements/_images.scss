@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
+
+.image {
+    @extend %padding-3;
+    @extend %box;
+}

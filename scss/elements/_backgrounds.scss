@@ -1,10 +1,27 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'offsets';
-@use 'shadow';
-@use 'layout';
-@use 'z-index';
+@use '../variables';
+@use '../prototypes';
+
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text-colour");
+
+    .#{$name}.fill.primary {
+        background-color: $primary;
+        color: $text;
+    } 
+
+    .#{$name}.fill.secondary {
+        @if color.blackness($primary) < 50% {
+            background-color: darken($primary, 5%);
+        }
+        @else {
+            background-color: lighten($primary, 5%);
+        }
+        color: $text;
+    } 
+}
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");

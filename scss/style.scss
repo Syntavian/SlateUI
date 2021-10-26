@@ -5,15 +5,14 @@
 @use 'layout';
 @use 'prototypes';
 @use 'z-index';
-@use 'gradients';
-@use 'box';
-@use 'images';
+@use 'elements/box';
+@use 'elements/images';
 @use 'text';
-@use 'buttons';
-@use 'links';
-@use 'backgrounds';
-@use 'banners';
-@use 'forms';
+@use 'elements/buttons';
+@use 'elements/links';
+@use 'elements/backgrounds';
+@use 'elements/banners';
+@use 'elements/forms';
 
 * {
     box-sizing: border-box;

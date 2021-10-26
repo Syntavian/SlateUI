@@ -1,4 +1,7 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
+@use 'prototypes';
 
 @each $value in 1, 2, 3, 4, 5 {
     .fixed-tl-#{$value} {

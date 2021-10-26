@@ -1,7 +1,7 @@
-@use 'variables';
-@use 'shadow';
-@use 'gradients';
-@use 'layout';
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
 
 .banner {
     @extend .center;

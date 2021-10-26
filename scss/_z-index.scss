@@ -1,7 +1,6 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
-@use 'offsets';
-@use 'shadow';
-@use 'layout';
 @use 'prototypes';
 
 @each $value in -1, 0, 1, 2, 3, 4, 5 {
