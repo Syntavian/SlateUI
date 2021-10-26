@@ -4,8 +4,8 @@
 @use '../prototypes';
 
 .banner {
-    @extend .center;
-    @extend .shadow-3;
-    @extend .width-10;
+    @extend %flex;
+    @extend %shadow-3;
+    @extend %width-10;
     height: min-content;
 }

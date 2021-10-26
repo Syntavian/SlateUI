@@ -1,10 +1,10 @@
 /* Error: The target selector was not found.
- * Use "@extend %padding-1 !optional" to avoid this error.
+ * Use "@extend .inline-box !optional" to avoid this error.
  *   ,
- * 8 |     @extend %padding-1;
- *   |     ^^^^^^^^^^^^^^^^^^
+ * 7 |     @extend .inline-box;
+ *   |     ^^^^^^^^^^^^^^^^^^^
  *   '
- *   scss\elements\_forms.scss 8:5  root stylesheet */
+ *   scss\elements\_links.scss 7:5  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: The target selector was not found.\aUse "@extend %padding-1 !optional" to avoid this error.\a   \2577 \a 8 \2502      @extend %padding-1;\d\a   \2502      ^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\elements\\_forms.scss 8:5  root stylesheet';
+  content: 'Error: The target selector was not found.\aUse "@extend .inline-box !optional" to avoid this error.\a   \2577 \a 7 \2502      @extend .inline-box;\d\a   \2502      ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\elements\\_links.scss 7:5  root stylesheet';
 }

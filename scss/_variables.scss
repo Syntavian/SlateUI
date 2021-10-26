@@ -10,6 +10,12 @@ $s-offset: 0.5em;
 $m-offset: 1em;
 $l-offset: 1.5em;
 $xl-offset: 2em;
+$xxl-offset: 3em;
+$xxxl-offset: 5em;
+
+$offset-types: padding, margin;
+$offset-directions: top, bottom, left, right;
+$offset-values: ("n": $n-offset, "s": $s-offset, "m": $m-offset, "l": $l-offset, "xl": $xl-offset, "xxl": $xxl-offset, "xxxl": $xxxl-offset);
 
 $fonts: "Century Gothic", Arial, sans-serif;
 

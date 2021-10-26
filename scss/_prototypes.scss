@@ -25,15 +25,119 @@
     border-radius: $radius;
 }
 
-@each $value in -1, 0, 1, 2, 3, 4, 5 {
-    %z#{$value} {
-        z-index: $value;
+@each $level, $value in variables.$offset-values {
+    @each $type in variables.$offset-types {
+        @each $direction in variables.$offset-directions {
+            %#{$type}-#{$direction}-#{$level} {
+                #{$type}-#{$direction}: $value;
+            }
+        }
+
+        %#{$type}-horizontal-#{$level} {
+            #{$type}: {
+                left: $value;
+                right: $value;
+            }
+        }
+
+        %#{$type}-vertical-#{$level} {
+            #{$type}: {
+                top: $value;
+                bottom: $value;
+            }
+        }
+
+        %#{$type}-#{$level} {
+            #{$type}: $value;
+        }
+    }    
+}
+
+@for $i from -1 through 10 {
+    %z#{$i} {
+        z-index: $i;
     }
 }
 
-@each $value in 0, 1, 2, 3, 4, 5 {
-    %flex-grow-#{$value} {
-        flex-grow: #{$value};
+@for $i from 1 through 10 { 
+    %width-#{$i} {
+        width: #{10% * $i};
+    }
+
+    %height-#{$i} {
+        width: #{10% * $i};
+    }
+
+    @each $type in variables.$offset-types {
+        @each $direction in variables.$offset-directions {
+            %#{$type}-#{$direction}-#{$i} {
+                #{$type}-#{$direction}: #{$i}em;
+            }
+        }
+
+        %#{$type}-horizontal-#{$i} {
+            #{$type}: {
+                left: #{$i}em;
+                right: #{$i}em;
+            }
+        }
+
+        %#{$type}-vertical-#{$i} {
+            #{$type}: {
+                top: #{$i}em;
+                bottom: #{$i}em;
+            }
+        }
+
+        %#{$type}-#{$i} {
+            #{$type}: #{$i}em;
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    %flex-grow-#{$i} {
+        flex-grow: #{$i};
+    }
+
+    %shadow-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px;
+    }
+    
+    %shadow-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
+    }
+    
+    %shadow-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
+    }
+    
+    %shadow-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
+    }
+    
+    %shadow-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
+    }
+
+    %shadow-inset-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
     }
 }
 

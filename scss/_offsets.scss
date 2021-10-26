@@ -3,118 +3,46 @@
 @use 'variables';
 @use 'prototypes';
 
-$types: padding, margin;
-$directions: top, bottom, left, right;
-$offsets: ("s": variables.$s-offset, "m": variables.$m-offset, "l": variables.$l-offset, "xl": variables.$xl-offset);
-$increments: 1, 2, 3, 4, 5;
-$percent-increments: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-
-@each $increment in $percent-increments { 
-    %width-#{$increment} {
-        width: #{10% * $increment};
+@for $i from 1 through 10 { 
+    .width-#{$i} {
+        width: #{10% * $i};
     }
 
-    %height-#{$increment} {
-        width: #{10% * $increment};
+    .height-#{$i} {
+        width: #{10% * $i};
     }
 }
 
-@each $increment in $percent-increments { 
-    .width-#{$increment} {
-        width: #{10% * $increment};
-    }
-
-    .height-#{$increment} {
-        width: #{10% * $increment};
-    }
-}
-
-@each $type in $types {
-
-    //Generate extendable offset styles that can be later overridden.
-    @each $increment in $increments {
-        @each $direction in $directions {
-            %#{$type}-#{$direction}-#{$increment} {
-                #{$type}-#{$direction}: #{$increment}em;
-            }
-        }
-
-        %#{$type}-horizontal-#{$increment} {
-            #{$type}: {
-                left: #{$increment}em;
-                right: #{$increment}em;
-            }
-        }
-
-        %#{$type}-vertical-#{$increment} {
-            #{$type}: {
-                top: #{$increment}em;
-                bottom: #{$increment}em;
-            }
-        }
-
-        %#{$type}-#{$increment} {
-            #{$type}: #{$increment}em;
-        }
-    }
-
-    //Generate extendable offsets of preset variable amounts that can be later overridden.
-    @each $level, $value in $offsets {
-        @each $direction in $directions {
-            %#{$type}-#{$direction}-#{$level} {
-                #{$type}-#{$direction}: $value;
-            }
-        }
-
-        %#{$type}-horizontal-#{$level} {
-            #{$type}: {
-                left: $value;
-                right: $value;
-            }
-        }
-
-        %#{$type}-vertical-#{$level} {
-            #{$type}: {
-                top: $value;
-                bottom: $value;
-            }
-        }
-
-        %#{$type}-#{$level} {
-            #{$type}: $value;
-        }
-    }
-
+@each $type in variables.$offset-types {
     //Generate offsets of fixed em value amounts.
-    @each $increment in $increments {
-        @each $direction in $directions {
-            .#{$type}-#{$direction}-#{$increment} {
-                #{$type}-#{$direction}: #{$increment}em;
+    @for $i from 1 through 10 {
+        @each $direction in variables.$offset-directions {
+            .#{$type}-#{$direction}-#{$i} {
+                #{$type}-#{$direction}: #{$i}em;
             }
         }
 
-        .#{$type}-horizontal-#{$increment} {
+        .#{$type}-horizontal-#{$i} {
             #{$type}: {
-                left: #{$increment}em;
-                right: #{$increment}em;
+                left: #{$i}em;
+                right: #{$i}em;
             }
         }
 
-        .#{$type}-vertical-#{$increment} {
+        .#{$type}-vertical-#{$i} {
             #{$type}: {
-                top: #{$increment}em;
-                bottom: #{$increment}em;
+                top: #{$i}em;
+                bottom: #{$i}em;
             }
         }
 
-        .#{$type}-#{$increment} {
-            #{$type}: #{$increment}em;
+        .#{$type}-#{$i} {
+            #{$type}: #{$i}em;
         }
     }
 
-    //Generate offsets of preset variable amounts.
-    @each $level, $value in $offsets {
-        @each $direction in $directions {
+    @each $level, $value in variables.$offset-values {
+        @each $direction in variables.$offset-directions {
             .#{$type}-#{$direction}-#{$level} {
                 #{$type}-#{$direction}: $value;
             }

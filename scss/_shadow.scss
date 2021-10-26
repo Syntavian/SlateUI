@@ -4,48 +4,6 @@
 @use 'prototypes';
 
 @for $i from 1 through 5 {
-    %shadow-#{$i} {
-        box-shadow: gray 0px 0px ($i + 2px) 0px;
-    }
-    
-    %shadow-up-#{$i} {
-        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
-    }
-    
-    %shadow-down-#{$i} {
-        box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
-    }
-    
-    %shadow-right-#{$i} {
-        box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
-    }
-    
-    %shadow-left-#{$i} {
-        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
-    }
-
-    %shadow-inset-#{$i} {
-        box-shadow: gray 0px 0px ($i + 2px) 0px inset;
-    }
-    
-    %shadow-inset-up-#{$i} {
-        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
-    }
-    
-    %shadow-inset-down-#{$i} {
-        box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
-    }
-    
-    %shadow-inset-right-#{$i} {
-        box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
-    }
-    
-    %shadow-inset-left-#{$i} {
-        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
-    }
-}
-
-@for $i from 1 through 5 {
     .shadow-#{$i} {
         box-shadow: gray 0px 0px ($i + 2px) 0px;
     }
