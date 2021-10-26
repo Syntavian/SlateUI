@@ -1,128 +1,105 @@
 @use 'variables';
+@use 'prototypes';
 @use 'offsets';
 @use 'shadow';
 
-@mixin flex($direction, $justify, $align, $grow: 1) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    flex-grow: $grow;
-}
-
-@mixin flex-column($justify, $align, $grow: 1) {
-    @include flex(column, $justify, $align, $grow);
-    height: 100%;
-}
-
-@mixin flex-row($justify, $align, $grow: 1) {
-    @include flex(row, $justify, $align, $grow);
-    width: 100%;
-}
-
 .flex, .center {
-    @include flex(column, center, center, 0);
+    @extend %flex;
 }
 
 .flex-column {
-    @include flex-column(space-between, center);
+    @include prototypes.flex-column(space-between, center);
 
     &-start {
-        @include flex-column(flex-start, center);
+        @include prototypes.flex-column(flex-start, center);
 
         &-left {
-            @include flex-column(flex-start, flex-start);
+            @include prototypes.flex-column(flex-start, flex-start);
         }
     
         &-right {
-            @include flex-column(flex-start, flex-end);
+            @include prototypes.flex-column(flex-start, flex-end);
         }
     }
 
     &-center {
-        @include flex-column(center, center);
+        @include prototypes.flex-column(center, center);
 
         &-left {
-            @include flex-column(center, flex-start);
+            @include prototypes.flex-column(center, flex-start);
         }
     
         &-right {
-            @include flex-column(center, flex-end);
+            @include prototypes.flex-column(center, flex-end);
         }
     }
 
     &-end {
-        @include flex-column(flex-end, center);
+        @include prototypes.flex-column(flex-end, center);
 
         &-left {
-            @include flex-column(flex-end, flex-start);
+            @include prototypes.flex-column(flex-end, flex-start);
         }
     
         &-right {
-            @include flex-column(flex-end, flex-end);
+            @include prototypes.flex-column(flex-end, flex-end);
         }
     }
 
     &-left {
-        @include flex-column(space-between, flex-start);
+        @include prototypes.flex-column(space-between, flex-start);
     }
 
     &-right {
-        @include flex-column(space-between, flex-end);
+        @include prototypes.flex-column(space-between, flex-end);
     }
 }
 
 .flex-row {
-    @include flex-row(space-between, center);
+    @include prototypes.flex-row(space-between, center);
 
     &-start {
-        @include flex-row(flex-start, center);
+        @include prototypes.flex-row(flex-start, center);
 
         &-top {
-            @include flex-row(flex-start, flex-start);
+            @include prototypes.flex-row(flex-start, flex-start);
         }
     
         &-bottom {
-            @include flex-row(flex-start, flex-end);
+            @include prototypes.flex-row(flex-start, flex-end);
         }
     }
 
     &-center {
-        @include flex-row(center, center);
+        @include prototypes.flex-row(center, center);
 
         &-top {
-            @include flex-row(center, flex-start);
+            @include prototypes.flex-row(center, flex-start);
         }
     
         &-bottom {
-            @include flex-row(center, flex-end);
+            @include prototypes.flex-row(center, flex-end);
         }
     }
 
     &-end {
-        @include flex-row(flex-end, center);
+        @include prototypes.flex-row(flex-end, center);
 
         &-top {
-            @include flex-row(flex-end, flex-start);
+            @include prototypes.flex-row(flex-end, flex-start);
         }
     
         &-bottom {
-            @include flex-row(flex-end, flex-end);
+            @include prototypes.flex-row(flex-end, flex-end);
         }
     }
 
     &-top {
-        @include flex-row(space-between, flex-start);
+        @include prototypes.flex-row(space-between, flex-start);
     }
 
     &-bottom {
-        @include flex-row(space-between, flex-end);
-    }
-}
-
-@each $value in 0, 1, 2, 3, 4, 5 {
-    %flex-grow-#{$value} {
-        flex-grow: #{$value};
+        @include prototypes.flex-row(space-between, flex-end);
     }
 }
 

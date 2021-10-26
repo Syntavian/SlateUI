@@ -1,20 +1,7 @@
 @use "sass:map";
 @use "sass:color";
 @use 'variables';
-@use 'offsets';
-@use 'fixed';
-@use 'shadow';
-@use 'layout';
-@use 'z-index';
-@use 'gradients';
-
-%box {
-    @extend %shadow-1 !optional;
-    @extend .flex !optional;
-    min-width: 5em;
-    min-height: 5em;
-    border-radius: 3px;
-}
+@use 'prototypes';
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");

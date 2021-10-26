@@ -1,16 +1,16 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
-@use 'layout';
-@use 'offsets';
-@use 'box';
+@use 'prototypes';
 
 .form {
-    @extend .box;
+    @extend %box;
     @extend %padding-1;
     @extend %width-5;
 }
 
 .form-row {
-    @include layout.flex-row(space-between, flex-start);
+    @include prototypes.flex-row(space-between, flex-start);
     @extend %margin-s;
     @extend %width-10;
 }
