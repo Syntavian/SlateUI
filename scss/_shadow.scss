@@ -3,90 +3,86 @@
 @use 'variables';
 @use 'prototypes';
 
-@each $value in 1, 2, 3, 4, 5 {
-    %shadow-#{$value} {
-        box-shadow: gray 0px 0px ($value + 2px) 0px;
+@for $i from 1 through 5 {
+    %shadow-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px;
     }
     
-    %shadow-up-#{$value} {
-        box-shadow: gray 0px -#{$value}px ($value + 2px) 0px;
+    %shadow-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
     }
     
-    %shadow-down-#{$value} {
-        box-shadow: gray 0px #{$value}px ($value + 2px) 0px;
+    %shadow-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
     }
     
-    %shadow-right-#{$value} {
-        box-shadow: gray #{$value}px 0px ($value + 2px) 0px;
+    %shadow-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
     }
     
-    %shadow-left-#{$value} {
-        box-shadow: gray -#{$value}px 0px ($value + 2px) 0px;
+    %shadow-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
+    }
+
+    %shadow-inset-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
+    }
+    
+    %shadow-inset-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
     }
 }
 
-@each $value in 1, 2, 3, 4, 5 {
-    %shadow-inset-#{$value} {
-        box-shadow: gray 0px 0px ($value + 2px) 0px inset;
+@for $i from 1 through 5 {
+    .shadow-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px;
     }
     
-    %shadow-inset-up-#{$value} {
-        box-shadow: gray 0px -#{$value}px ($value + 2px) 0px inset;
+    .shadow-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
     }
     
-    %shadow-inset-down-#{$value} {
-        box-shadow: gray 0px #{$value}px ($value + 2px) 0px inset;
+    .shadow-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
     }
     
-    %shadow-inset-right-#{$value} {
-        box-shadow: gray #{$value}px 0px ($value + 2px) 0px inset;
+    .shadow-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
     }
     
-    %shadow-inset-left-#{$value} {
-        box-shadow: gray -#{$value}px 0px ($value + 2px) 0px inset;
+    .shadow-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
     }
-}
 
-@each $value in 1, 2, 3, 4, 5 {
-    .shadow-#{$value} {
-        box-shadow: gray 0px 0px ($value + 2px) 0px;
+    .shadow-inset-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px inset;
     }
     
-    .shadow-up-#{$value} {
-        box-shadow: gray 0px -#{$value}px ($value + 2px) 0px;
+    .shadow-inset-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
     }
     
-    .shadow-down-#{$value} {
-        box-shadow: gray 0px #{$value}px ($value + 2px) 0px;
+    .shadow-inset-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
     }
     
-    .shadow-right-#{$value} {
-        box-shadow: gray #{$value}px 0px ($value + 2px) 0px;
+    .shadow-inset-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
     }
     
-    .shadow-left-#{$value} {
-        box-shadow: gray -#{$value}px 0px ($value + 2px) 0px;
-    }
-}
-
-@each $value in 1, 2, 3, 4, 5 {
-    .shadow-inset-#{$value} {
-        box-shadow: gray 0px 0px ($value + 2px) 0px inset;
-    }
-    
-    .shadow-inset-up-#{$value} {
-        box-shadow: gray 0px -#{$value}px ($value + 2px) 0px inset;
-    }
-    
-    .shadow-inset-down-#{$value} {
-        box-shadow: gray 0px #{$value}px ($value + 2px) 0px inset;
-    }
-    
-    .shadow-inset-right-#{$value} {
-        box-shadow: gray #{$value}px 0px ($value + 2px) 0px inset;
-    }
-    
-    .shadow-inset-left-#{$value} {
-        box-shadow: gray -#{$value}px 0px ($value + 2px) 0px inset;
+    .shadow-inset-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
     }
 }

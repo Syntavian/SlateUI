@@ -34,52 +34,52 @@
     }
 }
 
-@each $value in 1, 2, 3 {
+@for $i from 1 through 3 {
     
-    .button-round-#{$value} {
+    .button-round-#{$i} {
         @extend .button ;
-        border-radius: #{$value / 2 + 1}em;
+        border-radius: #{$i / 2 + 1}em;
     }
 
-    .button-expand-#{$value} {
+    .button-expand-#{$i} {
         @extend .center;
         
         > * { 
-            animation: animation-shrink-#{$value} 0.2s ease forwards;
+            animation: animation-shrink-#{$i} 0.2s ease forwards;
 
             &.gradient-hover-animation {
-                animation: animation-shrink-gradient-#{$value} 0.2s ease forwards;
+                animation: animation-shrink-gradient-#{$i} 0.2s ease forwards;
             }
         } 
     
         &:hover {
             > * { 
-                animation: animation-expand-#{$value} 0.2s ease forwards;
+                animation: animation-expand-#{$i} 0.2s ease forwards;
 
                 &.gradient-hover-animation {
-                    animation: animation-expand-gradient-#{$value} 0.2s ease forwards;
+                    animation: animation-expand-gradient-#{$i} 0.2s ease forwards;
                 }
             } 
         }
     }
     
-    @keyframes animation-expand-#{$value} {
-        0%{margin: 0em; padding: #{$value * 0.5em};}
-        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em};}
+    @keyframes animation-expand-#{$i} {
+        0%{margin: 0em; padding: #{$i * 0.5em};}
+        100%{margin: #{$i * -0.5em}; padding: #{$i * 0.5em + 0.5em};}
     }
     
-    @keyframes animation-shrink-#{$value} {
-        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em};}
-        100%{margin: 0em; padding: #{$value * 0.5em};}
+    @keyframes animation-shrink-#{$i} {
+        0%{margin: #{$i * -0.5em}; padding: #{$i * 0.5em + 0.5em};}
+        100%{margin: 0em; padding: #{$i * 0.5em};}
     }
 
-    @keyframes animation-expand-gradient-#{$value} {
-        0%{margin: 0em; padding: #{$value * 0.5em}; background-position: 0% 0%;}
-        100%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em}; background-position: 100% 100%;}
+    @keyframes animation-expand-gradient-#{$i} {
+        0%{margin: 0em; padding: #{$i * 0.5em}; background-position: 0% 0%;}
+        100%{margin: #{$i * -0.5em}; padding: #{$i * 0.5em + 0.5em}; background-position: 100% 100%;}
     }
     
-    @keyframes animation-shrink-gradient-#{$value} {
-        0%{margin: #{$value * -0.5em}; padding: #{$value * 0.5em + 0.5em}; background-position: 100% 100%;}
-        100%{margin: 0em; padding: #{$value * 0.5em}; background-position: 0% 0%;}
+    @keyframes animation-shrink-gradient-#{$i} {
+        0%{margin: #{$i * -0.5em}; padding: #{$i * 0.5em + 0.5em}; background-position: 100% 100%;}
+        100%{margin: 0em; padding: #{$i * 0.5em}; background-position: 0% 0%;}
     }
 }

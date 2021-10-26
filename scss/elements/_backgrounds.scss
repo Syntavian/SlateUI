@@ -21,12 +21,7 @@
         }
         color: $text;
     } 
-}
-
-@each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
-    $text: map.get($theme, "text-colour");
-
+    
     %#{$name}-gradient {
         @if color.blackness($primary) > 50% {
             background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);

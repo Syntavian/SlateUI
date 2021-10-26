@@ -3,8 +3,8 @@
 @use 'variables';
 @use 'prototypes';
 
-@each $value in -1, 0, 1, 2, 3, 4, 5 {
-    .z#{$value} {
-        @extend %z#{$value};
+@for $i from -1 through 10 {
+    .z#{$i} {
+        @extend %z#{$i};
     }
 }

@@ -3,28 +3,28 @@
 @use 'variables';
 @use 'prototypes';
 
-@each $value in 1, 2, 3, 4, 5 {
-    .fixed-tl-#{$value} {
+@for $i from 1 through 5 {
+    .fixed-tl-#{$i} {
         position: fixed;
-        top: #{$value}em;
-        left: #{$value}em;
+        top: #{$i}em;
+        left: #{$i}em;
     }
 
-    .fixed-tr-#{$value} {
+    .fixed-tr-#{$i} {
         position: fixed;
-        top: #{$value}em;
-        right: #{$value}em;
+        top: #{$i}em;
+        right: #{$i}em;
     }
 
-    .fixed-bl-#{$value} {
+    .fixed-bl-#{$i} {
         position: fixed;
-        bottom: #{$value}em;
-        left: #{$value}em;
+        bottom: #{$i}em;
+        left: #{$i}em;
     }
 
-    .fixed-br-#{$value} {
+    .fixed-br-#{$i} {
         position: fixed;
-        bottom: #{$value}em;
-        right: #{$value}em;
+        bottom: #{$i}em;
+        right: #{$i}em;
     }
 }
