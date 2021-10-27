@@ -164,3 +164,22 @@
     min-height: 5em;
     border-radius: 3px;
 }
+
+%inline-box {
+    @extend %box;
+    display: inline-flex;
+    min-height: fit-content;
+}
+
+%link {
+    @extend %inline-box;
+    @extend %gradient-hover-animation;
+    @extend %clickable;
+    padding: 0.25em;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

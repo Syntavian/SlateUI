@@ -14,8 +14,8 @@
     }
     
     .#{$name}.inline-box {
-        @extend %box;
-        display: inline-flex;
-        min-height: fit-content;
+        @extend %inline-box;
+        background-color: $primary;
+        color: $text;
     }
 }
