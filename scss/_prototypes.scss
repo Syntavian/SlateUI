@@ -149,6 +149,14 @@
     @include flex(column, center, center, 0);
 }
 
+%flex-column {
+    @include flex-column(space-between, center);
+}
+
+%flex-row {
+    @include flex-row(space-between, center);
+}
+
 %box {
     @extend %shadow-1;
     @extend %flex;
