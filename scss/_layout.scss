@@ -105,6 +105,6 @@
 
 @for $i from 0 through 10 {
     .flex-grow-#{$i} {
-        @extend %flex-grow-#{$i};
+        flex-grow: #{$i};
     }
 }

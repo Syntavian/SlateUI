@@ -5,6 +5,6 @@
 
 @for $i from -1 through 10 {
     .z#{$i} {
-        @extend %z#{$i};
+        z-index: $i;
     }
 }
