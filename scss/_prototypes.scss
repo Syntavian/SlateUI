@@ -157,7 +157,7 @@
     @include flex-row(space-between, center);
 }
 
-%gradient {
+@mixin gradient($primary) {
     @if color.blackness($primary) > 50% {
         background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
     }
@@ -166,8 +166,8 @@
     }
 }
 
-%gradient-hover-animation {
-    @extend %gradient;
+@mixin gradient-hover-animation($primary) {
+    @include gradient($primary);
     background-size: 200% 200%;
     -webkit-animation: animation-back 0.2s ease forwards;
     -moz-animation: animation-back 0.2s ease forwards;
@@ -188,9 +188,9 @@
     min-height: fit-content;
 }
 
-%link {
+@mixin link($primary) {
+    @include gradient-hover-animation($primary);
     @extend %inline-box;
-    @extend %gradient-hover-animation;
     @extend %clickable;
     padding: 0.25em;
     text-align: center;

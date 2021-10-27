@@ -15,8 +15,13 @@
     @extend %flex-row;
 }
 
-.link {
-    @extend %link;
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text-colour");
+
+    .#{$name}.link {
+        @include prototypes.link($primary);
+    }
 }
 
 .link-bar {
