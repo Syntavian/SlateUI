@@ -15,6 +15,10 @@
     @extend %flex-row;
 }
 
+.link {
+    @include prototypes.link(map.get(map.get(variables.$themes, "default"), "primary"));
+}
+
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
     $text: map.get($theme, "text-colour");

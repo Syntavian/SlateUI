@@ -83,7 +83,7 @@
   width: 100%;
 }
 
-.form, .image, .default.box, .dark.box, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -91,11 +91,11 @@
   box-shadow: gray 0px 0px 5px 0px;
 }
 
-.scroll-handle, .default.link, .dark.link, .button, .button-round-1, .button-round-2, .button-round-3 {
+.scroll-handle, .link, .default.link, .dark.link, .button, .button-round-1, .button-round-2, .button-round-3 {
   cursor: pointer;
 }
 
-.banner, .link-row, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3, .flex, .form, .image, .default.box, .dark.box, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.banner, .link-row, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3, .flex, .form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,13 +112,13 @@
   width: 100%;
 }
 
-.form, .image, .default.box, .dark.box, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
 }
 
-.default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
   display: inline-flex;
   min-height: fit-content;
 }
@@ -2142,6 +2142,20 @@ h6, .h6-text {
     background-position: 0% 0%;
   }
 }
+.link {
+  background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: none;
+}
+
 .default.link {
   background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
   background-size: 200% 200%;
