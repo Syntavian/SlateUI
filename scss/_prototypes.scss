@@ -157,6 +157,23 @@
     @include flex-row(space-between, center);
 }
 
+%gradient {
+    @if color.blackness($primary) > 50% {
+        background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
+    }
+    @else {
+        background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
+    }
+}
+
+%gradient-hover-animation {
+    @extend %gradient;
+    background-size: 200% 200%;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
 %box {
     @extend %shadow-1;
     @extend %flex;

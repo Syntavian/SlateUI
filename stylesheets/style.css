@@ -1,10 +1,11 @@
-/* Error: The target selector was not found.
- * Use "@extend .inline-box !optional" to avoid this error.
- *   ,
- * 7 |     @extend .inline-box;
- *   |     ^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\elements\_links.scss 7:5  root stylesheet */
+/* Error: Undefined variable.
+ *     ,
+ * 161 |     @if color.blackness($primary) > 50% {
+ *     |                         ^^^^^^^^
+ *     '
+ *   scss\_prototypes.scss 161:25  @use
+ *   scss\_offsets.scss 4:1        @use
+ *   scss\style.scss 2:1           root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: The target selector was not found.\aUse "@extend .inline-box !optional" to avoid this error.\a   \2577 \a 7 \2502      @extend .inline-box;\d\a   \2502      ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\elements\\_links.scss 7:5  root stylesheet';
+  content: "Error: Undefined variable.\a     \2577 \a 161 \2502      @if color.blackness($primary) > 50% {\d\a     \2502                          ^^^^^^^^\a     \2575 \a   scss\\_prototypes.scss 161:25  @use\a   scss\\_offsets.scss 4:1        @use\a   scss\\style.scss 2:1           root stylesheet";
 }

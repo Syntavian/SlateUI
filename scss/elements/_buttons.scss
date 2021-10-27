@@ -4,9 +4,9 @@
 @use '../prototypes';
 
 .button {
-    @extend .center !optional;
-    @extend .shadow-3 !optional;
-    @extend %clickable !optional;
+    @extend %flex;
+    @extend %shadow-3;
+    @extend %clickable;
     @include prototypes.border-radius();
 
     min-width: min-content;
@@ -42,7 +42,7 @@
     }
 
     .button-expand-#{$i} {
-        @extend .center;
+        @extend %flex;
         
         > * { 
             animation: animation-shrink-#{$i} 0.2s ease forwards;
