@@ -83,7 +83,7 @@
   width: 100%;
 }
 
-.form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -95,7 +95,7 @@
   cursor: pointer;
 }
 
-.banner, .link-row, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3, .flex, .form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.banner, .link-row, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3, .flex, .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,13 +112,13 @@
   width: 100%;
 }
 
-.form, .image, .default.box, .dark.box, .link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
 }
 
-.link, .default.link, .dark.link, .default.inline-box, .dark.inline-box {
+.link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   display: inline-flex;
   min-height: fit-content;
 }
@@ -1932,6 +1932,16 @@ h6, .h6-text {
     font-weight: normal;
   }
 }
+.box {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
+.inline-box {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
 .default.box {
   background-color: #f7f7f7;
   color: #000000;
