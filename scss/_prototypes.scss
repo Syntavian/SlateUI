@@ -25,6 +25,36 @@
     border-radius: $radius;
 }
 
+@mixin gradient($primary) {
+    @if color.blackness($primary) > 50% {
+        background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
+    }
+    @else {
+        background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
+    }
+}
+
+@mixin gradient-hover-animation($primary) {
+    @include gradient($primary);
+    background-size: 200% 200%;
+    -webkit-animation: animation-back 0.2s ease forwards;
+    -moz-animation: animation-back 0.2s ease forwards;
+    animation: animation-back 0.2s ease forwards;
+}
+
+@mixin link($primary) {
+    @include gradient-hover-animation($primary);
+    @extend %inline-box;
+    @extend %clickable;
+    padding: 0.25em;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 @each $level, $value in variables.$offset-values {
     @each $type in variables.$offset-types {
         @each $direction in variables.$offset-directions {
@@ -95,7 +125,7 @@
     }
 }
 
-@for $i from 1 through 5 {
+@for $i from 0 through 10 {
     %flex-grow-#{$i} {
         flex-grow: #{$i};
     }
@@ -157,23 +187,6 @@
     @include flex-row(space-between, center);
 }
 
-@mixin gradient($primary) {
-    @if color.blackness($primary) > 50% {
-        background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
-    }
-    @else {
-        background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
-    }
-}
-
-@mixin gradient-hover-animation($primary) {
-    @include gradient($primary);
-    background-size: 200% 200%;
-    -webkit-animation: animation-back 0.2s ease forwards;
-    -moz-animation: animation-back 0.2s ease forwards;
-    animation: animation-back 0.2s ease forwards;
-}
-
 %box {
     @extend %shadow-1;
     @extend %flex;
@@ -186,17 +199,4 @@
     @extend %box;
     display: inline-flex;
     min-height: fit-content;
-}
-
-@mixin link($primary) {
-    @include gradient-hover-animation($primary);
-    @extend %inline-box;
-    @extend %clickable;
-    padding: 0.25em;
-    text-align: center;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
 }

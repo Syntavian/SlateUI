@@ -103,8 +103,8 @@
     }
 }
 
-@each $value in 0, 1, 2, 3, 4, 5 {
-    .flex-grow-#{$value} {
-        flex-grow: #{$value};
+@for $i from 0 through 10 {
+    .flex-grow-#{$i} {
+        @extend %flex-grow-#{$i};
     }
 }

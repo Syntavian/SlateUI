@@ -83,12 +83,56 @@
   width: 100%;
 }
 
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
 .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
+}
+
 .banner, .button, .button-round-1, .button-round-2, .button-round-3 {
   box-shadow: gray 0px 0px 5px 0px;
+}
+
+.flex-grow-4 {
+  flex-grow: 4;
+}
+
+.flex-grow-5 {
+  flex-grow: 5;
+}
+
+.flex-grow-6 {
+  flex-grow: 6;
+}
+
+.flex-grow-7 {
+  flex-grow: 7;
+}
+
+.flex-grow-8 {
+  flex-grow: 8;
+}
+
+.flex-grow-9 {
+  flex-grow: 9;
+}
+
+.flex-grow-10 {
+  flex-grow: 10;
 }
 
 .scroll-handle, .link, .default.link, .dark.link, .button, .button-round-1, .button-round-2, .button-round-3 {
@@ -1735,30 +1779,6 @@
   align-items: flex-end;
   flex-grow: 1;
   width: 100%;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
-}
-
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.flex-grow-2 {
-  flex-grow: 2;
-}
-
-.flex-grow-3 {
-  flex-grow: 3;
-}
-
-.flex-grow-4 {
-  flex-grow: 4;
-}
-
-.flex-grow-5 {
-  flex-grow: 5;
 }
 
 body, div, p, span, a, .text, .link {
