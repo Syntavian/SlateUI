@@ -1785,85 +1785,142 @@
   z-index: 10;
 }
 
-body, div, p, span, a, .text, .link {
+body, div, p, span, a, .link {
   font-size: 1rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h1, .h1-text {
   font-size: 4rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h2, .h2-text {
   font-size: 2.5rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h3, .h3-text {
   font-size: 2rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h4, .h4-text {
   font-size: 1.75rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h5, .h5-text {
   font-size: 1.5rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
 h6, .h6-text {
   font-size: 1.25rem;
   margin: 0.5em 0em;
   font-weight: normal;
 }
-
+body, div, p, span, a, .link {
+  font-size: 1rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h1, .h1-text {
+  font-size: 4rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h2, .h2-text {
+  font-size: 2.5rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h3, .h3-text {
+  font-size: 2rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h4, .h4-text {
+  font-size: 1.75rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
+h6, .h6-text {
+  font-size: 1.25rem;
+  margin: 0.5em 0em;
+  font-weight: normal;
+}
 @media screen and (max-width: 1200px) {
-  body, div, p, span, a, .text, .link {
+  body, div, p, span, a, .link {
     font-size: 0.9rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h1, .h1-text {
     font-size: 3.6rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h2, .h2-text {
     font-size: 2.25rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h3, .h3-text {
     font-size: 1.8rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h4, .h4-text {
     font-size: 1.575rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h5, .h5-text {
     font-size: 1.35rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
+  h6, .h6-text {
+    font-size: 1.125rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.9rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3.6rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 2.25rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.8rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.575rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
   h6, .h6-text {
     font-size: 1.125rem;
     margin: 0.5em 0em;
@@ -1871,42 +1928,71 @@ h6, .h6-text {
   }
 }
 @media screen and (max-width: 900px) {
-  body, div, p, span, a, .text, .link {
+  body, div, p, span, a, .link {
     font-size: 0.75rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h1, .h1-text {
     font-size: 3rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h2, .h2-text {
     font-size: 1.875rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h3, .h3-text {
     font-size: 1.5rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h4, .h4-text {
     font-size: 1.3125rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h5, .h5-text {
     font-size: 1.125rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
+  h6, .h6-text {
+    font-size: 0.9375rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.75rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.875rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.5rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.3125rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
   h6, .h6-text {
     font-size: 0.9375rem;
     margin: 0.5em 0em;
@@ -1914,42 +2000,71 @@ h6, .h6-text {
   }
 }
 @media screen and (max-width: 600px) {
-  body, div, p, span, a, .text, .link {
+  body, div, p, span, a, .link {
     font-size: 0.5rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h1, .h1-text {
     font-size: 2rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h2, .h2-text {
     font-size: 1.25rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h3, .h3-text {
     font-size: 1rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h4, .h4-text {
     font-size: 0.875rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
   h5, .h5-text {
     font-size: 0.75rem;
     margin: 0.5em 0em;
     font-weight: normal;
   }
-
+  h6, .h6-text {
+    font-size: 0.625rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.5rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 2rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.25rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 0.875rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin: 0.5em 0em;
+    font-weight: normal;
+  }
   h6, .h6-text {
     font-size: 0.625rem;
     margin: 0.5em 0em;

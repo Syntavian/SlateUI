@@ -10,42 +10,65 @@
 }
 
 @mixin text-levels($scalar) {
-    body, div, p, span, a, .text, .link {
-        @include text(variables.$font-size * $scalar);
-    } 
 
-    h1, .h1-text {
-        @include text(variables.$h1-size * $scalar)
-    }
+    @each $name, $theme in variables.$themes {
+        $primary: map.get($theme, "primary");
+        $text: map.get($theme, "text");
+
+        body, div, p, span, a, .link {
+            @include text(variables.$font-size * $scalar);
     
-    h2, .h2-text {
-        @include text(variables.$h2-size * $scalar)
-    }
+            &.#{$name} {
+                color: $text;
+            }
+        } 
     
-    h3, .h3-text {
-        @include text(variables.$h3-size * $scalar)
-    }
+        h1, .h1-text {
+            @include text(variables.$h1-size * $scalar);
+
+            &.#{$name} {
+                color: $text;
+            }
+        }
+        
+        h2, .h2-text {
+            @include text(variables.$h2-size * $scalar);
+
+            &.#{$name} {
+                color: $text;
+            }
+        }
+        
+        h3, .h3-text {
+            @include text(variables.$h3-size * $scalar);
+
+            &.#{$name} {
+                color: $text;
+            }
+        }
+        
+        h4, .h4-text {
+            @include text(variables.$h4-size * $scalar);
+
+            &.#{$name} {
+                color: $text;
+            }
+        }
     
-    h4, .h4-text {
-        @include text(variables.$h4-size * $scalar)
-    }
+        h5, .h5-text {
+            @include text(variables.$h5-size * $scalar);
 
-    h5, .h5-text {
-        @include text(variables.$h5-size * $scalar)
-    }
-
-    h6, .h6-text {
-        @include text(variables.$h6-size * $scalar)
-    }
-}
-
-@each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
-    $text: map.get($theme, "text");
-
-    p, span, a, h1, h2, h3, h4, h5, h6 {
-        &.#{$name}.text {
-            color: $text;
+            &.#{$name} {
+                color: $text;
+            }
+        }
+    
+        h6, .h6-text {
+            @include text(variables.$h6-size * $scalar);
+    
+            &.#{$name} {
+                color: $text;
+            }
         }
     }
 }

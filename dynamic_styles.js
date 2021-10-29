@@ -2,7 +2,7 @@ let switchButtons = document.querySelectorAll(".active,.inactive");
 
 let themeSwitchers = document.querySelectorAll(".theme-selector");
 
-let themedElements = document.querySelectorAll("body,.fill,.box,.inline-box,.background,.link,.gradient,.gradient-hover-animation");
+let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,.fill,.box,.inline-box,.background,.link,.gradient,.gradient-hover-animation");
 
 let currentTheme = "";
 
