@@ -2565,5 +2565,15 @@ body {
 .no-shadow {
   box-shadow: none;
 }
+.no-shadow.default {
+  box-shadow: none;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+.no-shadow.dark {
+  box-shadow: none;
+}
 
 /*# sourceMappingURL=style.css.map */

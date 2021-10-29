@@ -128,6 +128,14 @@ body {
     }
 }
 
-.no-shadow {
-    box-shadow: none;
+@each $name, $theme in variables.$themes {
+    .no-shadow {
+        box-shadow: none;
+
+        &.#{$name} {
+            box-shadow: none;
+        }
+    }
 }
+
+
