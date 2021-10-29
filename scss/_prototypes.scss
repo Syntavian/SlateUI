@@ -40,6 +40,12 @@
     -webkit-animation: animation-back 0.2s ease forwards;
     -moz-animation: animation-back 0.2s ease forwards;
     animation: animation-back 0.2s ease forwards;
+
+    &:hover {
+        -webkit-animation: animation-forward 0.2s ease forwards;
+        -moz-animation: animation-forward 0.2s ease forwards;
+        animation: animation-forward 0.2s ease forwards;
+    }
 }
 
 @mixin link($primary) {
@@ -49,10 +55,6 @@
     padding: 0.25em;
     text-align: center;
     text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 @each $level, $value in variables.$offset-values {

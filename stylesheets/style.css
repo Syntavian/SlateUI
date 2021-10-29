@@ -2302,7 +2302,9 @@ h6, .h6-text {
   text-decoration: none;
 }
 .link:hover {
-  text-decoration: none;
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
 
 .default.link {
@@ -2316,7 +2318,9 @@ h6, .h6-text {
   text-decoration: none;
 }
 .default.link:hover {
-  text-decoration: none;
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
 
 .dark.link {
@@ -2330,7 +2334,9 @@ h6, .h6-text {
   text-decoration: none;
 }
 .dark.link:hover {
-  text-decoration: none;
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
 
 .link-bar {
