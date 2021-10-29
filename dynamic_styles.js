@@ -41,19 +41,19 @@ function initialiseThemeSwitcher(button) {
     select.style.width = style.width;
     select.style.height = style.height;
 
-    console.log(themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').split('),'));
-
-    for (let theme of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').split('),')) {
-        let option = document.createElement("option");
-        let text = theme.replaceAll('(', '').replaceAll(')', '').split(':')[0];
-        console.log(text);
-        if (currentTheme === "") {
-            currentTheme = text;
+    for (let string of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')) {
+        let splitString = string.split(':');
+        if (splitString.length === 3) {
+            let text = splitString[0];
+            let option = document.createElement("option");
+            if (currentTheme === "") {
+                currentTheme = text;
+            }
+            text = text[0].toUpperCase() + text.slice(1);
+            option.textContent = text;
+            option.value = text;
+            select.appendChild(option);
         }
-        text = text[0].toUpperCase() + text.slice(1);
-        option.textContent = text;
-        option.value = text;
-        select.appendChild(option);
     }
 
     button.appendChild(select);
@@ -64,8 +64,6 @@ function initialiseThemeSwitcher(button) {
 
     button.addEventListener("mouseleave", e => {select.blur();});
     select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
-
-    console.log(themes);
 }
 
 for (let button of switchButtons) {
