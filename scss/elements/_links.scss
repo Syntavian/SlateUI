@@ -4,7 +4,7 @@
 @use '../prototypes';
 
 .link-row {
-    @extend %flex;
+    @include prototypes.flex-row(center, center);
 
     > * {
         @extend %margin-horizontal-1;
@@ -12,7 +12,11 @@
 }
 
 .link-row-group {
-    @extend %flex-row;
+    @include prototypes.flex-row(center, center);
+
+    > * {
+        @extend %margin-horizontal-s;
+    }
 }
 
 .link {

@@ -36,33 +36,38 @@
 
 @for $i from 1 through 3 {
     
-    .button-round-#{$i} {
-        @extend .button ;
-        border-radius: #{$i / 2 + 1}em;
-    }
+    @each $name, $theme in variables.$themes {
+        $primary: map.get($theme, "primary");
+        $text: map.get($theme, "text-colour");
 
-    .button-expand-#{$i} {
-        @extend %flex;
-        
-        > * { 
-            animation: animation-shrink-#{$i} 0.2s ease forwards;
-
-            &.gradient-hover-animation {
-                animation: animation-shrink-gradient-#{$i} 0.2s ease forwards;
-            }
-        } 
+        .button-round-#{$i}, .#{$name}.button-round-#{$i} {
+            @extend .button ;
+            border-radius: #{$i / 2 + 1}em;
+        }
     
-        &:hover {
+        .button-expand-#{$i}, .#{$name}.button-expand-#{$i} {
+            @extend %flex;
+            
             > * { 
-                animation: animation-expand-#{$i} 0.2s ease forwards;
-
+                animation: animation-shrink-#{$i} 0.2s ease forwards;
+    
                 &.gradient-hover-animation {
-                    animation: animation-expand-gradient-#{$i} 0.2s ease forwards;
+                    animation: animation-shrink-gradient-#{$i} 0.2s ease forwards;
                 }
             } 
+        
+            &:hover {
+                > * { 
+                    animation: animation-expand-#{$i} 0.2s ease forwards;
+    
+                    &.gradient-hover-animation {
+                        animation: animation-expand-gradient-#{$i} 0.2s ease forwards;
+                    }
+                } 
+            }
         }
     }
-    
+
     @keyframes animation-expand-#{$i} {
         0%{margin: 0em; padding: #{$i * 0.5em};}
         100%{margin: #{$i * -0.5em}; padding: #{$i * 0.5em + 0.5em};}

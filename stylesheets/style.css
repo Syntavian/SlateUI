@@ -2,6 +2,11 @@
   margin-right: 0.5em;
 }
 
+.link-row-group > * {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
 .form-row {
   margin: 0.5em;
 }
@@ -43,29 +48,20 @@
   box-shadow: gray 0px 0px 3px 0px;
 }
 
-.banner, .button, .button-round-1, .button-round-2, .button-round-3 {
+.banner, .button, .button-round-1, .default.button-round-1, .dark.button-round-1, .button-round-2, .default.button-round-2, .dark.button-round-2, .button-round-3, .default.button-round-3, .dark.button-round-3 {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
-.scroll-handle, .link, .default.link, .dark.link, .button, .button-round-1, .button-round-2, .button-round-3 {
+.scroll-handle, .link, .default.link, .dark.link, .button, .button-round-1, .default.button-round-1, .dark.button-round-1, .button-round-2, .default.button-round-2, .dark.button-round-2, .button-round-3, .default.button-round-3, .dark.button-round-3 {
   cursor: pointer;
 }
 
-.banner, .link-row, .button, .button-round-1, .button-expand-1, .button-round-2, .button-expand-2, .button-round-3, .button-expand-3, .flex, .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
+.banner, .button, .button-round-1, .default.button-round-1, .button-expand-1, .default.button-expand-1, .dark.button-round-1, .dark.button-expand-1, .button-round-2, .default.button-round-2, .button-expand-2, .default.button-expand-2, .dark.button-round-2, .dark.button-expand-2, .button-round-3, .default.button-round-3, .button-expand-3, .default.button-expand-3, .dark.button-round-3, .dark.button-expand-3, .flex, .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 0;
-}
-
-.link-row-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  width: 100%;
 }
 
 .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
@@ -1787,287 +1783,343 @@
 
 body, div, p, span, a, .link {
   font-size: 1rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h1, .h1-text {
   font-size: 4rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h2, .h2-text {
   font-size: 2.5rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h3, .h3-text {
   font-size: 2rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h4, .h4-text {
   font-size: 1.75rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h5, .h5-text {
   font-size: 1.5rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h6, .h6-text {
   font-size: 1.25rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 body, div, p, span, a, .link {
   font-size: 1rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h1, .h1-text {
   font-size: 4rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h2, .h2-text {
   font-size: 2.5rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h3, .h3-text {
   font-size: 2rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h4, .h4-text {
   font-size: 1.75rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h5, .h5-text {
   font-size: 1.5rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 h6, .h6-text {
   font-size: 1.25rem;
-  margin: 0.5em 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
 }
 @media screen and (max-width: 1200px) {
   body, div, p, span, a, .link {
     font-size: 0.9rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 3.6rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 2.25rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1.8rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 1.575rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 1.35rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 1.125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   body, div, p, span, a, .link {
     font-size: 0.9rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 3.6rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 2.25rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1.8rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 1.575rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 1.35rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 1.125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
 }
 @media screen and (max-width: 900px) {
   body, div, p, span, a, .link {
     font-size: 0.75rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 3rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 1.875rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1.5rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 1.3125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 1.125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 0.9375rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   body, div, p, span, a, .link {
     font-size: 0.75rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 3rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 1.875rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1.5rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 1.3125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 1.125rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 0.9375rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
 }
 @media screen and (max-width: 600px) {
   body, div, p, span, a, .link {
     font-size: 0.5rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 2rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 1.25rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 0.875rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 0.75rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 0.625rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   body, div, p, span, a, .link {
     font-size: 0.5rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h1, .h1-text {
     font-size: 2rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h2, .h2-text {
     font-size: 1.25rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h3, .h3-text {
     font-size: 1rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h4, .h4-text {
     font-size: 0.875rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h5, .h5-text {
     font-size: 0.75rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
   h6, .h6-text {
     font-size: 0.625rem;
-    margin: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: normal;
   }
 }
@@ -2101,27 +2153,44 @@ h6, .h6-text {
   color: #ffffff;
 }
 
-.button, .button-round-3, .button-round-2, .button-round-1 {
+.button, .dark.button-round-3, .button-round-3, .default.button-round-3, .dark.button-round-2, .button-round-2, .default.button-round-2, .dark.button-round-1, .button-round-1, .default.button-round-1 {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
 }
-.button-round-1 {
+.button-round-1, .default.button-round-1 {
   border-radius: 1.5em;
 }
 
-.button-expand-1 > * {
+.button-expand-1 > *, .default.button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
-.button-expand-1 > *.gradient-hover-animation {
+.button-expand-1 > *.gradient-hover-animation, .default.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
-.button-expand-1:hover > * {
+.button-expand-1:hover > *, .default.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
-.button-expand-1:hover > *.gradient-hover-animation {
+.button-expand-1:hover > *.gradient-hover-animation, .default.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+
+.button-round-1, .dark.button-round-1 {
+  border-radius: 1.5em;
+}
+
+.button-expand-1 > *, .dark.button-expand-1 > * {
+  animation: animation-shrink-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation, .dark.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *, .dark.button-expand-1:hover > * {
+  animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation, .dark.button-expand-1:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -2169,20 +2238,37 @@ h6, .h6-text {
     background-position: 0% 0%;
   }
 }
-.button-round-2 {
+.button-round-2, .default.button-round-2 {
   border-radius: 2em;
 }
 
-.button-expand-2 > * {
+.button-expand-2 > *, .default.button-expand-2 > * {
   animation: animation-shrink-2 0.2s ease forwards;
 }
-.button-expand-2 > *.gradient-hover-animation {
+.button-expand-2 > *.gradient-hover-animation, .default.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
-.button-expand-2:hover > * {
+.button-expand-2:hover > *, .default.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
-.button-expand-2:hover > *.gradient-hover-animation {
+.button-expand-2:hover > *.gradient-hover-animation, .default.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+
+.button-round-2, .dark.button-round-2 {
+  border-radius: 2em;
+}
+
+.button-expand-2 > *, .dark.button-expand-2 > * {
+  animation: animation-shrink-2 0.2s ease forwards;
+}
+.button-expand-2 > *.gradient-hover-animation, .dark.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *, .dark.button-expand-2:hover > * {
+  animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation, .dark.button-expand-2:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -2230,20 +2316,37 @@ h6, .h6-text {
     background-position: 0% 0%;
   }
 }
-.button-round-3 {
+.button-round-3, .default.button-round-3 {
   border-radius: 2.5em;
 }
 
-.button-expand-3 > * {
+.button-expand-3 > *, .default.button-expand-3 > * {
   animation: animation-shrink-3 0.2s ease forwards;
 }
-.button-expand-3 > *.gradient-hover-animation {
+.button-expand-3 > *.gradient-hover-animation, .default.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
-.button-expand-3:hover > * {
+.button-expand-3:hover > *, .default.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
-.button-expand-3:hover > *.gradient-hover-animation {
+.button-expand-3:hover > *.gradient-hover-animation, .default.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+
+.button-round-3, .dark.button-round-3 {
+  border-radius: 2.5em;
+}
+
+.button-expand-3 > *, .dark.button-expand-3 > * {
+  animation: animation-shrink-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation, .dark.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *, .dark.button-expand-3:hover > * {
+  animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation, .dark.button-expand-3:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -2290,6 +2393,22 @@ h6, .h6-text {
     padding: 1.5em;
     background-position: 0% 0%;
   }
+}
+.link-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.link-row-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
 }
 .link {
   background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);

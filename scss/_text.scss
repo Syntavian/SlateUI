@@ -3,9 +3,10 @@
 @use 'variables';
 @use 'prototypes';
 
-@mixin text($size: variables.$font-size, $margin: variables.$s-offset variables.$n-offset, $weight: normal) {
+@mixin text($size: variables.$font-size, $margin: variables.$s-offset, $weight: normal) {
     font-size: $size;
-    margin: $margin;
+    margin-top: $margin;
+    margin-bottom: $margin;
     font-weight: $weight;
 }
 
