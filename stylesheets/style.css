@@ -44,19 +44,32 @@
   width: 100%;
 }
 
-.form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
+.form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
-.banner, .button, .button-round-1, .default.button-round-1, .dark.button-round-1, .button-round-2, .default.button-round-2, .dark.button-round-2, .button-round-3, .default.button-round-3, .dark.button-round-3 {
+.banner, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3 {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
-.scroll-handle, .link, .default.link, .dark.link, .button, .button-round-1, .default.button-round-1, .dark.button-round-1, .button-round-2, .default.button-round-2, .dark.button-round-2, .button-round-3, .default.button-round-3, .dark.button-round-3 {
-  cursor: pointer;
+.button.active, .button:hover:active, .button:active, .dark.button.active, .dark.button:hover:active, .dark.button:active, .green.button.active, .green.button:hover:active, .green.button:active, .active.button-round-1, .button-round-1:hover:active, .button-round-1:active, .dark.active.button-round-1, .dark.button-round-1:hover:active, .dark.button-round-1:active, .green.active.button-round-1, .green.button-round-1:hover:active, .green.button-round-1:active, .active.button-round-2, .button-round-2:hover:active, .button-round-2:active, .dark.active.button-round-2, .dark.button-round-2:hover:active, .dark.button-round-2:active, .green.active.button-round-2, .green.button-round-2:hover:active, .green.button-round-2:active, .active.button-round-3, .button-round-3:hover:active, .button-round-3:active, .dark.active.button-round-3, .dark.button-round-3:hover:active, .dark.button-round-3:active, .green.active.button-round-3, .green.button-round-3:hover:active, .green.button-round-3:active {
+  box-shadow: gray 0px 0px 5px 0px inset;
 }
 
-.banner, .button, .button-round-1, .default.button-round-1, .button-expand-1, .default.button-expand-1, .dark.button-round-1, .dark.button-expand-1, .button-round-2, .default.button-round-2, .button-expand-2, .default.button-expand-2, .dark.button-round-2, .dark.button-expand-2, .button-round-3, .default.button-round-3, .button-expand-3, .default.button-expand-3, .dark.button-round-3, .dark.button-expand-3, .flex, .form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
+.button:hover, .dark.button:hover, .green.button:hover, .button-round-1:hover, .dark.button-round-1:hover, .green.button-round-1:hover, .button-round-2:hover, .dark.button-round-2:hover, .green.button-round-2:hover, .button-round-3:hover, .dark.button-round-3:hover, .green.button-round-3:hover {
+  box-shadow: gray 0px 0px 7px 0px;
+}
+
+.button.active:hover, .dark.button.active:hover, .green.button.active:hover, .active.button-round-1:hover, .dark.active.button-round-1:hover, .green.active.button-round-1:hover, .active.button-round-2:hover, .dark.active.button-round-2:hover, .green.active.button-round-2:hover, .active.button-round-3:hover, .dark.active.button-round-3:hover, .green.active.button-round-3:hover {
+  box-shadow: gray 0px 0px 7px 0px inset;
+}
+
+.scroll-handle, .link, .light.link, .dark.link, .green.link, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3 {
+  cursor: pointer;
+  user-select: none;
+}
+
+.banner, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-expand-1, .light.button-expand-1, .dark.button-expand-1, .green.button-expand-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-expand-2, .light.button-expand-2, .dark.button-expand-2, .green.button-expand-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3, .button-expand-3, .light.button-expand-3, .dark.button-expand-3, .green.button-expand-3, .flex, .form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,13 +77,13 @@
   flex-grow: 0;
 }
 
-.form, .image, .box, .default.box, .dark.box, .link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
+.form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
 }
 
-.link, .default.link, .dark.link, .inline-box, .default.inline-box, .dark.inline-box {
+.link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
   display: inline-flex;
   min-height: fit-content;
 }
@@ -1865,7 +1878,91 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
+body, div, p, span, a, .link {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h1, .h1-text {
+  font-size: 4rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h2, .h2-text {
+  font-size: 2.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h3, .h3-text {
+  font-size: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h4, .h4-text {
+  font-size: 1.75rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h6, .h6-text {
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
 @media screen and (max-width: 1200px) {
+  body, div, p, span, a, .link {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3.6rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 2.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.575rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
   body, div, p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
@@ -2036,6 +2133,48 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
+  body, div, p, span, a, .link {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.3125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.9375rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
 }
 @media screen and (max-width: 600px) {
   body, div, p, span, a, .link {
@@ -2122,23 +2261,55 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
+  body, div, p, span, a, .link {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.625rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
 }
-.box {
+.light.box {
   background-color: #f7f7f7;
   color: #000000;
 }
 
-.inline-box {
-  background-color: #f7f7f7;
-  color: #000000;
-}
-
-.default.box {
-  background-color: #f7f7f7;
-  color: #000000;
-}
-
-.default.inline-box {
+.light.inline-box {
   background-color: #f7f7f7;
   color: #000000;
 }
@@ -2153,27 +2324,51 @@ h6, .h6-text {
   color: #ffffff;
 }
 
-.button, .dark.button-round-3, .button-round-3, .default.button-round-3, .dark.button-round-2, .button-round-2, .default.button-round-2, .dark.button-round-1, .button-round-1, .default.button-round-1 {
+.green.box {
+  background-color: #042f00;
+  color: #ffffff;
+}
+
+.green.inline-box {
+  background-color: #042f00;
+  color: #ffffff;
+}
+
+.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
 }
-.button-round-1, .default.button-round-1 {
+.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .dark.button {
+  border: 0px;
+  border-radius: 0.25em;
+  min-width: min-content;
+  min-height: min-content;
+  padding: 0.5em;
+}
+.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .green.button {
+  border: 0px;
+  border-radius: 0.25em;
+  min-width: min-content;
+  min-height: min-content;
+  padding: 0.5em;
+}
+.button-round-1, .light.button-round-1 {
   border-radius: 1.5em;
 }
 
-.button-expand-1 > *, .default.button-expand-1 > * {
+.button-expand-1 > *, .light.button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
-.button-expand-1 > *.gradient-hover-animation, .default.button-expand-1 > *.gradient-hover-animation {
+.button-expand-1 > *.gradient-hover-animation, .light.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
-.button-expand-1:hover > *, .default.button-expand-1:hover > * {
+.button-expand-1:hover > *, .light.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
-.button-expand-1:hover > *.gradient-hover-animation, .default.button-expand-1:hover > *.gradient-hover-animation {
+.button-expand-1:hover > *.gradient-hover-animation, .light.button-expand-1:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -2191,6 +2386,23 @@ h6, .h6-text {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .dark.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+
+.button-round-1, .green.button-round-1 {
+  border-radius: 1.5em;
+}
+
+.button-expand-1 > *, .green.button-expand-1 > * {
+  animation: animation-shrink-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation, .green.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *, .green.button-expand-1:hover > * {
+  animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation, .green.button-expand-1:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -2238,20 +2450,20 @@ h6, .h6-text {
     background-position: 0% 0%;
   }
 }
-.button-round-2, .default.button-round-2 {
+.button-round-2, .light.button-round-2 {
   border-radius: 2em;
 }
 
-.button-expand-2 > *, .default.button-expand-2 > * {
+.button-expand-2 > *, .light.button-expand-2 > * {
   animation: animation-shrink-2 0.2s ease forwards;
 }
-.button-expand-2 > *.gradient-hover-animation, .default.button-expand-2 > *.gradient-hover-animation {
+.button-expand-2 > *.gradient-hover-animation, .light.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
-.button-expand-2:hover > *, .default.button-expand-2:hover > * {
+.button-expand-2:hover > *, .light.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
-.button-expand-2:hover > *.gradient-hover-animation, .default.button-expand-2:hover > *.gradient-hover-animation {
+.button-expand-2:hover > *.gradient-hover-animation, .light.button-expand-2:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -2269,6 +2481,23 @@ h6, .h6-text {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .dark.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+
+.button-round-2, .green.button-round-2 {
+  border-radius: 2em;
+}
+
+.button-expand-2 > *, .green.button-expand-2 > * {
+  animation: animation-shrink-2 0.2s ease forwards;
+}
+.button-expand-2 > *.gradient-hover-animation, .green.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *, .green.button-expand-2:hover > * {
+  animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation, .green.button-expand-2:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -2316,20 +2545,20 @@ h6, .h6-text {
     background-position: 0% 0%;
   }
 }
-.button-round-3, .default.button-round-3 {
+.button-round-3, .light.button-round-3 {
   border-radius: 2.5em;
 }
 
-.button-expand-3 > *, .default.button-expand-3 > * {
+.button-expand-3 > *, .light.button-expand-3 > * {
   animation: animation-shrink-3 0.2s ease forwards;
 }
-.button-expand-3 > *.gradient-hover-animation, .default.button-expand-3 > *.gradient-hover-animation {
+.button-expand-3 > *.gradient-hover-animation, .light.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
-.button-expand-3:hover > *, .default.button-expand-3:hover > * {
+.button-expand-3:hover > *, .light.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
-.button-expand-3:hover > *.gradient-hover-animation, .default.button-expand-3:hover > *.gradient-hover-animation {
+.button-expand-3:hover > *.gradient-hover-animation, .light.button-expand-3:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -2347,6 +2576,23 @@ h6, .h6-text {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .dark.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+
+.button-round-3, .green.button-round-3 {
+  border-radius: 2.5em;
+}
+
+.button-expand-3 > *, .green.button-expand-3 > * {
+  animation: animation-shrink-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation, .green.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *, .green.button-expand-3:hover > * {
+  animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation, .green.button-expand-3:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -2426,7 +2672,7 @@ h6, .h6-text {
   animation: animation-forward 0.2s ease forwards;
 }
 
-.default.link {
+.light.link {
   background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
@@ -2436,7 +2682,7 @@ h6, .h6-text {
   text-align: center;
   text-decoration: none;
 }
-.default.link:hover {
+.light.link:hover {
   -webkit-animation: animation-forward 0.2s ease forwards;
   -moz-animation: animation-forward 0.2s ease forwards;
   animation: animation-forward 0.2s ease forwards;
@@ -2458,6 +2704,22 @@ h6, .h6-text {
   animation: animation-forward 0.2s ease forwards;
 }
 
+.green.link {
+  background: linear-gradient(135deg, #00000000, #086200 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+}
+.green.link:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
 .link-bar {
   cursor: pointer;
   width: calc(100% + 1em);
@@ -2471,21 +2733,21 @@ h6, .h6-text {
   border-radius: 0.25em;
 }
 
-.default.fill.primary {
+.light.fill.primary {
   background-color: #f7f7f7;
   color: #000000;
 }
 
-.default.fill.secondary {
+.light.fill.secondary {
   background-color: #eaeaea;
   color: #000000;
 }
 
-.gradient.default, .gradient-hover-animation.default {
+.gradient.light, .gradient-hover-animation.light {
   background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
 }
 
-.gradient-hover-animation.default {
+.gradient-hover-animation.light {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -2507,6 +2769,27 @@ h6, .h6-text {
 }
 
 .gradient-hover-animation.dark {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.green.fill.primary {
+  background-color: #042f00;
+  color: #ffffff;
+}
+
+.green.fill.secondary {
+  background-color: #064900;
+  color: #ffffff;
+}
+
+.gradient.green, .gradient-hover-animation.green {
+  background: linear-gradient(135deg, #00000000, #086200 25%, #00000000);
+}
+
+.gradient-hover-animation.green {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -2663,7 +2946,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("default": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -2681,23 +2964,97 @@ body {
   padding-left: 0.5em;
 }
 .theme-selector select:hover {
-  color: black;
+  color: inherit;
+}
+.theme-selector select.light option {
+  background-color: #f7f7f7;
 }
 .theme-selector:hover span {
-  color: white;
+  color: transparent;
 }
 
 .no-shadow {
   box-shadow: none;
 }
-.no-shadow.default {
+.no-shadow.light {
   box-shadow: none;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: inherit;
+}
+.theme-selector select.dark option {
+  background-color: #080808;
+}
+.theme-selector:hover span {
+  color: transparent;
 }
 
 .no-shadow {
   box-shadow: none;
 }
 .no-shadow.dark {
+  box-shadow: none;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: inherit;
+}
+.theme-selector select.green option {
+  background-color: #042f00;
+}
+.theme-selector:hover span {
+  color: transparent;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+.no-shadow.green {
   box-shadow: none;
 }
 

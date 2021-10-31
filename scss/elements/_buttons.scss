@@ -3,37 +3,45 @@
 @use '../variables';
 @use '../prototypes';
 
-.button {
-    @extend %flex;
-    @extend %shadow-3;
-    @extend %clickable;
-    @include prototypes.border-radius();
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text-colour");
 
-    min-width: min-content;
-    min-height: min-content;
-    padding: 0.5em;
+    .button, .#{$name}.button {
+        @extend %flex;
+        @extend %shadow-3;
+        @extend %clickable;
+        @include prototypes.border-radius();
 
-    &.active {
-        @extend .shadow-inset-3 !optional;
-
-        &:hover {
-            @extend .shadow-inset-5 !optional;
-        }
-    }
-
-    &:hover {
-        @extend .shadow-5 !optional;
+        min-width: min-content;
+        min-height: min-content;
+        padding: 0.5em;
 
         &.active {
-            @extend .shadow-inset-5 !optional;
+            @extend %shadow-inset-3;
+
+            &:hover {
+                @extend %shadow-inset-5;
+            }
+        }
+
+        &:hover {
+            @extend %shadow-5;
+
+            &:active {
+                @extend %shadow-inset-3;
+            }
+
+            &.active {
+                @extend %shadow-inset-5;
+            }
+        }
+
+        &:active {
+            @extend %shadow-inset-3;
         }
     }
-
-    &:active {
-        @extend .shadow-inset-3 !optional;
-    }
 }
-
 @for $i from 1 through 3 {
     
     @each $name, $theme in variables.$themes {

@@ -35,7 +35,7 @@ $alpha: #ffffff00;
 $alpha-dark: #00000000;
 
 $themes: (
-    "default": (
+    "light": (
         "primary": #f7f7f7, 
         "text-colour": $black,
         "fonts": $fonts,
@@ -46,6 +46,15 @@ $themes: (
     ), 
     "dark": ( 
         "primary": #080808, 
+        "text-colour": $white,
+        "fonts": $fonts,
+        "font-size": $font-size,
+        "padding": $s-offset,
+        "margin": $s-offset,
+        "rounding": 0.25em,
+    ), 
+    "green": ( 
+        "primary": #042f00, 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,

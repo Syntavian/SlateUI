@@ -20,7 +20,7 @@
 }
 
 .link {
-    @include prototypes.link(map.get(map.get(variables.$themes, "default"), "primary"));
+    @include prototypes.link(map.get(map.get(variables.$themes, "light"), "primary"));
 }
 
 @each $name, $theme in variables.$themes {

@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "sass:color";
 @use 'variables';
 @use 'offsets';
 @use 'fixed';
@@ -90,45 +92,54 @@ body {
     min-height: 100vh;
 }
 
-.theme-selector {
-    &::before {
-        content: "Change Theme";
-        display: none;
-    }
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $text: map.get($theme, "text-colour");
 
-    &::after {
-        content: "#{inspect(variables.$themes)}";
-        display: none;
-    }
+    .theme-selector {
+        &::before {
+            content: "Change Theme";
+            display: none;
+        }
 
-    span {
-        z-index: 1;
-    }
+        &::after {
+            content: "#{inspect(variables.$themes)}";
+            display: none;
+        }
 
-    select {
-        z-index: 2;
-        background-color: transparent;
-        color: transparent;
-        border: none;
-        display: block;
-        position: absolute;
-        font-family: variables.$fonts;
-        font-size: 1rem;
-        padding-left: 0.5em;
+        span {
+            z-index: 1;
+        }
+
+        select {
+            z-index: 2;
+            background-color: transparent;
+            color: transparent;
+            border: none;
+            display: block;
+            position: absolute;
+            font-family: variables.$fonts;
+            font-size: 1rem;
+            padding-left: 0.5em;
+
+            &:hover {
+                color: inherit;
+            }
+
+            &.#{$name} {
+                option {
+                    background-color: $primary;
+                }
+            }
+        }
 
         &:hover {
-            color: black;
+            span {
+                color: transparent;
+            }
         }
     }
 
-    &:hover {
-        span {
-            color: white;
-        }
-    }
-}
-
-@each $name, $theme in variables.$themes {
     .no-shadow {
         box-shadow: none;
 
