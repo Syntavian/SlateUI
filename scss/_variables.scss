@@ -52,14 +52,19 @@ $themes: (
         "padding": $s-offset,
         "margin": $s-offset,
         "rounding": 0.25em,
-    ), 
-    "green": ( 
-        "primary": #042f00, 
+    )
+);
+
+@mixin add-theme($name, $primary) {
+    $themes: map.merge($themes, ($name: (
+        "primary": $primary, 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,
         "padding": $s-offset,
         "margin": $s-offset,
         "rounding": 0.25em,
-    )
-);
+    ))) !global;
+}
+
+@include add-theme("green", #042f00);
