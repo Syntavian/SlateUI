@@ -56,6 +56,7 @@ $themes: (
     "light": (
         "primary": #f7f7f7, 
         "secondary": color-tone-shift(#f7f7f7), 
+        "complement": complement(#f7f7f7), 
         "text-colour": $black,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -66,6 +67,7 @@ $themes: (
     "dark": ( 
         "primary": #080808, 
         "secondary": color-tone-shift(#080808), 
+        "complement": complement(#080808), 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -79,6 +81,7 @@ $themes: (
     $themes: map.merge($themes, ($name: (
         "primary": $primary, 
         "secondary": color-tone-shift($primary), 
+        "complement": complement($primary), 
         "text-colour": get-contrasting-bw($primary),
         "fonts": $fonts,
         "font-size": $font-size,
