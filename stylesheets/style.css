@@ -2326,12 +2326,12 @@ h6, .h6-text {
 
 .green.box {
   background-color: #042f00;
-  color: #ffffff;
+  color: white;
 }
 
 .green.inline-box {
   background-color: #042f00;
-  color: #ffffff;
+  color: white;
 }
 
 .button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {
@@ -2777,12 +2777,12 @@ h6, .h6-text {
 
 .green.fill.primary {
   background-color: #042f00;
-  color: #ffffff;
+  color: white;
 }
 
 .green.fill.secondary {
   background-color: #064900;
-  color: #ffffff;
+  color: white;
 }
 
 .gradient.green, .gradient-hover-animation.green {
@@ -2946,7 +2946,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #042f00, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -2985,7 +2985,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #042f00, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -3024,7 +3024,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #042f00, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {

@@ -34,9 +34,19 @@ $black: #000000;
 $alpha: #ffffff00;
 $alpha-dark: #00000000;
 
+@function get-contrasting-bw($color) {
+    @if color.blackness($color) > 50% {
+        @return white; 
+    }
+    @else {
+        @return black; 
+    }
+}
+
 $themes: (
     "light": (
         "primary": #f7f7f7, 
+        "secondary": #f7f7f7, 
         "text-colour": $black,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -46,6 +56,7 @@ $themes: (
     ), 
     "dark": ( 
         "primary": #080808, 
+        "secondary": #080808, 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -55,10 +66,13 @@ $themes: (
     )
 );
 
+
+
 @mixin add-theme($name, $primary) {
     $themes: map.merge($themes, ($name: (
         "primary": $primary, 
-        "text-colour": $white,
+        "secondary": $primary, 
+        "text-colour": get-contrasting-bw($primary),
         "fonts": $fonts,
         "font-size": $font-size,
         "padding": $s-offset,
