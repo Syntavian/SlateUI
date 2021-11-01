@@ -43,10 +43,19 @@ $alpha-dark: #00000000;
     }
 }
 
+@function color-tone-shift($color) {
+    @if color.blackness($color) < 50% {
+        @return darken($color, 5%);
+    }
+    @else {
+        @return lighten($color, 5%);
+    }
+}
+
 $themes: (
     "light": (
         "primary": #f7f7f7, 
-        "secondary": #f7f7f7, 
+        "secondary": color-tone-shift(#f7f7f7), 
         "text-colour": $black,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -56,7 +65,7 @@ $themes: (
     ), 
     "dark": ( 
         "primary": #080808, 
-        "secondary": #080808, 
+        "secondary": color-tone-shift(#080808), 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -66,12 +75,10 @@ $themes: (
     )
 );
 
-
-
 @mixin add-theme($name, $primary) {
     $themes: map.merge($themes, ($name: (
         "primary": $primary, 
-        "secondary": $primary, 
+        "secondary": color-tone-shift($primary), 
         "text-colour": get-contrasting-bw($primary),
         "fonts": $fonts,
         "font-size": $font-size,

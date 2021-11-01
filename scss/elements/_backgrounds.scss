@@ -5,6 +5,7 @@
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
+    $secondary: map.get($theme, "secondary");
     $text: map.get($theme, "text-colour");
 
     .#{$name}.fill.primary {
@@ -13,12 +14,7 @@
     } 
 
     .#{$name}.fill.secondary {
-        @if color.blackness($primary) < 50% {
-            background-color: darken($primary, 5%);
-        }
-        @else {
-            background-color: lighten($primary, 5%);
-        }
+        background-color: $secondary;
         color: $text;
     } 
     
