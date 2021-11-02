@@ -18,6 +18,10 @@
 @mixin flex-row($justify, $align, $grow: 1) {
     @include flex(row, $justify, $align, $grow);
     width: 100%;
+
+    @media screen and (max-width: variables.$screen-width-small) {
+        @include flex(column, $align, $justify, $grow);
+    }
 }
 
 @mixin border-radius($radius: 0.25em) {
