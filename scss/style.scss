@@ -98,7 +98,7 @@ body {
     $text: map.get($theme, "text-colour");
 
     .break.#{$name} {
-        @extend %shadow-1;
+        @extend %shadow-down-1;
         background-color: $secondary;
         height: 1px;
         width: 100%;
