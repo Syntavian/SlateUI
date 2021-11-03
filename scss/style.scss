@@ -95,11 +95,12 @@ body {
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
+    $tertiary: map.get($theme, "tertiary");
     $text: map.get($theme, "text-colour");
 
     .break.#{$name} {
         @extend %shadow-down-1;
-        background-color: $secondary;
+        background-color: rgba($tertiary, 0.5);
         height: 1px;
         width: 100%;
     }

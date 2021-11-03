@@ -3,50 +3,92 @@
 @use 'variables';
 @use 'prototypes';
 
-@each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
-    $secondary: map.get($theme, "secondary");
-    $text: map.get($theme, "text-colour");
+@for $i from 1 through 10 {
 
-    @for $i from 1 through 5 {
+    .shadow-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px;
+    }
+    
+    .shadow-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
+    }
+    
+    .shadow-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
+    }
+    
+    .shadow-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
+    }
+    
+    .shadow-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
+    }
+
+    .shadow-inset-#{$i} {
+        box-shadow: gray 0px 0px ($i + 2px) 0px inset;
+    }
+    
+    .shadow-inset-up-#{$i} {
+        box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
+    }
+    
+    .shadow-inset-down-#{$i} {
+        box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
+    }
+    
+    .shadow-inset-right-#{$i} {
+        box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
+    }
+    
+    .shadow-inset-left-#{$i} {
+        box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
+    }
+
+    @each $name, $theme in variables.$themes {
+        $primary: map.get($theme, "primary");
+        $secondary: map.get($theme, "secondary");
+        $tertiary: map.get($theme, "tertiary");
+        $text: map.get($theme, "text-colour");
+
         .shadow-#{$i}.#{$name} {
-            box-shadow: $secondary 0px 0px ($i + 2px) 0px;
+            box-shadow: $tertiary 0px 0px ($i + 2px) 0px;
         }
         
         .shadow-up-#{$i}.#{$name} {
-            box-shadow: $secondary 0px -#{$i}px ($i + 2px) 0px;
+            box-shadow: $tertiary 0px -#{$i}px ($i + 2px) 0px;
         }
         
         .shadow-down-#{$i}.#{$name} {
-            box-shadow: $secondary 0px #{$i}px ($i + 2px) 0px;
+            box-shadow: $tertiary 0px #{$i}px ($i + 2px) 0px;
         }
         
         .shadow-right-#{$i}.#{$name} {
-            box-shadow: $secondary #{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $tertiary #{$i}px 0px ($i + 2px) 0px;
         }
         
         .shadow-left-#{$i}.#{$name} {
-            box-shadow: $secondary -#{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $tertiary -#{$i}px 0px ($i + 2px) 0px;
         }
     
         .shadow-inset-#{$i}.#{$name} {
-            box-shadow: $secondary 0px 0px ($i + 2px) 0px inset;
+            box-shadow: $tertiary 0px 0px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-up-#{$i}.#{$name} {
-            box-shadow: $secondary 0px -#{$i}px ($i + 2px) 0px inset;
+            box-shadow: $tertiary 0px -#{$i}px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-down-#{$i}.#{$name} {
-            box-shadow: $secondary 0px #{$i}px ($i + 2px) 0px inset;
+            box-shadow: $tertiary 0px #{$i}px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-right-#{$i}.#{$name} {
-            box-shadow: $secondary #{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $tertiary #{$i}px 0px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-left-#{$i}.#{$name} {
-            box-shadow: $secondary -#{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $tertiary -#{$i}px 0px ($i + 2px) 0px inset;
         }
     }
 }

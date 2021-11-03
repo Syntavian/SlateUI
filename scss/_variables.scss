@@ -43,12 +43,12 @@ $alpha-dark: #00000000;
     }
 }
 
-@function color-tone-shift($color) {
+@function color-tone-shift($color, $amount: 5%) {
     @if color.blackness($color) < 50% {
-        @return darken($color, 5%);
+        @return darken($color, $amount);
     }
     @else {
-        @return lighten($color, 5%);
+        @return lighten($color, $amount);
     }
 }
 
@@ -56,6 +56,7 @@ $themes: (
     "light": (
         "primary": #f7f7f7, 
         "secondary": color-tone-shift(#f7f7f7), 
+        "tertiary": color-tone-shift(#f7f7f7, 25%), 
         "complement": complement(#f7f7f7), 
         "text-colour": $black,
         "fonts": $fonts,
@@ -68,6 +69,7 @@ $themes: (
         "primary": #080808, 
         "secondary": color-tone-shift(#080808), 
         "complement": complement(#080808), 
+        "tertiary": color-tone-shift(#080808, 25%), 
         "text-colour": $white,
         "fonts": $fonts,
         "font-size": $font-size,
@@ -81,6 +83,7 @@ $themes: (
     $themes: map.merge($themes, ($name: (
         "primary": $primary, 
         "secondary": color-tone-shift($primary), 
+        "tertiary": color-tone-shift($primary, 25%), 
         "complement": complement($primary), 
         "text-colour": get-contrasting-bw($primary),
         "fonts": $fonts,
