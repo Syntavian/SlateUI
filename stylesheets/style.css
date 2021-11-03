@@ -44,32 +44,32 @@
   width: 100%;
 }
 
-.form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
+.form, .image, .light.box, .dark.box, .dark-green.box, .dark-blue.box, .light-cyan.box, .light-green.box, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
-.banner, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3 {
+.banner, .button, .light.button, .dark.button, .dark-green.button, .dark-blue.button, .light-cyan.button, .light-green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .dark-green.button-round-1, .dark-blue.button-round-1, .light-cyan.button-round-1, .light-green.button-round-1, .light.dark.button-round-1, .dark-green.dark.button-round-1, .dark-blue.dark.button-round-1, .light-cyan.dark.button-round-1, .light-green.dark.button-round-1, .light.dark-green.button-round-1, .dark.dark-green.button-round-1, .dark-blue.dark-green.button-round-1, .light-cyan.dark-green.button-round-1, .light-green.dark-green.button-round-1, .light.dark-blue.button-round-1, .dark.dark-blue.button-round-1, .dark-green.dark-blue.button-round-1, .light-cyan.dark-blue.button-round-1, .light-green.dark-blue.button-round-1, .light.light-cyan.button-round-1, .dark.light-cyan.button-round-1, .dark-green.light-cyan.button-round-1, .dark-blue.light-cyan.button-round-1, .light-green.light-cyan.button-round-1, .light.light-green.button-round-1, .dark.light-green.button-round-1, .dark-green.light-green.button-round-1, .dark-blue.light-green.button-round-1, .light-cyan.light-green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .dark-green.button-round-2, .dark-blue.button-round-2, .light-cyan.button-round-2, .light-green.button-round-2, .light.dark.button-round-2, .dark-green.dark.button-round-2, .dark-blue.dark.button-round-2, .light-cyan.dark.button-round-2, .light-green.dark.button-round-2, .light.dark-green.button-round-2, .dark.dark-green.button-round-2, .dark-blue.dark-green.button-round-2, .light-cyan.dark-green.button-round-2, .light-green.dark-green.button-round-2, .light.dark-blue.button-round-2, .dark.dark-blue.button-round-2, .dark-green.dark-blue.button-round-2, .light-cyan.dark-blue.button-round-2, .light-green.dark-blue.button-round-2, .light.light-cyan.button-round-2, .dark.light-cyan.button-round-2, .dark-green.light-cyan.button-round-2, .dark-blue.light-cyan.button-round-2, .light-green.light-cyan.button-round-2, .light.light-green.button-round-2, .dark.light-green.button-round-2, .dark-green.light-green.button-round-2, .dark-blue.light-green.button-round-2, .light-cyan.light-green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .dark-green.button-round-3, .dark-blue.button-round-3, .light-cyan.button-round-3, .light-green.button-round-3, .light.dark.button-round-3, .dark-green.dark.button-round-3, .dark-blue.dark.button-round-3, .light-cyan.dark.button-round-3, .light-green.dark.button-round-3, .light.dark-green.button-round-3, .dark.dark-green.button-round-3, .dark-blue.dark-green.button-round-3, .light-cyan.dark-green.button-round-3, .light-green.dark-green.button-round-3, .light.dark-blue.button-round-3, .dark.dark-blue.button-round-3, .dark-green.dark-blue.button-round-3, .light-cyan.dark-blue.button-round-3, .light-green.dark-blue.button-round-3, .light.light-cyan.button-round-3, .dark.light-cyan.button-round-3, .dark-green.light-cyan.button-round-3, .dark-blue.light-cyan.button-round-3, .light-green.light-cyan.button-round-3, .light.light-green.button-round-3, .dark.light-green.button-round-3, .dark-green.light-green.button-round-3, .dark-blue.light-green.button-round-3, .light-cyan.light-green.button-round-3 {
   box-shadow: gray 0px 0px 5px 0px;
 }
 
-.button.active, .button:hover:active, .button:active, .dark.button.active, .dark.button:hover:active, .dark.button:active, .green.button.active, .green.button:hover:active, .green.button:active, .active.button-round-1, .button-round-1:hover:active, .button-round-1:active, .dark.active.button-round-1, .dark.button-round-1:hover:active, .dark.button-round-1:active, .green.active.button-round-1, .green.button-round-1:hover:active, .green.button-round-1:active, .active.button-round-2, .button-round-2:hover:active, .button-round-2:active, .dark.active.button-round-2, .dark.button-round-2:hover:active, .dark.button-round-2:active, .green.active.button-round-2, .green.button-round-2:hover:active, .green.button-round-2:active, .active.button-round-3, .button-round-3:hover:active, .button-round-3:active, .dark.active.button-round-3, .dark.button-round-3:hover:active, .dark.button-round-3:active, .green.active.button-round-3, .green.button-round-3:hover:active, .green.button-round-3:active {
+.button.active, .light.button.active, .button:hover:active, .light.button:hover:active, .button:active, .light.button:active, .dark.button.active, .dark.button:hover:active, .dark.button:active, .dark-green.button.active, .dark-green.button:hover:active, .dark-green.button:active, .dark-blue.button.active, .dark-blue.button:hover:active, .dark-blue.button:active, .light-cyan.button.active, .light-cyan.button:hover:active, .light-cyan.button:active, .light-green.button.active, .light-green.button:hover:active, .light-green.button:active, .active.button-round-1, .light.active.button-round-1, .button-round-1:hover:active, .light.button-round-1:hover:active, .button-round-1:active, .light.button-round-1:active, .dark.active.button-round-1, .dark.button-round-1:hover:active, .dark.button-round-1:active, .dark-green.active.button-round-1, .dark-green.button-round-1:hover:active, .dark-green.button-round-1:active, .dark-blue.active.button-round-1, .dark-blue.button-round-1:hover:active, .dark-blue.button-round-1:active, .light-cyan.active.button-round-1, .light-cyan.button-round-1:hover:active, .light-cyan.button-round-1:active, .light-green.active.button-round-1, .light-green.button-round-1:hover:active, .light-green.button-round-1:active, .active.dark.button-round-1, .light.active.dark.button-round-1, .light.dark.button-round-1:hover:active, .light.dark.button-round-1:active, .dark-green.active.dark.button-round-1, .dark-green.dark.button-round-1:hover:active, .dark-green.dark.button-round-1:active, .dark-blue.active.dark.button-round-1, .dark-blue.dark.button-round-1:hover:active, .dark-blue.dark.button-round-1:active, .light-cyan.active.dark.button-round-1, .light-cyan.dark.button-round-1:hover:active, .light-cyan.dark.button-round-1:active, .light-green.active.dark.button-round-1, .light-green.dark.button-round-1:hover:active, .light-green.dark.button-round-1:active, .active.dark-green.button-round-1, .light.active.dark-green.button-round-1, .light.dark-green.button-round-1:hover:active, .light.dark-green.button-round-1:active, .dark.active.dark-green.button-round-1, .dark.dark-green.button-round-1:hover:active, .dark.dark-green.button-round-1:active, .dark-blue.active.dark-green.button-round-1, .dark-blue.dark-green.button-round-1:hover:active, .dark-blue.dark-green.button-round-1:active, .light-cyan.active.dark-green.button-round-1, .light-cyan.dark-green.button-round-1:hover:active, .light-cyan.dark-green.button-round-1:active, .light-green.active.dark-green.button-round-1, .light-green.dark-green.button-round-1:hover:active, .light-green.dark-green.button-round-1:active, .active.dark-blue.button-round-1, .light.active.dark-blue.button-round-1, .light.dark-blue.button-round-1:hover:active, .light.dark-blue.button-round-1:active, .dark.active.dark-blue.button-round-1, .dark.dark-blue.button-round-1:hover:active, .dark.dark-blue.button-round-1:active, .dark-green.active.dark-blue.button-round-1, .dark-green.dark-blue.button-round-1:hover:active, .dark-green.dark-blue.button-round-1:active, .light-cyan.active.dark-blue.button-round-1, .light-cyan.dark-blue.button-round-1:hover:active, .light-cyan.dark-blue.button-round-1:active, .light-green.active.dark-blue.button-round-1, .light-green.dark-blue.button-round-1:hover:active, .light-green.dark-blue.button-round-1:active, .active.light-cyan.button-round-1, .light.active.light-cyan.button-round-1, .light.light-cyan.button-round-1:hover:active, .light.light-cyan.button-round-1:active, .dark.active.light-cyan.button-round-1, .dark.light-cyan.button-round-1:hover:active, .dark.light-cyan.button-round-1:active, .dark-green.active.light-cyan.button-round-1, .dark-green.light-cyan.button-round-1:hover:active, .dark-green.light-cyan.button-round-1:active, .dark-blue.active.light-cyan.button-round-1, .dark-blue.light-cyan.button-round-1:hover:active, .dark-blue.light-cyan.button-round-1:active, .light-green.active.light-cyan.button-round-1, .light-green.light-cyan.button-round-1:hover:active, .light-green.light-cyan.button-round-1:active, .active.light-green.button-round-1, .light.active.light-green.button-round-1, .light.light-green.button-round-1:hover:active, .light.light-green.button-round-1:active, .dark.active.light-green.button-round-1, .dark.light-green.button-round-1:hover:active, .dark.light-green.button-round-1:active, .dark-green.active.light-green.button-round-1, .dark-green.light-green.button-round-1:hover:active, .dark-green.light-green.button-round-1:active, .dark-blue.active.light-green.button-round-1, .dark-blue.light-green.button-round-1:hover:active, .dark-blue.light-green.button-round-1:active, .light-cyan.active.light-green.button-round-1, .light-cyan.light-green.button-round-1:hover:active, .light-cyan.light-green.button-round-1:active, .active.button-round-2, .light.active.button-round-2, .button-round-2:hover:active, .light.button-round-2:hover:active, .button-round-2:active, .light.button-round-2:active, .dark.active.button-round-2, .dark.button-round-2:hover:active, .dark.button-round-2:active, .dark-green.active.button-round-2, .dark-green.button-round-2:hover:active, .dark-green.button-round-2:active, .dark-blue.active.button-round-2, .dark-blue.button-round-2:hover:active, .dark-blue.button-round-2:active, .light-cyan.active.button-round-2, .light-cyan.button-round-2:hover:active, .light-cyan.button-round-2:active, .light-green.active.button-round-2, .light-green.button-round-2:hover:active, .light-green.button-round-2:active, .active.dark.button-round-2, .light.active.dark.button-round-2, .light.dark.button-round-2:hover:active, .light.dark.button-round-2:active, .dark-green.active.dark.button-round-2, .dark-green.dark.button-round-2:hover:active, .dark-green.dark.button-round-2:active, .dark-blue.active.dark.button-round-2, .dark-blue.dark.button-round-2:hover:active, .dark-blue.dark.button-round-2:active, .light-cyan.active.dark.button-round-2, .light-cyan.dark.button-round-2:hover:active, .light-cyan.dark.button-round-2:active, .light-green.active.dark.button-round-2, .light-green.dark.button-round-2:hover:active, .light-green.dark.button-round-2:active, .active.dark-green.button-round-2, .light.active.dark-green.button-round-2, .light.dark-green.button-round-2:hover:active, .light.dark-green.button-round-2:active, .dark.active.dark-green.button-round-2, .dark.dark-green.button-round-2:hover:active, .dark.dark-green.button-round-2:active, .dark-blue.active.dark-green.button-round-2, .dark-blue.dark-green.button-round-2:hover:active, .dark-blue.dark-green.button-round-2:active, .light-cyan.active.dark-green.button-round-2, .light-cyan.dark-green.button-round-2:hover:active, .light-cyan.dark-green.button-round-2:active, .light-green.active.dark-green.button-round-2, .light-green.dark-green.button-round-2:hover:active, .light-green.dark-green.button-round-2:active, .active.dark-blue.button-round-2, .light.active.dark-blue.button-round-2, .light.dark-blue.button-round-2:hover:active, .light.dark-blue.button-round-2:active, .dark.active.dark-blue.button-round-2, .dark.dark-blue.button-round-2:hover:active, .dark.dark-blue.button-round-2:active, .dark-green.active.dark-blue.button-round-2, .dark-green.dark-blue.button-round-2:hover:active, .dark-green.dark-blue.button-round-2:active, .light-cyan.active.dark-blue.button-round-2, .light-cyan.dark-blue.button-round-2:hover:active, .light-cyan.dark-blue.button-round-2:active, .light-green.active.dark-blue.button-round-2, .light-green.dark-blue.button-round-2:hover:active, .light-green.dark-blue.button-round-2:active, .active.light-cyan.button-round-2, .light.active.light-cyan.button-round-2, .light.light-cyan.button-round-2:hover:active, .light.light-cyan.button-round-2:active, .dark.active.light-cyan.button-round-2, .dark.light-cyan.button-round-2:hover:active, .dark.light-cyan.button-round-2:active, .dark-green.active.light-cyan.button-round-2, .dark-green.light-cyan.button-round-2:hover:active, .dark-green.light-cyan.button-round-2:active, .dark-blue.active.light-cyan.button-round-2, .dark-blue.light-cyan.button-round-2:hover:active, .dark-blue.light-cyan.button-round-2:active, .light-green.active.light-cyan.button-round-2, .light-green.light-cyan.button-round-2:hover:active, .light-green.light-cyan.button-round-2:active, .active.light-green.button-round-2, .light.active.light-green.button-round-2, .light.light-green.button-round-2:hover:active, .light.light-green.button-round-2:active, .dark.active.light-green.button-round-2, .dark.light-green.button-round-2:hover:active, .dark.light-green.button-round-2:active, .dark-green.active.light-green.button-round-2, .dark-green.light-green.button-round-2:hover:active, .dark-green.light-green.button-round-2:active, .dark-blue.active.light-green.button-round-2, .dark-blue.light-green.button-round-2:hover:active, .dark-blue.light-green.button-round-2:active, .light-cyan.active.light-green.button-round-2, .light-cyan.light-green.button-round-2:hover:active, .light-cyan.light-green.button-round-2:active, .active.button-round-3, .light.active.button-round-3, .button-round-3:hover:active, .light.button-round-3:hover:active, .button-round-3:active, .light.button-round-3:active, .dark.active.button-round-3, .dark.button-round-3:hover:active, .dark.button-round-3:active, .dark-green.active.button-round-3, .dark-green.button-round-3:hover:active, .dark-green.button-round-3:active, .dark-blue.active.button-round-3, .dark-blue.button-round-3:hover:active, .dark-blue.button-round-3:active, .light-cyan.active.button-round-3, .light-cyan.button-round-3:hover:active, .light-cyan.button-round-3:active, .light-green.active.button-round-3, .light-green.button-round-3:hover:active, .light-green.button-round-3:active, .active.dark.button-round-3, .light.active.dark.button-round-3, .light.dark.button-round-3:hover:active, .light.dark.button-round-3:active, .dark-green.active.dark.button-round-3, .dark-green.dark.button-round-3:hover:active, .dark-green.dark.button-round-3:active, .dark-blue.active.dark.button-round-3, .dark-blue.dark.button-round-3:hover:active, .dark-blue.dark.button-round-3:active, .light-cyan.active.dark.button-round-3, .light-cyan.dark.button-round-3:hover:active, .light-cyan.dark.button-round-3:active, .light-green.active.dark.button-round-3, .light-green.dark.button-round-3:hover:active, .light-green.dark.button-round-3:active, .active.dark-green.button-round-3, .light.active.dark-green.button-round-3, .light.dark-green.button-round-3:hover:active, .light.dark-green.button-round-3:active, .dark.active.dark-green.button-round-3, .dark.dark-green.button-round-3:hover:active, .dark.dark-green.button-round-3:active, .dark-blue.active.dark-green.button-round-3, .dark-blue.dark-green.button-round-3:hover:active, .dark-blue.dark-green.button-round-3:active, .light-cyan.active.dark-green.button-round-3, .light-cyan.dark-green.button-round-3:hover:active, .light-cyan.dark-green.button-round-3:active, .light-green.active.dark-green.button-round-3, .light-green.dark-green.button-round-3:hover:active, .light-green.dark-green.button-round-3:active, .active.dark-blue.button-round-3, .light.active.dark-blue.button-round-3, .light.dark-blue.button-round-3:hover:active, .light.dark-blue.button-round-3:active, .dark.active.dark-blue.button-round-3, .dark.dark-blue.button-round-3:hover:active, .dark.dark-blue.button-round-3:active, .dark-green.active.dark-blue.button-round-3, .dark-green.dark-blue.button-round-3:hover:active, .dark-green.dark-blue.button-round-3:active, .light-cyan.active.dark-blue.button-round-3, .light-cyan.dark-blue.button-round-3:hover:active, .light-cyan.dark-blue.button-round-3:active, .light-green.active.dark-blue.button-round-3, .light-green.dark-blue.button-round-3:hover:active, .light-green.dark-blue.button-round-3:active, .active.light-cyan.button-round-3, .light.active.light-cyan.button-round-3, .light.light-cyan.button-round-3:hover:active, .light.light-cyan.button-round-3:active, .dark.active.light-cyan.button-round-3, .dark.light-cyan.button-round-3:hover:active, .dark.light-cyan.button-round-3:active, .dark-green.active.light-cyan.button-round-3, .dark-green.light-cyan.button-round-3:hover:active, .dark-green.light-cyan.button-round-3:active, .dark-blue.active.light-cyan.button-round-3, .dark-blue.light-cyan.button-round-3:hover:active, .dark-blue.light-cyan.button-round-3:active, .light-green.active.light-cyan.button-round-3, .light-green.light-cyan.button-round-3:hover:active, .light-green.light-cyan.button-round-3:active, .active.light-green.button-round-3, .light.active.light-green.button-round-3, .light.light-green.button-round-3:hover:active, .light.light-green.button-round-3:active, .dark.active.light-green.button-round-3, .dark.light-green.button-round-3:hover:active, .dark.light-green.button-round-3:active, .dark-green.active.light-green.button-round-3, .dark-green.light-green.button-round-3:hover:active, .dark-green.light-green.button-round-3:active, .dark-blue.active.light-green.button-round-3, .dark-blue.light-green.button-round-3:hover:active, .dark-blue.light-green.button-round-3:active, .light-cyan.active.light-green.button-round-3, .light-cyan.light-green.button-round-3:hover:active, .light-cyan.light-green.button-round-3:active {
   box-shadow: gray 0px 0px 5px 0px inset;
 }
 
-.button:hover, .dark.button:hover, .green.button:hover, .button-round-1:hover, .dark.button-round-1:hover, .green.button-round-1:hover, .button-round-2:hover, .dark.button-round-2:hover, .green.button-round-2:hover, .button-round-3:hover, .dark.button-round-3:hover, .green.button-round-3:hover {
+.button:hover, .light.button:hover, .dark.button:hover, .dark-green.button:hover, .dark-blue.button:hover, .light-cyan.button:hover, .light-green.button:hover, .button-round-1:hover, .light.button-round-1:hover, .dark.button-round-1:hover, .dark-green.button-round-1:hover, .dark-blue.button-round-1:hover, .light-cyan.button-round-1:hover, .light-green.button-round-1:hover, .light.dark.button-round-1:hover, .dark-green.dark.button-round-1:hover, .dark-blue.dark.button-round-1:hover, .light-cyan.dark.button-round-1:hover, .light-green.dark.button-round-1:hover, .light.dark-green.button-round-1:hover, .dark.dark-green.button-round-1:hover, .dark-blue.dark-green.button-round-1:hover, .light-cyan.dark-green.button-round-1:hover, .light-green.dark-green.button-round-1:hover, .light.dark-blue.button-round-1:hover, .dark.dark-blue.button-round-1:hover, .dark-green.dark-blue.button-round-1:hover, .light-cyan.dark-blue.button-round-1:hover, .light-green.dark-blue.button-round-1:hover, .light.light-cyan.button-round-1:hover, .dark.light-cyan.button-round-1:hover, .dark-green.light-cyan.button-round-1:hover, .dark-blue.light-cyan.button-round-1:hover, .light-green.light-cyan.button-round-1:hover, .light.light-green.button-round-1:hover, .dark.light-green.button-round-1:hover, .dark-green.light-green.button-round-1:hover, .dark-blue.light-green.button-round-1:hover, .light-cyan.light-green.button-round-1:hover, .button-round-2:hover, .light.button-round-2:hover, .dark.button-round-2:hover, .dark-green.button-round-2:hover, .dark-blue.button-round-2:hover, .light-cyan.button-round-2:hover, .light-green.button-round-2:hover, .light.dark.button-round-2:hover, .dark-green.dark.button-round-2:hover, .dark-blue.dark.button-round-2:hover, .light-cyan.dark.button-round-2:hover, .light-green.dark.button-round-2:hover, .light.dark-green.button-round-2:hover, .dark.dark-green.button-round-2:hover, .dark-blue.dark-green.button-round-2:hover, .light-cyan.dark-green.button-round-2:hover, .light-green.dark-green.button-round-2:hover, .light.dark-blue.button-round-2:hover, .dark.dark-blue.button-round-2:hover, .dark-green.dark-blue.button-round-2:hover, .light-cyan.dark-blue.button-round-2:hover, .light-green.dark-blue.button-round-2:hover, .light.light-cyan.button-round-2:hover, .dark.light-cyan.button-round-2:hover, .dark-green.light-cyan.button-round-2:hover, .dark-blue.light-cyan.button-round-2:hover, .light-green.light-cyan.button-round-2:hover, .light.light-green.button-round-2:hover, .dark.light-green.button-round-2:hover, .dark-green.light-green.button-round-2:hover, .dark-blue.light-green.button-round-2:hover, .light-cyan.light-green.button-round-2:hover, .button-round-3:hover, .light.button-round-3:hover, .dark.button-round-3:hover, .dark-green.button-round-3:hover, .dark-blue.button-round-3:hover, .light-cyan.button-round-3:hover, .light-green.button-round-3:hover, .light.dark.button-round-3:hover, .dark-green.dark.button-round-3:hover, .dark-blue.dark.button-round-3:hover, .light-cyan.dark.button-round-3:hover, .light-green.dark.button-round-3:hover, .light.dark-green.button-round-3:hover, .dark.dark-green.button-round-3:hover, .dark-blue.dark-green.button-round-3:hover, .light-cyan.dark-green.button-round-3:hover, .light-green.dark-green.button-round-3:hover, .light.dark-blue.button-round-3:hover, .dark.dark-blue.button-round-3:hover, .dark-green.dark-blue.button-round-3:hover, .light-cyan.dark-blue.button-round-3:hover, .light-green.dark-blue.button-round-3:hover, .light.light-cyan.button-round-3:hover, .dark.light-cyan.button-round-3:hover, .dark-green.light-cyan.button-round-3:hover, .dark-blue.light-cyan.button-round-3:hover, .light-green.light-cyan.button-round-3:hover, .light.light-green.button-round-3:hover, .dark.light-green.button-round-3:hover, .dark-green.light-green.button-round-3:hover, .dark-blue.light-green.button-round-3:hover, .light-cyan.light-green.button-round-3:hover {
   box-shadow: gray 0px 0px 7px 0px;
 }
 
-.button.active:hover, .dark.button.active:hover, .green.button.active:hover, .active.button-round-1:hover, .dark.active.button-round-1:hover, .green.active.button-round-1:hover, .active.button-round-2:hover, .dark.active.button-round-2:hover, .green.active.button-round-2:hover, .active.button-round-3:hover, .dark.active.button-round-3:hover, .green.active.button-round-3:hover {
+.button.active:hover, .light.button.active:hover, .button:hover.active, .light.button:hover.active, .dark.button.active:hover, .dark.button:hover.active, .dark-green.button.active:hover, .dark-green.button:hover.active, .dark-blue.button.active:hover, .dark-blue.button:hover.active, .light-cyan.button.active:hover, .light-cyan.button:hover.active, .light-green.button.active:hover, .light-green.button:hover.active, .active.button-round-1:hover, .light.active.button-round-1:hover, .button-round-1:hover.active, .light.button-round-1:hover.active, .dark.active.button-round-1:hover, .dark.button-round-1:hover.active, .dark-green.active.button-round-1:hover, .dark-green.button-round-1:hover.active, .dark-blue.active.button-round-1:hover, .dark-blue.button-round-1:hover.active, .light-cyan.active.button-round-1:hover, .light-cyan.button-round-1:hover.active, .light-green.active.button-round-1:hover, .light-green.button-round-1:hover.active, .active.dark.button-round-1:hover, .light.active.dark.button-round-1:hover, .light.dark.button-round-1:hover.active, .dark-green.active.dark.button-round-1:hover, .dark-green.dark.button-round-1:hover.active, .dark-blue.active.dark.button-round-1:hover, .dark-blue.dark.button-round-1:hover.active, .light-cyan.active.dark.button-round-1:hover, .light-cyan.dark.button-round-1:hover.active, .light-green.active.dark.button-round-1:hover, .light-green.dark.button-round-1:hover.active, .active.dark-green.button-round-1:hover, .light.active.dark-green.button-round-1:hover, .light.dark-green.button-round-1:hover.active, .dark.active.dark-green.button-round-1:hover, .dark.dark-green.button-round-1:hover.active, .dark-blue.active.dark-green.button-round-1:hover, .dark-blue.dark-green.button-round-1:hover.active, .light-cyan.active.dark-green.button-round-1:hover, .light-cyan.dark-green.button-round-1:hover.active, .light-green.active.dark-green.button-round-1:hover, .light-green.dark-green.button-round-1:hover.active, .active.dark-blue.button-round-1:hover, .light.active.dark-blue.button-round-1:hover, .light.dark-blue.button-round-1:hover.active, .dark.active.dark-blue.button-round-1:hover, .dark.dark-blue.button-round-1:hover.active, .dark-green.active.dark-blue.button-round-1:hover, .dark-green.dark-blue.button-round-1:hover.active, .light-cyan.active.dark-blue.button-round-1:hover, .light-cyan.dark-blue.button-round-1:hover.active, .light-green.active.dark-blue.button-round-1:hover, .light-green.dark-blue.button-round-1:hover.active, .active.light-cyan.button-round-1:hover, .light.active.light-cyan.button-round-1:hover, .light.light-cyan.button-round-1:hover.active, .dark.active.light-cyan.button-round-1:hover, .dark.light-cyan.button-round-1:hover.active, .dark-green.active.light-cyan.button-round-1:hover, .dark-green.light-cyan.button-round-1:hover.active, .dark-blue.active.light-cyan.button-round-1:hover, .dark-blue.light-cyan.button-round-1:hover.active, .light-green.active.light-cyan.button-round-1:hover, .light-green.light-cyan.button-round-1:hover.active, .active.light-green.button-round-1:hover, .light.active.light-green.button-round-1:hover, .light.light-green.button-round-1:hover.active, .dark.active.light-green.button-round-1:hover, .dark.light-green.button-round-1:hover.active, .dark-green.active.light-green.button-round-1:hover, .dark-green.light-green.button-round-1:hover.active, .dark-blue.active.light-green.button-round-1:hover, .dark-blue.light-green.button-round-1:hover.active, .light-cyan.active.light-green.button-round-1:hover, .light-cyan.light-green.button-round-1:hover.active, .active.button-round-2:hover, .light.active.button-round-2:hover, .button-round-2:hover.active, .light.button-round-2:hover.active, .dark.active.button-round-2:hover, .dark.button-round-2:hover.active, .dark-green.active.button-round-2:hover, .dark-green.button-round-2:hover.active, .dark-blue.active.button-round-2:hover, .dark-blue.button-round-2:hover.active, .light-cyan.active.button-round-2:hover, .light-cyan.button-round-2:hover.active, .light-green.active.button-round-2:hover, .light-green.button-round-2:hover.active, .active.dark.button-round-2:hover, .light.active.dark.button-round-2:hover, .light.dark.button-round-2:hover.active, .dark-green.active.dark.button-round-2:hover, .dark-green.dark.button-round-2:hover.active, .dark-blue.active.dark.button-round-2:hover, .dark-blue.dark.button-round-2:hover.active, .light-cyan.active.dark.button-round-2:hover, .light-cyan.dark.button-round-2:hover.active, .light-green.active.dark.button-round-2:hover, .light-green.dark.button-round-2:hover.active, .active.dark-green.button-round-2:hover, .light.active.dark-green.button-round-2:hover, .light.dark-green.button-round-2:hover.active, .dark.active.dark-green.button-round-2:hover, .dark.dark-green.button-round-2:hover.active, .dark-blue.active.dark-green.button-round-2:hover, .dark-blue.dark-green.button-round-2:hover.active, .light-cyan.active.dark-green.button-round-2:hover, .light-cyan.dark-green.button-round-2:hover.active, .light-green.active.dark-green.button-round-2:hover, .light-green.dark-green.button-round-2:hover.active, .active.dark-blue.button-round-2:hover, .light.active.dark-blue.button-round-2:hover, .light.dark-blue.button-round-2:hover.active, .dark.active.dark-blue.button-round-2:hover, .dark.dark-blue.button-round-2:hover.active, .dark-green.active.dark-blue.button-round-2:hover, .dark-green.dark-blue.button-round-2:hover.active, .light-cyan.active.dark-blue.button-round-2:hover, .light-cyan.dark-blue.button-round-2:hover.active, .light-green.active.dark-blue.button-round-2:hover, .light-green.dark-blue.button-round-2:hover.active, .active.light-cyan.button-round-2:hover, .light.active.light-cyan.button-round-2:hover, .light.light-cyan.button-round-2:hover.active, .dark.active.light-cyan.button-round-2:hover, .dark.light-cyan.button-round-2:hover.active, .dark-green.active.light-cyan.button-round-2:hover, .dark-green.light-cyan.button-round-2:hover.active, .dark-blue.active.light-cyan.button-round-2:hover, .dark-blue.light-cyan.button-round-2:hover.active, .light-green.active.light-cyan.button-round-2:hover, .light-green.light-cyan.button-round-2:hover.active, .active.light-green.button-round-2:hover, .light.active.light-green.button-round-2:hover, .light.light-green.button-round-2:hover.active, .dark.active.light-green.button-round-2:hover, .dark.light-green.button-round-2:hover.active, .dark-green.active.light-green.button-round-2:hover, .dark-green.light-green.button-round-2:hover.active, .dark-blue.active.light-green.button-round-2:hover, .dark-blue.light-green.button-round-2:hover.active, .light-cyan.active.light-green.button-round-2:hover, .light-cyan.light-green.button-round-2:hover.active, .active.button-round-3:hover, .light.active.button-round-3:hover, .button-round-3:hover.active, .light.button-round-3:hover.active, .dark.active.button-round-3:hover, .dark.button-round-3:hover.active, .dark-green.active.button-round-3:hover, .dark-green.button-round-3:hover.active, .dark-blue.active.button-round-3:hover, .dark-blue.button-round-3:hover.active, .light-cyan.active.button-round-3:hover, .light-cyan.button-round-3:hover.active, .light-green.active.button-round-3:hover, .light-green.button-round-3:hover.active, .active.dark.button-round-3:hover, .light.active.dark.button-round-3:hover, .light.dark.button-round-3:hover.active, .dark-green.active.dark.button-round-3:hover, .dark-green.dark.button-round-3:hover.active, .dark-blue.active.dark.button-round-3:hover, .dark-blue.dark.button-round-3:hover.active, .light-cyan.active.dark.button-round-3:hover, .light-cyan.dark.button-round-3:hover.active, .light-green.active.dark.button-round-3:hover, .light-green.dark.button-round-3:hover.active, .active.dark-green.button-round-3:hover, .light.active.dark-green.button-round-3:hover, .light.dark-green.button-round-3:hover.active, .dark.active.dark-green.button-round-3:hover, .dark.dark-green.button-round-3:hover.active, .dark-blue.active.dark-green.button-round-3:hover, .dark-blue.dark-green.button-round-3:hover.active, .light-cyan.active.dark-green.button-round-3:hover, .light-cyan.dark-green.button-round-3:hover.active, .light-green.active.dark-green.button-round-3:hover, .light-green.dark-green.button-round-3:hover.active, .active.dark-blue.button-round-3:hover, .light.active.dark-blue.button-round-3:hover, .light.dark-blue.button-round-3:hover.active, .dark.active.dark-blue.button-round-3:hover, .dark.dark-blue.button-round-3:hover.active, .dark-green.active.dark-blue.button-round-3:hover, .dark-green.dark-blue.button-round-3:hover.active, .light-cyan.active.dark-blue.button-round-3:hover, .light-cyan.dark-blue.button-round-3:hover.active, .light-green.active.dark-blue.button-round-3:hover, .light-green.dark-blue.button-round-3:hover.active, .active.light-cyan.button-round-3:hover, .light.active.light-cyan.button-round-3:hover, .light.light-cyan.button-round-3:hover.active, .dark.active.light-cyan.button-round-3:hover, .dark.light-cyan.button-round-3:hover.active, .dark-green.active.light-cyan.button-round-3:hover, .dark-green.light-cyan.button-round-3:hover.active, .dark-blue.active.light-cyan.button-round-3:hover, .dark-blue.light-cyan.button-round-3:hover.active, .light-green.active.light-cyan.button-round-3:hover, .light-green.light-cyan.button-round-3:hover.active, .active.light-green.button-round-3:hover, .light.active.light-green.button-round-3:hover, .light.light-green.button-round-3:hover.active, .dark.active.light-green.button-round-3:hover, .dark.light-green.button-round-3:hover.active, .dark-green.active.light-green.button-round-3:hover, .dark-green.light-green.button-round-3:hover.active, .dark-blue.active.light-green.button-round-3:hover, .dark-blue.light-green.button-round-3:hover.active, .light-cyan.active.light-green.button-round-3:hover, .light-cyan.light-green.button-round-3:hover.active {
   box-shadow: gray 0px 0px 7px 0px inset;
 }
 
-.scroll-handle, .link, .light.link, .dark.link, .green.link, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3 {
+.scroll-handle, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .button, .light.button, .dark.button, .dark-green.button, .dark-blue.button, .light-cyan.button, .light-green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .dark-green.button-round-1, .dark-blue.button-round-1, .light-cyan.button-round-1, .light-green.button-round-1, .light.dark.button-round-1, .dark-green.dark.button-round-1, .dark-blue.dark.button-round-1, .light-cyan.dark.button-round-1, .light-green.dark.button-round-1, .light.dark-green.button-round-1, .dark.dark-green.button-round-1, .dark-blue.dark-green.button-round-1, .light-cyan.dark-green.button-round-1, .light-green.dark-green.button-round-1, .light.dark-blue.button-round-1, .dark.dark-blue.button-round-1, .dark-green.dark-blue.button-round-1, .light-cyan.dark-blue.button-round-1, .light-green.dark-blue.button-round-1, .light.light-cyan.button-round-1, .dark.light-cyan.button-round-1, .dark-green.light-cyan.button-round-1, .dark-blue.light-cyan.button-round-1, .light-green.light-cyan.button-round-1, .light.light-green.button-round-1, .dark.light-green.button-round-1, .dark-green.light-green.button-round-1, .dark-blue.light-green.button-round-1, .light-cyan.light-green.button-round-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .dark-green.button-round-2, .dark-blue.button-round-2, .light-cyan.button-round-2, .light-green.button-round-2, .light.dark.button-round-2, .dark-green.dark.button-round-2, .dark-blue.dark.button-round-2, .light-cyan.dark.button-round-2, .light-green.dark.button-round-2, .light.dark-green.button-round-2, .dark.dark-green.button-round-2, .dark-blue.dark-green.button-round-2, .light-cyan.dark-green.button-round-2, .light-green.dark-green.button-round-2, .light.dark-blue.button-round-2, .dark.dark-blue.button-round-2, .dark-green.dark-blue.button-round-2, .light-cyan.dark-blue.button-round-2, .light-green.dark-blue.button-round-2, .light.light-cyan.button-round-2, .dark.light-cyan.button-round-2, .dark-green.light-cyan.button-round-2, .dark-blue.light-cyan.button-round-2, .light-green.light-cyan.button-round-2, .light.light-green.button-round-2, .dark.light-green.button-round-2, .dark-green.light-green.button-round-2, .dark-blue.light-green.button-round-2, .light-cyan.light-green.button-round-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .dark-green.button-round-3, .dark-blue.button-round-3, .light-cyan.button-round-3, .light-green.button-round-3, .light.dark.button-round-3, .dark-green.dark.button-round-3, .dark-blue.dark.button-round-3, .light-cyan.dark.button-round-3, .light-green.dark.button-round-3, .light.dark-green.button-round-3, .dark.dark-green.button-round-3, .dark-blue.dark-green.button-round-3, .light-cyan.dark-green.button-round-3, .light-green.dark-green.button-round-3, .light.dark-blue.button-round-3, .dark.dark-blue.button-round-3, .dark-green.dark-blue.button-round-3, .light-cyan.dark-blue.button-round-3, .light-green.dark-blue.button-round-3, .light.light-cyan.button-round-3, .dark.light-cyan.button-round-3, .dark-green.light-cyan.button-round-3, .dark-blue.light-cyan.button-round-3, .light-green.light-cyan.button-round-3, .light.light-green.button-round-3, .dark.light-green.button-round-3, .dark-green.light-green.button-round-3, .dark-blue.light-green.button-round-3, .light-cyan.light-green.button-round-3 {
   cursor: pointer;
   user-select: none;
 }
 
-.banner, .button, .light.button, .dark.button, .green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .green.button-round-1, .button-expand-1, .light.button-expand-1, .dark.button-expand-1, .green.button-expand-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .green.button-round-2, .button-expand-2, .light.button-expand-2, .dark.button-expand-2, .green.button-expand-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .green.button-round-3, .button-expand-3, .light.button-expand-3, .dark.button-expand-3, .green.button-expand-3, .flex, .form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
+.banner, .button, .light.button, .dark.button, .dark-green.button, .dark-blue.button, .light-cyan.button, .light-green.button, .button-round-1, .light.button-round-1, .dark.button-round-1, .dark-green.button-round-1, .dark-blue.button-round-1, .light-cyan.button-round-1, .light-green.button-round-1, .button-expand-1, .light.button-expand-1, .light.dark.button-round-1, .dark-green.dark.button-round-1, .dark-blue.dark.button-round-1, .light-cyan.dark.button-round-1, .light-green.dark.button-round-1, .dark.button-expand-1, .light.dark-green.button-round-1, .dark.dark-green.button-round-1, .dark-blue.dark-green.button-round-1, .light-cyan.dark-green.button-round-1, .light-green.dark-green.button-round-1, .dark-green.button-expand-1, .light.dark-blue.button-round-1, .dark.dark-blue.button-round-1, .dark-green.dark-blue.button-round-1, .light-cyan.dark-blue.button-round-1, .light-green.dark-blue.button-round-1, .dark-blue.button-expand-1, .light.light-cyan.button-round-1, .dark.light-cyan.button-round-1, .dark-green.light-cyan.button-round-1, .dark-blue.light-cyan.button-round-1, .light-green.light-cyan.button-round-1, .light-cyan.button-expand-1, .light.light-green.button-round-1, .dark.light-green.button-round-1, .dark-green.light-green.button-round-1, .dark-blue.light-green.button-round-1, .light-cyan.light-green.button-round-1, .light-green.button-expand-1, .button-round-2, .light.button-round-2, .dark.button-round-2, .dark-green.button-round-2, .dark-blue.button-round-2, .light-cyan.button-round-2, .light-green.button-round-2, .button-expand-2, .light.button-expand-2, .light.dark.button-round-2, .dark-green.dark.button-round-2, .dark-blue.dark.button-round-2, .light-cyan.dark.button-round-2, .light-green.dark.button-round-2, .dark.button-expand-2, .light.dark-green.button-round-2, .dark.dark-green.button-round-2, .dark-blue.dark-green.button-round-2, .light-cyan.dark-green.button-round-2, .light-green.dark-green.button-round-2, .dark-green.button-expand-2, .light.dark-blue.button-round-2, .dark.dark-blue.button-round-2, .dark-green.dark-blue.button-round-2, .light-cyan.dark-blue.button-round-2, .light-green.dark-blue.button-round-2, .dark-blue.button-expand-2, .light.light-cyan.button-round-2, .dark.light-cyan.button-round-2, .dark-green.light-cyan.button-round-2, .dark-blue.light-cyan.button-round-2, .light-green.light-cyan.button-round-2, .light-cyan.button-expand-2, .light.light-green.button-round-2, .dark.light-green.button-round-2, .dark-green.light-green.button-round-2, .dark-blue.light-green.button-round-2, .light-cyan.light-green.button-round-2, .light-green.button-expand-2, .button-round-3, .light.button-round-3, .dark.button-round-3, .dark-green.button-round-3, .dark-blue.button-round-3, .light-cyan.button-round-3, .light-green.button-round-3, .button-expand-3, .light.button-expand-3, .light.dark.button-round-3, .dark-green.dark.button-round-3, .dark-blue.dark.button-round-3, .light-cyan.dark.button-round-3, .light-green.dark.button-round-3, .dark.button-expand-3, .light.dark-green.button-round-3, .dark.dark-green.button-round-3, .dark-blue.dark-green.button-round-3, .light-cyan.dark-green.button-round-3, .light-green.dark-green.button-round-3, .dark-green.button-expand-3, .light.dark-blue.button-round-3, .dark.dark-blue.button-round-3, .dark-green.dark-blue.button-round-3, .light-cyan.dark-blue.button-round-3, .light-green.dark-blue.button-round-3, .dark-blue.button-expand-3, .light.light-cyan.button-round-3, .dark.light-cyan.button-round-3, .dark-green.light-cyan.button-round-3, .dark-blue.light-cyan.button-round-3, .light-green.light-cyan.button-round-3, .light-cyan.button-expand-3, .light.light-green.button-round-3, .dark.light-green.button-round-3, .dark-green.light-green.button-round-3, .dark-blue.light-green.button-round-3, .light-cyan.light-green.button-round-3, .light-green.button-expand-3, .flex, .form, .image, .light.box, .dark.box, .dark-green.box, .dark-blue.box, .light-cyan.box, .light-green.box, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,13 +77,13 @@
   flex-grow: 0;
 }
 
-.form, .image, .light.box, .dark.box, .green.box, .link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
+.form, .image, .light.box, .dark.box, .dark-green.box, .dark-blue.box, .light-cyan.box, .light-green.box, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
 }
 
-.link, .light.link, .dark.link, .green.link, .light.inline-box, .dark.inline-box, .green.inline-box {
+.link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
   display: inline-flex;
   min-height: fit-content;
 }
@@ -93,7 +93,7 @@
 }
 
 .height-1 {
-  width: 10%;
+  height: 10%;
 }
 
 .width-2 {
@@ -101,7 +101,7 @@
 }
 
 .height-2 {
-  width: 20%;
+  height: 20%;
 }
 
 .width-3 {
@@ -109,7 +109,7 @@
 }
 
 .height-3 {
-  width: 30%;
+  height: 30%;
 }
 
 .width-4 {
@@ -117,7 +117,7 @@
 }
 
 .height-4 {
-  width: 40%;
+  height: 40%;
 }
 
 .width-5 {
@@ -125,7 +125,7 @@
 }
 
 .height-5 {
-  width: 50%;
+  height: 50%;
 }
 
 .width-6 {
@@ -133,7 +133,7 @@
 }
 
 .height-6 {
-  width: 60%;
+  height: 60%;
 }
 
 .width-7 {
@@ -141,7 +141,7 @@
 }
 
 .height-7 {
-  width: 70%;
+  height: 70%;
 }
 
 .width-8 {
@@ -149,7 +149,7 @@
 }
 
 .height-8 {
-  width: 80%;
+  height: 80%;
 }
 
 .width-9 {
@@ -157,7 +157,7 @@
 }
 
 .height-9 {
-  width: 90%;
+  height: 90%;
 }
 
 .width-10 {
@@ -165,7 +165,7 @@
 }
 
 .height-10 {
-  width: 100%;
+  height: 100%;
 }
 
 .padding-top-1 {
@@ -1621,6 +1621,11 @@
     align-items: space-between;
     flex-grow: 1;
   }
+  .flex-row > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-start {
   display: flex;
@@ -1637,6 +1642,11 @@
     justify-content: center;
     align-items: flex-start;
     flex-grow: 1;
+  }
+  .flex-row-start > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .flex-row-start-top {
@@ -1655,6 +1665,11 @@
     align-items: flex-start;
     flex-grow: 1;
   }
+  .flex-row-start-top > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-start-bottom {
   display: flex;
@@ -1671,6 +1686,11 @@
     justify-content: flex-end;
     align-items: flex-start;
     flex-grow: 1;
+  }
+  .flex-row-start-bottom > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .flex-row-center {
@@ -1689,6 +1709,11 @@
     align-items: center;
     flex-grow: 1;
   }
+  .flex-row-center > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-center-top {
   display: flex;
@@ -1705,6 +1730,11 @@
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
+  }
+  .flex-row-center-top > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .flex-row-center-bottom {
@@ -1723,6 +1753,11 @@
     align-items: center;
     flex-grow: 1;
   }
+  .flex-row-center-bottom > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-end {
   display: flex;
@@ -1739,6 +1774,11 @@
     justify-content: center;
     align-items: flex-end;
     flex-grow: 1;
+  }
+  .flex-row-end > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .flex-row-end-top {
@@ -1757,6 +1797,11 @@
     align-items: flex-end;
     flex-grow: 1;
   }
+  .flex-row-end-top > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-end-bottom {
   display: flex;
@@ -1773,6 +1818,11 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-grow: 1;
+  }
+  .flex-row-end-bottom > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .flex-row-top {
@@ -1791,6 +1841,11 @@
     align-items: space-between;
     flex-grow: 1;
   }
+  .flex-row-top > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .flex-row-bottom {
   display: flex;
@@ -1807,6 +1862,11 @@
     justify-content: flex-end;
     align-items: space-between;
     flex-grow: 1;
+  }
+  .flex-row-bottom > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -2028,7 +2088,259 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
+body, div, p, span, a, .link {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h1, .h1-text {
+  font-size: 4rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h2, .h2-text {
+  font-size: 2.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h3, .h3-text {
+  font-size: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h4, .h4-text {
+  font-size: 1.75rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h6, .h6-text {
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+body, div, p, span, a, .link {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h1, .h1-text {
+  font-size: 4rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h2, .h2-text {
+  font-size: 2.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h3, .h3-text {
+  font-size: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h4, .h4-text {
+  font-size: 1.75rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h6, .h6-text {
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+body, div, p, span, a, .link {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h1, .h1-text {
+  font-size: 4rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h2, .h2-text {
+  font-size: 2.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h3, .h3-text {
+  font-size: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h4, .h4-text {
+  font-size: 1.75rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h5, .h5-text {
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+h6, .h6-text {
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
 @media screen and (max-width: 1200px) {
+  body, div, p, span, a, .link {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3.6rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 2.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.575rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3.6rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 2.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.575rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3.6rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 2.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.575rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.35rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
   body, div, p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
@@ -2283,8 +2595,260 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
+  body, div, p, span, a, .link {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.3125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.9375rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.3125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.9375rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 3rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 1.3125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.9375rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
 }
 @media screen and (max-width: 600px) {
+  body, div, p, span, a, .link {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.625rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.625rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  body, div, p, span, a, .link {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h1, .h1-text {
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h2, .h2-text {
+    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h3, .h3-text {
+    font-size: 1rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h4, .h4-text {
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h5, .h5-text {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  h6, .h6-text {
+    font-size: 0.625rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
   body, div, p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
@@ -2432,31 +2996,82 @@ h6, .h6-text {
   color: #ffffff;
 }
 
-.green.box {
-  background-color: #042f00;
+.dark-green.box {
+  background-color: #073004;
   color: white;
 }
 
-.green.inline-box {
-  background-color: #042f00;
+.dark-green.inline-box {
+  background-color: #073004;
   color: white;
 }
 
-.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {
+.dark-blue.box {
+  background-color: #05092e;
+  color: white;
+}
+
+.dark-blue.inline-box {
+  background-color: #05092e;
+  color: white;
+}
+
+.light-cyan.box {
+  background-color: #11f7ff;
+  color: black;
+}
+
+.light-cyan.inline-box {
+  background-color: #11f7ff;
+  color: black;
+}
+
+.light-green.box {
+  background-color: #1dff4e;
+  color: black;
+}
+
+.light-green.inline-box {
+  background-color: #1dff4e;
+  color: black;
+}
+
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
 }
-.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .dark.button {
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .dark.button {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
 }
-.button, .green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .green.button {
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .dark-green.button {
+  border: 0px;
+  border-radius: 0.25em;
+  min-width: min-content;
+  min-height: min-content;
+  padding: 0.5em;
+}
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .dark-blue.button {
+  border: 0px;
+  border-radius: 0.25em;
+  min-width: min-content;
+  min-height: min-content;
+  padding: 0.5em;
+}
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light-cyan.button {
+  border: 0px;
+  border-radius: 0.25em;
+  min-width: min-content;
+  min-height: min-content;
+  padding: 0.5em;
+}
+.button, .light-green.button-round-3, .light-cyan.button-round-3, .dark-blue.button-round-3, .dark-green.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .light-green.button-round-2, .light-cyan.button-round-2, .dark-blue.button-round-2, .dark-green.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .light-green.button-round-1, .light-cyan.button-round-1, .dark-blue.button-round-1, .dark-green.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light-green.button {
   border: 0px;
   border-radius: 0.25em;
   min-width: min-content;
@@ -2497,20 +3112,71 @@ h6, .h6-text {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
-.button-round-1, .green.button-round-1 {
+.button-round-1, .dark-green.button-round-1 {
   border-radius: 1.5em;
 }
 
-.button-expand-1 > *, .green.button-expand-1 > * {
+.button-expand-1 > *, .dark-green.button-expand-1 > * {
   animation: animation-shrink-1 0.2s ease forwards;
 }
-.button-expand-1 > *.gradient-hover-animation, .green.button-expand-1 > *.gradient-hover-animation {
+.button-expand-1 > *.gradient-hover-animation, .dark-green.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
-.button-expand-1:hover > *, .green.button-expand-1:hover > * {
+.button-expand-1:hover > *, .dark-green.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
-.button-expand-1:hover > *.gradient-hover-animation, .green.button-expand-1:hover > *.gradient-hover-animation {
+.button-expand-1:hover > *.gradient-hover-animation, .dark-green.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+
+.button-round-1, .dark-blue.button-round-1 {
+  border-radius: 1.5em;
+}
+
+.button-expand-1 > *, .dark-blue.button-expand-1 > * {
+  animation: animation-shrink-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation, .dark-blue.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *, .dark-blue.button-expand-1:hover > * {
+  animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation, .dark-blue.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+
+.button-round-1, .light-cyan.button-round-1 {
+  border-radius: 1.5em;
+}
+
+.button-expand-1 > *, .light-cyan.button-expand-1 > * {
+  animation: animation-shrink-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation, .light-cyan.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *, .light-cyan.button-expand-1:hover > * {
+  animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation, .light-cyan.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+
+.button-round-1, .light-green.button-round-1 {
+  border-radius: 1.5em;
+}
+
+.button-expand-1 > *, .light-green.button-expand-1 > * {
+  animation: animation-shrink-1 0.2s ease forwards;
+}
+.button-expand-1 > *.gradient-hover-animation, .light-green.button-expand-1 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *, .light-green.button-expand-1:hover > * {
+  animation: animation-expand-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation, .light-green.button-expand-1:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -2592,20 +3258,71 @@ h6, .h6-text {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
-.button-round-2, .green.button-round-2 {
+.button-round-2, .dark-green.button-round-2 {
   border-radius: 2em;
 }
 
-.button-expand-2 > *, .green.button-expand-2 > * {
+.button-expand-2 > *, .dark-green.button-expand-2 > * {
   animation: animation-shrink-2 0.2s ease forwards;
 }
-.button-expand-2 > *.gradient-hover-animation, .green.button-expand-2 > *.gradient-hover-animation {
+.button-expand-2 > *.gradient-hover-animation, .dark-green.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
-.button-expand-2:hover > *, .green.button-expand-2:hover > * {
+.button-expand-2:hover > *, .dark-green.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
-.button-expand-2:hover > *.gradient-hover-animation, .green.button-expand-2:hover > *.gradient-hover-animation {
+.button-expand-2:hover > *.gradient-hover-animation, .dark-green.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+
+.button-round-2, .dark-blue.button-round-2 {
+  border-radius: 2em;
+}
+
+.button-expand-2 > *, .dark-blue.button-expand-2 > * {
+  animation: animation-shrink-2 0.2s ease forwards;
+}
+.button-expand-2 > *.gradient-hover-animation, .dark-blue.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *, .dark-blue.button-expand-2:hover > * {
+  animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation, .dark-blue.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+
+.button-round-2, .light-cyan.button-round-2 {
+  border-radius: 2em;
+}
+
+.button-expand-2 > *, .light-cyan.button-expand-2 > * {
+  animation: animation-shrink-2 0.2s ease forwards;
+}
+.button-expand-2 > *.gradient-hover-animation, .light-cyan.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *, .light-cyan.button-expand-2:hover > * {
+  animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation, .light-cyan.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+
+.button-round-2, .light-green.button-round-2 {
+  border-radius: 2em;
+}
+
+.button-expand-2 > *, .light-green.button-expand-2 > * {
+  animation: animation-shrink-2 0.2s ease forwards;
+}
+.button-expand-2 > *.gradient-hover-animation, .light-green.button-expand-2 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *, .light-green.button-expand-2:hover > * {
+  animation: animation-expand-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation, .light-green.button-expand-2:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -2687,20 +3404,71 @@ h6, .h6-text {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
-.button-round-3, .green.button-round-3 {
+.button-round-3, .dark-green.button-round-3 {
   border-radius: 2.5em;
 }
 
-.button-expand-3 > *, .green.button-expand-3 > * {
+.button-expand-3 > *, .dark-green.button-expand-3 > * {
   animation: animation-shrink-3 0.2s ease forwards;
 }
-.button-expand-3 > *.gradient-hover-animation, .green.button-expand-3 > *.gradient-hover-animation {
+.button-expand-3 > *.gradient-hover-animation, .dark-green.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
-.button-expand-3:hover > *, .green.button-expand-3:hover > * {
+.button-expand-3:hover > *, .dark-green.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
-.button-expand-3:hover > *.gradient-hover-animation, .green.button-expand-3:hover > *.gradient-hover-animation {
+.button-expand-3:hover > *.gradient-hover-animation, .dark-green.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+
+.button-round-3, .dark-blue.button-round-3 {
+  border-radius: 2.5em;
+}
+
+.button-expand-3 > *, .dark-blue.button-expand-3 > * {
+  animation: animation-shrink-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation, .dark-blue.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *, .dark-blue.button-expand-3:hover > * {
+  animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation, .dark-blue.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+
+.button-round-3, .light-cyan.button-round-3 {
+  border-radius: 2.5em;
+}
+
+.button-expand-3 > *, .light-cyan.button-expand-3 > * {
+  animation: animation-shrink-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation, .light-cyan.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *, .light-cyan.button-expand-3:hover > * {
+  animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation, .light-cyan.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+
+.button-round-3, .light-green.button-round-3 {
+  border-radius: 2.5em;
+}
+
+.button-expand-3 > *, .light-green.button-expand-3 > * {
+  animation: animation-shrink-3 0.2s ease forwards;
+}
+.button-expand-3 > *.gradient-hover-animation, .light-green.button-expand-3 > *.gradient-hover-animation {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *, .light-green.button-expand-3:hover > * {
+  animation: animation-expand-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation, .light-green.button-expand-3:hover > *.gradient-hover-animation {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -2764,6 +3532,11 @@ h6, .h6-text {
     align-items: center;
     flex-grow: 1;
   }
+  .link-row > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .link-row-group {
   display: flex;
@@ -2780,6 +3553,11 @@ h6, .h6-text {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+  }
+  .link-row-group > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .link {
@@ -2830,8 +3608,8 @@ h6, .h6-text {
   animation: animation-forward 0.2s ease forwards;
 }
 
-.green.link {
-  background: linear-gradient(135deg, #00000000, #086200 25%, #00000000);
+.dark-green.link {
+  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -2840,7 +3618,55 @@ h6, .h6-text {
   text-align: center;
   text-decoration: none;
 }
-.green.link:hover {
+.dark-green.link:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.dark-blue.link {
+  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+}
+.dark-blue.link:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.light-cyan.link {
+  background: linear-gradient(135deg, #ffffff00, #00d6dd 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+}
+.light-cyan.link:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.light-green.link {
+  background: linear-gradient(135deg, #ffffff00, #00e933 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+}
+.light-green.link:hover {
   -webkit-animation: animation-forward 0.2s ease forwards;
   -moz-animation: animation-forward 0.2s ease forwards;
   animation: animation-forward 0.2s ease forwards;
@@ -2921,31 +3747,124 @@ h6, .h6-text {
   animation: animation-back 0.2s ease forwards;
 }
 
-.green.fill.primary {
-  background-color: #042f00;
+.dark-green.fill.primary {
+  background-color: #073004;
   color: white;
 }
 
-.green.fill.secondary {
-  background-color: #064900;
+.dark-green.fill.secondary {
+  background-color: #0a4806;
   color: white;
 }
 
-.green.fill.complement {
-  background-color: #2b002f;
+.dark-green.fill.complement {
+  background-color: #2d0430;
   color: white;
 }
 
-.green.fill.complement.secondary {
-  background-color: #420049;
+.dark-green.fill.complement.secondary {
+  background-color: #430648;
   color: white;
 }
 
-.gradient.green, .gradient-hover-animation.green {
-  background: linear-gradient(135deg, #00000000, #086200 25%, #00000000);
+.gradient.dark-green, .gradient-hover-animation.dark-green {
+  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
 }
 
-.gradient-hover-animation.green {
+.gradient-hover-animation.dark-green {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.dark-blue.fill.primary {
+  background-color: #05092e;
+  color: white;
+}
+
+.dark-blue.fill.secondary {
+  background-color: #080e45;
+  color: white;
+}
+
+.dark-blue.fill.complement {
+  background-color: #2e2a05;
+  color: white;
+}
+
+.dark-blue.fill.complement.secondary {
+  background-color: #453f08;
+  color: white;
+}
+
+.gradient.dark-blue, .gradient-hover-animation.dark-blue {
+  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+}
+
+.gradient-hover-animation.dark-blue {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.light-cyan.fill.primary {
+  background-color: #11f7ff;
+  color: black;
+}
+
+.light-cyan.fill.secondary {
+  background-color: #00eef7;
+  color: black;
+}
+
+.light-cyan.fill.complement {
+  background-color: #ff1911;
+  color: black;
+}
+
+.light-cyan.fill.complement.secondary {
+  background-color: #f70800;
+  color: black;
+}
+
+.gradient.light-cyan, .gradient-hover-animation.light-cyan {
+  background: linear-gradient(135deg, #ffffff00, #00d6dd 25%, #ffffff00);
+}
+
+.gradient-hover-animation.light-cyan {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+
+.light-green.fill.primary {
+  background-color: #1dff4e;
+  color: black;
+}
+
+.light-green.fill.secondary {
+  background-color: #04ff3a;
+  color: black;
+}
+
+.light-green.fill.complement {
+  background-color: #ff1dce;
+  color: black;
+}
+
+.light-green.fill.complement.secondary {
+  background-color: #ff04c8;
+  color: black;
+}
+
+.gradient.light-green, .gradient-hover-animation.light-green {
+  background: linear-gradient(135deg, #ffffff00, #00e933 25%, #ffffff00);
+}
+
+.gradient-hover-animation.light-green {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -3025,6 +3944,11 @@ h6, .h6-text {
     justify-content: flex-start;
     align-items: space-between;
     flex-grow: 1;
+  }
+  .form-row > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -3111,7 +4035,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #064900, "complement": #2b002f, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -3150,7 +4074,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #064900, "complement": #2b002f, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -3189,7 +4113,7 @@ body {
   display: none;
 }
 .theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "green": ("primary": #042f00, "secondary": #064900, "complement": #2b002f, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
   display: none;
 }
 .theme-selector span {
@@ -3209,8 +4133,8 @@ body {
 .theme-selector select:hover {
   color: inherit;
 }
-.theme-selector select.green option {
-  background-color: #042f00;
+.theme-selector select.dark-green option {
+  background-color: #073004;
 }
 .theme-selector:hover span {
   color: transparent;
@@ -3219,7 +4143,124 @@ body {
 .no-shadow {
   box-shadow: none;
 }
-.no-shadow.green {
+.no-shadow.dark-green {
+  box-shadow: none;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: inherit;
+}
+.theme-selector select.dark-blue option {
+  background-color: #05092e;
+}
+.theme-selector:hover span {
+  color: transparent;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+.no-shadow.dark-blue {
+  box-shadow: none;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: inherit;
+}
+.theme-selector select.light-cyan option {
+  background-color: #11f7ff;
+}
+.theme-selector:hover span {
+  color: transparent;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+.no-shadow.light-cyan {
+  box-shadow: none;
+}
+
+.theme-selector::before {
+  content: "Change Theme";
+  display: none;
+}
+.theme-selector::after {
+  content: '("light": ("primary": #f7f7f7, "secondary": #eaeaea, "complement": #f7f7f7, "text-colour": #000000, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #151515, "complement": #080808, "text-colour": #ffffff, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #0a4806, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #080e45, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #00eef7, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #04ff3a, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
+  display: none;
+}
+.theme-selector span {
+  z-index: 1;
+}
+.theme-selector select {
+  z-index: 2;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  display: block;
+  position: absolute;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5em;
+}
+.theme-selector select:hover {
+  color: inherit;
+}
+.theme-selector select.light-green option {
+  background-color: #1dff4e;
+}
+.theme-selector:hover span {
+  color: transparent;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+.no-shadow.light-green {
   box-shadow: none;
 }
 

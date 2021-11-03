@@ -21,6 +21,12 @@
 
     @media screen and (max-width: variables.$screen-width-small) {
         @include flex(column, $align, $justify, $grow);
+
+        > * {
+            width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
     }
 }
 
@@ -101,7 +107,7 @@
     }
 
     %height-#{$i} {
-        width: #{10% * $i};
+        height: #{10% * $i};
     }
 
     @each $type in variables.$offset-types {

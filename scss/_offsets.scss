@@ -9,7 +9,7 @@
     }
 
     .height-#{$i} {
-        width: #{10% * $i};
+        height: #{10% * $i};
     }
 }
 

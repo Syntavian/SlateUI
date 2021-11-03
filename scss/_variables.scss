@@ -91,4 +91,7 @@ $themes: (
     ))) !global;
 }
 
-@include add-theme("green", #042f00);
+@include add-theme("dark-green", #073004);
+@include add-theme("dark-blue", #05092e);
+@include add-theme("light-cyan", #11f7ff);
+@include add-theme("light-green", #1dff4e);
