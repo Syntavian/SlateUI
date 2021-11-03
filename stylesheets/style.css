@@ -44,7 +44,7 @@
   width: 100%;
 }
 
-.form, .image, .light.box, .dark.box, .dark-green.box, .dark-blue.box, .light-cyan.box, .light-green.box, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
+.break.light, .break.dark, .break.dark-green, .break.dark-blue, .break.light-cyan, .break.light-green, .form, .image, .light.box, .dark.box, .dark-green.box, .dark-blue.box, .light-cyan.box, .light-green.box, .link, .light.link, .dark.link, .dark-green.link, .dark-blue.link, .light-cyan.link, .light-green.link, .light.inline-box, .dark.inline-box, .dark-green.inline-box, .dark-blue.inline-box, .light-cyan.inline-box, .light-green.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -4030,6 +4030,12 @@ body {
   min-height: 100vh;
 }
 
+.break.light {
+  background-color: #eaeaea;
+  height: 1px;
+  width: 100%;
+}
+
 .theme-selector::before {
   content: "Change Theme";
   display: none;
@@ -4067,6 +4073,12 @@ body {
 }
 .no-shadow.light {
   box-shadow: none;
+}
+
+.break.dark {
+  background-color: #151515;
+  height: 1px;
+  width: 100%;
 }
 
 .theme-selector::before {
@@ -4108,6 +4120,12 @@ body {
   box-shadow: none;
 }
 
+.break.dark-green {
+  background-color: #0a4806;
+  height: 1px;
+  width: 100%;
+}
+
 .theme-selector::before {
   content: "Change Theme";
   display: none;
@@ -4145,6 +4163,12 @@ body {
 }
 .no-shadow.dark-green {
   box-shadow: none;
+}
+
+.break.dark-blue {
+  background-color: #080e45;
+  height: 1px;
+  width: 100%;
 }
 
 .theme-selector::before {
@@ -4186,6 +4210,12 @@ body {
   box-shadow: none;
 }
 
+.break.light-cyan {
+  background-color: #00eef7;
+  height: 1px;
+  width: 100%;
+}
+
 .theme-selector::before {
   content: "Change Theme";
   display: none;
@@ -4223,6 +4253,12 @@ body {
 }
 .no-shadow.light-cyan {
   box-shadow: none;
+}
+
+.break.light-green {
+  background-color: #04ff3a;
+  height: 1px;
+  width: 100%;
 }
 
 .theme-selector::before {

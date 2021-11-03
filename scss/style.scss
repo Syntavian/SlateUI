@@ -94,7 +94,15 @@ body {
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
+    $secondary: map.get($theme, "secondary");
     $text: map.get($theme, "text-colour");
+
+    .break.#{$name} {
+        @extend %shadow-1;
+        background-color: $secondary;
+        height: 1px;
+        width: 100%;
+    }
 
     .theme-selector {
         &::before {
