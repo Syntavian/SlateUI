@@ -4,7 +4,21 @@ let themeSwitchers = document.querySelectorAll(".theme-selector");
 
 let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,[class^='.shadow']");
 
+const scrollBar = document.getElementById("scroll-bar");
+const scrollHandle = document.getElementById("scroll-handle");
+
+let isScrollBarActive = false;
+
 let currentTheme = "";
+
+function updateScrollBar() {
+    if (!isScrollBarActive) {
+        let scrollBarStyle = getComputedStyle(scrollBar);
+
+        scrollHandle.style.height = Number(scrollBarStyle.height.replace("px", "")) * window.innerHeight / document.body.scrollHeight + "px";  
+        scrollHandle.style.top = Number(scrollBarStyle.height.replace("px", "")) * window.scrollY / document.body.scrollHeight + "px";  
+    }
+}
 
 function switchClicked(button) {
     if (button.classList.contains("active") || button.classList.contains("inactive")) {
@@ -68,6 +82,8 @@ function initialiseThemeSwitcher(button) {
     select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
 }
 
+updateScrollBar();
+
 for (let button of switchButtons) {
     initialiseSwitch(button);
 }
@@ -75,3 +91,55 @@ for (let button of switchButtons) {
 for (let button of themeSwitchers) {
     initialiseThemeSwitcher(button);
 }
+
+window.addEventListener("resize", e => {
+    updateScrollBar();
+});
+
+scrollHandle.addEventListener("mousedown", function (e) {
+    if (e.button === 0) {
+        isScrollBarActive = true;
+    }
+}, {
+    passive: false
+});
+
+document.addEventListener("mousemove", function (e) {
+    if (isScrollBarActive) {
+        e.preventDefault();
+
+        let scrollBarStyle = getComputedStyle(scrollBar);
+
+        let targetPosition = Number(scrollHandle.style.top.replace("px", "")) + e.movementY;
+
+        let targetMax = Number(scrollBarStyle.height.replace("px", "")) * (document.body.scrollHeight - window.innerHeight) / document.body.scrollHeight;
+
+        if (targetPosition < 0) {
+            targetPosition = 0;
+        } else if (targetPosition > targetMax) {
+            targetPosition = targetMax;
+        }
+
+        scrollHandle.style.top = targetPosition + "px";        
+
+        window.scroll({
+            top: Number(scrollHandle.style.top.replace("px", "")) * document.body.scrollHeight / Number(scrollBarStyle.height.replace("px", "")),
+            left: 0,
+            behavior: "instant"
+        });
+    }
+}, {
+    passive: false
+});
+
+document.addEventListener("mouseup", function (e) {
+    isScrollBarActive = false;
+}, {
+    passive: false
+});
+
+document.addEventListener("scroll", function (e) {
+    updateScrollBar();
+}, {
+    passive: false
+});

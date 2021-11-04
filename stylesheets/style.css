@@ -4710,11 +4710,19 @@
   z-index: 10;
 }
 
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4752,11 +4760,19 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4794,11 +4810,19 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4836,11 +4860,19 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4878,11 +4910,19 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4920,11 +4960,19 @@ h6, .h6-text {
   margin-bottom: 0.5em;
   font-weight: normal;
 }
-body, div, p, span, a, .link {
+p, span, a, .link {
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-weight: normal;
+}
+body, div {
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1, .h1-text {
   font-size: 4rem;
@@ -4963,11 +5011,19 @@ h6, .h6-text {
   font-weight: normal;
 }
 @media screen and (max-width: 1200px) {
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5005,11 +5061,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5047,11 +5111,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5089,11 +5161,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5131,11 +5211,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5173,11 +5261,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3.6rem;
@@ -5217,11 +5313,19 @@ h6, .h6-text {
   }
 }
 @media screen and (max-width: 900px) {
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5259,11 +5363,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5301,11 +5413,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5343,11 +5463,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5385,11 +5513,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5427,11 +5563,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.75rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 3rem;
@@ -5471,11 +5615,19 @@ h6, .h6-text {
   }
 }
 @media screen and (max-width: 600px) {
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;
@@ -5513,11 +5665,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;
@@ -5555,11 +5715,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;
@@ -5597,11 +5765,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;
@@ -5639,11 +5815,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;
@@ -5681,11 +5865,19 @@ h6, .h6-text {
     margin-bottom: 0.5em;
     font-weight: normal;
   }
-  body, div, p, span, a, .link {
+  p, span, a, .link {
     font-size: 0.5rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: normal;
+  }
+  body, div {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   h1, .h1-text {
     font-size: 2rem;

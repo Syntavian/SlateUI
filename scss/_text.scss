@@ -16,7 +16,7 @@
         $primary: map.get($theme, "primary");
         $text: map.get($theme, "text");
 
-        body, div, p, span, a, .link {
+        p, span, a, .link {
             @include text(variables.$font-size * $scalar);
     
             &.#{$name} {
@@ -24,6 +24,17 @@
             }
         } 
     
+        body, div {
+            @include text(variables.$font-size * $scalar);
+
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+            &.#{$name} {
+                color: $text;
+            }
+        } 
+
         h1, .h1-text {
             @include text(variables.$h1-size * $scalar);
 
