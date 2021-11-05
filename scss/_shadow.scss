@@ -46,49 +46,46 @@
     }
 
     @each $name, $theme in variables.$themes {
-        $primary: map.get($theme, "primary");
-        $secondary: map.get($theme, "secondary");
-        $tertiary: map.get($theme, "tertiary");
-        $text: map.get($theme, "text-colour");
+        $shifted: map.get($theme, "shifted");
 
         .shadow-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px 0px ($i + 2px) 0px;
+            box-shadow: $shifted 0px 0px ($i + 2px) 0px;
         }
         
         .shadow-up-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px -#{$i}px ($i + 2px) 0px;
+            box-shadow: $shifted 0px -#{$i}px ($i + 2px) 0px;
         }
         
         .shadow-down-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px #{$i}px ($i + 2px) 0px;
+            box-shadow: $shifted 0px #{$i}px ($i + 2px) 0px;
         }
         
         .shadow-right-#{$i}.#{$name} {
-            box-shadow: $tertiary #{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $shifted #{$i}px 0px ($i + 2px) 0px;
         }
         
         .shadow-left-#{$i}.#{$name} {
-            box-shadow: $tertiary -#{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $shifted -#{$i}px 0px ($i + 2px) 0px;
         }
     
         .shadow-inset-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px 0px ($i + 2px) 0px inset;
+            box-shadow: $shifted 0px 0px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-up-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px -#{$i}px ($i + 2px) 0px inset;
+            box-shadow: $shifted 0px -#{$i}px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-down-#{$i}.#{$name} {
-            box-shadow: $tertiary 0px #{$i}px ($i + 2px) 0px inset;
+            box-shadow: $shifted 0px #{$i}px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-right-#{$i}.#{$name} {
-            box-shadow: $tertiary #{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $shifted #{$i}px 0px ($i + 2px) 0px inset;
         }
         
         .shadow-inset-left-#{$i}.#{$name} {
-            box-shadow: $tertiary -#{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $shifted -#{$i}px 0px ($i + 2px) 0px inset;
         }
     }
 }

@@ -7,6 +7,9 @@
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
     $tertiary: map.get($theme, "tertiary");
+    $darkened: map.get($theme, "darkened");
+    $lightened: map.get($theme, "lightened");
+    $shifted: map.get($theme, "shifted");
     $complement: map.get($theme, "complement");
     $text: map.get($theme, "text-colour");
 
@@ -25,21 +28,26 @@
         color: $text;
     } 
 
+    .#{$name}.fill.darkened {
+        background-color: $darkened;
+        color: $text;
+    } 
+
+    .#{$name}.fill.lightened {
+        background-color: $lightened;
+        color: $text;
+    } 
+    
+    .#{$name}.fill.shifted {
+        background-color: $shifted;
+        color: $text;
+    } 
+
     .#{$name}.fill.complement {
         background-color: $complement;
         color: $text;
     } 
 
-    .#{$name}.fill.complement.secondary {
-        background-color: complement($secondary);
-        color: $text;
-    } 
-
-    .#{$name}.fill.complement.tertiary {
-        background-color: complement($tertiary);
-        color: $text;
-    } 
-    
     %#{$name}-gradient {
         @if color.blackness($primary) > 50% {
             background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
