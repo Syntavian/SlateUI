@@ -92,9 +92,9 @@
 }
 
 @media screen and (max-width: variables.$screen-width-medium) {
-    @include text-levels(0.75);
+    @include text-levels(0.8);
 }
 
 @media screen and (max-width: variables.$screen-width-small) {
-    @include text-levels(0.5);
+    @include text-levels(0.7);
 }

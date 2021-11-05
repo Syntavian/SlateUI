@@ -6,7 +6,7 @@
 .form {
     @extend %box;
     @extend %padding-1;
-    @extend %width-5;
+    @extend %width-10;
 }
 
 .form-row {
@@ -18,9 +18,30 @@
 .form-label {
     @extend %width-3;
     @extend %margin-right-s; 
+    @extend %margin-bottom-s; 
+    text-align: end;
 }
 
 .form-input {
     @extend %width-7;
     resize: vertical;
+}
+
+@media screen and (max-width: variables.$screen-width-medium) {
+    .form-row {
+        @include prototypes.flex-column(space-between, flex-start);
+    }
+
+    .form-label {
+        text-align: start;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .form-input {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
