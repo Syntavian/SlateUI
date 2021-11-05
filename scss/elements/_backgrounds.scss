@@ -9,6 +9,7 @@
     $tertiary: map.get($theme, "tertiary");
     $darkened: map.get($theme, "darkened");
     $lightened: map.get($theme, "lightened");
+    $shifted-less: map.get($theme, "shifted-less");
     $shifted: map.get($theme, "shifted");
     $complement: map.get($theme, "complement");
     $text: map.get($theme, "text-colour");
@@ -37,7 +38,12 @@
         background-color: $lightened;
         color: $text;
     } 
-    
+
+    .#{$name}.fill.shifted-less {
+        background-color: $shifted-less;
+        color: $text;
+    } 
+
     .#{$name}.fill.shifted {
         background-color: $shifted;
         color: $text;
