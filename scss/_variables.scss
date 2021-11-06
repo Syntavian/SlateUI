@@ -52,50 +52,19 @@ $alpha-dark: #00000000;
     }
 }
 
-$themes: (
-    "light": (
-        "primary": #f7f7f7, 
-        "secondary": adjust-hue(#f7f7f7, 120deg), 
-        "tertiary": adjust-hue(#f7f7f7, 240deg), 
-        "darkened": darken(#f7f7f7, 20%),
-        "lighten": lighten(#f7f7f7, 20%),
-        "shifted-less": color-tone-shift(#f7f7f7, 10%),
-        "shifted": color-tone-shift(#f7f7f7, 20%),
-        "complement": complement(#f7f7f7), 
-        "text-colour": $black,
-        "fonts": $fonts,
-        "font-size": $font-size,
-        "padding": $s-offset,
-        "margin": $s-offset,
-        "rounding": 0.25em,
-    ), 
-    "dark": ( 
-        "primary": #080808, 
-        "secondary": adjust-hue(#080808, 120deg), 
-        "tertiary": adjust-hue(#080808, 240deg), 
-        "darkened": darken(#080808, 20%),
-        "lighten": lighten(#080808, 20%),
-        "shifted-less": color-tone-shift(#080808, 10%),
-        "shifted": color-tone-shift(#080808, 20%),
-        "complement": complement(#080808), 
-        "text-colour": $white,
-        "fonts": $fonts,
-        "font-size": $font-size,
-        "padding": $s-offset,
-        "margin": $s-offset,
-        "rounding": 0.25em,
-    )
-);
+$themes: ();
 
 @mixin add-theme($name, $primary) {
     $themes: map.merge($themes, ($name: (
         "primary": $primary, 
         "secondary": adjust-hue($primary, 120deg), 
         "tertiary": adjust-hue($primary, 240deg), 
-        "darkened": darken($primary, 20%),
-        "lighten": lighten($primary, 20%),
-        "shifted-less": color-tone-shift($primary, 10%),
-        "shifted": color-tone-shift($primary, 20%),
+        "darkened-20": darken($primary, 20%),
+        "lightened-20": lighten($primary, 20%),
+        "shifted-10": color-tone-shift($primary, 10%),
+        "shifted-20": color-tone-shift($primary, 20%),
+        "shifted-30": color-tone-shift($primary, 20%),
+        "inverted": invert($primary),
         "complement": complement($primary), 
         "text-colour": get-contrasting-bw($primary),
         "fonts": $fonts,
@@ -106,7 +75,9 @@ $themes: (
     ))) !global;
 }
 
-@include add-theme("dark-green", #073004);
-@include add-theme("dark-blue", #05092e);
+@include add-theme("light", #f7f7f7);
+@include add-theme("dark", #080808);
 @include add-theme("light-cyan", #11f7ff);
 @include add-theme("light-green", #1dff4e);
+@include add-theme("dark-green", #073004);
+@include add-theme("dark-blue", #05092e);

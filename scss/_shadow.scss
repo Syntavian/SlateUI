@@ -46,7 +46,7 @@
     }
 
     @each $name, $theme in variables.$themes {
-        $shifted: map.get($theme, "shifted");
+        $shifted: map.get($theme, "shifted-20");
 
         .shadow-#{$i}.#{$name} {
             box-shadow: $shifted 0px 0px ($i + 2px) 0px;

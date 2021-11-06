@@ -7,60 +7,101 @@
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
     $tertiary: map.get($theme, "tertiary");
-    $darkened: map.get($theme, "darkened");
-    $lightened: map.get($theme, "lightened");
-    $shifted-less: map.get($theme, "shifted-less");
-    $shifted: map.get($theme, "shifted");
+    $darkened-20: map.get($theme, "darkened-20");
+    $lightened-20: map.get($theme, "lightened-20");
+    $shifted-10: map.get($theme, "shifted-10");
+    $shifted-20: map.get($theme, "shifted-20");
     $complement: map.get($theme, "complement");
+    $inverted: map.get($theme, "inverted");
     $text: map.get($theme, "text-colour");
 
-    .#{$name}.fill.primary {
+    .#{$name}.fill {
         background-color: $primary;
         color: $text;
-    } 
 
-    .#{$name}.fill.secondary {
-        background-color: $secondary;
-        color: $text;
-    } 
+        &.secondary {
+            background-color: $secondary;
 
-    .#{$name}.fill.tertiary {
-        background-color: $tertiary;
-        color: $text;
-    } 
+            &.complement {
+                background-color: complement($secondary);
+            }
 
-    .#{$name}.fill.darkened {
-        background-color: $darkened;
-        color: $text;
-    } 
+            &.inverted {
+                background-color: invert($secondary);
+            }
+        }
 
-    .#{$name}.fill.lightened {
-        background-color: $lightened;
-        color: $text;
-    } 
+        &.tertiary {
+            background-color: $tertiary;
 
-    .#{$name}.fill.shifted-less {
-        background-color: $shifted-less;
-        color: $text;
-    } 
+            &.complement {
+                background-color: complement($tertiary);
+            }
 
-    .#{$name}.fill.shifted {
-        background-color: $shifted;
-        color: $text;
-    } 
+            &.inverted {
+                background-color: invert($tertiary);
+            }
+        }
 
-    .#{$name}.fill.complement {
-        background-color: $complement;
-        color: $text;
-    } 
+        &.darkened-20 {
+            background-color: $darkened-20;
+
+            &.complement {
+                background-color: complement($darkened-20);
+            }
+
+            &.inverted {
+                background-color: invert($darkened-20);
+            }
+        }
+
+        &.lightened-20 {
+            background-color: $lightened-20;
+
+            &.complement {
+                background-color: complement($lightened-20);
+            }
+
+            &.inverted {
+                background-color: invert($lightened-20);
+            }
+        }
+
+        &.shifted-10 {
+            background-color: $shifted-10;
+
+            &.complement {
+                background-color: complement($shifted-10);
+            }
+
+            &.inverted {
+                background-color: invert($shifted-10);
+            }
+        }
+
+        &.shifted-20 {
+            background-color: $shifted-20;
+
+            &.complement {
+                background-color: complement($shifted-20);
+            }
+
+            &.inverted {
+                background-color: invert($shifted-20);
+            }
+        }
+
+        &.complement {
+            background-color: $complement;
+        }
+
+        &.inverted {
+            background-color: $inverted;
+        }
+    }
 
     %#{$name}-gradient {
-        @if color.blackness($primary) > 50% {
-            background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
-        }
-        @else {
-            background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
-        }
+        background: linear-gradient(135deg, variables.$alpha, $shifted-10 25%, variables.$alpha);
     }
     
     %#{$name}-gradient-hover-animation {

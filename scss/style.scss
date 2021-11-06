@@ -96,12 +96,18 @@ body {
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
     $tertiary: map.get($theme, "tertiary");
+    $darkened-20: map.get($theme, "darkened-20");
+    $lightened-20: map.get($theme, "lightened-20");
+    $shifted-10: map.get($theme, "shifted-10");
+    $shifted-20: map.get($theme, "shifted-20");
+    $complement: map.get($theme, "complement");
+    $inverted: map.get($theme, "inverted");
     $text: map.get($theme, "text-colour");
 
     .break.#{$name} {
         @extend %shadow-down-1;
         @extend %margin-bottom-s;
-        background-color: rgba($tertiary, 0.5);
+        background-color: rgba($shifted-20, 0.5);
         height: 1px;
         width: 100%;
     }
