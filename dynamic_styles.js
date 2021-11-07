@@ -58,6 +58,15 @@ function switchElementThemes(newTheme) {
     currentTheme = newTheme;
 }
 
+function updateThemeSwitchers() {
+    for (let button of themeSwitchers) {
+        let style = getComputedStyle(button);
+        let select = button.querySelector("select");
+        select.style.width = style.width;
+        select.style.height = style.height;
+    }
+}
+
 function initialiseThemeSwitcher(button) {
 
     let style = getComputedStyle(button);
@@ -69,9 +78,6 @@ function initialiseThemeSwitcher(button) {
     let themes = getComputedStyle(button, "::after").content;
 
     let select = document.createElement("select");
-
-    select.style.width = style.width;
-    select.style.height = style.height;
 
     for (let string of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')) {
         let splitString = string.split(':');
@@ -98,6 +104,9 @@ function initialiseThemeSwitcher(button) {
 
     button.addEventListener("mouseleave", e => {select.blur();});
     select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
+    window.addEventListener("resize", e => {
+       updateThemeSwitchers(); 
+    });
 }
 
 for (let button of switchButtons) {
@@ -109,6 +118,7 @@ for (let button of themeSwitchers) {
 }
 
 updateScrollBar();
+updateThemeSwitchers();
 
 if (scrollBar && scrollHandle) {
     window.addEventListener("resize", e => {

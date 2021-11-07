@@ -67,6 +67,15 @@
     text-decoration: none;
 }
 
+@mixin link-touch($primary) {
+    @include gradient-hover-animation($primary);
+    @extend %box;
+    @extend %clickable;
+    padding: 0.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
 @each $level, $value in variables.$offset-values {
     @each $type in variables.$offset-types {
         @each $direction in variables.$offset-directions {
