@@ -110,13 +110,36 @@ function initialiseThemeSwitcher(button) {
 
 function initialiseImageCarousel(ic) {
     let childCount = ic.children.length;
+
+    let zIndexOffset = Math.floor(childCount / 2 - 0.5);
+    if (zIndexOffset > 2) {
+        zIndexOffset = 2;
+    }
+
     for (let i = 0; i < childCount; i++) {
-        let zIndex = -Math.abs(i - Math.floor(childCount / 2)) + 2;
+        let zIndex = -Math.abs(i - Math.floor(childCount / 2)) + zIndexOffset;
         ic.children[i].style.zIndex = zIndex;
         if (zIndex < 0) {
             ic.children[i].style.display = "none";
         }
     }
+
+    let leftButton = document.createElement("div");
+    let rightButton = document.createElement("div");
+
+    let leftButtonStyle = getComputedStyle(ic, "::before");
+    let rightButtonStyle = getComputedStyle(ic, "::after");
+
+    leftButton.textContent = leftButtonStyle.content.slice(1,leftButtonStyle.content.length - 1);
+    leftButton.style.fontSize = leftButtonStyle.fontSize;
+    leftButton.style.zIndex = zIndexOffset + 1;
+
+    rightButton.textContent = rightButtonStyle.content.slice(1,rightButtonStyle.content.length - 1);
+    rightButton.style.fontSize = rightButtonStyle.fontSize;
+    rightButton.style.zIndex = zIndexOffset + 1;
+
+    ic.prepend(leftButton);
+    ic.append(rightButton);
 }
 
 for (let button of switchButtons) {

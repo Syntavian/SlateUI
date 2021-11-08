@@ -9062,19 +9062,19 @@ h6, .h6-text {
     margin-right: 0px;
   }
 }
-.image-carousel > * {
+.image-carousel > .image {
   margin-left: -1em;
   margin-right: -1em;
 }
 .image-carousel::before {
   content: "<";
-  display: block;
+  display: none;
   font-size: 2rem;
   margin-right: -1em;
 }
 .image-carousel::after {
   content: ">";
-  display: block;
+  display: none;
   font-size: 2rem;
   margin-left: -1em;
 }

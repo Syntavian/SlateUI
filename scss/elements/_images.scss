@@ -12,7 +12,7 @@
     @include prototypes.flex-row(space-around, center);
     width: max-content;
 
-    > * {
+    > .image {
         margin: {
             left: -1em;
             right: -1em;
@@ -21,7 +21,7 @@
 
     &::before {
         content: "<";
-        display: block;
+        display: none;
         font-size: variables.$h3-size;
         margin-right: -1em; 
         @extend %padding-s;
@@ -29,7 +29,7 @@
 
     &::after {
         content: ">";
-        display: block;
+        display: none;
         font-size: variables.$h3-size;
         margin-left: -1em; 
         @extend %padding-s;
