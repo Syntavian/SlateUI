@@ -4,6 +4,8 @@ let themeSwitchers = document.querySelectorAll(".theme-selector");
 
 let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,[class^='.shadow']");
 
+let imageCarousels = document.querySelectorAll(".image-carousel");
+
 let scrollBar = document.getElementById("scroll-bar");
 let scrollHandle = document.getElementById("scroll-handle");
 
@@ -68,17 +70,11 @@ function updateThemeSwitchers() {
 }
 
 function initialiseThemeSwitcher(button) {
-
-    let style = getComputedStyle(button);
-
     let label = document.createElement("span");
     label.textContent = getComputedStyle(button, "::before").content.replaceAll('"', '');
     button.appendChild(label);
-
     let themes = getComputedStyle(button, "::after").content;
-
     let select = document.createElement("select");
-
     for (let string of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')) {
         let splitString = string.split(':');
         if (splitString.length === 3) {
@@ -105,8 +101,19 @@ function initialiseThemeSwitcher(button) {
     button.addEventListener("mouseleave", e => {select.blur();});
     select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
     window.addEventListener("resize", e => {
-       updateThemeSwitchers(); 
+        updateThemeSwitchers(); 
     });
+}
+
+function initialiseImageCarousel(ic) {
+    let childCount = ic.children.length;
+    for (let i = 0; i < childCount; i++) {
+        let zIndex = -Math.abs(i - Math.floor(childCount / 2)) + 2;
+        ic.children[i].style.zIndex = zIndex;
+        if (zIndex < 0) {
+            ic.children[i].style.display = "none";
+        }
+    }
 }
 
 for (let button of switchButtons) {
@@ -115,6 +122,10 @@ for (let button of switchButtons) {
 
 for (let button of themeSwitchers) {
     initialiseThemeSwitcher(button);
+}
+
+for (let ic of imageCarousels) {
+    initialiseImageCarousel(ic);
 }
 
 updateScrollBar();
