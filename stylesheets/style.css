@@ -1,3 +1,7 @@
+.image-carousel::before, .image-carousel::after {
+  padding: 0.5em;
+}
+
 .break.light, .break.dark, .break.light-cyan, .break.light-green, .break.dark-green, .break.dark-blue, .form-label {
   margin-bottom: 0.5em;
 }
@@ -19,7 +23,7 @@
   z-index: -1;
 }
 
-.form {
+.form, .image {
   padding: 1em;
 }
 
@@ -30,10 +34,6 @@
 
 .form-label {
   width: 30%;
-}
-
-.image {
-  padding: 3em;
 }
 
 .form-input {
@@ -9037,6 +9037,46 @@ h6, .h6-text {
 .dark-blue.inline-box {
   background-color: #05092e;
   color: white;
+}
+
+.image-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  width: max-content;
+}
+@media screen and (max-width: 600px) {
+  .image-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    flex-grow: 1;
+  }
+  .image-carousel > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.image-carousel > * {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+.image-carousel::before {
+  content: "<";
+  display: block;
+  font-size: 2rem;
+  margin-right: -1em;
+}
+.image-carousel::after {
+  content: ">";
+  display: block;
+  font-size: 2rem;
+  margin-left: -1em;
 }
 
 .button, .dark-blue.button-round-3, .dark-green.button-round-3, .light-green.button-round-3, .light-cyan.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .dark-blue.button-round-2, .dark-green.button-round-2, .light-green.button-round-2, .light-cyan.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .dark-blue.button-round-1, .dark-green.button-round-1, .light-green.button-round-1, .light-cyan.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {

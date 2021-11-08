@@ -4,6 +4,34 @@
 @use '../prototypes';
 
 .image {
-    @extend %padding-3;
+    @extend %padding-1;
     @extend %box;
+}
+
+.image-carousel {
+    @include prototypes.flex-row(space-around, center);
+    width: max-content;
+
+    > * {
+        margin: {
+            left: -1em;
+            right: -1em;
+        }
+    }
+
+    &::before {
+        content: "<";
+        display: block;
+        font-size: variables.$h3-size;
+        margin-right: -1em; 
+        @extend %padding-s;
+    }
+
+    &::after {
+        content: ">";
+        display: block;
+        font-size: variables.$h3-size;
+        margin-left: -1em; 
+        @extend %padding-s;
+    }
 }
