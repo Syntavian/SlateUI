@@ -1,7 +1,3 @@
-.image-carousel::before, .image-carousel::after {
-  padding: 0.5em;
-}
-
 .break.light, .break.dark, .break.light-cyan, .break.light-green, .break.dark-green, .break.dark-blue, .form-label {
   margin-bottom: 0.5em;
 }
@@ -9039,6 +9035,10 @@ h6, .h6-text {
   color: white;
 }
 
+.image {
+  user-select: none;
+}
+
 .image-carousel {
   display: flex;
   flex-direction: row;
@@ -9046,7 +9046,7 @@ h6, .h6-text {
   align-items: center;
   flex-grow: 1;
   width: 100%;
-  width: max-content;
+  width: min-content;
 }
 @media screen and (max-width: 600px) {
   .image-carousel {
@@ -9063,20 +9063,18 @@ h6, .h6-text {
   }
 }
 .image-carousel > .image {
-  margin-left: -1em;
-  margin-right: -1em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 }
 .image-carousel::before {
   content: "<";
   display: none;
-  font-size: 2rem;
-  margin-right: -1em;
+  font-size: 1.25rem;
 }
 .image-carousel::after {
   content: ">";
   display: none;
-  font-size: 2rem;
-  margin-left: -1em;
+  font-size: 1.25rem;
 }
 
 .button, .dark-blue.button-round-3, .dark-green.button-round-3, .light-green.button-round-3, .light-cyan.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .dark-blue.button-round-2, .dark-green.button-round-2, .light-green.button-round-2, .light-cyan.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .dark-blue.button-round-1, .dark-green.button-round-1, .light-green.button-round-1, .light-cyan.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {

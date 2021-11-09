@@ -6,32 +6,29 @@
 .image {
     @extend %padding-1;
     @extend %box;
+    user-select: none;
 }
 
 .image-carousel {
     @include prototypes.flex-row(space-around, center);
-    width: max-content;
+    width: min-content;
 
     > .image {
         margin: {
-            left: -1em;
-            right: -1em;
+            left: -1.5em;
+            right: -1.5em;
         }
     }
 
     &::before {
         content: "<";
         display: none;
-        font-size: variables.$h3-size;
-        margin-right: -1em; 
-        @extend %padding-s;
+        font-size: 1.25rem;
     }
 
     &::after {
         content: ">";
         display: none;
-        font-size: variables.$h3-size;
-        margin-left: -1em; 
-        @extend %padding-s;
+        font-size: 1.25rem;
     }
 }
