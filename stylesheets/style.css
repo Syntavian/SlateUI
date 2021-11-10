@@ -3374,7 +3374,7 @@
     margin: 3em;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .padding-top-1 {
     padding-top: 0.45em;
   }
@@ -7420,15 +7420,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row {
+@media screen and (max-width: 700px) {
+  .flex-row:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row > * {
+  .flex-row:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7442,15 +7442,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-start {
+@media screen and (max-width: 700px) {
+  .flex-row-start:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start > * {
+  .flex-row-start:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7464,15 +7464,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-start-top {
+@media screen and (max-width: 700px) {
+  .flex-row-start-top:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start-top > * {
+  .flex-row-start-top:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7486,15 +7486,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-start-bottom {
+@media screen and (max-width: 700px) {
+  .flex-row-start-bottom:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start-bottom > * {
+  .flex-row-start-bottom:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7508,15 +7508,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-center {
+@media screen and (max-width: 700px) {
+  .flex-row-center:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center > * {
+  .flex-row-center:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7530,15 +7530,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-center-top {
+@media screen and (max-width: 700px) {
+  .flex-row-center-top:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center-top > * {
+  .flex-row-center-top:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7552,15 +7552,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-center-bottom {
+@media screen and (max-width: 700px) {
+  .flex-row-center-bottom:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center-bottom > * {
+  .flex-row-center-bottom:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7574,15 +7574,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-end {
+@media screen and (max-width: 700px) {
+  .flex-row-end:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end > * {
+  .flex-row-end:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7596,15 +7596,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-end-top {
+@media screen and (max-width: 700px) {
+  .flex-row-end-top:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end-top > * {
+  .flex-row-end-top:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7618,15 +7618,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-end-bottom {
+@media screen and (max-width: 700px) {
+  .flex-row-end-bottom:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end-bottom > * {
+  .flex-row-end-bottom:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7640,15 +7640,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-top {
+@media screen and (max-width: 700px) {
+  .flex-row-top:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row-top > * {
+  .flex-row-top:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -7662,15 +7662,15 @@
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .flex-row-bottom {
+@media screen and (max-width: 700px) {
+  .flex-row-bottom:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row-bottom > * {
+  .flex-row-bottom:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -8673,7 +8673,7 @@ h6, .h6-text {
     font-weight: normal;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   p, span, a, select, option, .link {
     font-size: 0.7rem;
     margin-top: 0.5em;
@@ -9042,29 +9042,29 @@ h6, .h6-text {
 .image-carousel {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-grow: 1;
   width: 100%;
   width: min-content;
 }
-@media screen and (max-width: 600px) {
-  .image-carousel {
+@media screen and (max-width: 700px) {
+  .image-carousel:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-around;
+    align-items: center;
     flex-grow: 1;
   }
-  .image-carousel > * {
+  .image-carousel:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 .image-carousel > .image {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: -2em;
+  margin-right: -2em;
 }
 .image-carousel::before {
   content: "<";
@@ -9077,6 +9077,42 @@ h6, .h6-text {
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .image-carousel > .image {
+    margin-left: -2.5em;
+    margin-right: -2.5em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .image-carousel > .image {
+    margin-left: -3em;
+    margin-right: -3em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .image-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) and (max-width: 700px) {
+  .image-carousel:not(.image-carousel) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .image-carousel:not(.image-carousel) > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 .button, .dark-blue.button-round-3, .dark-green.button-round-3, .light-green.button-round-3, .light-cyan.button-round-3, .dark.button-round-3, .button-round-3, .light.button-round-3, .dark-blue.button-round-2, .dark-green.button-round-2, .light-green.button-round-2, .light-cyan.button-round-2, .dark.button-round-2, .button-round-2, .light.button-round-2, .dark-blue.button-round-1, .dark-green.button-round-1, .light-green.button-round-1, .light-cyan.button-round-1, .dark.button-round-1, .button-round-1, .light.button-round-1, .light.button {
   border: 0px;
   border-radius: 0.25em;
@@ -9565,15 +9601,15 @@ h6, .h6-text {
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .link-row {
+@media screen and (max-width: 700px) {
+  .link-row:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .link-row > * {
+  .link-row:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -9587,15 +9623,15 @@ h6, .h6-text {
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .link-row-group {
+@media screen and (max-width: 700px) {
+  .link-row-group:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .link-row-group > * {
+  .link-row-group:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -10374,15 +10410,15 @@ h6, .h6-text {
   flex-grow: 1;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .form-row {
+@media screen and (max-width: 700px) {
+  .form-row:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
     flex-grow: 1;
   }
-  .form-row > * {
+  .form-row:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;

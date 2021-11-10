@@ -19,13 +19,15 @@
     @include flex(row, $justify, $align, $grow);
     width: 100%;
 
-    @media screen and (max-width: variables.$screen-width-small) {
-        @include flex(column, $align, $justify, $grow);
-
-        > * {
-            width: 100%;
-            margin-left: 0px;
-            margin-right: 0px;
+    &:not(.image-carousel) {
+        @media screen and (max-width: variables.$screen-width-small) {
+            @include flex(column, $align, $justify, $grow);
+    
+            > * {
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
         }
     }
 }

@@ -10,13 +10,13 @@
 }
 
 .image-carousel {
-    @include prototypes.flex-row(space-around, center);
+    @include prototypes.flex-row(center, center);
     width: min-content;
 
     > .image {
         margin: {
-            left: -1.5em;
-            right: -1.5em;
+            left: -2em;
+            right: -2em;
         }
     }
 
@@ -30,5 +30,33 @@
         content: ">";
         display: none;
         font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: variables.$screen-width-large) {
+    .image-carousel {
+        > .image {
+            margin: {
+                left: -2.5em;
+                right: -2.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: variables.$screen-width-medium) {
+    .image-carousel {
+        > .image {
+            margin: {
+                left: -3em;
+                right: -3em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: variables.$screen-width-small) {
+    .image-carousel {
+        @include prototypes.flex-row(center, center);
     }
 }
