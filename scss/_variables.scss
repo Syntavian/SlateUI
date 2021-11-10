@@ -45,10 +45,10 @@ $alpha-dark: #00000000;
 
 @function color-tone-shift($color, $amount: 5%) {
     @if color.blackness($color) < 50% {
-        @return darken($color, $amount);
+        @return color.scale($color, $lightness: -$amount);
     }
     @else {
-        @return lighten($color, $amount);
+        @return color.scale($color, $lightness: $amount);
     }
 }
 
@@ -59,11 +59,11 @@ $themes: ();
         "primary": $primary, 
         "secondary": adjust-hue($primary, 120deg), 
         "tertiary": adjust-hue($primary, 240deg), 
-        "darkened-20": darken($primary, 20%),
-        "lightened-20": lighten($primary, 20%),
+        "darkened-20": color.scale($primary, $lightness: -20%),
+        "lightened-20": color.scale($primary, $lightness: 20%),
         "shifted-10": color-tone-shift($primary, 10%),
         "shifted-20": color-tone-shift($primary, 20%),
-        "shifted-30": color-tone-shift($primary, 20%),
+        "shifted-30": color-tone-shift($primary, 30%),
         "inverted": invert($primary),
         "complement": complement($primary), 
         "text-colour": get-contrasting-bw($primary),
