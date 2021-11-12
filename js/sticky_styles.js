@@ -7,18 +7,29 @@ function updateBanners() {
         let elementStyle = getComputedStyle(element);
         if (elementStyle.position != "fixed") {
             if (element.getBoundingClientRect().top < 0) {
-                element.parentElement.style.height = getElementStylesAsNumberSum(elementStyle.height, elementStyle.marginTop, elementStyle.marginBottom, elementStyle.paddingTop, elementStyle.paddingBottom) + "px";
-                element.parentElement.style.width = getElementStylesAsNumberSum(elementStyle.width, elementStyle.marginRight, elementStyle.marginLeft) + "px";
+
+                let placeholder = document.createElement("div");
+                placeholder.style.height = getElementStylesAsNumberSum(elementStyle.height) + "px";
+                placeholder.style.width = getElementStylesAsNumberSum(elementStyle.width, elementStyle.marginLeft, elementStyle.marginRight) + "px";
+                placeholder.style.display = elementStyle.display;
+                placeholder.className = "sticky-placeholder";
+
                 element.style.position = "fixed";
                 element.style.zIndex = 99;
                 elementStyle = getComputedStyle(element);
                 element.setAttribute("originalpostion", getElementStyleAsNumber(elementStyle.top));
                 element.style.top = "0px";
+
+                element.parentElement.insertBefore(placeholder, element);
+                
             }
         } else {
             element.style.top = "0px";
-            element.parentElement.style.height = getElementStylesAsNumberSum(elementStyle.height, elementStyle.marginTop, elementStyle.marginBottom, elementStyle.paddingTop, elementStyle.paddingBottom) + "px";
-            element.parentElement.style.width = getElementStylesAsNumberSum(elementStyle.width, elementStyle.marginRight, elementStyle.marginLeft) + "px";
+            let placeholder = element.parentElement.children[Array.prototype.indexOf.call(element.parentElement.children, element) - 1];
+
+            placeholder.style.height = getElementStylesAsNumberSum(elementStyle.height) + "px";
+            placeholder.style.width = getElementStylesAsNumberSum(elementStyle.width, elementStyle.marginLeft, elementStyle.marginRight) + "px";
+
             if (window.scrollY <= Number(element.getAttribute("originalpostion"))) {
                 element.style.top = Number(element.getAttribute("originalpostion")) - window.scrollY + "px";
             }
@@ -30,8 +41,13 @@ function resetBanners() {
     for (let element of sticky) {
         element.removeAttribute('style');
         element.removeAttribute('originalpostion');
-        element.parentElement.removeAttribute('style');
-        element.parentElement.removeAttribute('style');
+
+        if (Array.prototype.indexOf.call(element.parentElement.children, element) - 1 >= 0) {
+            let placeholder = element.parentElement.children[Array.prototype.indexOf.call(element.parentElement.children, element) - 1];
+            if (placeholder.classList.contains("sticky-placeholder")) {
+                element.parentElement.removeChild(placeholder);
+            }
+        }
     }
 
     updateBanners();
