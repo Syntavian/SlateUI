@@ -26,6 +26,17 @@ function updateBanners() {
     }
 }
 
+function resetBanners() {
+    for (let element of sticky) {
+        element.removeAttribute('style');
+        element.removeAttribute('originalpostion');
+        element.parentElement.removeAttribute('style');
+        element.parentElement.removeAttribute('style');
+    }
+
+    updateBanners();
+}
+
 document.addEventListener("scroll", function (e) {
     updateBanners();
 }, {
@@ -33,7 +44,7 @@ document.addEventListener("scroll", function (e) {
 });
 
 window.addEventListener("resize", function (e) {
-    updateBanners();
+    resetBanners();
 }, {
     passive: false
 });
