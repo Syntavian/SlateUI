@@ -1,7 +1,8 @@
+import { updateButtonStyle } from './image_styles.js';
+
 let themeSwitchers = document.querySelectorAll(".theme-selector");
 let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,[class^='.shadow']");
 let currentTheme = "";
-
 
 function switchElementThemes(newTheme) {
     for (let element of themedElements) {
@@ -10,6 +11,8 @@ function switchElementThemes(newTheme) {
     }
 
     currentTheme = newTheme;
+
+    updateButtonStyle();
 }
 
 function updateThemeSwitchers() {

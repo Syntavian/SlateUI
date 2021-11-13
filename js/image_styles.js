@@ -1,9 +1,7 @@
-const imageCarouselData = [];
-
 let imageCarousels = document.querySelectorAll(".image-carousel");
 
 function cycleCarousel(index, offset, maxDimension) {
-    let imageCarouselElement = imageCarouselData[index].element;
+    let imageCarouselElement = imageCarousels[index];
     let maxIndex = 0;
     let maxPosition = 0;
 
@@ -40,12 +38,27 @@ function cycleCarousel(index, offset, maxDimension) {
         child.style.width = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
         child.style.height = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
     }
+
+    if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
+        let colour = getComputedStyle(imageCarouselElement.children[imageCarouselElement.children.length - 1]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
+        imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+    } else {
+        imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "";
+    }
+    if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset - 1].classList.contains("placeholder")) {
+        let colour = getComputedStyle(imageCarouselElement.children[0]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
+        imageCarouselElement.children[0].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+    } else {
+        imageCarouselElement.children[0].style.color = "";
+    }
 }
 
-function initialiseImageCarousel(imageCarouselElement, index) {
+function initialiseImageCarousel(index) {
+    let imageCarouselElement = imageCarousels[index];
     let childCount = imageCarouselElement.children.length;
     let zIndexOffset = Math.floor(childCount / 2 - 0.5);
     let maxDimension = 0;
+    let margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft;
 
     if (zIndexOffset > 2) {
         zIndexOffset = 2;
@@ -54,14 +67,14 @@ function initialiseImageCarousel(imageCarouselElement, index) {
     for (let i = 0; i < zIndexOffset; i++) {
         let placeholder = document.createElement("div");
         placeholder.classList.add("placeholder");
-        placeholder.style.marginLeft = "-1.5em";
-        placeholder.style.marginRight = "-1.5em";
+        placeholder.style.marginLeft = margin;
+        placeholder.style.marginRight = margin;
         imageCarouselElement.prepend(placeholder);
 
         placeholder = document.createElement("div");
         placeholder.classList.add("placeholder");
-        placeholder.style.marginLeft = "-1.5em";
-        placeholder.style.marginRight = "-1.5em";
+        placeholder.style.marginLeft = margin;
+        placeholder.style.marginRight = margin;
         imageCarouselElement.append(placeholder);
     }
 
@@ -110,12 +123,34 @@ function initialiseImageCarousel(imageCarouselElement, index) {
     imageCarouselElement.prepend(leftButton);
     imageCarouselElement.append(rightButton);
 
-    imageCarouselData.push({index: index, element: imageCarouselElement, position: 0});
-
     leftButton.addEventListener("click", e => cycleCarousel(index, -1, maxDimension));
     rightButton.addEventListener("click", e => cycleCarousel(index, 1, maxDimension));
 }
 
-for (let i = 0; i < imageCarousels.length; i++) {
-    initialiseImageCarousel(imageCarousels[i], i);
+function resizeCarousel(index) {
+    let imageCarouselElement = imageCarousels[index];
+    let margin = getComputedStyle(imageCarouselElement.querySelectorAll(".image")[0]).marginLeft;
+
+    for (let child of imageCarouselElement.querySelectorAll(".placeholder")) {
+        child.style.marginLeft = margin;
+        child.style.marginRight = margin;
+    }
 }
+
+function resizeCarousels() {
+    for (let i = 0; i < imageCarousels.length; i++) {
+        resizeCarousel(i);
+    }
+}
+
+export function updateButtonStyle() {
+    return;
+}
+
+for (let i = 0; i < imageCarousels.length; i++) {
+    initialiseImageCarousel(i);
+}
+
+window.addEventListener("resize", e => {
+    resizeCarousels();
+});
