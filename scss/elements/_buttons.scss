@@ -5,6 +5,14 @@
 
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
+    $secondary: map.get($theme, "secondary");
+    $tertiary: map.get($theme, "tertiary");
+    $darkened-20: map.get($theme, "darkened-20");
+    $lightened-20: map.get($theme, "lightened-20");
+    $shifted-10: map.get($theme, "shifted-10");
+    $shifted-20: map.get($theme, "shifted-20");
+    $complement: map.get($theme, "complement");
+    $inverted: map.get($theme, "inverted");
     $text: map.get($theme, "text-colour");
 
     .button, .#{$name}.button {
@@ -17,6 +25,10 @@
         min-height: min-content;
         padding: 0.5em;
 
+        &.disabled {
+            color: $shifted-20;
+        }
+
         &.active {
             @extend %shadow-inset-3;
 
@@ -25,7 +37,7 @@
             }
         }
 
-        &:hover {
+        &:hover:not(.disabled) {
             @extend %shadow-5;
 
             &:active {
@@ -37,7 +49,7 @@
             }
         }
 
-        &:active {
+        &:active:not(.disabled) {
             @extend %shadow-inset-3;
         }
     }

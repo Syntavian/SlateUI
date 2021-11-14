@@ -11,21 +11,41 @@
 
 .form-row {
     @include prototypes.flex-row(space-between, flex-start);
-    @extend %margin-s;
     @extend %width-10;
 }
 
 .form-label {
     @extend %width-3;
     @extend %margin-right-s; 
-    @extend %margin-bottom-s; 
     text-align: end;
 }
 
 .form-input {
+    @include prototypes.border-radius();
+    @extend %shadow-1;
     @extend %width-7;
     resize: vertical;
 }
+
+@each $name, $theme in variables.$themes {
+    $primary: map.get($theme, "primary");
+    $secondary: map.get($theme, "secondary");
+    $tertiary: map.get($theme, "tertiary");
+    $darkened-20: map.get($theme, "darkened-20");
+    $lightened-20: map.get($theme, "lightened-20");
+    $shifted-10: map.get($theme, "shifted-10");
+    $shifted-20: map.get($theme, "shifted-20");
+    $complement: map.get($theme, "complement");
+    $inverted: map.get($theme, "inverted");
+    $text: map.get($theme, "text-colour");
+
+    .#{$name}.form-input {
+        border: 1px solid $shifted-20;
+        color: $text;
+        background-color: invert($text);
+    }
+}
+
 
 @media screen and (max-width: variables.$screen-width-medium) {
     .form-row {

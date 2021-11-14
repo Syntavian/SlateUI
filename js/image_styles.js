@@ -40,16 +40,24 @@ function cycleCarousel(index, offset, maxDimension) {
     }
 
     if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
-        let colour = getComputedStyle(imageCarouselElement.children[imageCarouselElement.children.length - 1]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
-        imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+        // let colour = getComputedStyle(imageCarouselElement.children[imageCarouselElement.children.length - 1]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
+        // imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+
+        imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.add("disabled");
     } else {
-        imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "";
+        // imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "";
+
+        imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.remove("disabled");
     }
     if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset - 1].classList.contains("placeholder")) {
-        let colour = getComputedStyle(imageCarouselElement.children[0]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
-        imageCarouselElement.children[0].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+        // let colour = getComputedStyle(imageCarouselElement.children[0]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
+        // imageCarouselElement.children[0].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
+
+        imageCarouselElement.children[0].classList.add("disabled");
     } else {
-        imageCarouselElement.children[0].style.color = "";
+        // imageCarouselElement.children[0].style.color = "";
+
+        imageCarouselElement.children[0].classList.remove("disabled");
     }
 }
 
@@ -109,13 +117,13 @@ function initialiseImageCarousel(index) {
     let rightButtonStyle = getComputedStyle(imageCarouselElement, "::after");
 
     leftButton.textContent = leftButtonStyle.content.slice(1,leftButtonStyle.content.length - 1);
-    leftButton.classList.add("button");
+    leftButton.classList.add("button", "fill");
     leftButton.style.fontSize = leftButtonStyle.fontSize;
     leftButton.style.fontWeight = leftButtonStyle.fontWeight;
     leftButton.style.zIndex = zIndexOffset + 1;
 
     rightButton.textContent = rightButtonStyle.content.slice(1,rightButtonStyle.content.length - 1);
-    rightButton.classList.add("button");
+    rightButton.classList.add("button", "fill");
     rightButton.style.fontSize = rightButtonStyle.fontSize;
     rightButton.style.fontWeight = rightButtonStyle.fontWeight;
     rightButton.style.zIndex = zIndexOffset + 1;
@@ -141,10 +149,6 @@ function resizeCarousels() {
     for (let i = 0; i < imageCarousels.length; i++) {
         resizeCarousel(i);
     }
-}
-
-export function updateButtonStyle() {
-    return;
 }
 
 for (let i = 0; i < imageCarousels.length; i++) {

@@ -3,10 +3,11 @@
 @use 'variables';
 @use 'prototypes';
 
-@mixin text($size: variables.$font-size, $margin: variables.$s-offset, $weight: normal) {
+@mixin text($size: variables.$font-size, $margin: variables.$s-offset, $padding: 0px, $weight: normal) {
     font-size: $size;
     margin-top: $margin;
     margin-bottom: $margin;
+    padding: $padding;
     font-weight: $weight;
 }
 
@@ -16,7 +17,7 @@
         $primary: map.get($theme, "primary");
         $text: map.get($theme, "text");
 
-        p, span, a, select, option, .link {
+        p, span, a, select, option, label, input, textarea, .link {
             @include text(variables.$font-size * $scalar);
     
             &.#{$name} {
