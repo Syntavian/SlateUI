@@ -3,6 +3,46 @@
 @use '../variables';
 @use '../prototypes';
 
+.button, input[type='submit'] {
+    @extend %flex;
+    @extend %shadow-3;
+    @extend %clickable;
+    @include prototypes.border-radius();
+
+    background-color: variables.$alpha-dark;
+    min-width: min-content;
+    min-height: min-content;
+    padding: 0.5em;
+
+    &.disabled {
+        color: map.get(map.get(variables.$themes, "light"), "shifted-20");
+    }
+
+    &.active {
+        @extend %shadow-inset-3;
+
+        &:hover {
+            @extend %shadow-inset-5;
+        }
+    }
+
+    &:hover:not(.disabled) {
+        @extend %shadow-5;
+
+        &:active {
+            @extend %shadow-inset-3;
+        }
+
+        &.active {
+            @extend %shadow-inset-5;
+        }
+    }
+
+    &:active:not(.disabled) {
+        @extend %shadow-inset-3;
+    }
+}
+
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
@@ -15,42 +55,9 @@
     $inverted: map.get($theme, "inverted");
     $text: map.get($theme, "text-colour");
 
-    .button, .#{$name}.button {
-        @extend %flex;
-        @extend %shadow-3;
-        @extend %clickable;
-        @include prototypes.border-radius();
-
-        min-width: min-content;
-        min-height: min-content;
-        padding: 0.5em;
-
+    .#{$name}.button {
         &.disabled {
             color: $shifted-20;
-        }
-
-        &.active {
-            @extend %shadow-inset-3;
-
-            &:hover {
-                @extend %shadow-inset-5;
-            }
-        }
-
-        &:hover:not(.disabled) {
-            @extend %shadow-5;
-
-            &:active {
-                @extend %shadow-inset-3;
-            }
-
-            &.active {
-                @extend %shadow-inset-5;
-            }
-        }
-
-        &:active:not(.disabled) {
-            @extend %shadow-inset-3;
         }
     }
 }

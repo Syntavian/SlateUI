@@ -7,20 +7,6 @@
     $primary: map.get($theme, "primary");
     $text: map.get($theme, "text-colour");
 
-    @if $name == "default" {
-        .box {
-            @extend %box;
-            background-color: $primary;
-            color: $text;
-        }
-        
-        .inline-box {
-            @extend %inline-box;
-            background-color: $primary;
-            color: $text;
-        }
-    }
-
     .#{$name}.box {
         @extend %box;
         background-color: $primary;
