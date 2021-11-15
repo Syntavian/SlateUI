@@ -15,7 +15,15 @@
 
     @each $name, $theme in variables.$themes {
         $primary: map.get($theme, "primary");
-        $text: map.get($theme, "text");
+        $secondary: map.get($theme, "secondary");
+        $tertiary: map.get($theme, "tertiary");
+        $darkened-20: map.get($theme, "darkened-20");
+        $lightened-20: map.get($theme, "lightened-20");
+        $shifted-10: map.get($theme, "shifted-10");
+        $shifted-20: map.get($theme, "shifted-20");
+        $complement: map.get($theme, "complement");
+        $inverted: map.get($theme, "inverted");
+        $text: map.get($theme, "text-colour");
 
         p, span, a, select, option, label, input, textarea, .link {
             @include text(variables.$font-size * $scalar);
@@ -24,7 +32,7 @@
                 color: $text;
             }
         } 
-    
+
         body, div {
             @include text(variables.$font-size * $scalar);
 
