@@ -2,8 +2,8 @@
   margin-bottom: 0.5em;
 }
 
-.form-label {
-  margin-right: 0.5em;
+.form-input {
+  margin-left: 0.5em;
 }
 
 .link-row-group > * {
@@ -11335,7 +11335,7 @@ h6.dark-blue, .h6-text.dark-blue {
 .form-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-grow: 1;
 }
@@ -11344,7 +11344,7 @@ h6.dark-blue, .h6-text.dark-blue {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: space-between;
+    align-items: flex-start;
     flex-grow: 1;
   }
   .form-row:not(.image-carousel) > * {
@@ -11367,6 +11367,7 @@ h6.dark-blue, .h6-text.dark-blue {
 .form-input[type=checkbox] {
   width: min-content;
   align-self: center;
+  margin-right: auto;
 }
 
 .light.form-input {

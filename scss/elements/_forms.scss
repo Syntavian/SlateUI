@@ -10,13 +10,13 @@
 }
 
 .form-row {
-    @include prototypes.flex-row(space-between, flex-start);
+    @include prototypes.flex-row(flex-start, flex-start);
     @extend %width-10;
 }
 
 .form-label {
     @extend %width-3;
-    @extend %margin-right-s; 
+
     text-align: end;
 }
 
@@ -24,12 +24,14 @@
     @include prototypes.border-radius();
     @extend %shadow-1;
     @extend %width-7;
+    @extend %margin-left-s; 
     resize: vertical;
 }
 
 .form-input[type="checkbox"] {
     width: min-content;
     align-self: center;
+    margin-right: auto;
 }
 
 @each $name, $theme in variables.$themes {
