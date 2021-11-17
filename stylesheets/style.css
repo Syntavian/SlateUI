@@ -11364,6 +11364,11 @@ h6.dark-blue, .h6-text.dark-blue {
   resize: vertical;
 }
 
+.form-input[type=checkbox] {
+  width: min-content;
+  align-self: center;
+}
+
 .light.form-input {
   border: 1px solid #c6c6c6;
   color: black;

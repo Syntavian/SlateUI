@@ -27,6 +27,11 @@
     resize: vertical;
 }
 
+.form-input[type="checkbox"] {
+    width: min-content;
+    align-self: center;
+}
+
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
@@ -45,7 +50,6 @@
         background-color: invert($text);
     }
 }
-
 
 @media screen and (max-width: variables.$screen-width-medium) {
     .form-row {
