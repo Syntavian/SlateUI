@@ -17,10 +17,30 @@
 @mixin flex-row($justify, $align, $grow: 1) {
     @include flex(row, $justify, $align, $grow);
 
+    &.shrink-xl:not(.image-carousel) {
+        @media screen and (max-width: variables.$screen-width-xl) {
+            @include flex(column, $align, $justify, $grow);
+    
+            &.flex-reverse {
+                flex-direction: column-reverse;
+            }
+
+            > * {
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
+
     &:not(.image-carousel) {
         @media screen and (max-width: variables.$screen-width-small) {
             @include flex(column, $align, $justify, $grow);
     
+            &.flex-reverse {
+                flex-direction: column-reverse;
+            }
+
             > * {
                 width: 100%;
                 margin-left: 0px;
