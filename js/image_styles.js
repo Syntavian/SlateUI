@@ -138,6 +138,7 @@ function initialiseImageCarousel(index) {
 function resizeCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
     let margin = getComputedStyle(imageCarouselElement.querySelectorAll(".image")[0]).marginLeft;
+    let width = getComputedStyle(imageCarouselElement.querySelectorAll(".image")[0]).width;
 
     for (let child of imageCarouselElement.querySelectorAll(".placeholder")) {
         child.style.marginLeft = margin;

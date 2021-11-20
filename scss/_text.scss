@@ -96,6 +96,10 @@
 
 @include text-levels(1);
 
+p {
+    text-align: justify;
+}
+
 @media screen and (max-width: variables.$screen-width-large) {
     @include text-levels(0.9);
 }

@@ -33,28 +33,6 @@
     }
 }
 
-@media screen and (max-width: variables.$screen-width-large) {
-    .image-carousel {
-        > .image {
-            margin: {
-                left: -2.5em;
-                right: -2.5em;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: variables.$screen-width-medium) {
-    .image-carousel {
-        > .image {
-            margin: {
-                left: -3em;
-                right: -3em;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: variables.$screen-width-small) {
     .image-carousel {
         @include prototypes.flex-row(center, center);
