@@ -13,12 +13,12 @@
     @include prototypes.flex-row(center, center);
     width: min-content;
 
-    > .image {
-        margin: {
-            left: -2em;
-            right: -2em;
-        }
-    }
+    // > .image {
+    //     margin: {
+    //         left: -2em;
+    //         right: -2em;
+    //     }
+    // }
 
     &::before {
         content: "<";
@@ -36,5 +36,6 @@
 @media screen and (max-width: variables.$screen-width-small) {
     .image-carousel {
         @include prototypes.flex-row(center, center);
+        width: 100%;
     }
 }

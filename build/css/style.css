@@ -10165,9 +10165,17 @@ p {
   color: black;
 }
 
+.light.box.block {
+  display: block;
+}
+
 .light.inline-box {
   background-color: #f7f7f7;
   color: black;
+}
+
+.light.inline-box.block {
+  display: inline-block;
 }
 
 .dark.box {
@@ -10175,9 +10183,17 @@ p {
   color: white;
 }
 
+.dark.box.block {
+  display: block;
+}
+
 .dark.inline-box {
   background-color: #080808;
   color: white;
+}
+
+.dark.inline-box.block {
+  display: inline-block;
 }
 
 .light-cyan.box {
@@ -10185,9 +10201,17 @@ p {
   color: black;
 }
 
+.light-cyan.box.block {
+  display: block;
+}
+
 .light-cyan.inline-box {
   background-color: #11f7ff;
   color: black;
+}
+
+.light-cyan.inline-box.block {
+  display: inline-block;
 }
 
 .light-green.box {
@@ -10195,9 +10219,17 @@ p {
   color: black;
 }
 
+.light-green.box.block {
+  display: block;
+}
+
 .light-green.inline-box {
   background-color: #1dff4e;
   color: black;
+}
+
+.light-green.inline-box.block {
+  display: inline-block;
 }
 
 .dark-green.box {
@@ -10205,9 +10237,17 @@ p {
   color: white;
 }
 
+.dark-green.box.block {
+  display: block;
+}
+
 .dark-green.inline-box {
   background-color: #073004;
   color: white;
+}
+
+.dark-green.inline-box.block {
+  display: inline-block;
 }
 
 .dark-blue.box {
@@ -10215,9 +10255,17 @@ p {
   color: white;
 }
 
+.dark-blue.box.block {
+  display: block;
+}
+
 .dark-blue.inline-box {
   background-color: #05092e;
   color: white;
+}
+
+.dark-blue.inline-box.block {
+  display: inline-block;
 }
 
 .image {
@@ -10266,10 +10314,6 @@ p {
     margin-right: 0px;
   }
 }
-.image-carousel > .image {
-  margin-left: -2em;
-  margin-right: -2em;
-}
 .image-carousel::before {
   content: "<";
   display: none;
@@ -10288,6 +10332,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
   }
 }
 @media screen and (max-width: 700px) and (max-width: 1600px) {
@@ -10803,6 +10848,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  width: 100%;
 }
 @media screen and (max-width: 1600px) {
   .link-row.shrink-xl:not(.image-carousel) {

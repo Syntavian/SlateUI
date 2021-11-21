@@ -5,6 +5,7 @@
 
 .link-row {
     @include prototypes.flex-row(center, center);
+    width: 100%;
 
     > * {
         @extend %margin-horizontal-1;
