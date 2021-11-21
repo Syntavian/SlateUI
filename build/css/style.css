@@ -96,7 +96,7 @@
   box-shadow: gray 0px 0px 5px 0px;
 }
 
-.button.active, input[type=submit].active, .button:hover:not(.disabled):active, input[type=submit]:hover:not(.disabled):active, .button:active:not(.disabled), input[type=submit]:active:not(.disabled), .active.button-round-1, .button-round-1:hover:not(.disabled):active, .button-round-1:active:not(.disabled), .active.button-round-2, .button-round-2:hover:not(.disabled):active, .button-round-2:active:not(.disabled), .active.button-round-3, .button-round-3:hover:not(.disabled):active, .button-round-3:active:not(.disabled) {
+.button.active:not(.disabled), input[type=submit].active:not(.disabled), .button:hover:not(.disabled):active:not(.disabled), input[type=submit]:hover:not(.disabled):active:not(.disabled), .button:active:not(.disabled), input[type=submit]:active:not(.disabled), .active.button-round-1:not(.disabled), .button-round-1:hover:not(.disabled):active:not(.disabled), .button-round-1:active:not(.disabled), .active.button-round-2:not(.disabled), .button-round-2:hover:not(.disabled):active:not(.disabled), .button-round-2:active:not(.disabled), .active.button-round-3:not(.disabled), .button-round-3:hover:not(.disabled):active:not(.disabled), .button-round-3:active:not(.disabled) {
   box-shadow: gray 0px 0px 5px 0px inset;
 }
 
@@ -104,7 +104,7 @@
   box-shadow: #c6c6c6 0px 0px 5px 0px;
 }
 
-.light.button.active, input.light[type=submit].active, .light.button:active:not(.disabled), input.light[type=submit]:active:not(.disabled), .light.active.button-round-1, .light.button-round-1:active:not(.disabled), .light.active.button-round-2, .light.button-round-2:active:not(.disabled), .light.active.button-round-3, .light.button-round-3:active:not(.disabled) {
+.light.button.active:not(.disabled), input.light[type=submit].active:not(.disabled), .light.button:hover:not(.disabled):active, input.light[type=submit]:hover:not(.disabled):active, .light.button:active:not(.disabled), input.light[type=submit]:active:not(.disabled), .light.active.button-round-1:not(.disabled), .light.button-round-1:hover:not(.disabled):active, .light.button-round-1:active:not(.disabled), .light.active.button-round-2:not(.disabled), .light.button-round-2:hover:not(.disabled):active, .light.button-round-2:active:not(.disabled), .light.active.button-round-3:not(.disabled), .light.button-round-3:hover:not(.disabled):active, .light.button-round-3:active:not(.disabled) {
   box-shadow: #c6c6c6 0px 0px 5px 0px inset;
 }
 
@@ -112,7 +112,7 @@
   box-shadow: #393939 0px 0px 5px 0px;
 }
 
-.dark.button.active, input.dark[type=submit].active, .dark.button:active:not(.disabled), input.dark[type=submit]:active:not(.disabled), .dark.active.button-round-1, .dark.button-round-1:active:not(.disabled), .dark.active.button-round-2, .dark.button-round-2:active:not(.disabled), .dark.active.button-round-3, .dark.button-round-3:active:not(.disabled) {
+.dark.button.active:not(.disabled), input.dark[type=submit].active:not(.disabled), .dark.button:hover:not(.disabled):active, input.dark[type=submit]:hover:not(.disabled):active, .dark.button:active:not(.disabled), input.dark[type=submit]:active:not(.disabled), .dark.active.button-round-1:not(.disabled), .dark.button-round-1:hover:not(.disabled):active, .dark.button-round-1:active:not(.disabled), .dark.active.button-round-2:not(.disabled), .dark.button-round-2:hover:not(.disabled):active, .dark.button-round-2:active:not(.disabled), .dark.active.button-round-3:not(.disabled), .dark.button-round-3:hover:not(.disabled):active, .dark.button-round-3:active:not(.disabled) {
   box-shadow: #393939 0px 0px 5px 0px inset;
 }
 
@@ -120,7 +120,7 @@
   box-shadow: #00d2da 0px 0px 5px 0px;
 }
 
-.light-cyan.button.active, input.light-cyan[type=submit].active, .light-cyan.button:active:not(.disabled), input.light-cyan[type=submit]:active:not(.disabled), .light-cyan.active.button-round-1, .light-cyan.button-round-1:active:not(.disabled), .light-cyan.active.button-round-2, .light-cyan.button-round-2:active:not(.disabled), .light-cyan.active.button-round-3, .light-cyan.button-round-3:active:not(.disabled) {
+.light-cyan.button.active:not(.disabled), input.light-cyan[type=submit].active:not(.disabled), .light-cyan.button:hover:not(.disabled):active, input.light-cyan[type=submit]:hover:not(.disabled):active, .light-cyan.button:active:not(.disabled), input.light-cyan[type=submit]:active:not(.disabled), .light-cyan.active.button-round-1:not(.disabled), .light-cyan.button-round-1:hover:not(.disabled):active, .light-cyan.button-round-1:active:not(.disabled), .light-cyan.active.button-round-2:not(.disabled), .light-cyan.button-round-2:hover:not(.disabled):active, .light-cyan.button-round-2:active:not(.disabled), .light-cyan.active.button-round-3:not(.disabled), .light-cyan.button-round-3:hover:not(.disabled):active, .light-cyan.button-round-3:active:not(.disabled) {
   box-shadow: #00d2da 0px 0px 5px 0px inset;
 }
 
@@ -128,7 +128,7 @@
   box-shadow: #00e331 0px 0px 5px 0px;
 }
 
-.light-green.button.active, input.light-green[type=submit].active, .light-green.button:active:not(.disabled), input.light-green[type=submit]:active:not(.disabled), .light-green.active.button-round-1, .light-green.button-round-1:active:not(.disabled), .light-green.active.button-round-2, .light-green.button-round-2:active:not(.disabled), .light-green.active.button-round-3, .light-green.button-round-3:active:not(.disabled) {
+.light-green.button.active:not(.disabled), input.light-green[type=submit].active:not(.disabled), .light-green.button:hover:not(.disabled):active, input.light-green[type=submit]:hover:not(.disabled):active, .light-green.button:active:not(.disabled), input.light-green[type=submit]:active:not(.disabled), .light-green.active.button-round-1:not(.disabled), .light-green.button-round-1:hover:not(.disabled):active, .light-green.button-round-1:active:not(.disabled), .light-green.active.button-round-2:not(.disabled), .light-green.button-round-2:hover:not(.disabled):active, .light-green.button-round-2:active:not(.disabled), .light-green.active.button-round-3:not(.disabled), .light-green.button-round-3:hover:not(.disabled):active, .light-green.button-round-3:active:not(.disabled) {
   box-shadow: #00e331 0px 0px 5px 0px inset;
 }
 
@@ -136,7 +136,7 @@
   box-shadow: #13850b 0px 0px 5px 0px;
 }
 
-.dark-green.button.active, input.dark-green[type=submit].active, .dark-green.button:active:not(.disabled), input.dark-green[type=submit]:active:not(.disabled), .dark-green.active.button-round-1, .dark-green.button-round-1:active:not(.disabled), .dark-green.active.button-round-2, .dark-green.button-round-2:active:not(.disabled), .dark-green.active.button-round-3, .dark-green.button-round-3:active:not(.disabled) {
+.dark-green.button.active:not(.disabled), input.dark-green[type=submit].active:not(.disabled), .dark-green.button:hover:not(.disabled):active, input.dark-green[type=submit]:hover:not(.disabled):active, .dark-green.button:active:not(.disabled), input.dark-green[type=submit]:active:not(.disabled), .dark-green.active.button-round-1:not(.disabled), .dark-green.button-round-1:hover:not(.disabled):active, .dark-green.button-round-1:active:not(.disabled), .dark-green.active.button-round-2:not(.disabled), .dark-green.button-round-2:hover:not(.disabled):active, .dark-green.button-round-2:active:not(.disabled), .dark-green.active.button-round-3:not(.disabled), .dark-green.button-round-3:hover:not(.disabled):active, .dark-green.button-round-3:active:not(.disabled) {
   box-shadow: #13850b 0px 0px 5px 0px inset;
 }
 
@@ -144,7 +144,7 @@
   box-shadow: #0e1981 0px 0px 5px 0px;
 }
 
-.dark-blue.button.active, input.dark-blue[type=submit].active, .dark-blue.button:active:not(.disabled), input.dark-blue[type=submit]:active:not(.disabled), .dark-blue.active.button-round-1, .dark-blue.button-round-1:active:not(.disabled), .dark-blue.active.button-round-2, .dark-blue.button-round-2:active:not(.disabled), .dark-blue.active.button-round-3, .dark-blue.button-round-3:active:not(.disabled) {
+.dark-blue.button.active:not(.disabled), input.dark-blue[type=submit].active:not(.disabled), .dark-blue.button:hover:not(.disabled):active, input.dark-blue[type=submit]:hover:not(.disabled):active, .dark-blue.button:active:not(.disabled), input.dark-blue[type=submit]:active:not(.disabled), .dark-blue.active.button-round-1:not(.disabled), .dark-blue.button-round-1:hover:not(.disabled):active, .dark-blue.button-round-1:active:not(.disabled), .dark-blue.active.button-round-2:not(.disabled), .dark-blue.button-round-2:hover:not(.disabled):active, .dark-blue.button-round-2:active:not(.disabled), .dark-blue.active.button-round-3:not(.disabled), .dark-blue.button-round-3:hover:not(.disabled):active, .dark-blue.button-round-3:active:not(.disabled) {
   box-shadow: #0e1981 0px 0px 5px 0px inset;
 }
 
@@ -152,7 +152,7 @@
   box-shadow: gray 0px 0px 7px 0px;
 }
 
-.button.active:hover, input[type=submit].active:hover, .button:hover:not(.disabled).active, input[type=submit]:hover:not(.disabled).active, .active.button-round-1:hover, .button-round-1:hover:not(.disabled).active, .active.button-round-2:hover, .button-round-2:hover:not(.disabled).active, .active.button-round-3:hover, .button-round-3:hover:not(.disabled).active {
+.button.active:not(.disabled):hover:not(.disabled), input[type=submit].active:not(.disabled):hover:not(.disabled), .active.button-round-1:not(.disabled):hover:not(.disabled), .active.button-round-2:not(.disabled):hover:not(.disabled), .active.button-round-3:not(.disabled):hover:not(.disabled) {
   box-shadow: gray 0px 0px 7px 0px inset;
 }
 
@@ -160,7 +160,7 @@
   box-shadow: #c6c6c6 0px 0px 7px 0px;
 }
 
-.light.button.active:hover, input.light[type=submit].active:hover, .light.active.button-round-1:hover, .light.active.button-round-2:hover, .light.active.button-round-3:hover {
+.light.button.active:not(.disabled):hover, input.light[type=submit].active:not(.disabled):hover, .light.active.button-round-1:not(.disabled):hover, .light.active.button-round-2:not(.disabled):hover, .light.active.button-round-3:not(.disabled):hover {
   box-shadow: #c6c6c6 0px 0px 7px 0px inset;
 }
 
@@ -168,7 +168,7 @@
   box-shadow: #393939 0px 0px 7px 0px;
 }
 
-.dark.button.active:hover, input.dark[type=submit].active:hover, .dark.active.button-round-1:hover, .dark.active.button-round-2:hover, .dark.active.button-round-3:hover {
+.dark.button.active:not(.disabled):hover, input.dark[type=submit].active:not(.disabled):hover, .dark.active.button-round-1:not(.disabled):hover, .dark.active.button-round-2:not(.disabled):hover, .dark.active.button-round-3:not(.disabled):hover {
   box-shadow: #393939 0px 0px 7px 0px inset;
 }
 
@@ -176,7 +176,7 @@
   box-shadow: #00d2da 0px 0px 7px 0px;
 }
 
-.light-cyan.button.active:hover, input.light-cyan[type=submit].active:hover, .light-cyan.active.button-round-1:hover, .light-cyan.active.button-round-2:hover, .light-cyan.active.button-round-3:hover {
+.light-cyan.button.active:not(.disabled):hover, input.light-cyan[type=submit].active:not(.disabled):hover, .light-cyan.active.button-round-1:not(.disabled):hover, .light-cyan.active.button-round-2:not(.disabled):hover, .light-cyan.active.button-round-3:not(.disabled):hover {
   box-shadow: #00d2da 0px 0px 7px 0px inset;
 }
 
@@ -184,7 +184,7 @@
   box-shadow: #00e331 0px 0px 7px 0px;
 }
 
-.light-green.button.active:hover, input.light-green[type=submit].active:hover, .light-green.active.button-round-1:hover, .light-green.active.button-round-2:hover, .light-green.active.button-round-3:hover {
+.light-green.button.active:not(.disabled):hover, input.light-green[type=submit].active:not(.disabled):hover, .light-green.active.button-round-1:not(.disabled):hover, .light-green.active.button-round-2:not(.disabled):hover, .light-green.active.button-round-3:not(.disabled):hover {
   box-shadow: #00e331 0px 0px 7px 0px inset;
 }
 
@@ -192,7 +192,7 @@
   box-shadow: #13850b 0px 0px 7px 0px;
 }
 
-.dark-green.button.active:hover, input.dark-green[type=submit].active:hover, .dark-green.active.button-round-1:hover, .dark-green.active.button-round-2:hover, .dark-green.active.button-round-3:hover {
+.dark-green.button.active:not(.disabled):hover, input.dark-green[type=submit].active:not(.disabled):hover, .dark-green.active.button-round-1:not(.disabled):hover, .dark-green.active.button-round-2:not(.disabled):hover, .dark-green.active.button-round-3:not(.disabled):hover {
   box-shadow: #13850b 0px 0px 7px 0px inset;
 }
 
@@ -200,7 +200,7 @@
   box-shadow: #0e1981 0px 0px 7px 0px;
 }
 
-.dark-blue.button.active:hover, input.dark-blue[type=submit].active:hover, .dark-blue.active.button-round-1:hover, .dark-blue.active.button-round-2:hover, .dark-blue.active.button-round-3:hover {
+.dark-blue.button.active:not(.disabled):hover, input.dark-blue[type=submit].active:not(.disabled):hover, .dark-blue.active.button-round-1:not(.disabled):hover, .dark-blue.active.button-round-2:not(.disabled):hover, .dark-blue.active.button-round-3:not(.disabled):hover {
   box-shadow: #0e1981 0px 0px 7px 0px inset;
 }
 

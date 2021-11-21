@@ -18,10 +18,10 @@
         color: map.get(map.get(variables.$themes, "light"), "shifted-20");
     }
 
-    &.active {
+    &.active:not(.disabled) {
         @extend %shadow-inset-3;
 
-        &:hover {
+        &:hover:not(.disabled) {
             @extend %shadow-inset-5;
         }
     }
@@ -29,11 +29,11 @@
     &:hover:not(.disabled) {
         @extend %shadow-5;
 
-        &:active {
+        &:active:not(.disabled) {
             @extend %shadow-inset-3;
         }
 
-        &.active {
+        &.active:not(.disabled) {
             @extend %shadow-inset-5;
         }
     }
