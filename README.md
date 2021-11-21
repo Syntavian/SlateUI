@@ -1,6 +1,6 @@
-## SlateUI
+# SlateUI
 
-# Build
+## Build
 ```
 sass --watch scss:build/css
 ```
