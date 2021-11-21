@@ -4,6 +4,7 @@
 @use 'prototypes';
 
 @mixin text($size: variables.$font-size, $margin: variables.$s-offset, $padding: 0px, $weight: normal) {
+    font-family: variables.$fonts;
     font-size: $size;
     margin-top: $margin;
     margin-bottom: $margin;
@@ -25,7 +26,7 @@
         $inverted: map.get($theme, "inverted");
         $text: map.get($theme, "text-colour");
 
-        p, span, a, select, option, label, input, textarea, .link {
+        p, span, a, select, option, label, input, textarea, button, .link {
             @include text(variables.$font-size * $scalar);
     
             &.#{$name} {
@@ -33,7 +34,7 @@
             }
         } 
 
-        body, div {
+        body, div, main, nav {
             @include text(variables.$font-size * $scalar);
 
             margin-top: 0px;
