@@ -1,5 +1,6 @@
-## Slate
+## SlateUI
 
 # Build
-
-sass --watch scss:stylesheets
+```
+sass --watch scss:build/css
+```
