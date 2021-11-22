@@ -1,5 +1,5 @@
 let themeSwitchers = document.querySelectorAll(".theme-selector");
-let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input");
+let themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input");
 let currentTheme = "";
 
 function switchElementThemes(newTheme) {
@@ -46,7 +46,7 @@ function initialiseThemeSwitcher(button) {
 
     button.appendChild(select);
 
-    themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input");
+    themedElements = document.querySelectorAll("body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input");
 
     for (let element of themedElements) {
         element.classList.add(currentTheme);
