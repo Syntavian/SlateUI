@@ -80,6 +80,10 @@
     
                 &.gradient-hover-animation {
                     animation: animation-shrink-gradient-#{$i} 0.2s ease forwards;
+
+                    &.fill {
+                        animation: animation-shrink-gradient-#{$i} 0.2s ease forwards;
+                    }
                 }
             } 
         
@@ -89,6 +93,10 @@
     
                     &.gradient-hover-animation {
                         animation: animation-expand-gradient-#{$i} 0.2s ease forwards;
+
+                        &.fill {
+                            animation: animation-expand-gradient-#{$i} 0.2s ease forwards;
+                        }
                     }
                 } 
             }

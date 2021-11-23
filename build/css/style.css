@@ -10606,10 +10606,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .light.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .light.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .light.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .light.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .light.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10623,10 +10629,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .dark.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .dark.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .dark.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .dark.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .dark.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10640,10 +10652,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .light-cyan.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .light-cyan.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .light-cyan.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .light-cyan.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .light-cyan.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10657,10 +10675,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .light-green.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .light-green.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .light-green.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .light-green.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .light-green.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10674,10 +10698,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .dark-green.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .dark-green.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .dark-green.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .dark-green.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .dark-green.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10691,10 +10721,16 @@ p {
 .button-expand-1 > *.gradient-hover-animation, .dark-blue.button-expand-1 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-1 0.2s ease forwards;
 }
+.button-expand-1 > *.gradient-hover-animation.fill, .dark-blue.button-expand-1 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-1 0.2s ease forwards;
+}
 .button-expand-1:hover > *, .dark-blue.button-expand-1:hover > * {
   animation: animation-expand-1 0.2s ease forwards;
 }
 .button-expand-1:hover > *.gradient-hover-animation, .dark-blue.button-expand-1:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-1 0.2s ease forwards;
+}
+.button-expand-1:hover > *.gradient-hover-animation.fill, .dark-blue.button-expand-1:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-1 0.2s ease forwards;
 }
 
@@ -10752,10 +10788,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .light.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .light.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .light.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .light.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .light.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10769,10 +10811,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .dark.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .dark.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .dark.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .dark.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .dark.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10786,10 +10834,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .light-cyan.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .light-cyan.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .light-cyan.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .light-cyan.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .light-cyan.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10803,10 +10857,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .light-green.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .light-green.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .light-green.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .light-green.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .light-green.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10820,10 +10880,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .dark-green.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .dark-green.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .dark-green.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .dark-green.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .dark-green.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10837,10 +10903,16 @@ p {
 .button-expand-2 > *.gradient-hover-animation, .dark-blue.button-expand-2 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-2 0.2s ease forwards;
 }
+.button-expand-2 > *.gradient-hover-animation.fill, .dark-blue.button-expand-2 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-2 0.2s ease forwards;
+}
 .button-expand-2:hover > *, .dark-blue.button-expand-2:hover > * {
   animation: animation-expand-2 0.2s ease forwards;
 }
 .button-expand-2:hover > *.gradient-hover-animation, .dark-blue.button-expand-2:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-2 0.2s ease forwards;
+}
+.button-expand-2:hover > *.gradient-hover-animation.fill, .dark-blue.button-expand-2:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-2 0.2s ease forwards;
 }
 
@@ -10898,10 +10970,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .light.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .light.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .light.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .light.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .light.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -10915,10 +10993,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .dark.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .dark.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .dark.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .dark.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .dark.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -10932,10 +11016,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .light-cyan.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .light-cyan.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .light-cyan.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .light-cyan.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .light-cyan.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -10949,10 +11039,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .light-green.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .light-green.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .light-green.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .light-green.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .light-green.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -10966,10 +11062,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .dark-green.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .dark-green.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .dark-green.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .dark-green.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .dark-green.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -10983,10 +11085,16 @@ p {
 .button-expand-3 > *.gradient-hover-animation, .dark-blue.button-expand-3 > *.gradient-hover-animation {
   animation: animation-shrink-gradient-3 0.2s ease forwards;
 }
+.button-expand-3 > *.gradient-hover-animation.fill, .dark-blue.button-expand-3 > *.gradient-hover-animation.fill {
+  animation: animation-shrink-gradient-3 0.2s ease forwards;
+}
 .button-expand-3:hover > *, .dark-blue.button-expand-3:hover > * {
   animation: animation-expand-3 0.2s ease forwards;
 }
 .button-expand-3:hover > *.gradient-hover-animation, .dark-blue.button-expand-3:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient-3 0.2s ease forwards;
+}
+.button-expand-3:hover > *.gradient-hover-animation.fill, .dark-blue.button-expand-3:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient-3 0.2s ease forwards;
 }
 
@@ -11331,8 +11439,17 @@ p {
 .gradient.light, .gradient-hover-animation.light {
   background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
 }
+.fill.gradient.light, .fill.gradient-hover-animation.light {
+  background: linear-gradient(135deg, #f7f7f7, #dedede 25%, #f7f7f7);
+}
 
 .gradient-hover-animation.light {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.light {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -11428,8 +11545,17 @@ p {
 .gradient.dark, .gradient-hover-animation.dark {
   background: linear-gradient(135deg, #ffffff00, #212121 25%, #ffffff00);
 }
+.fill.gradient.dark, .fill.gradient-hover-animation.dark {
+  background: linear-gradient(135deg, #080808, #212121 25%, #080808);
+}
 
 .gradient-hover-animation.dark {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.dark {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -11525,8 +11651,17 @@ p {
 .gradient.light-cyan, .gradient-hover-animation.light-cyan {
   background: linear-gradient(135deg, #ffffff00, #00edf5 25%, #ffffff00);
 }
+.fill.gradient.light-cyan, .fill.gradient-hover-animation.light-cyan {
+  background: linear-gradient(135deg, #11f7ff, #00edf5 25%, #11f7ff);
+}
 
 .gradient-hover-animation.light-cyan {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.light-cyan {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -11622,8 +11757,17 @@ p {
 .gradient.light-green, .gradient-hover-animation.light-green {
   background: linear-gradient(135deg, #ffffff00, #01ff38 25%, #ffffff00);
 }
+.fill.gradient.light-green, .fill.gradient-hover-animation.light-green {
+  background: linear-gradient(135deg, #1dff4e, #01ff38 25%, #1dff4e);
+}
 
 .gradient-hover-animation.light-green {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.light-green {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -11719,8 +11863,17 @@ p {
 .gradient.dark-green, .gradient-hover-animation.dark-green {
   background: linear-gradient(135deg, #ffffff00, #0d5a08 25%, #ffffff00);
 }
+.fill.gradient.dark-green, .fill.gradient-hover-animation.dark-green {
+  background: linear-gradient(135deg, #073004, #0d5a08 25%, #073004);
+}
 
 .gradient-hover-animation.dark-green {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.dark-green {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -11816,8 +11969,17 @@ p {
 .gradient.dark-blue, .gradient-hover-animation.dark-blue {
   background: linear-gradient(135deg, #ffffff00, #0a1157 25%, #ffffff00);
 }
+.fill.gradient.dark-blue, .fill.gradient-hover-animation.dark-blue {
+  background: linear-gradient(135deg, #05092e, #0a1157 25%, #05092e);
+}
 
 .gradient-hover-animation.dark-blue {
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.fill.gradient-hover-animation.dark-blue {
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
