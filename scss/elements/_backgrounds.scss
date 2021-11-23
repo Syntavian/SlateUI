@@ -130,6 +130,10 @@
 
     %#{$name}-gradient {
         background: linear-gradient(135deg, variables.$alpha, $shifted-10 25%, variables.$alpha);
+
+        &.fill {
+            background: linear-gradient(135deg, $primary, $shifted-10 25%, $primary);
+        }
     }
     
     %#{$name}-gradient-hover-animation {
@@ -138,6 +142,13 @@
         -webkit-animation: animation-back 0.2s ease forwards;
         -moz-animation: animation-back 0.2s ease forwards;
         animation: animation-back 0.2s ease forwards;
+
+        &.fill {
+            background-size: 200% 200%;
+            -webkit-animation: animation-back 0.2s ease forwards;
+            -moz-animation: animation-back 0.2s ease forwards;
+            animation: animation-back 0.2s ease forwards;
+        }
     }
     
     .gradient.#{$name} {
