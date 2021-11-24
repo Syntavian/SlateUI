@@ -16,15 +16,16 @@
 
 .form-label {
     @extend %width-3;
-
+    @extend %padding-top-xs;
     text-align: end;
 }
 
 .form-input {
     @include prototypes.border-radius();
     @extend %shadow-1;
-    @extend %width-7;
+    @extend %width-6;
     @extend %margin-left-s; 
+    @extend %padding-xs;
     resize: vertical;
 }
 
