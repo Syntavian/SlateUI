@@ -15,7 +15,7 @@
   z-index: -1;
 }
 
-.form, .image {
+.form {
   padding: 1em;
 }
 
@@ -11987,6 +11987,11 @@ p {
 }
 
 .gradient-hover-animation:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+.gradient-hover-animation:hover.fill {
   -webkit-animation: animation-forward 0.2s ease forwards;
   -moz-animation: animation-forward 0.2s ease forwards;
   animation: animation-forward 0.2s ease forwards;

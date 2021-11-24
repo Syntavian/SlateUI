@@ -4,7 +4,6 @@
 @use '../prototypes';
 
 .image {
-    @extend %padding-1;
     @extend %box;
     user-select: none;
 }
