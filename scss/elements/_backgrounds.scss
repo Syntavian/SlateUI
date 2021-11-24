@@ -164,6 +164,12 @@
     -webkit-animation: animation-forward 0.2s ease forwards;
     -moz-animation: animation-forward 0.2s ease forwards;
     animation: animation-forward 0.2s ease forwards;
+
+    &.fill {
+        -webkit-animation: animation-forward 0.2s ease forwards;
+        -moz-animation: animation-forward 0.2s ease forwards;
+        animation: animation-forward 0.2s ease forwards;
+    }
 }
 
 @-webkit-keyframes animation-forward {
