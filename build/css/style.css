@@ -8241,33 +8241,25 @@
   z-index: 9999;
 }
 
-p, span, a, select, option, label, input, textarea, button, .link {
+p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding: 0px;
   font-weight: normal;
-}
-p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, .link.light {
-  color: black;
 }
 
 body, div, main, nav {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
   margin-top: 0px;
   margin-bottom: 0px;
-}
-body.light, div.light, main.light, nav.light {
-  color: black;
+  padding: 0px;
+  font-weight: normal;
 }
 
-h1, .h1-text {
+h1, .h1 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 4rem;
   margin-top: 0.5em;
@@ -8275,11 +8267,8 @@ h1, .h1-text {
   padding: 0px;
   font-weight: normal;
 }
-h1.light, .h1-text.light {
-  color: black;
-}
 
-h2, .h2-text {
+h2, .h2 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 2.5rem;
   margin-top: 0.5em;
@@ -8287,11 +8276,8 @@ h2, .h2-text {
   padding: 0px;
   font-weight: normal;
 }
-h2.light, .h2-text.light {
-  color: black;
-}
 
-h3, .h3-text {
+h3, .h3 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 2rem;
   margin-top: 0.5em;
@@ -8299,11 +8285,8 @@ h3, .h3-text {
   padding: 0px;
   font-weight: normal;
 }
-h3.light, .h3-text.light {
-  color: black;
-}
 
-h4, .h4-text {
+h4, .h4 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1.75rem;
   margin-top: 0.5em;
@@ -8311,11 +8294,8 @@ h4, .h4-text {
   padding: 0px;
   font-weight: normal;
 }
-h4.light, .h4-text.light {
-  color: black;
-}
 
-h5, .h5-text {
+h5, .h5 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1.5rem;
   margin-top: 0.5em;
@@ -8323,11 +8303,8 @@ h5, .h5-text {
   padding: 0px;
   font-weight: normal;
 }
-h5.light, .h5-text.light {
-  color: black;
-}
 
-h6, .h6-text {
+h6, .h6 {
   font-family: "Century Gothic", Arial, sans-serif;
   font-size: 1.25rem;
   margin-top: 0.5em;
@@ -8335,497 +8312,28 @@ h6, .h6-text {
   padding: 0px;
   font-weight: normal;
 }
-h6.light, .h6-text.light {
+
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, body.light, div.light, main.light, nav.light, .h1.light, .h2.light, .h3.light, .h4.light, .h5.light, .h6.light, .p.light, .text.light, .a.light, .link.light {
   color: black;
 }
 
-p, span, a, select, option, label, input, textarea, button, .link {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, .link.dark {
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark, p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, body.dark, div.dark, main.dark, nav.dark, .h1.dark, .h2.dark, .h3.dark, .h4.dark, .h5.dark, .h6.dark, .p.dark, .text.dark, .a.dark, .link.dark {
   color: white;
 }
 
-body, div, main, nav {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-body.dark, div.dark, main.dark, nav.dark {
-  color: white;
-}
-
-h1, .h1-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 4rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h1.dark, .h1-text.dark {
-  color: white;
-}
-
-h2, .h2-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h2.dark, .h2-text.dark {
-  color: white;
-}
-
-h3, .h3-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h3.dark, .h3-text.dark {
-  color: white;
-}
-
-h4, .h4-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h4.dark, .h4-text.dark {
-  color: white;
-}
-
-h5, .h5-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h5.dark, .h5-text.dark {
-  color: white;
-}
-
-h6, .h6-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h6.dark, .h6-text.dark {
-  color: white;
-}
-
-p, span, a, select, option, label, input, textarea, button, .link {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, .link.light-cyan {
+h1.light-cyan, h2.light-cyan, h3.light-cyan, h4.light-cyan, h5.light-cyan, h6.light-cyan, p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan, .h1.light-cyan, .h2.light-cyan, .h3.light-cyan, .h4.light-cyan, .h5.light-cyan, .h6.light-cyan, .p.light-cyan, .text.light-cyan, .a.light-cyan, .link.light-cyan {
   color: black;
 }
 
-body, div, main, nav {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan {
+h1.light-green, h2.light-green, h3.light-green, h4.light-green, h5.light-green, h6.light-green, p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, body.light-green, div.light-green, main.light-green, nav.light-green, .h1.light-green, .h2.light-green, .h3.light-green, .h4.light-green, .h5.light-green, .h6.light-green, .p.light-green, .text.light-green, .a.light-green, .link.light-green {
   color: black;
 }
 
-h1, .h1-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 4rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h1.light-cyan, .h1-text.light-cyan {
-  color: black;
-}
-
-h2, .h2-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h2.light-cyan, .h2-text.light-cyan {
-  color: black;
-}
-
-h3, .h3-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h3.light-cyan, .h3-text.light-cyan {
-  color: black;
-}
-
-h4, .h4-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h4.light-cyan, .h4-text.light-cyan {
-  color: black;
-}
-
-h5, .h5-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h5.light-cyan, .h5-text.light-cyan {
-  color: black;
-}
-
-h6, .h6-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h6.light-cyan, .h6-text.light-cyan {
-  color: black;
-}
-
-p, span, a, select, option, label, input, textarea, button, .link {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, .link.light-green {
-  color: black;
-}
-
-body, div, main, nav {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-body.light-green, div.light-green, main.light-green, nav.light-green {
-  color: black;
-}
-
-h1, .h1-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 4rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h1.light-green, .h1-text.light-green {
-  color: black;
-}
-
-h2, .h2-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h2.light-green, .h2-text.light-green {
-  color: black;
-}
-
-h3, .h3-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h3.light-green, .h3-text.light-green {
-  color: black;
-}
-
-h4, .h4-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h4.light-green, .h4-text.light-green {
-  color: black;
-}
-
-h5, .h5-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h5.light-green, .h5-text.light-green {
-  color: black;
-}
-
-h6, .h6-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h6.light-green, .h6-text.light-green {
-  color: black;
-}
-
-p, span, a, select, option, label, input, textarea, button, .link {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, .link.dark-green {
+h1.dark-green, h2.dark-green, h3.dark-green, h4.dark-green, h5.dark-green, h6.dark-green, p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, body.dark-green, div.dark-green, main.dark-green, nav.dark-green, .h1.dark-green, .h2.dark-green, .h3.dark-green, .h4.dark-green, .h5.dark-green, .h6.dark-green, .p.dark-green, .text.dark-green, .a.dark-green, .link.dark-green {
   color: white;
 }
 
-body, div, main, nav {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-body.dark-green, div.dark-green, main.dark-green, nav.dark-green {
-  color: white;
-}
-
-h1, .h1-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 4rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h1.dark-green, .h1-text.dark-green {
-  color: white;
-}
-
-h2, .h2-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h2.dark-green, .h2-text.dark-green {
-  color: white;
-}
-
-h3, .h3-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h3.dark-green, .h3-text.dark-green {
-  color: white;
-}
-
-h4, .h4-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h4.dark-green, .h4-text.dark-green {
-  color: white;
-}
-
-h5, .h5-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h5.dark-green, .h5-text.dark-green {
-  color: white;
-}
-
-h6, .h6-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h6.dark-green, .h6-text.dark-green {
-  color: white;
-}
-
-p, span, a, select, option, label, input, textarea, button, .link {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, .link.dark-blue {
-  color: white;
-}
-
-body, div, main, nav {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue {
-  color: white;
-}
-
-h1, .h1-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 4rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h1.dark-blue, .h1-text.dark-blue {
-  color: white;
-}
-
-h2, .h2-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h2.dark-blue, .h2-text.dark-blue {
-  color: white;
-}
-
-h3, .h3-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h3.dark-blue, .h3-text.dark-blue {
-  color: white;
-}
-
-h4, .h4-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h4.dark-blue, .h4-text.dark-blue {
-  color: white;
-}
-
-h5, .h5-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h5.dark-blue, .h5-text.dark-blue {
-  color: white;
-}
-
-h6, .h6-text {
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0px;
-  font-weight: normal;
-}
-h6.dark-blue, .h6-text.dark-blue {
+h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, h6.dark-blue, p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue, .h1.dark-blue, .h2.dark-blue, .h3.dark-blue, .h4.dark-blue, .h5.dark-blue, .h6.dark-blue, .p.dark-blue, .text.dark-blue, .a.dark-blue, .link.dark-blue {
   color: white;
 }
 
@@ -8834,33 +8342,25 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
-  p, span, a, select, option, label, input, textarea, button, .link {
+  p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.9rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 0px;
     font-weight: normal;
-  }
-  p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, .link.light {
-    color: black;
   }
 
   body, div, main, nav {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-  body.light, div.light, main.light, nav.light {
-    color: black;
+    padding: 0px;
+    font-weight: normal;
   }
 
-  h1, .h1-text {
+  h1, .h1 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 3.6rem;
     margin-top: 0.5em;
@@ -8868,11 +8368,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h1.light, .h1-text.light {
-    color: black;
-  }
 
-  h2, .h2-text {
+  h2, .h2 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 2.25rem;
     margin-top: 0.5em;
@@ -8880,11 +8377,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h2.light, .h2-text.light {
-    color: black;
-  }
 
-  h3, .h3-text {
+  h3, .h3 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.8rem;
     margin-top: 0.5em;
@@ -8892,11 +8386,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h3.light, .h3-text.light {
-    color: black;
-  }
 
-  h4, .h4-text {
+  h4, .h4 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.575rem;
     margin-top: 0.5em;
@@ -8904,11 +8395,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h4.light, .h4-text.light {
-    color: black;
-  }
 
-  h5, .h5-text {
+  h5, .h5 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.35rem;
     margin-top: 0.5em;
@@ -8916,11 +8404,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h5.light, .h5-text.light {
-    color: black;
-  }
 
-  h6, .h6-text {
+  h6, .h6 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.125rem;
     margin-top: 0.5em;
@@ -8928,528 +8413,51 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h6.light, .h6-text.light {
+
+  h1.light, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, body.light, div.light, main.light, nav.light, .h1.light, .h2.light, .h3.light, .h4.light, .h5.light, .h6.light, .p.light, .text.light, .a.light, .link.light {
     color: black;
   }
 
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, .link.dark {
+  h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark, p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, body.dark, div.dark, main.dark, nav.dark, .h1.dark, .h2.dark, .h3.dark, .h4.dark, .h5.dark, .h6.dark, .p.dark, .text.dark, .a.dark, .link.dark {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark, div.dark, main.dark, nav.dark {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark, .h1-text.dark {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.25rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark, .h2-text.dark {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark, .h3-text.dark {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.575rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark, .h4-text.dark {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.35rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark, .h5-text.dark {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.125rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark, .h6-text.dark {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, .link.light-cyan {
+  h1.light-cyan, h2.light-cyan, h3.light-cyan, h4.light-cyan, h5.light-cyan, h6.light-cyan, p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan, .h1.light-cyan, .h2.light-cyan, .h3.light-cyan, .h4.light-cyan, .h5.light-cyan, .h6.light-cyan, .p.light-cyan, .text.light-cyan, .a.light-cyan, .link.light-cyan {
     color: black;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan {
+  h1.light-green, h2.light-green, h3.light-green, h4.light-green, h5.light-green, h6.light-green, p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, body.light-green, div.light-green, main.light-green, nav.light-green, .h1.light-green, .h2.light-green, .h3.light-green, .h4.light-green, .h5.light-green, .h6.light-green, .p.light-green, .text.light-green, .a.light-green, .link.light-green {
     color: black;
   }
 
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-cyan, .h1-text.light-cyan {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.25rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-cyan, .h2-text.light-cyan {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-cyan, .h3-text.light-cyan {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.575rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-cyan, .h4-text.light-cyan {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.35rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-cyan, .h5-text.light-cyan {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.125rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-cyan, .h6-text.light-cyan {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, .link.light-green {
-    color: black;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-green, div.light-green, main.light-green, nav.light-green {
-    color: black;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-green, .h1-text.light-green {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.25rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-green, .h2-text.light-green {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-green, .h3-text.light-green {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.575rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-green, .h4-text.light-green {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.35rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-green, .h5-text.light-green {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.125rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-green, .h6-text.light-green {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, .link.dark-green {
+  h1.dark-green, h2.dark-green, h3.dark-green, h4.dark-green, h5.dark-green, h6.dark-green, p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, body.dark-green, div.dark-green, main.dark-green, nav.dark-green, .h1.dark-green, .h2.dark-green, .h3.dark-green, .h4.dark-green, .h5.dark-green, .h6.dark-green, .p.dark-green, .text.dark-green, .a.dark-green, .link.dark-green {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-green, div.dark-green, main.dark-green, nav.dark-green {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-green, .h1-text.dark-green {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.25rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-green, .h2-text.dark-green {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-green, .h3-text.dark-green {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.575rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-green, .h4-text.dark-green {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.35rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-green, .h5-text.dark-green {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.125rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-green, .h6-text.dark-green {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, .link.dark-blue {
-    color: white;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-blue, .h1-text.dark-blue {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.25rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-blue, .h2-text.dark-blue {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-blue, .h3-text.dark-blue {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.575rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-blue, .h4-text.dark-blue {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.35rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-blue, .h5-text.dark-blue {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.125rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-blue, .h6-text.dark-blue {
+  h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, h6.dark-blue, p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue, .h1.dark-blue, .h2.dark-blue, .h3.dark-blue, .h4.dark-blue, .h5.dark-blue, .h6.dark-blue, .p.dark-blue, .text.dark-blue, .a.dark-blue, .link.dark-blue {
     color: white;
   }
 }
 @media screen and (max-width: 900px) {
-  p, span, a, select, option, label, input, textarea, button, .link {
+  p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.8rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 0px;
     font-weight: normal;
-  }
-  p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, .link.light {
-    color: black;
   }
 
   body, div, main, nav {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-  body.light, div.light, main.light, nav.light {
-    color: black;
+    padding: 0px;
+    font-weight: normal;
   }
 
-  h1, .h1-text {
+  h1, .h1 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 3.2rem;
     margin-top: 0.5em;
@@ -9457,11 +8465,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h1.light, .h1-text.light {
-    color: black;
-  }
 
-  h2, .h2-text {
+  h2, .h2 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 2rem;
     margin-top: 0.5em;
@@ -9469,11 +8474,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h2.light, .h2-text.light {
-    color: black;
-  }
 
-  h3, .h3-text {
+  h3, .h3 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.6rem;
     margin-top: 0.5em;
@@ -9481,11 +8483,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h3.light, .h3-text.light {
-    color: black;
-  }
 
-  h4, .h4-text {
+  h4, .h4 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.4rem;
     margin-top: 0.5em;
@@ -9493,11 +8492,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h4.light, .h4-text.light {
-    color: black;
-  }
 
-  h5, .h5-text {
+  h5, .h5 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.2rem;
     margin-top: 0.5em;
@@ -9505,11 +8501,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h5.light, .h5-text.light {
-    color: black;
-  }
 
-  h6, .h6-text {
+  h6, .h6 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1rem;
     margin-top: 0.5em;
@@ -9517,528 +8510,51 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h6.light, .h6-text.light {
+
+  h1.light, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, body.light, div.light, main.light, nav.light, .h1.light, .h2.light, .h3.light, .h4.light, .h5.light, .h6.light, .p.light, .text.light, .a.light, .link.light {
     color: black;
   }
 
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, .link.dark {
+  h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark, p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, body.dark, div.dark, main.dark, nav.dark, .h1.dark, .h2.dark, .h3.dark, .h4.dark, .h5.dark, .h6.dark, .p.dark, .text.dark, .a.dark, .link.dark {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark, div.dark, main.dark, nav.dark {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark, .h1-text.dark {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark, .h2-text.dark {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark, .h3-text.dark {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark, .h4-text.dark {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark, .h5-text.dark {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark, .h6-text.dark {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, .link.light-cyan {
+  h1.light-cyan, h2.light-cyan, h3.light-cyan, h4.light-cyan, h5.light-cyan, h6.light-cyan, p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan, .h1.light-cyan, .h2.light-cyan, .h3.light-cyan, .h4.light-cyan, .h5.light-cyan, .h6.light-cyan, .p.light-cyan, .text.light-cyan, .a.light-cyan, .link.light-cyan {
     color: black;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan {
+  h1.light-green, h2.light-green, h3.light-green, h4.light-green, h5.light-green, h6.light-green, p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, body.light-green, div.light-green, main.light-green, nav.light-green, .h1.light-green, .h2.light-green, .h3.light-green, .h4.light-green, .h5.light-green, .h6.light-green, .p.light-green, .text.light-green, .a.light-green, .link.light-green {
     color: black;
   }
 
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-cyan, .h1-text.light-cyan {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-cyan, .h2-text.light-cyan {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-cyan, .h3-text.light-cyan {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-cyan, .h4-text.light-cyan {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-cyan, .h5-text.light-cyan {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-cyan, .h6-text.light-cyan {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, .link.light-green {
-    color: black;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-green, div.light-green, main.light-green, nav.light-green {
-    color: black;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-green, .h1-text.light-green {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-green, .h2-text.light-green {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-green, .h3-text.light-green {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-green, .h4-text.light-green {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-green, .h5-text.light-green {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-green, .h6-text.light-green {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, .link.dark-green {
+  h1.dark-green, h2.dark-green, h3.dark-green, h4.dark-green, h5.dark-green, h6.dark-green, p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, body.dark-green, div.dark-green, main.dark-green, nav.dark-green, .h1.dark-green, .h2.dark-green, .h3.dark-green, .h4.dark-green, .h5.dark-green, .h6.dark-green, .p.dark-green, .text.dark-green, .a.dark-green, .link.dark-green {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-green, div.dark-green, main.dark-green, nav.dark-green {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-green, .h1-text.dark-green {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-green, .h2-text.dark-green {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-green, .h3-text.dark-green {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-green, .h4-text.dark-green {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-green, .h5-text.dark-green {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-green, .h6-text.dark-green {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, .link.dark-blue {
-    color: white;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 3.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-blue, .h1-text.dark-blue {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-blue, .h2-text.dark-blue {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.6rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-blue, .h3-text.dark-blue {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-blue, .h4-text.dark-blue {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-blue, .h5-text.dark-blue {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-blue, .h6-text.dark-blue {
+  h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, h6.dark-blue, p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue, .h1.dark-blue, .h2.dark-blue, .h3.dark-blue, .h4.dark-blue, .h5.dark-blue, .h6.dark-blue, .p.dark-blue, .text.dark-blue, .a.dark-blue, .link.dark-blue {
     color: white;
   }
 }
 @media screen and (max-width: 700px) {
-  p, span, a, select, option, label, input, textarea, button, .link {
+  p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.7rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 0px;
     font-weight: normal;
-  }
-  p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, .link.light {
-    color: black;
   }
 
   body, div, main, nav {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-  body.light, div.light, main.light, nav.light {
-    color: black;
+    padding: 0px;
+    font-weight: normal;
   }
 
-  h1, .h1-text {
+  h1, .h1 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 2.8rem;
     margin-top: 0.5em;
@@ -10046,11 +8562,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h1.light, .h1-text.light {
-    color: black;
-  }
 
-  h2, .h2-text {
+  h2, .h2 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.75rem;
     margin-top: 0.5em;
@@ -10058,11 +8571,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h2.light, .h2-text.light {
-    color: black;
-  }
 
-  h3, .h3-text {
+  h3, .h3 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.4rem;
     margin-top: 0.5em;
@@ -10070,11 +8580,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h3.light, .h3-text.light {
-    color: black;
-  }
 
-  h4, .h4-text {
+  h4, .h4 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.225rem;
     margin-top: 0.5em;
@@ -10082,11 +8589,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h4.light, .h4-text.light {
-    color: black;
-  }
 
-  h5, .h5-text {
+  h5, .h5 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 1.05rem;
     margin-top: 0.5em;
@@ -10094,11 +8598,8 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h5.light, .h5-text.light {
-    color: black;
-  }
 
-  h6, .h6-text {
+  h6, .h6 {
     font-family: "Century Gothic", Arial, sans-serif;
     font-size: 0.875rem;
     margin-top: 0.5em;
@@ -10106,497 +8607,28 @@ p {
     padding: 0px;
     font-weight: normal;
   }
-  h6.light, .h6-text.light {
+
+  h1.light, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, span.light, a.light, select.light, option.light, label.light, input.light, textarea.light, button.light, body.light, div.light, main.light, nav.light, .h1.light, .h2.light, .h3.light, .h4.light, .h5.light, .h6.light, .p.light, .text.light, .a.light, .link.light {
     color: black;
   }
 
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, .link.dark {
+  h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark, p.dark, span.dark, a.dark, select.dark, option.dark, label.dark, input.dark, textarea.dark, button.dark, body.dark, div.dark, main.dark, nav.dark, .h1.dark, .h2.dark, .h3.dark, .h4.dark, .h5.dark, .h6.dark, .p.dark, .text.dark, .a.dark, .link.dark {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark, div.dark, main.dark, nav.dark {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark, .h1-text.dark {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.75rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark, .h2-text.dark {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark, .h3-text.dark {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.225rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark, .h4-text.dark {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.05rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark, .h5-text.dark {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark, .h6-text.dark {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, .link.light-cyan {
+  h1.light-cyan, h2.light-cyan, h3.light-cyan, h4.light-cyan, h5.light-cyan, h6.light-cyan, p.light-cyan, span.light-cyan, a.light-cyan, select.light-cyan, option.light-cyan, label.light-cyan, input.light-cyan, textarea.light-cyan, button.light-cyan, body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan, .h1.light-cyan, .h2.light-cyan, .h3.light-cyan, .h4.light-cyan, .h5.light-cyan, .h6.light-cyan, .p.light-cyan, .text.light-cyan, .a.light-cyan, .link.light-cyan {
     color: black;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-cyan, div.light-cyan, main.light-cyan, nav.light-cyan {
+  h1.light-green, h2.light-green, h3.light-green, h4.light-green, h5.light-green, h6.light-green, p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, body.light-green, div.light-green, main.light-green, nav.light-green, .h1.light-green, .h2.light-green, .h3.light-green, .h4.light-green, .h5.light-green, .h6.light-green, .p.light-green, .text.light-green, .a.light-green, .link.light-green {
     color: black;
   }
 
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-cyan, .h1-text.light-cyan {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.75rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-cyan, .h2-text.light-cyan {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-cyan, .h3-text.light-cyan {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.225rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-cyan, .h4-text.light-cyan {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.05rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-cyan, .h5-text.light-cyan {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-cyan, .h6-text.light-cyan {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.light-green, span.light-green, a.light-green, select.light-green, option.light-green, label.light-green, input.light-green, textarea.light-green, button.light-green, .link.light-green {
-    color: black;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.light-green, div.light-green, main.light-green, nav.light-green {
-    color: black;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.light-green, .h1-text.light-green {
-    color: black;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.75rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.light-green, .h2-text.light-green {
-    color: black;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.light-green, .h3-text.light-green {
-    color: black;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.225rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.light-green, .h4-text.light-green {
-    color: black;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.05rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.light-green, .h5-text.light-green {
-    color: black;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.light-green, .h6-text.light-green {
-    color: black;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, .link.dark-green {
+  h1.dark-green, h2.dark-green, h3.dark-green, h4.dark-green, h5.dark-green, h6.dark-green, p.dark-green, span.dark-green, a.dark-green, select.dark-green, option.dark-green, label.dark-green, input.dark-green, textarea.dark-green, button.dark-green, body.dark-green, div.dark-green, main.dark-green, nav.dark-green, .h1.dark-green, .h2.dark-green, .h3.dark-green, .h4.dark-green, .h5.dark-green, .h6.dark-green, .p.dark-green, .text.dark-green, .a.dark-green, .link.dark-green {
     color: white;
   }
 
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-green, div.dark-green, main.dark-green, nav.dark-green {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-green, .h1-text.dark-green {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.75rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-green, .h2-text.dark-green {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-green, .h3-text.dark-green {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.225rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-green, .h4-text.dark-green {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.05rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-green, .h5-text.dark-green {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-green, .h6-text.dark-green {
-    color: white;
-  }
-
-  p, span, a, select, option, label, input, textarea, button, .link {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, .link.dark-blue {
-    color: white;
-  }
-
-  body, div, main, nav {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue {
-    color: white;
-  }
-
-  h1, .h1-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h1.dark-blue, .h1-text.dark-blue {
-    color: white;
-  }
-
-  h2, .h2-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.75rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h2.dark-blue, .h2-text.dark-blue {
-    color: white;
-  }
-
-  h3, .h3-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h3.dark-blue, .h3-text.dark-blue {
-    color: white;
-  }
-
-  h4, .h4-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.225rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h4.dark-blue, .h4-text.dark-blue {
-    color: white;
-  }
-
-  h5, .h5-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 1.05rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h5.dark-blue, .h5-text.dark-blue {
-    color: white;
-  }
-
-  h6, .h6-text {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0px;
-    font-weight: normal;
-  }
-  h6.dark-blue, .h6-text.dark-blue {
+  h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, h6.dark-blue, p.dark-blue, span.dark-blue, a.dark-blue, select.dark-blue, option.dark-blue, label.dark-blue, input.dark-blue, textarea.dark-blue, button.dark-blue, body.dark-blue, div.dark-blue, main.dark-blue, nav.dark-blue, .h1.dark-blue, .h2.dark-blue, .h3.dark-blue, .h4.dark-blue, .h5.dark-blue, .h6.dark-blue, .p.dark-blue, .text.dark-blue, .a.dark-blue, .link.dark-blue {
     color: white;
   }
 }

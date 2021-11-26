@@ -14,6 +14,38 @@
 
 @mixin text-levels($scalar) {
 
+    p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link {
+        @include text(variables.$font-size * $scalar);
+    } 
+
+    body, div, main, nav {
+        @include text(variables.$font-size * $scalar, 0px);
+    } 
+
+    h1, .h1 {
+        @include text(variables.$h1-size * $scalar);
+    }
+    
+    h2, .h2 {
+        @include text(variables.$h2-size * $scalar);
+    }
+    
+    h3, .h3 {
+        @include text(variables.$h3-size * $scalar);
+    }
+    
+    h4, .h4 {
+        @include text(variables.$h4-size * $scalar);
+    }
+
+    h5, .h5 {
+        @include text(variables.$h5-size * $scalar);
+    }
+
+    h6, .h6 {
+        @include text(variables.$h6-size * $scalar);
+    }
+
     @each $name, $theme in variables.$themes {
         $primary: map.get($theme, "primary");
         $secondary: map.get($theme, "secondary");
@@ -26,72 +58,11 @@
         $inverted: map.get($theme, "inverted");
         $text: map.get($theme, "text-colour");
 
-        p, span, a, select, option, label, input, textarea, button, .link {
-            @include text(variables.$font-size * $scalar);
-    
+        h1, h2, h3, h4, h5, h6, p, span, a, select, option, label, input, textarea, button, body, div, main, nav, .h1, .h2, .h3, .h4, .h5, .h6, .p, .text, .a, .link {
             &.#{$name} {
                 color: $text;
             }
         } 
-
-        body, div, main, nav {
-            @include text(variables.$font-size * $scalar);
-
-            margin-top: 0px;
-            margin-bottom: 0px;
-
-            &.#{$name} {
-                color: $text;
-            }
-        } 
-
-        h1, .h1-text {
-            @include text(variables.$h1-size * $scalar);
-
-            &.#{$name} {
-                color: $text;
-            }
-        }
-        
-        h2, .h2-text {
-            @include text(variables.$h2-size * $scalar);
-
-            &.#{$name} {
-                color: $text;
-            }
-        }
-        
-        h3, .h3-text {
-            @include text(variables.$h3-size * $scalar);
-
-            &.#{$name} {
-                color: $text;
-            }
-        }
-        
-        h4, .h4-text {
-            @include text(variables.$h4-size * $scalar);
-
-            &.#{$name} {
-                color: $text;
-            }
-        }
-    
-        h5, .h5-text {
-            @include text(variables.$h5-size * $scalar);
-
-            &.#{$name} {
-                color: $text;
-            }
-        }
-    
-        h6, .h6-text {
-            @include text(variables.$h6-size * $scalar);
-    
-            &.#{$name} {
-                color: $text;
-            }
-        }
     }
 }
 
