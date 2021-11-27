@@ -217,7 +217,7 @@
   user-select: none;
 }
 
-.banner, .button, input[type=submit], .button-round-1, .light.button-round-1, .button-expand-1, .light.button-expand-1, .dark.button-round-1, .dark.button-expand-1, .light-cyan.button-round-1, .light-cyan.button-expand-1, .light-green.button-round-1, .light-green.button-expand-1, .dark-green.button-round-1, .dark-green.button-expand-1, .dark-blue.button-round-1, .dark-blue.button-expand-1, .button-round-2, .light.button-round-2, .button-expand-2, .light.button-expand-2, .dark.button-round-2, .dark.button-expand-2, .light-cyan.button-round-2, .light-cyan.button-expand-2, .light-green.button-round-2, .light-green.button-expand-2, .dark-green.button-round-2, .dark-green.button-expand-2, .dark-blue.button-round-2, .dark-blue.button-expand-2, .button-round-3, .light.button-round-3, .button-expand-3, .light.button-expand-3, .dark.button-round-3, .dark.button-expand-3, .light-cyan.button-round-3, .light-cyan.button-expand-3, .light-green.button-round-3, .light-green.button-expand-3, .dark-green.button-round-3, .dark-green.button-expand-3, .dark-blue.button-round-3, .dark-blue.button-expand-3, .flex, .form, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.expand, .banner, .button, input[type=submit], .button-round-1, .light.button-round-1, .button-expand-1, .light.button-expand-1, .dark.button-round-1, .dark.button-expand-1, .light-cyan.button-round-1, .light-cyan.button-expand-1, .light-green.button-round-1, .light-green.button-expand-1, .dark-green.button-round-1, .dark-green.button-expand-1, .dark-blue.button-round-1, .dark-blue.button-expand-1, .button-round-2, .light.button-round-2, .button-expand-2, .light.button-expand-2, .dark.button-round-2, .dark.button-expand-2, .light-cyan.button-round-2, .light-cyan.button-expand-2, .light-green.button-round-2, .light-green.button-expand-2, .dark-green.button-round-2, .dark-green.button-expand-2, .dark-blue.button-round-2, .dark-blue.button-expand-2, .button-round-3, .light.button-round-3, .button-expand-3, .light.button-expand-3, .dark.button-round-3, .dark.button-expand-3, .light-cyan.button-round-3, .light-cyan.button-expand-3, .light-green.button-round-3, .light-green.button-expand-3, .dark-green.button-round-3, .dark-green.button-expand-3, .dark-blue.button-round-3, .dark-blue.button-expand-3, .flex, .form, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10521,6 +10521,33 @@ body {
   min-height: 100vh;
 }
 
+.expand > * {
+  animation: animation-shrink 0.2s ease forwards;
+}
+.expand:hover > * {
+  animation: animation-expand 0.2s ease forwards;
+}
+
+@keyframes animation-expand {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+}
+@keyframes animation-shrink {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+}
 .break.light {
   background-color: rgba(198, 198, 198, 0.5);
   height: 1px;
