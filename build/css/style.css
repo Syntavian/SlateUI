@@ -6,7 +6,7 @@
   padding: 0.25em;
 }
 
-.break.light, .break.dark, .break.light-cyan, .break.light-green, .break.dark-green, .break.dark-blue {
+.break {
   margin-bottom: 0.5em;
 }
 
@@ -48,7 +48,7 @@
   box-shadow: gray 0px 0px 3px 0px;
 }
 
-.break.light, .break.dark, .break.light-cyan, .break.light-green, .break.dark-green, .break.dark-blue {
+.break {
   box-shadow: gray 0px 1px 3px 0px;
 }
 
@@ -10548,8 +10548,7 @@ body {
     padding: 0.5em;
   }
 }
-.break.light {
-  background-color: rgba(198, 198, 198, 0.5);
+.break {
   height: 1px;
   width: 100%;
 }
@@ -10578,9 +10577,6 @@ body {
 .theme-selector select:hover {
   color: inherit;
 }
-.theme-selector select.light option {
-  background-color: #f7f7f7;
-}
 .theme-selector:hover span {
   color: transparent;
 }
@@ -10588,226 +10584,75 @@ body {
 .no-shadow {
   box-shadow: none;
 }
+
+.break.light {
+  background-color: rgba(198, 198, 198, 0.5);
+}
+
+.theme-selector select.light option {
+  background-color: #f7f7f7;
+}
+
 .no-shadow.light {
   box-shadow: none;
 }
 
 .break.dark {
   background-color: rgba(57, 57, 57, 0.5);
-  height: 1px;
-  width: 100%;
 }
 
-.theme-selector::before {
-  content: "Change Theme";
-  display: none;
-}
-.theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "tertiary": #f7f7f7, "darkened-20": #c6c6c6, "lightened-20": #f9f9f9, "shifted-10": #dedede, "shifted-20": #c6c6c6, "shifted-30": #adadad, "inverted": #080808, "complement": #f7f7f7, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "tertiary": #080808, "darkened-20": #060606, "lightened-20": #393939, "shifted-10": #212121, "shifted-20": #393939, "shifted-30": #525252, "inverted": #f7f7f7, "complement": #080808, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #ff11f7, "tertiary": #f7ff11, "darkened-20": #00d2da, "lightened-20": #41f9ff, "shifted-10": #00edf5, "shifted-20": #00d2da, "shifted-30": #00b8be, "inverted": #ee0800, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #4e1dff, "tertiary": #ff4e1d, "darkened-20": #00e331, "lightened-20": #4aff71, "shifted-10": #01ff38, "shifted-20": #00e331, "shifted-30": #00c72b, "inverted": #e200b1, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #040730, "tertiary": #300407, "darkened-20": #062603, "lightened-20": #13850b, "shifted-10": #0d5a08, "shifted-20": #13850b, "shifted-30": #19af0f, "inverted": #f8cffb, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #2e0509, "tertiary": #092e05, "darkened-20": #040725, "lightened-20": #0e1981, "shifted-10": #0a1157, "shifted-20": #0e1981, "shifted-30": #1321aa, "inverted": #faf6d1, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
-  display: none;
-}
-.theme-selector span {
-  z-index: 1;
-}
-.theme-selector select {
-  z-index: 2;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  display: block;
-  position: absolute;
-  font-family: "Century Gothic", Arial, sans-serif;
-  padding-left: 0.5em;
-}
-.theme-selector select:hover {
-  color: inherit;
-}
 .theme-selector select.dark option {
   background-color: #080808;
 }
-.theme-selector:hover span {
-  color: transparent;
-}
 
-.no-shadow {
-  box-shadow: none;
-}
 .no-shadow.dark {
   box-shadow: none;
 }
 
 .break.light-cyan {
   background-color: rgba(0, 210, 218, 0.5);
-  height: 1px;
-  width: 100%;
 }
 
-.theme-selector::before {
-  content: "Change Theme";
-  display: none;
-}
-.theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "tertiary": #f7f7f7, "darkened-20": #c6c6c6, "lightened-20": #f9f9f9, "shifted-10": #dedede, "shifted-20": #c6c6c6, "shifted-30": #adadad, "inverted": #080808, "complement": #f7f7f7, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "tertiary": #080808, "darkened-20": #060606, "lightened-20": #393939, "shifted-10": #212121, "shifted-20": #393939, "shifted-30": #525252, "inverted": #f7f7f7, "complement": #080808, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #ff11f7, "tertiary": #f7ff11, "darkened-20": #00d2da, "lightened-20": #41f9ff, "shifted-10": #00edf5, "shifted-20": #00d2da, "shifted-30": #00b8be, "inverted": #ee0800, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #4e1dff, "tertiary": #ff4e1d, "darkened-20": #00e331, "lightened-20": #4aff71, "shifted-10": #01ff38, "shifted-20": #00e331, "shifted-30": #00c72b, "inverted": #e200b1, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #040730, "tertiary": #300407, "darkened-20": #062603, "lightened-20": #13850b, "shifted-10": #0d5a08, "shifted-20": #13850b, "shifted-30": #19af0f, "inverted": #f8cffb, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #2e0509, "tertiary": #092e05, "darkened-20": #040725, "lightened-20": #0e1981, "shifted-10": #0a1157, "shifted-20": #0e1981, "shifted-30": #1321aa, "inverted": #faf6d1, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
-  display: none;
-}
-.theme-selector span {
-  z-index: 1;
-}
-.theme-selector select {
-  z-index: 2;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  display: block;
-  position: absolute;
-  font-family: "Century Gothic", Arial, sans-serif;
-  padding-left: 0.5em;
-}
-.theme-selector select:hover {
-  color: inherit;
-}
 .theme-selector select.light-cyan option {
   background-color: #11f7ff;
 }
-.theme-selector:hover span {
-  color: transparent;
-}
 
-.no-shadow {
-  box-shadow: none;
-}
 .no-shadow.light-cyan {
   box-shadow: none;
 }
 
 .break.light-green {
   background-color: rgba(0, 227, 49, 0.5);
-  height: 1px;
-  width: 100%;
 }
 
-.theme-selector::before {
-  content: "Change Theme";
-  display: none;
-}
-.theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "tertiary": #f7f7f7, "darkened-20": #c6c6c6, "lightened-20": #f9f9f9, "shifted-10": #dedede, "shifted-20": #c6c6c6, "shifted-30": #adadad, "inverted": #080808, "complement": #f7f7f7, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "tertiary": #080808, "darkened-20": #060606, "lightened-20": #393939, "shifted-10": #212121, "shifted-20": #393939, "shifted-30": #525252, "inverted": #f7f7f7, "complement": #080808, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #ff11f7, "tertiary": #f7ff11, "darkened-20": #00d2da, "lightened-20": #41f9ff, "shifted-10": #00edf5, "shifted-20": #00d2da, "shifted-30": #00b8be, "inverted": #ee0800, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #4e1dff, "tertiary": #ff4e1d, "darkened-20": #00e331, "lightened-20": #4aff71, "shifted-10": #01ff38, "shifted-20": #00e331, "shifted-30": #00c72b, "inverted": #e200b1, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #040730, "tertiary": #300407, "darkened-20": #062603, "lightened-20": #13850b, "shifted-10": #0d5a08, "shifted-20": #13850b, "shifted-30": #19af0f, "inverted": #f8cffb, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #2e0509, "tertiary": #092e05, "darkened-20": #040725, "lightened-20": #0e1981, "shifted-10": #0a1157, "shifted-20": #0e1981, "shifted-30": #1321aa, "inverted": #faf6d1, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
-  display: none;
-}
-.theme-selector span {
-  z-index: 1;
-}
-.theme-selector select {
-  z-index: 2;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  display: block;
-  position: absolute;
-  font-family: "Century Gothic", Arial, sans-serif;
-  padding-left: 0.5em;
-}
-.theme-selector select:hover {
-  color: inherit;
-}
 .theme-selector select.light-green option {
   background-color: #1dff4e;
 }
-.theme-selector:hover span {
-  color: transparent;
-}
 
-.no-shadow {
-  box-shadow: none;
-}
 .no-shadow.light-green {
   box-shadow: none;
 }
 
 .break.dark-green {
   background-color: rgba(19, 133, 11, 0.5);
-  height: 1px;
-  width: 100%;
 }
 
-.theme-selector::before {
-  content: "Change Theme";
-  display: none;
-}
-.theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "tertiary": #f7f7f7, "darkened-20": #c6c6c6, "lightened-20": #f9f9f9, "shifted-10": #dedede, "shifted-20": #c6c6c6, "shifted-30": #adadad, "inverted": #080808, "complement": #f7f7f7, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "tertiary": #080808, "darkened-20": #060606, "lightened-20": #393939, "shifted-10": #212121, "shifted-20": #393939, "shifted-30": #525252, "inverted": #f7f7f7, "complement": #080808, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #ff11f7, "tertiary": #f7ff11, "darkened-20": #00d2da, "lightened-20": #41f9ff, "shifted-10": #00edf5, "shifted-20": #00d2da, "shifted-30": #00b8be, "inverted": #ee0800, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #4e1dff, "tertiary": #ff4e1d, "darkened-20": #00e331, "lightened-20": #4aff71, "shifted-10": #01ff38, "shifted-20": #00e331, "shifted-30": #00c72b, "inverted": #e200b1, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #040730, "tertiary": #300407, "darkened-20": #062603, "lightened-20": #13850b, "shifted-10": #0d5a08, "shifted-20": #13850b, "shifted-30": #19af0f, "inverted": #f8cffb, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #2e0509, "tertiary": #092e05, "darkened-20": #040725, "lightened-20": #0e1981, "shifted-10": #0a1157, "shifted-20": #0e1981, "shifted-30": #1321aa, "inverted": #faf6d1, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
-  display: none;
-}
-.theme-selector span {
-  z-index: 1;
-}
-.theme-selector select {
-  z-index: 2;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  display: block;
-  position: absolute;
-  font-family: "Century Gothic", Arial, sans-serif;
-  padding-left: 0.5em;
-}
-.theme-selector select:hover {
-  color: inherit;
-}
 .theme-selector select.dark-green option {
   background-color: #073004;
 }
-.theme-selector:hover span {
-  color: transparent;
-}
 
-.no-shadow {
-  box-shadow: none;
-}
 .no-shadow.dark-green {
   box-shadow: none;
 }
 
 .break.dark-blue {
   background-color: rgba(14, 25, 129, 0.5);
-  height: 1px;
-  width: 100%;
 }
 
-.theme-selector::before {
-  content: "Change Theme";
-  display: none;
-}
-.theme-selector::after {
-  content: '("light": ("primary": #f7f7f7, "secondary": #f7f7f7, "tertiary": #f7f7f7, "darkened-20": #c6c6c6, "lightened-20": #f9f9f9, "shifted-10": #dedede, "shifted-20": #c6c6c6, "shifted-30": #adadad, "inverted": #080808, "complement": #f7f7f7, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark": ("primary": #080808, "secondary": #080808, "tertiary": #080808, "darkened-20": #060606, "lightened-20": #393939, "shifted-10": #212121, "shifted-20": #393939, "shifted-30": #525252, "inverted": #f7f7f7, "complement": #080808, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-cyan": ("primary": #11f7ff, "secondary": #ff11f7, "tertiary": #f7ff11, "darkened-20": #00d2da, "lightened-20": #41f9ff, "shifted-10": #00edf5, "shifted-20": #00d2da, "shifted-30": #00b8be, "inverted": #ee0800, "complement": #ff1911, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "light-green": ("primary": #1dff4e, "secondary": #4e1dff, "tertiary": #ff4e1d, "darkened-20": #00e331, "lightened-20": #4aff71, "shifted-10": #01ff38, "shifted-20": #00e331, "shifted-30": #00c72b, "inverted": #e200b1, "complement": #ff1dce, "text-colour": black, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-green": ("primary": #073004, "secondary": #040730, "tertiary": #300407, "darkened-20": #062603, "lightened-20": #13850b, "shifted-10": #0d5a08, "shifted-20": #13850b, "shifted-30": #19af0f, "inverted": #f8cffb, "complement": #2d0430, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em), "dark-blue": ("primary": #05092e, "secondary": #2e0509, "tertiary": #092e05, "darkened-20": #040725, "lightened-20": #0e1981, "shifted-10": #0a1157, "shifted-20": #0e1981, "shifted-30": #1321aa, "inverted": #faf6d1, "complement": #2e2a05, "text-colour": white, "fonts": ("Century Gothic", Arial, sans-serif), "font-size": 1rem, "padding": 0.5em, "margin": 0.5em, "rounding": 0.25em))';
-  display: none;
-}
-.theme-selector span {
-  z-index: 1;
-}
-.theme-selector select {
-  z-index: 2;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  display: block;
-  position: absolute;
-  font-family: "Century Gothic", Arial, sans-serif;
-  padding-left: 0.5em;
-}
-.theme-selector select:hover {
-  color: inherit;
-}
 .theme-selector select.dark-blue option {
   background-color: #05092e;
 }
-.theme-selector:hover span {
-  color: transparent;
-}
 
-.no-shadow {
-  box-shadow: none;
-}
 .no-shadow.dark-blue {
   box-shadow: none;
 }
