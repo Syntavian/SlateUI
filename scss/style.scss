@@ -118,6 +118,54 @@ body {
 100%{margin: 0em; padding: 0.5em;}
 }
 
+.break {
+    @extend %shadow-down-1;
+    @extend %margin-bottom-s;
+    height: 1px;
+    width: 100%;
+}
+
+.theme-selector {
+    &::before {
+        content: "Change Theme";
+        display: none;
+    }
+
+    &::after {
+        content: "#{inspect(variables.$themes)}";
+        display: none;
+    }
+
+    span {
+        z-index: 1;
+    }
+
+    select {
+        z-index: 2;
+        background-color: transparent;
+        color: transparent;
+        border: none;
+        display: block;
+        position: absolute;
+        font-family: variables.$fonts;
+        padding-left: 0.5em;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    &:hover {
+        span {
+            color: transparent;
+        }
+    }
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
 @each $name, $theme in variables.$themes {
     $primary: map.get($theme, "primary");
     $secondary: map.get($theme, "secondary");
@@ -131,62 +179,15 @@ body {
     $text: map.get($theme, "text-colour");
 
     .break.#{$name} {
-        @extend %shadow-down-1;
-        @extend %margin-bottom-s;
         background-color: rgba($shifted-20, 0.5);
-        height: 1px;
-        width: 100%;
     }
 
-    .theme-selector {
-        &::before {
-            content: "Change Theme";
-            display: none;
-        }
-
-        &::after {
-            content: "#{inspect(variables.$themes)}";
-            display: none;
-        }
-
-        span {
-            z-index: 1;
-        }
-
-        select {
-            z-index: 2;
-            background-color: transparent;
-            color: transparent;
-            border: none;
-            display: block;
-            position: absolute;
-            font-family: variables.$fonts;
-            padding-left: 0.5em;
-
-            &:hover {
-                color: inherit;
-            }
-
-            &.#{$name} {
-                option {
-                    background-color: $primary;
-                }
-            }
-        }
-
-        &:hover {
-            span {
-                color: transparent;
-            }
-        }
+    .theme-selector select.#{$name} option {
+        background-color: $primary;
     }
 
-    .no-shadow {
+    .no-shadow.#{$name} {
         box-shadow: none;
-
-        &.#{$name} {
-            box-shadow: none;
-        }
     }
 }
 
