@@ -8751,6 +8751,7 @@ p {
   align-items: center;
   flex-grow: 1;
   width: min-content;
+  max-width: 50%;
 }
 @media screen and (max-width: 1600px) {
   .image-carousel.shrink-xl:not(.image-carousel) {
@@ -8805,6 +8806,7 @@ p {
     align-items: center;
     flex-grow: 1;
     width: 100%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 700px) and (max-width: 1600px) {
