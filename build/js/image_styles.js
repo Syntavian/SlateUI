@@ -108,6 +108,8 @@ function initialiseImageCarousel(index) {
 
         imageCarouselElement.children[i].style.width = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
         imageCarouselElement.children[i].style.height = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
+        imageCarouselElement.children[i].style.minWidth = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
+        imageCarouselElement.children[i].style.minHeight = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
     }
 
     let leftButton = document.createElement("div");

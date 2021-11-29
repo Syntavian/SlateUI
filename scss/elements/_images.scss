@@ -11,6 +11,7 @@
 .image-carousel {
     @include prototypes.flex-row(center, center);
     width: min-content;
+    max-width: 50%;
 
     // > .image {
     //     margin: {
@@ -36,5 +37,6 @@
     .image-carousel {
         @include prototypes.flex-row(center, center);
         width: 100%;
+        max-width: 100%;
     }
 }
