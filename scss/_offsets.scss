@@ -13,6 +13,25 @@
     }
 }
 
+@for $i from 1 through 10 { 
+    .width-#{$i}em {
+        min-width: #{$i}em;
+        width: #{$i}em;
+    }
+
+    .height-#{$i}em {
+        min-height: #{$i}em;
+        height: #{$i}em;
+    }
+
+    .size-#{$i}em {
+        min-width: #{$i}em;
+        width: #{$i}em;
+        min-height: #{$i}em;
+        height: #{$i}em;
+    }
+}
+
 @mixin offsets($scalar: 1) {
     @each $type in variables.$offset-types {
         //Generate offsets of fixed em value amounts.
