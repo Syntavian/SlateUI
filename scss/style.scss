@@ -68,7 +68,7 @@ body {
 }
 
 .background {
-    @extend %z-1;
+    @extend %z--1;
     position: fixed;
     width: 100vw;
     height: 100vh;
