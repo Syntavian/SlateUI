@@ -125,7 +125,7 @@
 }
 
 @for $i from -1 through 10 {
-    %z#{$i} {
+    %z-#{$i} {
         z-index: $i;
     }
 }
@@ -137,6 +137,23 @@
 
     %height-#{$i} {
         height: #{10% * $i};
+    }
+
+    %width-#{$i}em {
+        min-width: #{$i}em;
+        width: #{$i}em;
+    }
+
+    %height-#{$i}em {
+        min-height: #{$i}em;
+        height: #{$i}em;
+    }
+
+    %size-#{$i}em {
+        min-width: #{$i}em;
+        width: #{$i}em;
+        min-height: #{$i}em;
+        height: #{$i}em;
     }
 
     @each $type in variables.$offset-types {
