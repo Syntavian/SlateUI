@@ -3,13 +3,26 @@
 @use 'variables';
 @use 'prototypes';
 
-@mixin text($size: variables.$font-size, $margin: variables.$s-offset, $padding: 0px, $weight: normal) {
+%common-text, p, span, a, select, option, label, input, textarea, button, .p, .text, .a, .link, body, div, main, nav, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: variables.$fonts;
+    margin-top: variables.$s-offset;
+    margin-bottom: variables.$s-offset;
+    padding: 0px;
+    font-weight: normal;
+}
+
+@mixin text($size: variables.$font-size, $margin: variables.$s-offset, $padding: 0px, $weight: normal) {
     font-size: $size;
-    margin-top: $margin;
-    margin-bottom: $margin;
-    padding: $padding;
-    font-weight: $weight;
+    @if ($margin != variables.$s-offset) {
+        margin-top: $margin;
+        margin-bottom: $margin;
+    }
+    @if ($padding != 0px) {
+        padding: $padding;
+    }
+    @if ($weight != normal) {
+        font-weight: $weight;
+    }
 }
 
 @mixin text-levels($scalar) {
