@@ -37,6 +37,8 @@ function cycleCarousel(index, offset, maxDimension) {
 
         child.style.width = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
         child.style.height = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
+        child.style.minWidth = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
+        child.style.minHeight = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
     }
 
     if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
