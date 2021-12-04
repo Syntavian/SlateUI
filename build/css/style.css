@@ -10552,30 +10552,16 @@ body {
 .expand > * {
   animation: animation-shrink 0.2s ease forwards;
 }
+.expand > *.gradient-hover-animation {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
 .expand:hover > * {
   animation: animation-expand 0.2s ease forwards;
 }
+.expand:hover > *.gradient-hover-animation {
+  animation: animation-expand-gradient 0.2s ease forwards;
+}
 
-@keyframes animation-expand {
-  0% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-  100% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-}
-@keyframes animation-shrink {
-  0% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-  100% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-}
 .break {
   height: 1px;
   width: 100%;
@@ -10625,6 +10611,13 @@ body {
   box-shadow: none;
 }
 
+.expand > .gradient-hover-animation.light {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.light {
+  animation: animation-expand-gradient 0.2s ease forwards;
+}
+
 .break.dark {
   background-color: rgba(57, 57, 57, 0.5);
 }
@@ -10635,6 +10628,13 @@ body {
 
 .no-shadow.dark {
   box-shadow: none;
+}
+
+.expand > .gradient-hover-animation.dark {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.dark {
+  animation: animation-expand-gradient 0.2s ease forwards;
 }
 
 .break.light-cyan {
@@ -10649,6 +10649,13 @@ body {
   box-shadow: none;
 }
 
+.expand > .gradient-hover-animation.light-cyan {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.light-cyan {
+  animation: animation-expand-gradient 0.2s ease forwards;
+}
+
 .break.light-green {
   background-color: rgba(0, 227, 49, 0.5);
 }
@@ -10659,6 +10666,13 @@ body {
 
 .no-shadow.light-green {
   box-shadow: none;
+}
+
+.expand > .gradient-hover-animation.light-green {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.light-green {
+  animation: animation-expand-gradient 0.2s ease forwards;
 }
 
 .break.dark-green {
@@ -10673,6 +10687,13 @@ body {
   box-shadow: none;
 }
 
+.expand > .gradient-hover-animation.dark-green {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.dark-green {
+  animation: animation-expand-gradient 0.2s ease forwards;
+}
+
 .break.dark-blue {
   background-color: rgba(14, 25, 129, 0.5);
 }
@@ -10683,6 +10704,58 @@ body {
 
 .no-shadow.dark-blue {
   box-shadow: none;
+}
+
+.expand > .gradient-hover-animation.dark-blue {
+  animation: animation-shrink-gradient 0.2s ease forwards;
+}
+.expand:hover > .gradient-hover-animation.dark-blue {
+  animation: animation-expand-gradient 0.2s ease forwards;
+}
+
+@keyframes animation-expand {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+}
+@keyframes animation-shrink {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+}
+@keyframes animation-expand-gradient {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-shrink-gradient {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

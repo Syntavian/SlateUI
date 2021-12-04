@@ -99,23 +99,21 @@ body {
     
     > * { 
         animation: animation-shrink 0.2s ease forwards;
+
+        &.gradient-hover-animation {
+            animation: animation-shrink-gradient 0.2s ease forwards;
+        }
     } 
 
     &:hover {
         > * { 
             animation: animation-expand 0.2s ease forwards;
+        
+            &.gradient-hover-animation {
+                animation: animation-expand-gradient 0.2s ease forwards;
+            }
         } 
     }
-}
-
-@keyframes animation-expand {
-0%{margin: 0em; padding: 0.5em;}
-100%{margin: -0.5em; padding: 1em;}
-}
-
-@keyframes animation-shrink {
-0%{margin: -0.5em; padding: 1em;}
-100%{margin: 0em; padding: 0.5em;}
 }
 
 .break {
@@ -189,6 +187,34 @@ body {
     .no-shadow.#{$name} {
         box-shadow: none;
     }
+
+    .expand {
+        > .gradient-hover-animation.#{$name} {
+            animation: animation-shrink-gradient 0.2s ease forwards;
+        } 
+    
+        &:hover > .gradient-hover-animation.#{$name} {
+            animation: animation-expand-gradient 0.2s ease forwards;
+        }
+    }
 }
 
+@keyframes animation-expand {
+    0%{margin: 0em; padding: 0.5em;}
+    100%{margin: -0.5em; padding: 1em;}
+}
 
+@keyframes animation-shrink {
+0%{margin: -0.5em; padding: 1em;}
+100%{margin: 0em; padding: 0.5em;}
+}
+
+@keyframes animation-expand-gradient {
+    0%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
+    100%{margin: #{-0.5em}; padding: #{1em}; background-position: 100% 100%;}
+}
+
+@keyframes animation-shrink-gradient {
+    0%{margin: #{-0.5em}; padding: #{1em}; background-position: 100% 100%;}
+    100%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
+}
