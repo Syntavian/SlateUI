@@ -139,20 +139,23 @@ function initialiseImageCarousel(index) {
     rightButton.addEventListener("click", e => cycleCarousel(index, 1, maxDimension));
 }
 
-function resizeCarousel(index) {
+function resetCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
-    let margin = getComputedStyle(imageCarouselElement.querySelectorAll(".image")[0]).marginLeft;
-    let width = getComputedStyle(imageCarouselElement.querySelectorAll(".image")[0]).width;
 
-    for (let child of imageCarouselElement.querySelectorAll(".placeholder")) {
-        child.style.marginLeft = margin;
-        child.style.marginRight = margin;
+    for (let child of imageCarouselElement.querySelectorAll(".placeholder,.button")) {
+        child.parentElement.removeChild(child);
     }
+
+    for (let child of imageCarouselElement.querySelectorAll(".image")) {
+        child.style = "";
+    }
+
+    initialiseImageCarousel(index);
 }
 
-function resizeCarousels() {
+function resetCarousels() {
     for (let i = 0; i < imageCarousels.length; i++) {
-        resizeCarousel(i);
+        resetCarousel(i);
     }
 }
 
@@ -161,5 +164,5 @@ for (let i = 0; i < imageCarousels.length; i++) {
 }
 
 window.addEventListener("resize", e => {
-    resizeCarousels();
+    resetCarousels();
 });

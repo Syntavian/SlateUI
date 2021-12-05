@@ -8813,6 +8813,10 @@ p {
     margin-right: 0px;
   }
 }
+.image-carousel > .image {
+  margin-left: -1em;
+  margin-right: -1em;
+}
 .image-carousel::before {
   content: "<";
   display: none;
