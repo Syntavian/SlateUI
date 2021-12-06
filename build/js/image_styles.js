@@ -1,5 +1,9 @@
 let imageCarousels = document.querySelectorAll(".image-carousel");
 
+function px(value) {
+    return value + "px";
+}
+
 function cycleCarousel(index, offset, maxDimension) {
     let imageCarouselElement = imageCarousels[index];
     let maxIndex = 0;
@@ -42,23 +46,13 @@ function cycleCarousel(index, offset, maxDimension) {
     }
 
     if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
-        // let colour = getComputedStyle(imageCarouselElement.children[imageCarouselElement.children.length - 1]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
-        // imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
-
         imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.add("disabled");
     } else {
-        // imageCarouselElement.children[imageCarouselElement.children.length - 1].style.color = "";
-
         imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.remove("disabled");
     }
     if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset - 1].classList.contains("placeholder")) {
-        // let colour = getComputedStyle(imageCarouselElement.children[0]).color.replace("rgb(", "").replace(")", "").replaceAll(" ", "").split(",");
-        // imageCarouselElement.children[0].style.color = "rgba(" + colour.join(", ") + ", 0.2)";
-
         imageCarouselElement.children[0].classList.add("disabled");
     } else {
-        // imageCarouselElement.children[0].style.color = "";
-
         imageCarouselElement.children[0].classList.remove("disabled");
     }
 }
@@ -67,9 +61,11 @@ function initialiseImageCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
     let childCount = imageCarouselElement.children.length;
     let zIndexOffset = Math.floor(childCount / 2 - 0.5);
-    let maxDimension = 0;
+    let maxImageSize = 0;
+    let maxCarouselSize = 0;
     let margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft;
 
+    // Keep the max number of images in a carousel <= 5.
     if (zIndexOffset > 2) {
         zIndexOffset = 2;
     }
@@ -88,14 +84,16 @@ function initialiseImageCarousel(index) {
         imageCarouselElement.append(placeholder);
     }
 
+    // let carouselStyle = getComputedStyle(imageCarouselElement);
+
     for (let i = 0; i < imageCarouselElement.children.length; i++) {
         let style = getComputedStyle(imageCarouselElement.children[i]);
 
-        if (Number(style.height.replace("px", "")) > maxDimension) {
-            maxDimension = Number(style.height.replace("px", ""));
+        if (Number(style.height.replace("px", "")) > maxImageSize) {
+            maxImageSize = Number(style.height.replace("px", ""));
         }
-        if (Number(style.width.replace("px", "")) > maxDimension) {
-            maxDimension = Number(style.width.replace("px", ""));
+        if (Number(style.width.replace("px", "")) > maxImageSize) {
+            maxImageSize = Number(style.width.replace("px", ""));
         }
     }
 
@@ -108,10 +106,19 @@ function initialiseImageCarousel(index) {
             imageCarouselElement.children[i].style.display = "none";
         }
 
-        imageCarouselElement.children[i].style.width = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
-        imageCarouselElement.children[i].style.height = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
-        imageCarouselElement.children[i].style.minWidth = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
-        imageCarouselElement.children[i].style.minHeight = maxDimension + maxDimension / 2 * (zIndex / zIndexOffset) + "px";
+        let newSize = maxImageSize + maxImageSize / 2 * (zIndex / zIndexOffset);
+        maxCarouselSize = (maxCarouselSize < newSize) ? newSize : maxCarouselSize;
+        let formattedSize = px(newSize);
+
+        imageCarouselElement.children[i].style.width = formattedSize;
+        imageCarouselElement.children[i].style.height = formattedSize;
+        imageCarouselElement.children[i].style.minWidth = formattedSize;
+        imageCarouselElement.children[i].style.minHeight = formattedSize;
+    }
+
+    for (let i = 0; i < imageCarouselElement.children.length; i++) {
+        imageCarouselElement.children[i].style.marginLeft = px(-maxCarouselSize / 4);
+        imageCarouselElement.children[i].style.marginRight = px(-maxCarouselSize / 4);
     }
 
     let leftButton = document.createElement("div");
@@ -135,12 +142,13 @@ function initialiseImageCarousel(index) {
     imageCarouselElement.prepend(leftButton);
     imageCarouselElement.append(rightButton);
 
-    leftButton.addEventListener("click", e => cycleCarousel(index, -1, maxDimension));
-    rightButton.addEventListener("click", e => cycleCarousel(index, 1, maxDimension));
+    leftButton.addEventListener("click", e => cycleCarousel(index, -1, maxImageSize));
+    rightButton.addEventListener("click", e => cycleCarousel(index, 1, maxImageSize));
 }
 
 function resetCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
+    console.log(getComputedStyle(imageCarouselElement).width);
 
     for (let child of imageCarouselElement.querySelectorAll(".placeholder,.button")) {
         child.parentElement.removeChild(child);
