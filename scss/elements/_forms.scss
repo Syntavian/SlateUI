@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (max-width: variables.$screen-width-medium) {
+@media screen and (max-width: variables.$screen-width-m) {
     .form-row {
         @include prototypes.flex-column(space-between, flex-start);
     }

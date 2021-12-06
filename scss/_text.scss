@@ -85,14 +85,14 @@ p {
     text-align: justify;
 }
 
-@media screen and (max-width: variables.$screen-width-large) {
+@media screen and (max-width: variables.$screen-width-l) {
     @include text-levels(0.9);
 }
 
-@media screen and (max-width: variables.$screen-width-medium) {
+@media screen and (max-width: variables.$screen-width-m) {
     @include text-levels(0.8);
 }
 
-@media screen and (max-width: variables.$screen-width-small) {
+@media screen and (max-width: variables.$screen-width-s) {
     @include text-levels(0.7);
 }

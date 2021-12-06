@@ -91,14 +91,14 @@
 
 @include offsets(1);
 
-@media screen and (max-width: variables.$screen-width-large) {
+@media screen and (max-width: variables.$screen-width-l) {
     @include offsets(0.75);
 }
 
-@media screen and (max-width: variables.$screen-width-medium) {
+@media screen and (max-width: variables.$screen-width-m) {
     @include offsets(0.6);
 }
 
-@media screen and (max-width: variables.$screen-width-small) {
+@media screen and (max-width: variables.$screen-width-s) {
     @include offsets(0.45);
 }

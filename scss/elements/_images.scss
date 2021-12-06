@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: variables.$screen-width-small) {
+@media screen and (max-width: variables.$screen-width-s) {
     .image-carousel {
         @include prototypes.flex-row(center, center);
         width: 100%;
