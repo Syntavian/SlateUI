@@ -261,46 +261,46 @@
     }
 
     @each $name, $theme in variables.$themes {
-        $shifted: map.get($theme, "shifted-20");
+        $colour: map.get(map.get($theme, "colours"), "shifted-2");
     
         %shadow-#{$i}.#{$name} {
-            box-shadow: $shifted 0px 0px ($i + 2px) 0px;
+            box-shadow: $colour 0px 0px ($i + 2px) 0px;
         }
         
         %shadow-up-#{$i}.#{$name} {
-            box-shadow: $shifted 0px -#{$i}px ($i + 2px) 0px;
+            box-shadow: $colour 0px -#{$i}px ($i + 2px) 0px;
         }
         
         %shadow-down-#{$i}.#{$name} {
-            box-shadow: $shifted 0px #{$i}px ($i + 2px) 0px;
+            box-shadow: $colour 0px #{$i}px ($i + 2px) 0px;
         }
         
         %shadow-right-#{$i}.#{$name} {
-            box-shadow: $shifted #{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $colour #{$i}px 0px ($i + 2px) 0px;
         }
         
         %shadow-left-#{$i}.#{$name} {
-            box-shadow: $shifted -#{$i}px 0px ($i + 2px) 0px;
+            box-shadow: $colour -#{$i}px 0px ($i + 2px) 0px;
         }
     
         %shadow-inset-#{$i}.#{$name} {
-            box-shadow: $shifted 0px 0px ($i + 2px) 0px inset;
+            box-shadow: $colour 0px 0px ($i + 2px) 0px inset;
         }
         
         %shadow-inset-up-#{$i}.#{$name} {
-            box-shadow: $shifted 0px -#{$i}px ($i + 2px) 0px inset;
+            box-shadow: $colour 0px -#{$i}px ($i + 2px) 0px inset;
         }
         
         %shadow-inset-down-#{$i}.#{$name} {
-            box-shadow: $shifted 0px #{$i}px ($i + 2px) 0px inset;
+            box-shadow: $colour 0px #{$i}px ($i + 2px) 0px inset;
         }
         
         %shadow-inset-right-#{$i}.#{$name} {
-            box-shadow: $shifted #{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $colour #{$i}px 0px ($i + 2px) 0px inset;
         }
         
         %shadow-inset-left-#{$i}.#{$name} {
-            box-shadow: $shifted -#{$i}px 0px ($i + 2px) 0px inset;
+            box-shadow: $colour -#{$i}px 0px ($i + 2px) 0px inset;
         }
     }
 }

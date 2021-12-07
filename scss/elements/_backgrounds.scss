@@ -4,15 +4,19 @@
 @use '../prototypes';
 
 @each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
-    $secondary: map.get($theme, "secondary");
-    $tertiary: map.get($theme, "tertiary");
-    $darkened-20: map.get($theme, "darkened-20");
-    $lightened-20: map.get($theme, "lightened-20");
-    $shifted-10: map.get($theme, "shifted-10");
-    $shifted-20: map.get($theme, "shifted-20");
-    $complement: map.get($theme, "complement");
-    $inverted: map.get($theme, "inverted");
+    $colours: map.get($theme, "colours");
+    $primary: map.get($colours, "primary");
+    $secondary: map.get($colours, "secondary");
+    $tertiary: map.get($colours, "tertiary");
+    $darkened-1: map.get($colours, "darkened-1");
+    $darkened-2: map.get($colours, "darkened-2");
+    $lightened-1: map.get($colours, "lightened-2");
+    $lightened-2: map.get($colours, "lightened-2");
+    $shifted-1: map.get($colours, "shifted-1");
+    $shifted-2: map.get($colours, "shifted-2");
+    $shifted-3: map.get($colours, "shifted-3");
+    $inverted: map.get($colours, "inverted");
+    $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
     .#{$name}.fill {
@@ -51,67 +55,67 @@
             }
         }
 
-        &.darkened-20 {
-            background-color: $darkened-20;
+        &.darkened-2 {
+            background-color: $darkened-2;
 
             &.complement {
-                background-color: complement($darkened-20);
+                background-color: complement($darkened-2);
             }
 
             &.inverted {
-                background-color: invert($darkened-20);
+                background-color: invert($darkened-2);
             }
 
             &.transparent {
-                background-color: color.scale($darkened-20, $alpha: -25%);
+                background-color: color.scale($darkened-2, $alpha: -25%);
             }
         }
 
-        &.lightened-20 {
-            background-color: $lightened-20;
+        &.lightened-2 {
+            background-color: $lightened-2;
 
             &.complement {
-                background-color: complement($lightened-20);
+                background-color: complement($lightened-2);
             }
 
             &.inverted {
-                background-color: invert($lightened-20);
+                background-color: invert($lightened-2);
             }
 
             &.transparent {
-                background-color: color.scale($lightened-20, $alpha: -25%);
+                background-color: color.scale($lightened-2, $alpha: -25%);
             }
         }
 
-        &.shifted-10 {
-            background-color: $shifted-10;
+        &.shifted-1 {
+            background-color: $shifted-1;
 
             &.complement {
-                background-color: complement($shifted-10);
+                background-color: complement($shifted-1);
             }
 
             &.inverted {
-                background-color: invert($shifted-10);
+                background-color: invert($shifted-1);
             }
 
             &.transparent {
-                background-color: color.scale($shifted-10, $alpha: -25%);
+                background-color: color.scale($shifted-1, $alpha: -25%);
             }
         }
 
-        &.shifted-20 {
-            background-color: $shifted-20;
+        &.shifted-2 {
+            background-color: $shifted-2;
 
             &.complement {
-                background-color: complement($shifted-20);
+                background-color: complement($shifted-2);
             }
 
             &.inverted {
-                background-color: invert($shifted-20);
+                background-color: invert($shifted-2);
             }
 
             &.transparent {
-                background-color: color.scale($shifted-20, $alpha: -25%);
+                background-color: color.scale($shifted-2, $alpha: -25%);
             }
         }
 
@@ -129,10 +133,10 @@
     }
 
     %#{$name}-gradient {
-        background: linear-gradient(135deg, variables.$alpha, $shifted-10 25%, variables.$alpha);
+        background: linear-gradient(135deg, variables.$alpha, $shifted-1 25%, variables.$alpha);
 
         &.fill {
-            background: linear-gradient(135deg, $primary, $shifted-10 25%, $primary);
+            background: linear-gradient(135deg, $primary, $shifted-1 25%, $primary);
         }
     }
     

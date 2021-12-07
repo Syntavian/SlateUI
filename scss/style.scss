@@ -165,19 +165,22 @@ body {
 }
 
 @each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
-    $secondary: map.get($theme, "secondary");
-    $tertiary: map.get($theme, "tertiary");
-    $darkened-20: map.get($theme, "darkened-20");
-    $lightened-20: map.get($theme, "lightened-20");
-    $shifted-10: map.get($theme, "shifted-10");
-    $shifted-20: map.get($theme, "shifted-20");
-    $complement: map.get($theme, "complement");
-    $inverted: map.get($theme, "inverted");
-    $text: map.get($theme, "text-colour");
+    $colours: map.get($theme, "colours");
+    $primary: map.get($colours, "primary");
+    $secondary: map.get($colours, "secondary");
+    $tertiary: map.get($colours, "tertiary");
+    $darkened-1: map.get($colours, "darkened-1");
+    $darkened-2: map.get($colours, "darkened-2");
+    $lightened-1: map.get($colours, "lightened-2");
+    $lightened-2: map.get($colours, "lightened-2");
+    $shifted-1: map.get($colours, "shifted-1");
+    $shifted-2: map.get($colours, "shifted-2");
+    $shifted-3: map.get($colours, "shifted-3");
+    $inverted: map.get($colours, "inverted");
+    $complement: map.get($colours, "complement");
 
     .break.#{$name} {
-        background-color: rgba($shifted-20, 0.5);
+        background-color: rgba($shifted-2, 0.5);
     }
 
     .theme-selector select.#{$name} option {

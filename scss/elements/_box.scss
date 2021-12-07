@@ -4,7 +4,19 @@
 @use '../prototypes';
 
 @each $name, $theme in variables.$themes {
-    $primary: map.get($theme, "primary");
+    $colours: map.get($theme, "colours");
+    $primary: map.get($colours, "primary");
+    $secondary: map.get($colours, "secondary");
+    $tertiary: map.get($colours, "tertiary");
+    $darkened-1: map.get($colours, "darkened-1");
+    $darkened-2: map.get($colours, "darkened-2");
+    $lightened-1: map.get($colours, "lightened-2");
+    $lightened-2: map.get($colours, "lightened-2");
+    $shifted-1: map.get($colours, "shifted-1");
+    $shifted-2: map.get($colours, "shifted-2");
+    $shifted-3: map.get($colours, "shifted-3");
+    $inverted: map.get($colours, "inverted");
+    $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
     .#{$name}.box {
