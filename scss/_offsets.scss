@@ -59,6 +59,32 @@
             .#{$type}-#{$i} {
                 #{$type}: #{$i * $scalar}em;
             }
+
+            .child- {
+                @each $direction in variables.$offset-directions {
+                    &#{$type}-#{$direction}-#{$i} > * {
+                        #{$type}-#{$direction}: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type}-horizontal-#{$i} > * {
+                    #{$type}: {
+                        left: #{$i * $scalar}em;
+                        right: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type}-vertical-#{$i} > * {
+                    #{$type}: {
+                        top: #{$i * $scalar}em;
+                        bottom: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type}-#{$i} > * {
+                    #{$type}: #{$i * $scalar}em;
+                }
+            }
         }
 
         @each $level, $value in variables.$offset-values {
@@ -84,6 +110,32 @@
 
             .#{$type}-#{$level} {
                 #{$type}: $value * $scalar;
+            }
+
+            .child- {
+                @each $direction in variables.$offset-directions {
+                    &#{$type}-#{$direction}-#{$level} > * {
+                        #{$type}-#{$direction}: $value * $scalar;
+                    }
+                }
+    
+                &#{$type}-horizontal-#{$level} > * {
+                    #{$type}: {
+                        left: $value * $scalar;
+                        right: $value * $scalar;
+                    }
+                }
+    
+                &#{$type}-vertical-#{$level} > * {
+                    #{$type}: {
+                        top: $value * $scalar;
+                        bottom: $value * $scalar;
+                    }
+                }
+    
+                &#{$type}-#{$level} > * {
+                    #{$type}: $value * $scalar;
+                }
             }
         }
     }
