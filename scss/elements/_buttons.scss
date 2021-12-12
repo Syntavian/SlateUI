@@ -67,7 +67,14 @@
 
 .button-round {
     @extend .button;
-    border-radius: 3em;
+    border-radius: 2em;
+}
+
+@for $i from 1 through 5 {
+    .button-round-#{$i} {
+        @extend .button;
+        border-radius: #{$i / 2}em;
+    }
 }
 
 .button-expand {
@@ -75,34 +82,11 @@
     
     > * { 
         @extend .button;
-        animation: animation-shrink 0.2s ease forwards;
-
-        &.gradient-hover-animation {
-            animation: animation-shrink-gradient 0.2s ease forwards;
-
-            &.fill {
-                animation: animation-shrink-gradient 0.2s ease forwards;
-            }
-        }
     } 
-
-    &:hover {
-        > * { 
-            animation: animation-expand 0.2s ease forwards;
-
-            &.gradient-hover-animation {
-                animation: animation-expand-gradient 0.2s ease forwards;
-
-                &.fill {
-                    animation: animation-expand-gradient 0.2s ease forwards;
-                }
-            }
-        } 
-    }
 }
 
 @each $name, $theme in variables.$themes {
-    .#{$name}.button-expand {
+    .button-expand, .#{$name}.button-expand {
         > * { 
             animation: animation-shrink 0.2s ease forwards;
 
