@@ -4,27 +4,32 @@
 @use 'prototypes';
 
 @for $i from 1 through 10 { 
-    .width-#{$i} {
+    .width-#{$i}, .w-#{$i} {
         width: #{10% * $i};
     }
 
-    .height-#{$i} {
+    .height-#{$i}, .h-#{$i} {
         height: #{10% * $i};
     }
-}
 
-@for $i from 1 through 10 { 
-    .width-#{$i}em {
+    .size-#{$i}, .s-#{$i} {
+        min-width: #{10% * $i};
+        width: #{10% * $i};
+        min-height: #{10% * $i};
+        height: #{10% * $i};
+    }
+
+    .width-#{$i}em, .w-#{$i}em {
         min-width: #{$i}em;
         width: #{$i}em;
     }
 
-    .height-#{$i}em {
+    .height-#{$i}em, .h-#{$i}em {
         min-height: #{$i}em;
         height: #{$i}em;
     }
 
-    .size-#{$i}em {
+    .size-#{$i}em, .s-#{$i}em {
         min-width: #{$i}em;
         width: #{$i}em;
         min-height: #{$i}em;

@@ -3,108 +3,156 @@
 @use 'variables';
 @use 'prototypes';
 
-.flex {
+.flex, .f {
     @extend %flex;
 }
 
-.flex-column {
+.flex-column, .f-c {
     @include prototypes.flex-column(space-between, center);
 
-    &-start {
+    &-start, &-s {
         @include prototypes.flex-column(flex-start, center);
 
-        &-left {
+        &-left, &-l {
             @include prototypes.flex-column(flex-start, flex-start);
         }
     
-        &-right {
+        &-right, &-r {
             @include prototypes.flex-column(flex-start, flex-end);
         }
     }
 
-    &-center {
+    &-center, &-c {
         @include prototypes.flex-column(center, center);
 
-        &-left {
+        &-left, &-l {
             @include prototypes.flex-column(center, flex-start);
         }
     
-        &-right {
+        &-right, &-r {
             @include prototypes.flex-column(center, flex-end);
         }
     }
 
-    &-end {
+    &-end, &-e {
         @include prototypes.flex-column(flex-end, center);
 
-        &-left {
+        &-left, &-l {
             @include prototypes.flex-column(flex-end, flex-start);
         }
     
-        &-right {
+        &-right, &-r {
             @include prototypes.flex-column(flex-end, flex-end);
         }
     }
 
-    &-left {
+    &-left, &-l {
         @include prototypes.flex-column(space-between, flex-start);
+
+        &-start, &-s {
+            @include prototypes.flex-column(flex-start, flex-start);
+        }
+    
+        &-center, &-c {
+            @include prototypes.flex-column(center, flex-start);
+        }
+    
+        &-end, &-e {
+            @include prototypes.flex-column(flex-end, flex-start);
+        }
     }
 
-    &-right {
+    &-right, &-r {
         @include prototypes.flex-column(space-between, flex-end);
+
+        &-start, &-s {
+            @include prototypes.flex-column(flex-start, flex-end);
+        }
+    
+        &-center, &-c {
+            @include prototypes.flex-column(center, flex-end);
+        }
+    
+        &-end, &-e {
+            @include prototypes.flex-column(flex-end, flex-end);
+        }
     }
 }
 
-.flex-row {
+.flex-row, .f-r {
     @include prototypes.flex-row(space-between, center);
 
-    &-start {
+    &-start, &-s {
         @include prototypes.flex-row(flex-start, center);
 
-        &-top {
+        &-top, &-t {
             @include prototypes.flex-row(flex-start, flex-start);
         }
     
-        &-bottom {
+        &-bottom, &-b {
             @include prototypes.flex-row(flex-start, flex-end);
         }
     }
 
-    &-center {
+    &-center, &-c {
         @include prototypes.flex-row(center, center);
 
-        &-top {
+        &-top, &-t {
             @include prototypes.flex-row(center, flex-start);
         }
     
-        &-bottom {
+        &-bottom, &-b {
             @include prototypes.flex-row(center, flex-end);
         }
     }
 
-    &-end {
+    &-end, &-e {
         @include prototypes.flex-row(flex-end, center);
 
-        &-top {
+        &-top, &-t {
             @include prototypes.flex-row(flex-end, flex-start);
         }
     
-        &-bottom {
+        &-bottom, &-b {
             @include prototypes.flex-row(flex-end, flex-end);
         }
     }
 
-    &-top {
+    &-top, &-t {
         @include prototypes.flex-row(space-between, flex-start);
+
+        &-start, &-s {
+            @include prototypes.flex-row(flex-start, flex-start);
+        }
+    
+        &-center, &-c {
+            @include prototypes.flex-row(center, flex-start);
+        }
+    
+        &-end, &-e {
+            @include prototypes.flex-row(flex-end, flex-start);
+        }
     }
 
-    &-bottom {
+    &-bottom, &-b {
         @include prototypes.flex-row(space-between, flex-end);
+
+        &-start, &-s {
+            @include prototypes.flex-row(flex-start, flex-end);
+        }
+    
+        &-center, &-c {
+            @include prototypes.flex-row(center, flex-end);
+        }
+    
+        &-end, &-e {
+            @include prototypes.flex-row(flex-end, flex-end);
+        }
     }
 }
 
 @for $i from 0 through 10 {
-    .flex-grow-#{$i} {
+    .flex-grow-#{$i}, .f-g-#{$i} {
         flex-grow: #{$i};
     }
 }
