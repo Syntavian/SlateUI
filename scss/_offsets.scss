@@ -42,26 +42,26 @@
         //Generate offsets of fixed em value amounts.
         @for $i from 1 through 10 {
             @each $direction-key, $direction in variables.$offset-directions {
-                .#{$type}-#{$direction}-#{$i} {
+                .#{$type}-#{$direction}-#{$i}, .#{$type-key}-#{$direction-key}-#{$i} {
                     #{$type}-#{$direction}: #{$i * $scalar}em;
                 }
             }
 
-            .#{$type}-horizontal-#{$i} {
+            .#{$type}-horizontal-#{$i}, .#{$type-key}-h-#{$i} {
                 #{$type}: {
                     left: #{$i * $scalar}em;
                     right: #{$i * $scalar}em;
                 }
             }
 
-            .#{$type}-vertical-#{$i} {
+            .#{$type}-vertical-#{$i}, .#{$type-key}-v-#{$i} {
                 #{$type}: {
                     top: #{$i * $scalar}em;
                     bottom: #{$i * $scalar}em;
                 }
             }
 
-            .#{$type}-#{$i} {
+            .#{$type}-#{$i}, .#{$type-key}-#{$i} {
                 #{$type}: #{$i * $scalar}em;
             }
 
@@ -90,30 +90,56 @@
                     #{$type}: #{$i * $scalar}em;
                 }
             }
+
+            .c- {
+                @each $direction-key, $direction in variables.$offset-directions {
+                    &#{$type-key}-#{$direction-key}-#{$i} > * {
+                        #{$type}-#{$direction}: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type-key}-h-#{$i} > * {
+                    #{$type}: {
+                        left: #{$i * $scalar}em;
+                        right: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type-key}-v-#{$i} > * {
+                    #{$type}: {
+                        top: #{$i * $scalar}em;
+                        bottom: #{$i * $scalar}em;
+                    }
+                }
+    
+                &#{$type-key}-#{$i} > * {
+                    #{$type}: #{$i * $scalar}em;
+                }
+            }
         }
 
         @each $level, $value in variables.$offset-values {
             @each $direction-key, $direction in variables.$offset-directions {
-                .#{$type}-#{$direction}-#{$level} {
+                .#{$type}-#{$direction}-#{$level}, .#{$type-key}-#{$direction-key}-#{$level} {
                     #{$type}-#{$direction}: $value * $scalar;
                 }
             }
 
-            .#{$type}-horizontal-#{$level} {
+            .#{$type}-horizontal-#{$level}, .#{$type-key}-h-#{$level} {
                 #{$type}: {
                     left: $value * $scalar;
                     right: $value * $scalar;
                 }
             }
 
-            .#{$type}-vertical-#{$level} {
+            .#{$type}-vertical-#{$level}, .#{$type-key}-v-#{$level} {
                 #{$type}: {
                     top: $value * $scalar;
                     bottom: $value * $scalar;
                 }
             }
 
-            .#{$type}-#{$level} {
+            .#{$type}-#{$level}, .#{$type-key}-#{$level} {
                 #{$type}: $value * $scalar;
             }
 
@@ -139,6 +165,32 @@
                 }
     
                 &#{$type}-#{$level} > * {
+                    #{$type}: $value * $scalar;
+                }
+            }
+
+            .c- {
+                @each $direction-key, $direction in variables.$offset-directions {
+                    &#{$type-key}-#{$direction-key}-#{$level} > * {
+                        #{$type}-#{$direction}: $value * $scalar;
+                    }
+                }
+    
+                &#{$type-key}-h-#{$level} > * {
+                    #{$type}: {
+                        left: $value * $scalar;
+                        right: $value * $scalar;
+                    }
+                }
+    
+                &#{$type-key}-v-#{$level} > * {
+                    #{$type}: {
+                        top: $value * $scalar;
+                        bottom: $value * $scalar;
+                    }
+                }
+    
+                &#{$type-key}-#{$level} > * {
                     #{$type}: $value * $scalar;
                 }
             }
