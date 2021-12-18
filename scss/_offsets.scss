@@ -38,10 +38,10 @@
 }
 
 @mixin offsets($scalar: 1) {
-    @each $type in variables.$offset-types {
+    @each $type-key, $type in variables.$offset-types {
         //Generate offsets of fixed em value amounts.
         @for $i from 1 through 10 {
-            @each $direction in variables.$offset-directions {
+            @each $direction-key, $direction in variables.$offset-directions {
                 .#{$type}-#{$direction}-#{$i} {
                     #{$type}-#{$direction}: #{$i * $scalar}em;
                 }
@@ -66,7 +66,7 @@
             }
 
             .child- {
-                @each $direction in variables.$offset-directions {
+                @each $direction-key, $direction in variables.$offset-directions {
                     &#{$type}-#{$direction}-#{$i} > * {
                         #{$type}-#{$direction}: #{$i * $scalar}em;
                     }
@@ -93,7 +93,7 @@
         }
 
         @each $level, $value in variables.$offset-values {
-            @each $direction in variables.$offset-directions {
+            @each $direction-key, $direction in variables.$offset-directions {
                 .#{$type}-#{$direction}-#{$level} {
                     #{$type}-#{$direction}: $value * $scalar;
                 }
@@ -118,7 +118,7 @@
             }
 
             .child- {
-                @each $direction in variables.$offset-directions {
+                @each $direction-key, $direction in variables.$offset-directions {
                     &#{$type}-#{$direction}-#{$level} > * {
                         #{$type}-#{$direction}: $value * $scalar;
                     }
