@@ -3,28 +3,44 @@
 @use 'variables';
 @use 'prototypes';
 
-@for $i from 1 through 5 {
-    .fixed-tl-#{$i} {
-        position: fixed;
-        top: #{$i}em;
-        left: #{$i}em;
+@mixin fixed($scalar: 1) {
+    @for $i from 1 through 5 {
+        .fixed-tl-#{$i} {
+            position: fixed;
+            top: #{$i * $scalar}em;
+            left: #{$i * $scalar}em;
+        }
+    
+        .fixed-tr-#{$i} {
+            position: fixed;
+            top: #{$i * $scalar}em;
+            right: #{$i * $scalar}em;
+        }
+    
+        .fixed-bl-#{$i} {
+            position: fixed;
+            bottom: #{$i * $scalar}em;
+            left: #{$i * $scalar}em;
+        }
+    
+        .fixed-br-#{$i} {
+            position: fixed;
+            bottom: #{$i * $scalar}em;
+            right: #{$i * $scalar}em;
+        }
     }
+}
 
-    .fixed-tr-#{$i} {
-        position: fixed;
-        top: #{$i}em;
-        right: #{$i}em;
-    }
+@include fixed(1);
 
-    .fixed-bl-#{$i} {
-        position: fixed;
-        bottom: #{$i}em;
-        left: #{$i}em;
-    }
+@media screen and (max-width: variables.$screen-width-l) {
+    @include fixed(0.75);
+}
 
-    .fixed-br-#{$i} {
-        position: fixed;
-        bottom: #{$i}em;
-        right: #{$i}em;
-    }
+@media screen and (max-width: variables.$screen-width-m) {
+    @include fixed(0.6);
+}
+
+@media screen and (max-width: variables.$screen-width-s) {
+    @include fixed(0.45);
 }

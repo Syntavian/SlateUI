@@ -11911,6 +11911,369 @@
   right: 5em;
 }
 
+@media screen and (max-width: 1200px) {
+  .fixed-tl-1 {
+    position: fixed;
+    top: 0.75em;
+    left: 0.75em;
+  }
+
+  .fixed-tr-1 {
+    position: fixed;
+    top: 0.75em;
+    right: 0.75em;
+  }
+
+  .fixed-bl-1 {
+    position: fixed;
+    bottom: 0.75em;
+    left: 0.75em;
+  }
+
+  .fixed-br-1 {
+    position: fixed;
+    bottom: 0.75em;
+    right: 0.75em;
+  }
+
+  .fixed-tl-2 {
+    position: fixed;
+    top: 1.5em;
+    left: 1.5em;
+  }
+
+  .fixed-tr-2 {
+    position: fixed;
+    top: 1.5em;
+    right: 1.5em;
+  }
+
+  .fixed-bl-2 {
+    position: fixed;
+    bottom: 1.5em;
+    left: 1.5em;
+  }
+
+  .fixed-br-2 {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+  }
+
+  .fixed-tl-3 {
+    position: fixed;
+    top: 2.25em;
+    left: 2.25em;
+  }
+
+  .fixed-tr-3 {
+    position: fixed;
+    top: 2.25em;
+    right: 2.25em;
+  }
+
+  .fixed-bl-3 {
+    position: fixed;
+    bottom: 2.25em;
+    left: 2.25em;
+  }
+
+  .fixed-br-3 {
+    position: fixed;
+    bottom: 2.25em;
+    right: 2.25em;
+  }
+
+  .fixed-tl-4 {
+    position: fixed;
+    top: 3em;
+    left: 3em;
+  }
+
+  .fixed-tr-4 {
+    position: fixed;
+    top: 3em;
+    right: 3em;
+  }
+
+  .fixed-bl-4 {
+    position: fixed;
+    bottom: 3em;
+    left: 3em;
+  }
+
+  .fixed-br-4 {
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+  }
+
+  .fixed-tl-5 {
+    position: fixed;
+    top: 3.75em;
+    left: 3.75em;
+  }
+
+  .fixed-tr-5 {
+    position: fixed;
+    top: 3.75em;
+    right: 3.75em;
+  }
+
+  .fixed-bl-5 {
+    position: fixed;
+    bottom: 3.75em;
+    left: 3.75em;
+  }
+
+  .fixed-br-5 {
+    position: fixed;
+    bottom: 3.75em;
+    right: 3.75em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .fixed-tl-1 {
+    position: fixed;
+    top: 0.6em;
+    left: 0.6em;
+  }
+
+  .fixed-tr-1 {
+    position: fixed;
+    top: 0.6em;
+    right: 0.6em;
+  }
+
+  .fixed-bl-1 {
+    position: fixed;
+    bottom: 0.6em;
+    left: 0.6em;
+  }
+
+  .fixed-br-1 {
+    position: fixed;
+    bottom: 0.6em;
+    right: 0.6em;
+  }
+
+  .fixed-tl-2 {
+    position: fixed;
+    top: 1.2em;
+    left: 1.2em;
+  }
+
+  .fixed-tr-2 {
+    position: fixed;
+    top: 1.2em;
+    right: 1.2em;
+  }
+
+  .fixed-bl-2 {
+    position: fixed;
+    bottom: 1.2em;
+    left: 1.2em;
+  }
+
+  .fixed-br-2 {
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.2em;
+  }
+
+  .fixed-tl-3 {
+    position: fixed;
+    top: 1.8em;
+    left: 1.8em;
+  }
+
+  .fixed-tr-3 {
+    position: fixed;
+    top: 1.8em;
+    right: 1.8em;
+  }
+
+  .fixed-bl-3 {
+    position: fixed;
+    bottom: 1.8em;
+    left: 1.8em;
+  }
+
+  .fixed-br-3 {
+    position: fixed;
+    bottom: 1.8em;
+    right: 1.8em;
+  }
+
+  .fixed-tl-4 {
+    position: fixed;
+    top: 2.4em;
+    left: 2.4em;
+  }
+
+  .fixed-tr-4 {
+    position: fixed;
+    top: 2.4em;
+    right: 2.4em;
+  }
+
+  .fixed-bl-4 {
+    position: fixed;
+    bottom: 2.4em;
+    left: 2.4em;
+  }
+
+  .fixed-br-4 {
+    position: fixed;
+    bottom: 2.4em;
+    right: 2.4em;
+  }
+
+  .fixed-tl-5 {
+    position: fixed;
+    top: 3em;
+    left: 3em;
+  }
+
+  .fixed-tr-5 {
+    position: fixed;
+    top: 3em;
+    right: 3em;
+  }
+
+  .fixed-bl-5 {
+    position: fixed;
+    bottom: 3em;
+    left: 3em;
+  }
+
+  .fixed-br-5 {
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .fixed-tl-1 {
+    position: fixed;
+    top: 0.45em;
+    left: 0.45em;
+  }
+
+  .fixed-tr-1 {
+    position: fixed;
+    top: 0.45em;
+    right: 0.45em;
+  }
+
+  .fixed-bl-1 {
+    position: fixed;
+    bottom: 0.45em;
+    left: 0.45em;
+  }
+
+  .fixed-br-1 {
+    position: fixed;
+    bottom: 0.45em;
+    right: 0.45em;
+  }
+
+  .fixed-tl-2 {
+    position: fixed;
+    top: 0.9em;
+    left: 0.9em;
+  }
+
+  .fixed-tr-2 {
+    position: fixed;
+    top: 0.9em;
+    right: 0.9em;
+  }
+
+  .fixed-bl-2 {
+    position: fixed;
+    bottom: 0.9em;
+    left: 0.9em;
+  }
+
+  .fixed-br-2 {
+    position: fixed;
+    bottom: 0.9em;
+    right: 0.9em;
+  }
+
+  .fixed-tl-3 {
+    position: fixed;
+    top: 1.35em;
+    left: 1.35em;
+  }
+
+  .fixed-tr-3 {
+    position: fixed;
+    top: 1.35em;
+    right: 1.35em;
+  }
+
+  .fixed-bl-3 {
+    position: fixed;
+    bottom: 1.35em;
+    left: 1.35em;
+  }
+
+  .fixed-br-3 {
+    position: fixed;
+    bottom: 1.35em;
+    right: 1.35em;
+  }
+
+  .fixed-tl-4 {
+    position: fixed;
+    top: 1.8em;
+    left: 1.8em;
+  }
+
+  .fixed-tr-4 {
+    position: fixed;
+    top: 1.8em;
+    right: 1.8em;
+  }
+
+  .fixed-bl-4 {
+    position: fixed;
+    bottom: 1.8em;
+    left: 1.8em;
+  }
+
+  .fixed-br-4 {
+    position: fixed;
+    bottom: 1.8em;
+    right: 1.8em;
+  }
+
+  .fixed-tl-5 {
+    position: fixed;
+    top: 2.25em;
+    left: 2.25em;
+  }
+
+  .fixed-tr-5 {
+    position: fixed;
+    top: 2.25em;
+    right: 2.25em;
+  }
+
+  .fixed-bl-5 {
+    position: fixed;
+    bottom: 2.25em;
+    left: 2.25em;
+  }
+
+  .fixed-br-5 {
+    position: fixed;
+    bottom: 2.25em;
+    right: 2.25em;
+  }
+}
 .shadow-1 {
   box-shadow: gray 0px 0px 3px 0px;
 }
