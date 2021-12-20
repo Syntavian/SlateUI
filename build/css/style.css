@@ -1,9 +1,9 @@
-.form-label {
-  padding-top: 0.25em;
+.form-input {
+  padding: 0.25em;
 }
 
 .form-input {
-  padding: 0.25em;
+  margin-top: 0.25em;
 }
 
 .break {
@@ -18461,10 +18461,39 @@ p {
   resize: vertical;
 }
 
+textarea.form-input {
+  min-height: 2em;
+}
+
 .form-input[type=checkbox] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
   width: min-content;
   align-self: center;
   margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 1em;
+  height: 1em;
+}
+.form-input[type=checkbox]:checked.light {
+  background-color: black;
+}
+.form-input[type=checkbox]:checked.dark {
+  background-color: white;
+}
+.form-input[type=checkbox]:checked.light-cyan {
+  background-color: black;
+}
+.form-input[type=checkbox]:checked.light-green {
+  background-color: black;
+}
+.form-input[type=checkbox]:checked.dark-green {
+  background-color: white;
+}
+.form-input[type=checkbox]:checked.dark-blue {
+  background-color: white;
 }
 
 .light.form-input {

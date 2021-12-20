@@ -16,7 +16,6 @@
 
 .form-label {
     @extend %width-3;
-    @extend %padding-top-xs;
     text-align: end;
 }
 
@@ -26,13 +25,35 @@
     @extend %width-6;
     @extend %margin-left-s; 
     @extend %padding-xs;
+    @extend %margin-top-xs;
     resize: vertical;
 }
 
+textarea.form-input {
+    min-height: 2em;
+}
+
 .form-input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
     width: min-content;
     align-self: center;
     margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 1em;
+    height: 1em;
+
+    &:checked {
+        @each $name, $theme in variables.$themes {
+            $text: map.get($theme, "text-colour");
+            
+            &.#{$name} {
+                background-color: $text;
+            }
+        }
+    }
 }
 
 @each $name, $theme in variables.$themes {
