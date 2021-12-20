@@ -4,9 +4,8 @@
 @use '../prototypes';
 
 .form {
-    @extend %box;
+    @include prototypes.flex-column(flex-start, center);
     @extend %padding-1;
-    @extend %width-10;
 }
 
 .form-row {

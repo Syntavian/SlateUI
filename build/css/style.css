@@ -40,11 +40,11 @@
   width: 60%;
 }
 
-.form, .form-row, .banner {
+.form-row, .banner {
   width: 100%;
 }
 
-.form-input, .form, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.form-input, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -52,7 +52,7 @@
   box-shadow: gray 0px 1px 3px 0px;
 }
 
-.light.form-input, .light.form, .light.image, .light.box, .light.link, .light.inline-box {
+.light.form-input, .light.image, .light.box, .light.link, .light.inline-box {
   box-shadow: #c6c6c6 0px 0px 3px 0px;
 }
 
@@ -60,7 +60,7 @@
   box-shadow: #c6c6c6 0px 1px 3px 0px;
 }
 
-.dark.form-input, .dark.form, .dark.image, .dark.box, .dark.link, .dark.inline-box {
+.dark.form-input, .dark.image, .dark.box, .dark.link, .dark.inline-box {
   box-shadow: #393939 0px 0px 3px 0px;
 }
 
@@ -68,7 +68,7 @@
   box-shadow: #393939 0px 1px 3px 0px;
 }
 
-.light-cyan.form-input, .light-cyan.form, .light-cyan.image, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
+.light-cyan.form-input, .light-cyan.image, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
   box-shadow: #00d2da 0px 0px 3px 0px;
 }
 
@@ -76,7 +76,7 @@
   box-shadow: #00d2da 0px 1px 3px 0px;
 }
 
-.light-green.form-input, .light-green.form, .light-green.image, .light-green.box, .light-green.link, .light-green.inline-box {
+.light-green.form-input, .light-green.image, .light-green.box, .light-green.link, .light-green.inline-box {
   box-shadow: #00e331 0px 0px 3px 0px;
 }
 
@@ -84,7 +84,7 @@
   box-shadow: #00e331 0px 1px 3px 0px;
 }
 
-.dark-green.form-input, .dark-green.form, .dark-green.image, .dark-green.box, .dark-green.link, .dark-green.inline-box {
+.dark-green.form-input, .dark-green.image, .dark-green.box, .dark-green.link, .dark-green.inline-box {
   box-shadow: #13850b 0px 0px 3px 0px;
 }
 
@@ -92,7 +92,7 @@
   box-shadow: #13850b 0px 1px 3px 0px;
 }
 
-.dark-blue.form-input, .dark-blue.form, .dark-blue.image, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
+.dark-blue.form-input, .dark-blue.image, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
   box-shadow: #0e1981 0px 0px 3px 0px;
 }
 
@@ -217,7 +217,7 @@
   user-select: none;
 }
 
-.expand, .banner, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .form, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.expand, .banner, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +225,7 @@
   flex-grow: 0;
 }
 
-.form, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
@@ -18373,6 +18373,14 @@ p {
 }
 .banner {
   height: min-content;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .form-row {
