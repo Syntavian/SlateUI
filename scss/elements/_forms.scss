@@ -3,9 +3,8 @@
 @use '../variables';
 @use '../prototypes';
 
-.form {
-    @include prototypes.flex-column(flex-start, center);
-    @extend %padding-1;
+textarea {
+    min-height: 2em;
 }
 
 .form-row {
@@ -26,32 +25,53 @@
     @extend %padding-xs;
     @extend %margin-top-xs;
     resize: vertical;
-}
 
-textarea.form-input {
-    min-height: 2em;
-}
-
-.form-input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    width: min-content;
-    align-self: center;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 1em;
-    height: 1em;
-
-    &:checked {
-        @each $name, $theme in variables.$themes {
-            $text: map.get($theme, "text-colour");
-            
-            &.#{$name} {
-                background-color: $text;
+    &[type="checkbox"] {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        width: min-content;
+        align-self: center;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 1em;
+        height: 1em;
+    
+        &:checked {
+            @each $name, $theme in variables.$themes {
+                $text: map.get($theme, "text-colour");
+                
+                &.#{$name} {
+                    background-color: $text;
+                }
             }
         }
+    }
+}
+
+form, .form {
+    @include prototypes.flex-column(flex-start, center);
+    @extend %padding-1;
+
+    div {
+        @extend .form-row;
+
+        label {
+            @extend .form-label;
+        }
+    
+        input, textarea, select {
+            @extend .form-input;
+        }
+    }
+
+    label {
+        @extend .form-label;
+    }
+
+    input:not([type="submit"]), textarea {
+        @extend .form-input;
     }
 }
 

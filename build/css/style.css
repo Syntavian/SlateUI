@@ -1,8 +1,8 @@
-.form-input {
+.form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
   padding: 0.25em;
 }
 
-.form-input {
+.form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
   margin-top: 0.25em;
 }
 
@@ -10,7 +10,7 @@
   margin-bottom: 0.5em;
 }
 
-.form-input {
+.form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
   margin-left: 0.5em;
 }
 
@@ -23,7 +23,7 @@
   z-index: -1;
 }
 
-.form {
+form, .form {
   padding: 1em;
 }
 
@@ -32,19 +32,19 @@
   margin-right: 1em;
 }
 
-.form-label {
+.form-label, form div label, form label, .form label {
   width: 30%;
 }
 
-.form-input {
+.form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
   width: 60%;
 }
 
-.form-row, .banner {
+.form-row, form div, .form div, .banner {
   width: 100%;
 }
 
-.form-input, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -52,7 +52,7 @@
   box-shadow: gray 0px 1px 3px 0px;
 }
 
-.light.form-input, .light.image, .light.box, .light.link, .light.inline-box {
+.light.form-input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), form textarea.light, .form input.light:not([type=submit]), .form textarea.light, .light.image, .light.box, .light.link, .light.inline-box {
   box-shadow: #c6c6c6 0px 0px 3px 0px;
 }
 
@@ -60,7 +60,7 @@
   box-shadow: #c6c6c6 0px 1px 3px 0px;
 }
 
-.dark.form-input, .dark.image, .dark.box, .dark.link, .dark.inline-box {
+.dark.form-input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), form textarea.dark, .form input.dark:not([type=submit]), .form textarea.dark, .dark.image, .dark.box, .dark.link, .dark.inline-box {
   box-shadow: #393939 0px 0px 3px 0px;
 }
 
@@ -68,7 +68,7 @@
   box-shadow: #393939 0px 1px 3px 0px;
 }
 
-.light-cyan.form-input, .light-cyan.image, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
+.light-cyan.form-input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), form textarea.light-cyan, .form input.light-cyan:not([type=submit]), .form textarea.light-cyan, .light-cyan.image, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
   box-shadow: #00d2da 0px 0px 3px 0px;
 }
 
@@ -76,7 +76,7 @@
   box-shadow: #00d2da 0px 1px 3px 0px;
 }
 
-.light-green.form-input, .light-green.image, .light-green.box, .light-green.link, .light-green.inline-box {
+.light-green.form-input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), form textarea.light-green, .form input.light-green:not([type=submit]), .form textarea.light-green, .light-green.image, .light-green.box, .light-green.link, .light-green.inline-box {
   box-shadow: #00e331 0px 0px 3px 0px;
 }
 
@@ -84,7 +84,7 @@
   box-shadow: #00e331 0px 1px 3px 0px;
 }
 
-.dark-green.form-input, .dark-green.image, .dark-green.box, .dark-green.link, .dark-green.inline-box {
+.dark-green.form-input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), form textarea.dark-green, .form input.dark-green:not([type=submit]), .form textarea.dark-green, .dark-green.image, .dark-green.box, .dark-green.link, .dark-green.inline-box {
   box-shadow: #13850b 0px 0px 3px 0px;
 }
 
@@ -92,7 +92,7 @@
   box-shadow: #13850b 0px 1px 3px 0px;
 }
 
-.dark-blue.form-input, .dark-blue.image, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
+.dark-blue.form-input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), form textarea.dark-blue, .form input.dark-blue:not([type=submit]), .form textarea.dark-blue, .dark-blue.image, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
   box-shadow: #0e1981 0px 0px 3px 0px;
 }
 
@@ -18375,15 +18375,11 @@ p {
   height: min-content;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
+textarea {
+  min-height: 2em;
 }
 
-.form-row {
+.form-row, form div, .form div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -18391,89 +18387,84 @@ p {
   flex-grow: 1;
 }
 @media screen and (max-width: 1600px) {
-  .form-row.shrink-xl:not(.image-carousel) {
+  .form-row.shrink-xl:not(.image-carousel), form div.shrink-xl:not(.image-carousel), .form div.shrink-xl:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .form-row.shrink-xl:not(.image-carousel).flex-reverse {
+  .form-row.shrink-xl:not(.image-carousel).flex-reverse, form div.shrink-xl:not(.image-carousel).flex-reverse, .form div.shrink-xl:not(.image-carousel).flex-reverse {
     flex-direction: column-reverse;
   }
-  .form-row.shrink-xl:not(.image-carousel) > * {
+  .form-row.shrink-xl:not(.image-carousel) > *, form div.shrink-xl:not(.image-carousel) > *, .form div.shrink-xl:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .form-row.shrink-l:not(.image-carousel) {
+  .form-row.shrink-l:not(.image-carousel), form div.shrink-l:not(.image-carousel), .form div.shrink-l:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .form-row.shrink-l:not(.image-carousel).flex-reverse {
+  .form-row.shrink-l:not(.image-carousel).flex-reverse, form div.shrink-l:not(.image-carousel).flex-reverse, .form div.shrink-l:not(.image-carousel).flex-reverse {
     flex-direction: column-reverse;
   }
-  .form-row.shrink-l:not(.image-carousel) > * {
+  .form-row.shrink-l:not(.image-carousel) > *, form div.shrink-l:not(.image-carousel) > *, .form div.shrink-l:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 900px) {
-  .form-row.shrink-m:not(.image-carousel) {
+  .form-row.shrink-m:not(.image-carousel), form div.shrink-m:not(.image-carousel), .form div.shrink-m:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .form-row.shrink-m:not(.image-carousel).flex-reverse {
+  .form-row.shrink-m:not(.image-carousel).flex-reverse, form div.shrink-m:not(.image-carousel).flex-reverse, .form div.shrink-m:not(.image-carousel).flex-reverse {
     flex-direction: column-reverse;
   }
-  .form-row.shrink-m:not(.image-carousel) > * {
+  .form-row.shrink-m:not(.image-carousel) > *, form div.shrink-m:not(.image-carousel) > *, .form div.shrink-m:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 700px) {
-  .form-row:not(.image-carousel) {
+  .form-row:not(.image-carousel), form div:not(.image-carousel), .form div:not(.image-carousel) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .form-row:not(.image-carousel).flex-reverse {
+  .form-row:not(.image-carousel).flex-reverse, form div:not(.image-carousel).flex-reverse, .form div:not(.image-carousel).flex-reverse {
     flex-direction: column-reverse;
   }
-  .form-row:not(.image-carousel) > * {
+  .form-row:not(.image-carousel) > *, form div:not(.image-carousel) > *, .form div:not(.image-carousel) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 
-.form-label {
+.form-label, form label, .form label, form div label {
   text-align: end;
 }
 
-.form-input {
+.form-input, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, form div input, form div textarea, form div select, .form div input, .form div select {
   border: 0px;
   border-radius: 0.25em;
   resize: vertical;
 }
-
-textarea.form-input {
-  min-height: 2em;
-}
-
-.form-input[type=checkbox] {
+.form-input[type=checkbox], form input[type=checkbox]:not([type=submit]), form textarea[type=checkbox], .form input[type=checkbox]:not([type=submit]), .form textarea[type=checkbox], form div input[type=checkbox], form div select[type=checkbox], .form div input[type=checkbox], .form div select[type=checkbox] {
   -moz-appearance: none;
   -webkit-appearance: none;
   -o-appearance: none;
@@ -18485,63 +18476,70 @@ textarea.form-input {
   width: 1em;
   height: 1em;
 }
-.form-input[type=checkbox]:checked.light {
+.form-input[type=checkbox]:checked.light, form input[type=checkbox]:checked.light:not([type=submit]), form textarea[type=checkbox]:checked.light, .form input[type=checkbox]:checked.light:not([type=submit]), .form textarea[type=checkbox]:checked.light, form div input[type=checkbox]:checked.light, form div select[type=checkbox]:checked.light, .form div input[type=checkbox]:checked.light, .form div select[type=checkbox]:checked.light {
   background-color: black;
 }
-.form-input[type=checkbox]:checked.dark {
+.form-input[type=checkbox]:checked.dark, form input[type=checkbox]:checked.dark:not([type=submit]), form textarea[type=checkbox]:checked.dark, .form input[type=checkbox]:checked.dark:not([type=submit]), .form textarea[type=checkbox]:checked.dark, form div input[type=checkbox]:checked.dark, form div select[type=checkbox]:checked.dark, .form div input[type=checkbox]:checked.dark, .form div select[type=checkbox]:checked.dark {
   background-color: white;
 }
-.form-input[type=checkbox]:checked.light-cyan {
+.form-input[type=checkbox]:checked.light-cyan, form input[type=checkbox]:checked.light-cyan:not([type=submit]), form textarea[type=checkbox]:checked.light-cyan, .form input[type=checkbox]:checked.light-cyan:not([type=submit]), .form textarea[type=checkbox]:checked.light-cyan, form div input[type=checkbox]:checked.light-cyan, form div select[type=checkbox]:checked.light-cyan, .form div input[type=checkbox]:checked.light-cyan, .form div select[type=checkbox]:checked.light-cyan {
   background-color: black;
 }
-.form-input[type=checkbox]:checked.light-green {
+.form-input[type=checkbox]:checked.light-green, form input[type=checkbox]:checked.light-green:not([type=submit]), form textarea[type=checkbox]:checked.light-green, .form input[type=checkbox]:checked.light-green:not([type=submit]), .form textarea[type=checkbox]:checked.light-green, form div input[type=checkbox]:checked.light-green, form div select[type=checkbox]:checked.light-green, .form div input[type=checkbox]:checked.light-green, .form div select[type=checkbox]:checked.light-green {
   background-color: black;
 }
-.form-input[type=checkbox]:checked.dark-green {
+.form-input[type=checkbox]:checked.dark-green, form input[type=checkbox]:checked.dark-green:not([type=submit]), form textarea[type=checkbox]:checked.dark-green, .form input[type=checkbox]:checked.dark-green:not([type=submit]), .form textarea[type=checkbox]:checked.dark-green, form div input[type=checkbox]:checked.dark-green, form div select[type=checkbox]:checked.dark-green, .form div input[type=checkbox]:checked.dark-green, .form div select[type=checkbox]:checked.dark-green {
   background-color: white;
 }
-.form-input[type=checkbox]:checked.dark-blue {
+.form-input[type=checkbox]:checked.dark-blue, form input[type=checkbox]:checked.dark-blue:not([type=submit]), form textarea[type=checkbox]:checked.dark-blue, .form input[type=checkbox]:checked.dark-blue:not([type=submit]), .form textarea[type=checkbox]:checked.dark-blue, form div input[type=checkbox]:checked.dark-blue, form div select[type=checkbox]:checked.dark-blue, .form div input[type=checkbox]:checked.dark-blue, .form div select[type=checkbox]:checked.dark-blue {
   background-color: white;
 }
 
-.light.form-input {
+form, .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+.light.form-input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), form textarea.light, .form input.light:not([type=submit]), .form textarea.light {
   border: 1px solid #c6c6c6;
   color: black;
   background-color: white;
 }
 
-.dark.form-input {
+.dark.form-input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), form textarea.dark, .form input.dark:not([type=submit]), .form textarea.dark {
   border: 1px solid #393939;
   color: white;
   background-color: black;
 }
 
-.light-cyan.form-input {
+.light-cyan.form-input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), form textarea.light-cyan, .form input.light-cyan:not([type=submit]), .form textarea.light-cyan {
   border: 1px solid #00d2da;
   color: black;
   background-color: white;
 }
 
-.light-green.form-input {
+.light-green.form-input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), form textarea.light-green, .form input.light-green:not([type=submit]), .form textarea.light-green {
   border: 1px solid #00e331;
   color: black;
   background-color: white;
 }
 
-.dark-green.form-input {
+.dark-green.form-input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), form textarea.dark-green, .form input.dark-green:not([type=submit]), .form textarea.dark-green {
   border: 1px solid #13850b;
   color: white;
   background-color: black;
 }
 
-.dark-blue.form-input {
+.dark-blue.form-input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), form textarea.dark-blue, .form input.dark-blue:not([type=submit]), .form textarea.dark-blue {
   border: 1px solid #0e1981;
   color: white;
   background-color: black;
 }
 
 @media screen and (max-width: 900px) {
-  .form-row {
+  .form-row, form div, .form div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18549,14 +18547,14 @@ textarea.form-input {
     flex-grow: 1;
   }
 
-  .form-label {
+  .form-label, form div label, form label, .form label {
     text-align: start;
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .form-input {
+  .form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
