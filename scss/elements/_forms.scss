@@ -3,13 +3,13 @@
 @use '../variables';
 @use '../prototypes';
 
-textarea {
-    min-height: 2em;
-}
-
 .form-row {
     @include prototypes.flex-row(flex-start, flex-start);
     @extend %width-10;
+
+    .form-input, .input { 
+        @extend %width-6;
+    }
 }
 
 .form-label {
@@ -17,10 +17,9 @@ textarea {
     text-align: end;
 }
 
-.form-input {
+.form-input, .input {
     @include prototypes.border-radius();
     @extend %shadow-1;
-    @extend %width-6;
     @extend %margin-left-s; 
     @extend %padding-xs;
     @extend %margin-top-xs;
@@ -72,6 +71,20 @@ form, .form {
 
     input:not([type="submit"]), textarea {
         @extend .form-input;
+    }
+}
+
+textarea {
+    @extend .input;
+    min-height: 1em + (variables.$xs-offset * 3.25);
+    height: 1em + (variables.$xs-offset * 3.25);
+
+    &.all-resize {
+        resize: both;
+    }
+
+    &.no-resize {
+        resize: none;
     }
 }
 
