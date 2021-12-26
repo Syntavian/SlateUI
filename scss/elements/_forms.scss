@@ -112,19 +112,37 @@ textarea {
 }
 
 @media screen and (max-width: variables.$screen-width-m) {
-    .form-row {
-        @include prototypes.flex-column(space-between, flex-start);
+
+    form, .form {
+        width: 100% !important;
     }
 
-    .form-label {
+    .form-row, form div, .form div {
+        @include prototypes.flex-column(space-between, flex-start);
+
+        label {
+            text-align: start;
+            width: 100% !important;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    
+        input:not([type="checkbox"]) {
+            width: 100% !important;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .form-label, form label, .form label {
         text-align: start;
-        width: 100%;
+        width: 100% !important;
         margin-left: 0px;
         margin-right: 0px;
     }
 
-    .form-input {
-        width: 100%;
+    .form-input:not([type="checkbox"]), form input:not([type="checkbox"]), .form input:not([type="checkbox"]) {
+        width: 100% !important;
         margin-left: 0px;
         margin-right: 0px;
     }

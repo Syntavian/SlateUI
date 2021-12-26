@@ -18545,6 +18545,10 @@ textarea.no-resize {
 }
 
 @media screen and (max-width: 900px) {
+  form, .form {
+    width: 100% !important;
+  }
+
   .form-row, form div, .form div {
     display: flex;
     flex-direction: column;
@@ -18552,16 +18556,27 @@ textarea.no-resize {
     align-items: flex-start;
     flex-grow: 1;
   }
-
-  .form-label, form div label, form label, .form label {
+  .form-row label, form div label, .form div label {
     text-align: start;
-    width: 100%;
+    width: 100% !important;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .form-row input:not([type=checkbox]), form div input:not([type=checkbox]), .form div input:not([type=checkbox]) {
+    width: 100% !important;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .form-input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea {
-    width: 100%;
+  .form-label, form div label, form label, .form label {
+    text-align: start;
+    width: 100% !important;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .form-input:not([type=checkbox]), form div select:not([type=checkbox]), .form div select:not([type=checkbox]), form textarea:not([type=checkbox]), .form textarea:not([type=checkbox]), form input:not([type=checkbox]), .form input:not([type=checkbox]) {
+    width: 100% !important;
     margin-left: 0px;
     margin-right: 0px;
   }
