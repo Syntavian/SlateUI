@@ -53,6 +53,8 @@ function resetBanners() {
     updateBanners();
 }
 
+updateBanners();
+
 document.addEventListener("scroll", function (e) {
     updateBanners();
 }, {
