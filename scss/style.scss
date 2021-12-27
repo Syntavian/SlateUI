@@ -200,6 +200,10 @@ body {
             animation: animation-expand-gradient 0.2s ease forwards;
         }
     }
+
+    .scroll-handle.#{$name} {
+        background-color: rgba($shifted-3, 0.9);
+    }
 }
 
 @keyframes animation-expand {

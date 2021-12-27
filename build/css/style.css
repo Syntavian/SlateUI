@@ -18752,6 +18752,10 @@ body {
   animation: animation-expand-gradient 0.2s ease forwards;
 }
 
+.scroll-handle.light {
+  background-color: rgba(173, 173, 173, 0.9);
+}
+
 .break.dark {
   background-color: rgba(57, 57, 57, 0.5);
 }
@@ -18769,6 +18773,10 @@ body {
 }
 .expand:hover > .gradient-hover-animation.dark {
   animation: animation-expand-gradient 0.2s ease forwards;
+}
+
+.scroll-handle.dark {
+  background-color: rgba(82, 82, 82, 0.9);
 }
 
 .break.light-cyan {
@@ -18790,6 +18798,10 @@ body {
   animation: animation-expand-gradient 0.2s ease forwards;
 }
 
+.scroll-handle.light-cyan {
+  background-color: rgba(0, 184, 190, 0.9);
+}
+
 .break.light-green {
   background-color: rgba(0, 227, 49, 0.5);
 }
@@ -18807,6 +18819,10 @@ body {
 }
 .expand:hover > .gradient-hover-animation.light-green {
   animation: animation-expand-gradient 0.2s ease forwards;
+}
+
+.scroll-handle.light-green {
+  background-color: rgba(0, 199, 43, 0.9);
 }
 
 .break.dark-green {
@@ -18828,6 +18844,10 @@ body {
   animation: animation-expand-gradient 0.2s ease forwards;
 }
 
+.scroll-handle.dark-green {
+  background-color: rgba(25, 175, 15, 0.9);
+}
+
 .break.dark-blue {
   background-color: rgba(14, 25, 129, 0.5);
 }
@@ -18845,6 +18865,10 @@ body {
 }
 .expand:hover > .gradient-hover-animation.dark-blue {
   animation: animation-expand-gradient 0.2s ease forwards;
+}
+
+.scroll-handle.dark-blue {
+  background-color: rgba(19, 33, 170, 0.9);
 }
 
 @keyframes animation-expand {
