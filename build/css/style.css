@@ -1,8 +1,8 @@
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea {
+.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue {
   padding: 0.25em;
 }
 
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea {
+.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue {
   margin-top: 0.25em;
 }
 
@@ -10,11 +10,7 @@
   margin-bottom: 0.5em;
 }
 
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea {
-  margin-left: 0.5em;
-}
-
-.link-row-group > * {
+.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .link-row-group > * {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
@@ -36,7 +32,7 @@ form, .form {
   width: 30%;
 }
 
-.form-row .form-input, .form-row .input, form div .form-input, .form div .form-input, form div .input, .form div .input, .form-row form div input, form div .form-row input, .form-row form div select, form div .form-row select, form div input, form div textarea, form div select, .form div input, .form div textarea, .form div select, .form-row form input:not([type=submit]), form .form-row input:not([type=submit]), .form-row .form input:not([type=submit]), .form .form-row input:not([type=submit]), form div input:not([type=submit]), form div .form textarea, .form-row textarea {
+.form-row .form-input, .form-row .input, form div .form-input, .form div .form-input, form div .input, .form div .input, .form-row form div input, form div .form-row input, .form-row form div select, form div .form-row select, form div input, form div textarea, form div select, .form div input, .form div textarea, .form div select, .form-row form input:not([type=submit]), form .form-row input:not([type=submit]), .form-row .form input:not([type=submit]), .form .form-row input:not([type=submit]), form div input:not([type=submit]), form div .form textarea, .form-row textarea, form div textarea.light, form div textarea.dark, form div textarea.light-cyan, form div textarea.light-green, form div textarea.dark-green, form div textarea.dark-blue {
   width: 60%;
 }
 
@@ -44,7 +40,7 @@ form, .form {
   width: 100%;
 }
 
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -18454,7 +18450,7 @@ p {
   text-align: end;
 }
 
-.form-input, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, form div input, form div textarea, form div select, .form div input, .form div select, .input, textarea {
+.form-input, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, form div input, form div textarea, form div select, .form div input, .form div select, .input, textarea.dark-blue, textarea.dark-green, textarea.light-green, textarea.light-cyan, textarea.dark, textarea.light, textarea {
   border: 0px;
   border-radius: 0.25em;
   resize: vertical;
@@ -18498,8 +18494,8 @@ form, .form {
   flex-grow: 1;
 }
 textarea {
-  min-height: 1.8125em;
-  height: 1.8125em;
+  min-height: 1.9375em;
+  height: 1.9375em;
 }
 textarea.all-resize {
   resize: both;
@@ -18508,40 +18504,70 @@ textarea.no-resize {
   resize: none;
 }
 
-.light.form-input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), form textarea.light, .form input.light:not([type=submit]), .form textarea.light {
+.light.form-input, form div select.light, .form div select.light, form input.light:not([type=submit]), .form input.light:not([type=submit]), input.light, .light.input, textarea.light {
   border: 1px solid #c6c6c6;
   color: black;
   background-color: white;
 }
 
-.dark.form-input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), form textarea.dark, .form input.dark:not([type=submit]), .form textarea.dark {
+textarea.light {
+  min-height: 1.9375em;
+  height: 1.9375em;
+}
+
+.dark.form-input, form div select.dark, .form div select.dark, form input.dark:not([type=submit]), .form input.dark:not([type=submit]), input.dark, .dark.input, textarea.dark {
   border: 1px solid #393939;
   color: white;
   background-color: black;
 }
 
-.light-cyan.form-input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), form textarea.light-cyan, .form input.light-cyan:not([type=submit]), .form textarea.light-cyan {
+textarea.dark {
+  min-height: 1.9375em;
+  height: 1.9375em;
+}
+
+.light-cyan.form-input, form div select.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), .form input.light-cyan:not([type=submit]), input.light-cyan, .light-cyan.input, textarea.light-cyan {
   border: 1px solid #00d2da;
   color: black;
   background-color: white;
 }
 
-.light-green.form-input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), form textarea.light-green, .form input.light-green:not([type=submit]), .form textarea.light-green {
+textarea.light-cyan {
+  min-height: 1.9375em;
+  height: 1.9375em;
+}
+
+.light-green.form-input, form div select.light-green, .form div select.light-green, form input.light-green:not([type=submit]), .form input.light-green:not([type=submit]), input.light-green, .light-green.input, textarea.light-green {
   border: 1px solid #00e331;
   color: black;
   background-color: white;
 }
 
-.dark-green.form-input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), form textarea.dark-green, .form input.dark-green:not([type=submit]), .form textarea.dark-green {
+textarea.light-green {
+  min-height: 1.9375em;
+  height: 1.9375em;
+}
+
+.dark-green.form-input, form div select.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), .form input.dark-green:not([type=submit]), input.dark-green, .dark-green.input, textarea.dark-green {
   border: 1px solid #13850b;
   color: white;
   background-color: black;
 }
 
-.dark-blue.form-input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), form textarea.dark-blue, .form input.dark-blue:not([type=submit]), .form textarea.dark-blue {
+textarea.dark-green {
+  min-height: 1.9375em;
+  height: 1.9375em;
+}
+
+.dark-blue.form-input, form div select.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), .form input.dark-blue:not([type=submit]), input.dark-blue, .dark-blue.input, textarea.dark-blue {
   border: 1px solid #0e1981;
   color: white;
   background-color: black;
+}
+
+textarea.dark-blue {
+  min-height: 1.9375em;
+  height: 1.9375em;
 }
 
 @media screen and (max-width: 900px) {

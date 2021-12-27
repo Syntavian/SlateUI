@@ -20,10 +20,11 @@
 .form-input, .input {
     @include prototypes.border-radius();
     @extend %shadow-1;
-    @extend %margin-left-s; 
+    @extend %margin-horizontal-s; 
     @extend %padding-xs;
     @extend %margin-top-xs;
     resize: vertical;
+    
 
     &[type="checkbox"] {
         -moz-appearance: none;
@@ -76,8 +77,8 @@ form, .form {
 
 textarea {
     @extend .input;
-    min-height: 1em + (variables.$xs-offset * 3.25);
-    height: 1em + (variables.$xs-offset * 3.25);
+    min-height: 1em + (variables.$xs-offset * 3.75);
+    height: 1em + (variables.$xs-offset * 3.75);
 
     &.all-resize {
         resize: both;
@@ -104,10 +105,16 @@ textarea {
     $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
-    .#{$name}.form-input {
+    .#{$name}.form-input, input.#{$name}, .#{$name}.input {
         border: 1px solid $shifted-2;
         color: $text;
         background-color: invert($text);
+    }
+
+    textarea.#{$name} {
+        @extend .input;
+        min-height: 1em + (variables.$xs-offset * 3.75);
+        height: 1em + (variables.$xs-offset * 3.75);
     }
 }
 
