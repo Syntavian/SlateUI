@@ -17189,28 +17189,47 @@ p {
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
+  border: none;
 }
-.light.button.disabled, .button-expand > .light.disabled, .light.disabled.button-round-5, .light.disabled.button-round-4, .light.disabled.button-round-3, .light.disabled.button-round-2, .light.disabled.button-round-1, .light.disabled.button-round {
+.light.button, .button-expand > .light, .light.button-round-5, .light.button-round-4, .light.button-round-3, .light.button-round-2, .light.button-round-1, .light.button-round, input[type=submit].light {
+  border: none;
+}
+.light.button.disabled, .button-expand > .light.disabled, .light.disabled.button-round-5, .light.disabled.button-round-4, .light.disabled.button-round-3, .light.disabled.button-round-2, .light.disabled.button-round-1, .light.disabled.button-round, input[type=submit].light.disabled {
   color: #c6c6c6;
 }
 
-.dark.button.disabled, .button-expand > .dark.disabled, .dark.disabled.button-round-5, .dark.disabled.button-round-4, .dark.disabled.button-round-3, .dark.disabled.button-round-2, .dark.disabled.button-round-1, .dark.disabled.button-round {
+.dark.button, .button-expand > .dark, .dark.button-round-5, .dark.button-round-4, .dark.button-round-3, .dark.button-round-2, .dark.button-round-1, .dark.button-round, input[type=submit].dark {
+  border: none;
+}
+.dark.button.disabled, .button-expand > .dark.disabled, .dark.disabled.button-round-5, .dark.disabled.button-round-4, .dark.disabled.button-round-3, .dark.disabled.button-round-2, .dark.disabled.button-round-1, .dark.disabled.button-round, input[type=submit].dark.disabled {
   color: #393939;
 }
 
-.light-cyan.button.disabled, .button-expand > .light-cyan.disabled, .light-cyan.disabled.button-round-5, .light-cyan.disabled.button-round-4, .light-cyan.disabled.button-round-3, .light-cyan.disabled.button-round-2, .light-cyan.disabled.button-round-1, .light-cyan.disabled.button-round {
+.light-cyan.button, .button-expand > .light-cyan, .light-cyan.button-round-5, .light-cyan.button-round-4, .light-cyan.button-round-3, .light-cyan.button-round-2, .light-cyan.button-round-1, .light-cyan.button-round, input[type=submit].light-cyan {
+  border: none;
+}
+.light-cyan.button.disabled, .button-expand > .light-cyan.disabled, .light-cyan.disabled.button-round-5, .light-cyan.disabled.button-round-4, .light-cyan.disabled.button-round-3, .light-cyan.disabled.button-round-2, .light-cyan.disabled.button-round-1, .light-cyan.disabled.button-round, input[type=submit].light-cyan.disabled {
   color: #00d2da;
 }
 
-.light-green.button.disabled, .button-expand > .light-green.disabled, .light-green.disabled.button-round-5, .light-green.disabled.button-round-4, .light-green.disabled.button-round-3, .light-green.disabled.button-round-2, .light-green.disabled.button-round-1, .light-green.disabled.button-round {
+.light-green.button, .button-expand > .light-green, .light-green.button-round-5, .light-green.button-round-4, .light-green.button-round-3, .light-green.button-round-2, .light-green.button-round-1, .light-green.button-round, input[type=submit].light-green {
+  border: none;
+}
+.light-green.button.disabled, .button-expand > .light-green.disabled, .light-green.disabled.button-round-5, .light-green.disabled.button-round-4, .light-green.disabled.button-round-3, .light-green.disabled.button-round-2, .light-green.disabled.button-round-1, .light-green.disabled.button-round, input[type=submit].light-green.disabled {
   color: #00e331;
 }
 
-.dark-green.button.disabled, .button-expand > .dark-green.disabled, .dark-green.disabled.button-round-5, .dark-green.disabled.button-round-4, .dark-green.disabled.button-round-3, .dark-green.disabled.button-round-2, .dark-green.disabled.button-round-1, .dark-green.disabled.button-round {
+.dark-green.button, .button-expand > .dark-green, .dark-green.button-round-5, .dark-green.button-round-4, .dark-green.button-round-3, .dark-green.button-round-2, .dark-green.button-round-1, .dark-green.button-round, input[type=submit].dark-green {
+  border: none;
+}
+.dark-green.button.disabled, .button-expand > .dark-green.disabled, .dark-green.disabled.button-round-5, .dark-green.disabled.button-round-4, .dark-green.disabled.button-round-3, .dark-green.disabled.button-round-2, .dark-green.disabled.button-round-1, .dark-green.disabled.button-round, input[type=submit].dark-green.disabled {
   color: #13850b;
 }
 
-.dark-blue.button.disabled, .button-expand > .dark-blue.disabled, .dark-blue.disabled.button-round-5, .dark-blue.disabled.button-round-4, .dark-blue.disabled.button-round-3, .dark-blue.disabled.button-round-2, .dark-blue.disabled.button-round-1, .dark-blue.disabled.button-round {
+.dark-blue.button, .button-expand > .dark-blue, .dark-blue.button-round-5, .dark-blue.button-round-4, .dark-blue.button-round-3, .dark-blue.button-round-2, .dark-blue.button-round-1, .dark-blue.button-round, input[type=submit].dark-blue {
+  border: none;
+}
+.dark-blue.button.disabled, .button-expand > .dark-blue.disabled, .dark-blue.disabled.button-round-5, .dark-blue.disabled.button-round-4, .dark-blue.disabled.button-round-3, .dark-blue.disabled.button-round-2, .dark-blue.disabled.button-round-1, .dark-blue.disabled.button-round, input[type=submit].dark-blue.disabled {
   color: #0e1981;
 }
 

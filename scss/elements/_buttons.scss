@@ -12,7 +12,8 @@
     background-color: variables.$alpha-dark;
     min-width: min-content;
     min-height: min-content;
-    padding: 0.5em;
+    padding: variables.$s-offset;
+    border: none;
 
     &.disabled {
         color: map.get(map.get(variables.$themes, "light"), "shifted-20");
@@ -58,7 +59,8 @@
     $inverted: map.get($colours, "inverted");
     $complement: map.get($colours, "complement");
 
-    .#{$name}.button {
+    .#{$name}.button, input[type='submit'].#{$name} {
+        border: none;
         &.disabled {
             color: $shifted-2;
         }
