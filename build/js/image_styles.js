@@ -1,4 +1,5 @@
 let imageCarousels = document.querySelectorAll(".image-carousel");
+let currentButtonTheme = "";
 
 function px(value) {
     return value + "px";
@@ -128,13 +129,21 @@ function initialiseImageCarousel(index) {
     let rightButtonStyle = getComputedStyle(imageCarouselElement, "::after");
 
     leftButton.textContent = leftButtonStyle.content.slice(1,leftButtonStyle.content.length - 1);
-    leftButton.classList.add("button", "fill");
+    if (currentButtonTheme) {
+        leftButton.classList.value = currentButtonTheme;
+    } else {
+        leftButton.classList.add("button", "fill");
+    }
     leftButton.style.fontSize = leftButtonStyle.fontSize;
     leftButton.style.fontWeight = leftButtonStyle.fontWeight;
     leftButton.style.zIndex = zIndexOffset + 1;
 
     rightButton.textContent = rightButtonStyle.content.slice(1,rightButtonStyle.content.length - 1);
-    rightButton.classList.add("button", "fill");
+    if (currentButtonTheme) {
+        rightButton.classList.value = currentButtonTheme;
+    } else {
+        rightButton.classList.add("button", "fill");
+    }
     rightButton.style.fontSize = rightButtonStyle.fontSize;
     rightButton.style.fontWeight = rightButtonStyle.fontWeight;
     rightButton.style.zIndex = zIndexOffset + 1;
@@ -148,12 +157,12 @@ function initialiseImageCarousel(index) {
 
 function resetCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
-    console.log(getComputedStyle(imageCarouselElement).width);
+    currentButtonTheme = imageCarouselElement.querySelectorAll(".button")[0].classList.value;
 
     for (let child of imageCarouselElement.querySelectorAll(".placeholder,.button")) {
         child.parentElement.removeChild(child);
     }
-
+    
     for (let child of imageCarouselElement.querySelectorAll(".image")) {
         child.style = "";
     }
