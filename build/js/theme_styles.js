@@ -32,7 +32,6 @@ function initialiseThemeSwitcher(button) {
     select.style.width = style.width;
     select.style.height = style.height;
     for (let string of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')) {
-        console.log(string);
         let splitString = string.split(':');
         if (splitString.length === 4) {
             let text = splitString[0];
