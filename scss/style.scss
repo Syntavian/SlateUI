@@ -13,7 +13,6 @@
 @use 'elements/buttons';
 @use 'elements/links';
 @use 'elements/backgrounds';
-@use 'elements/banners';
 @use 'elements/forms';
 
 * {
@@ -77,6 +76,13 @@ body {
 .full-screen {
     width: 100vw;
     height: 100vh;
+}
+
+.banner {
+    @extend %flex;
+    @extend %shadow-3;
+    @extend %width-10;
+    height: min-content;
 }
 
 .screen-fade {

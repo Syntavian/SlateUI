@@ -36,7 +36,7 @@ form, .form {
   width: 60%;
 }
 
-.form-row, form div, .form div, .banner {
+.banner, .form-row, form div, .form div {
   width: 100%;
 }
 
@@ -213,7 +213,7 @@ form, .form {
   user-select: none;
 }
 
-.expand, .banner, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.banner, .expand, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18386,10 +18386,6 @@ p {
     background-position: 0% 0%;
   }
 }
-.banner {
-  height: min-content;
-}
-
 .form-row, form div, .form div {
   display: flex;
   flex-direction: row;
@@ -18686,6 +18682,10 @@ body {
 .full-screen {
   width: 100vw;
   height: 100vh;
+}
+
+.banner {
+  height: min-content;
 }
 
 .screen-fade {
