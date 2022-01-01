@@ -5,6 +5,8 @@ let themedElements = document.querySelectorAll(elementQuery);
 let currentTheme = "";
 
 function switchElementThemes(newTheme) {
+    themedElements = document.querySelectorAll(elementQuery);
+
     for (let element of themedElements) {
         element.classList.remove(currentTheme);
         element.classList.add(newTheme);
