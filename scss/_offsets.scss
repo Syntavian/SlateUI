@@ -39,8 +39,15 @@
 
 @mixin offsets($scalar: 1) {
     @each $type-key, $type in variables.$offset-types {
+
+        $start: 0;
+
+        @if $type-key == "m" {
+            $start: -10;
+        }
+        
         //Generate offsets of fixed em value amounts.
-        @for $i from 1 through 10 {
+        @for $i from $start through 10 {
             @each $direction-key, $direction in variables.$offset-directions {
                 .#{$type}-#{$direction}-#{$i}, .#{$type-key}-#{$direction-key}-#{$i} {
                     #{$type}-#{$direction}: #{$i * $scalar}em;
