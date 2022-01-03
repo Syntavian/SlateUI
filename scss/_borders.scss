@@ -1,0 +1,111 @@
+@use "sass:map";
+@use "sass:color";
+@use 'variables';
+@use 'prototypes';
+
+.border {
+    border: 1px solid black;
+}
+
+@each $name, $theme in variables.$themes {
+    $colours: map-get($theme, "colours");
+    $primary: map-get($colours, "primary");
+    $secondary: map-get($colours, "secondary");
+    $tertiary: map-get($colours, "tertiary");
+    $darkened-1: map-get($colours, "darkened-1");
+    $darkened-2: map-get($colours, "darkened-2");
+    $lightened-1: map-get($colours, "lightened-2");
+    $lightened-2: map-get($colours, "lightened-2");
+    $shifted-1: map-get($colours, "shifted-1");
+    $shifted-2: map-get($colours, "shifted-2");
+    $shifted-3: map-get($colours, "shifted-3");
+    $inverted: map-get($colours, "inverted");
+    $complement: map-get($colours, "complement");
+    $text: map-get($theme, "text-colour");
+
+    @for $width from 0 through 10 {
+        .#{$name}.border-#{$width} {
+            border: #{$width}px solid $primary;
+
+            &-secondary {
+                border: #{$width}px solid $secondary;
+
+                &-complement {
+                    border: #{$width}px solid complement($secondary);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($secondary);
+                }
+            }
+
+            &-tertiary {
+                border: #{$width}px solid $tertiary;
+
+                &-complement {
+                    border: #{$width}px solid complement($tertiary);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($tertiary);
+                }
+            }
+
+            &-darkened-2 {
+                border: #{$width}px solid $darkened-2;
+
+                &-complement {
+                    border: #{$width}px solid complement($darkened-2);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($darkened-2);
+                }
+            }
+
+            &-lightened-2 {
+                border: #{$width}px solid $lightened-2;
+
+                &-complement {
+                    border: #{$width}px solid complement($lightened-2);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($lightened-2);
+                }
+            }
+
+            &-shifted-1 {
+                border: #{$width}px solid $shifted-1;
+
+                &-complement {
+                    border: #{$width}px solid complement($shifted-1);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($shifted-1);
+                }
+            }
+
+            &-shifted-2 {
+                border: #{$width}px solid $shifted-2;
+
+                &-complement {
+                    border: #{$width}px solid complement($shifted-2);
+                }
+
+                &-inverted {
+                    border: #{$width}px solid invert($shifted-2);
+                }
+            }
+
+            &-complement {
+                border: #{$width}px solid $complement;
+            }
+
+            &-inverted {
+                border: #{$width}px solid $inverted;
+            }
+        }
+    }
+}
