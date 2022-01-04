@@ -27753,7 +27753,7 @@ body {
 }
 
 .no-shadow {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .break.light {
@@ -27762,10 +27762,6 @@ body {
 
 .theme-selector select.light option {
   background-color: #f7f7f7;
-}
-
-.no-shadow.light {
-  box-shadow: none;
 }
 
 .expand > .gradient-hover-animation.light {
@@ -27787,10 +27783,6 @@ body {
   background-color: #080808;
 }
 
-.no-shadow.dark {
-  box-shadow: none;
-}
-
 .expand > .gradient-hover-animation.dark {
   animation: animation-shrink-gradient 0.2s ease forwards;
 }
@@ -27808,10 +27800,6 @@ body {
 
 .theme-selector select.light-cyan option {
   background-color: #11f7ff;
-}
-
-.no-shadow.light-cyan {
-  box-shadow: none;
 }
 
 .expand > .gradient-hover-animation.light-cyan {
@@ -27833,10 +27821,6 @@ body {
   background-color: #1dff4e;
 }
 
-.no-shadow.light-green {
-  box-shadow: none;
-}
-
 .expand > .gradient-hover-animation.light-green {
   animation: animation-shrink-gradient 0.2s ease forwards;
 }
@@ -27856,10 +27840,6 @@ body {
   background-color: #073004;
 }
 
-.no-shadow.dark-green {
-  box-shadow: none;
-}
-
 .expand > .gradient-hover-animation.dark-green {
   animation: animation-shrink-gradient 0.2s ease forwards;
 }
@@ -27877,10 +27857,6 @@ body {
 
 .theme-selector select.dark-blue option {
   background-color: #05092e;
-}
-
-.no-shadow.dark-blue {
-  box-shadow: none;
 }
 
 .expand > .gradient-hover-animation.dark-blue {

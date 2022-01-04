@@ -168,7 +168,7 @@ body {
 }
 
 .no-shadow {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 @each $name, $theme in variables.$themes {
@@ -192,10 +192,6 @@ body {
 
     .theme-selector select.#{$name} option {
         background-color: $primary;
-    }
-
-    .no-shadow.#{$name} {
-        box-shadow: none;
     }
 
     .expand {
