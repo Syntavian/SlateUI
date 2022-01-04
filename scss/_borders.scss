@@ -4,7 +4,7 @@
 @use 'prototypes';
 
 .border {
-    border: 1px solid black;
+    border: 1px solid map.get(map.get(map.get(variables.$themes, "light"), "colours"), "shifted-1");
 }
 
 @each $name, $theme in variables.$themes {
@@ -23,9 +23,117 @@
     $complement: map-get($colours, "complement");
     $text: map-get($theme, "text-colour");
 
+    .#{$name}.border {
+        border: 1px solid $shifted-1;
+
+        &-primary {
+            border: 1px solid $primary;
+
+            &-complement {
+                border: 1px solid complement($primary);
+            }
+
+            &-inverted {
+                border: 1px solid invert($primary);
+            }
+        }
+
+        &-secondary {
+            border: 1px solid $secondary;
+
+            &-complement {
+                border: 1px solid complement($secondary);
+            }
+
+            &-inverted {
+                border: 1px solid invert($secondary);
+            }
+        }
+
+        &-tertiary {
+            border: 1px solid $tertiary;
+
+            &-complement {
+                border: 1px solid complement($tertiary);
+            }
+
+            &-inverted {
+                border: 1px solid invert($tertiary);
+            }
+        }
+
+        &-darkened-2 {
+            border: 1px solid $darkened-2;
+
+            &-complement {
+                border: 1px solid complement($darkened-2);
+            }
+
+            &-inverted {
+                border: 1px solid invert($darkened-2);
+            }
+        }
+
+        &-lightened-2 {
+            border: 1px solid $lightened-2;
+
+            &-complement {
+                border: 1px solid complement($lightened-2);
+            }
+
+            &-inverted {
+                border: 1px solid invert($lightened-2);
+            }
+        }
+
+        &-shifted-1 {
+            border: 1px solid $shifted-1;
+
+            &-complement {
+                border: 1px solid complement($shifted-1);
+            }
+
+            &-inverted {
+                border: 1px solid invert($shifted-1);
+            }
+        }
+
+        &-shifted-2 {
+            border: 1px solid $shifted-2;
+
+            &-complement {
+                border: 1px solid complement($shifted-2);
+            }
+
+            &-inverted {
+                border: 1px solid invert($shifted-2);
+            }
+        }
+
+        &-complement {
+            border: 1px solid $complement;
+        }
+
+        &-inverted {
+            border: 1px solid $inverted;
+        }
+    }
+
     @for $width from 0 through 10 {
         .#{$name}.border-#{$width} {
-            border: #{$width}px solid $primary;
+            border: #{$width}px solid $shifted-1;
+
+            &-primary {
+                border: 1px solid $primary;
+    
+                &-complement {
+                    border: 1px solid complement($primary);
+                }
+    
+                &-inverted {
+                    border: 1px solid invert($primary);
+                }
+            }
 
             &-secondary {
                 border: #{$width}px solid $secondary;
