@@ -1,4 +1,5 @@
 import os
+import re
 
 HTML_DIR = "./build"
 SLATE_DIR = "./build/css"
@@ -20,3 +21,13 @@ if __name__ == "__main__":
             html.close()
 
             print(page_file_text)
+            
+            styleClassIndices = (styleClassIndex.start() for styleClassIndex in re.finditer("class=", page_file_text))
+            styleClasses = set()
+
+            for styleClassIndex in styleClassIndices:
+                for styleClass in page_file_text[styleClassIndex + 7 : page_file_text.find('"', styleClassIndex + 7)].split():
+                    styleClasses.add(styleClass)
+
+            for sc in styleClasses:
+                print(sc)
