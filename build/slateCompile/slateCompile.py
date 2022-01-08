@@ -5,6 +5,8 @@ HTML_DIR = "./build"
 SLATE_DIR = "./build/css"
 OUTPUT_DIR = "./build/compile"
 
+#[@\.]([a-zA-Z][\w-]*?)[ ,{]
+
 if __name__ == "__main__":
 
     # A set of both id and class selectors that must be compiled
@@ -24,11 +26,13 @@ if __name__ == "__main__":
                 html_file_text = html_file_text + html_file_line
             html_file.close()
 
-            styleSelectorIndices = (styleClassIndex.start() for styleClassIndex in re.finditer(r"class=|id=", html_file_text))
+            for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:  
+                for tag in tags:
+                    styleSelectors.add(tag)
 
-            for styleSelectorIndex in styleSelectorIndices:
-                for styleSelector in html_file_text[styleSelectorIndex + 7 : html_file_text.find('"', styleSelectorIndex + 7)].split():
-                    styleSelectors.add(styleSelector)
+            for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:  
+                for style in tag_styles:
+                    styleSelectors.add(style)
 
     input_css = open(SLATE_DIR + "/style.css", "r")
     output_css_file_text = ""
@@ -38,8 +42,11 @@ if __name__ == "__main__":
     activeBlockLevel = 0
 
     for input_css_file_line in input_css.readlines():
-        if blockLevel == activeBlockLevel and (any([(styleSelector in input_css_file_line) for styleSelector in styleSelectors])):
-            isInRequiredBlock = True
+        line = input_css_file_line.strip()
+        if len(line) > 0 and line[-1] == r'{':
+            matches = set([a.group(1) for a in  re.finditer(r"(?:[\.# ]?([a-zA-Z][\w-]*?)[ ,.#:>])", input_css_file_line)])
+            if len(matches) > 0 and any((m in styleSelectors) for m in matches):
+                isInRequiredBlock = True
         if '@' in input_css_file_line:
             isInRequiredBlock = False
             activeBlockLevel += 1
