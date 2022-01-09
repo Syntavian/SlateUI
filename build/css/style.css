@@ -24260,17 +24260,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row:not(.image-carousel), .f-r:not(.image-carousel) {
+  .flex-row:not(.image-carousel, .no-shrink), .f-r:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row:not(.image-carousel).flex-reverse, .f-r:not(.image-carousel).flex-reverse {
+  .flex-row:not(.image-carousel, .no-shrink).flex-reverse, .f-r:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row:not(.image-carousel) > *, .f-r:not(.image-carousel) > * {
+  .flex-row:not(.image-carousel, .no-shrink) > *, .f-r:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24335,17 +24335,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-start:not(.image-carousel), .flex-row-s:not(.image-carousel), .f-r-start:not(.image-carousel), .f-r-s:not(.image-carousel) {
+  .flex-row-start:not(.image-carousel, .no-shrink), .flex-row-s:not(.image-carousel, .no-shrink), .f-r-start:not(.image-carousel, .no-shrink), .f-r-s:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start:not(.image-carousel).flex-reverse, .flex-row-s:not(.image-carousel).flex-reverse, .f-r-start:not(.image-carousel).flex-reverse, .f-r-s:not(.image-carousel).flex-reverse {
+  .flex-row-start:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-s:not(.image-carousel, .no-shrink).flex-reverse, .f-r-start:not(.image-carousel, .no-shrink).flex-reverse, .f-r-s:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-start:not(.image-carousel) > *, .flex-row-s:not(.image-carousel) > *, .f-r-start:not(.image-carousel) > *, .f-r-s:not(.image-carousel) > * {
+  .flex-row-start:not(.image-carousel, .no-shrink) > *, .flex-row-s:not(.image-carousel, .no-shrink) > *, .f-r-start:not(.image-carousel, .no-shrink) > *, .f-r-s:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24410,17 +24410,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-start-top:not(.image-carousel), .flex-row-start-t:not(.image-carousel), .flex-row-s-top:not(.image-carousel), .flex-row-s-t:not(.image-carousel), .f-r-start-top:not(.image-carousel), .f-r-start-t:not(.image-carousel), .f-r-s-top:not(.image-carousel), .f-r-s-t:not(.image-carousel) {
+  .flex-row-start-top:not(.image-carousel, .no-shrink), .flex-row-start-t:not(.image-carousel, .no-shrink), .flex-row-s-top:not(.image-carousel, .no-shrink), .flex-row-s-t:not(.image-carousel, .no-shrink), .f-r-start-top:not(.image-carousel, .no-shrink), .f-r-start-t:not(.image-carousel, .no-shrink), .f-r-s-top:not(.image-carousel, .no-shrink), .f-r-s-t:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start-top:not(.image-carousel).flex-reverse, .flex-row-start-t:not(.image-carousel).flex-reverse, .flex-row-s-top:not(.image-carousel).flex-reverse, .flex-row-s-t:not(.image-carousel).flex-reverse, .f-r-start-top:not(.image-carousel).flex-reverse, .f-r-start-t:not(.image-carousel).flex-reverse, .f-r-s-top:not(.image-carousel).flex-reverse, .f-r-s-t:not(.image-carousel).flex-reverse {
+  .flex-row-start-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-start-t:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-s-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-s-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-start-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-start-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-s-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-s-t:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-start-top:not(.image-carousel) > *, .flex-row-start-t:not(.image-carousel) > *, .flex-row-s-top:not(.image-carousel) > *, .flex-row-s-t:not(.image-carousel) > *, .f-r-start-top:not(.image-carousel) > *, .f-r-start-t:not(.image-carousel) > *, .f-r-s-top:not(.image-carousel) > *, .f-r-s-t:not(.image-carousel) > * {
+  .flex-row-start-top:not(.image-carousel, .no-shrink) > *, .flex-row-start-t:not(.image-carousel, .no-shrink) > *, .flex-row-s-top:not(.image-carousel, .no-shrink) > *, .flex-row-s-t:not(.image-carousel, .no-shrink) > *, .f-r-start-top:not(.image-carousel, .no-shrink) > *, .f-r-start-t:not(.image-carousel, .no-shrink) > *, .f-r-s-top:not(.image-carousel, .no-shrink) > *, .f-r-s-t:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24485,17 +24485,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-start-bottom:not(.image-carousel), .flex-row-start-b:not(.image-carousel), .flex-row-s-bottom:not(.image-carousel), .flex-row-s-b:not(.image-carousel), .f-r-start-bottom:not(.image-carousel), .f-r-start-b:not(.image-carousel), .f-r-s-bottom:not(.image-carousel), .f-r-s-b:not(.image-carousel) {
+  .flex-row-start-bottom:not(.image-carousel, .no-shrink), .flex-row-start-b:not(.image-carousel, .no-shrink), .flex-row-s-bottom:not(.image-carousel, .no-shrink), .flex-row-s-b:not(.image-carousel, .no-shrink), .f-r-start-bottom:not(.image-carousel, .no-shrink), .f-r-start-b:not(.image-carousel, .no-shrink), .f-r-s-bottom:not(.image-carousel, .no-shrink), .f-r-s-b:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-start-bottom:not(.image-carousel).flex-reverse, .flex-row-start-b:not(.image-carousel).flex-reverse, .flex-row-s-bottom:not(.image-carousel).flex-reverse, .flex-row-s-b:not(.image-carousel).flex-reverse, .f-r-start-bottom:not(.image-carousel).flex-reverse, .f-r-start-b:not(.image-carousel).flex-reverse, .f-r-s-bottom:not(.image-carousel).flex-reverse, .f-r-s-b:not(.image-carousel).flex-reverse {
+  .flex-row-start-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-start-b:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-s-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-s-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-start-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-start-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-s-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-s-b:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-start-bottom:not(.image-carousel) > *, .flex-row-start-b:not(.image-carousel) > *, .flex-row-s-bottom:not(.image-carousel) > *, .flex-row-s-b:not(.image-carousel) > *, .f-r-start-bottom:not(.image-carousel) > *, .f-r-start-b:not(.image-carousel) > *, .f-r-s-bottom:not(.image-carousel) > *, .f-r-s-b:not(.image-carousel) > * {
+  .flex-row-start-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-start-b:not(.image-carousel, .no-shrink) > *, .flex-row-s-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-s-b:not(.image-carousel, .no-shrink) > *, .f-r-start-bottom:not(.image-carousel, .no-shrink) > *, .f-r-start-b:not(.image-carousel, .no-shrink) > *, .f-r-s-bottom:not(.image-carousel, .no-shrink) > *, .f-r-s-b:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24560,17 +24560,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-center:not(.image-carousel), .flex-row-c:not(.image-carousel), .f-r-center:not(.image-carousel), .f-r-c:not(.image-carousel) {
+  .flex-row-center:not(.image-carousel, .no-shrink), .flex-row-c:not(.image-carousel, .no-shrink), .f-r-center:not(.image-carousel, .no-shrink), .f-r-c:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center:not(.image-carousel).flex-reverse, .flex-row-c:not(.image-carousel).flex-reverse, .f-r-center:not(.image-carousel).flex-reverse, .f-r-c:not(.image-carousel).flex-reverse {
+  .flex-row-center:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-c:not(.image-carousel, .no-shrink).flex-reverse, .f-r-center:not(.image-carousel, .no-shrink).flex-reverse, .f-r-c:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-center:not(.image-carousel) > *, .flex-row-c:not(.image-carousel) > *, .f-r-center:not(.image-carousel) > *, .f-r-c:not(.image-carousel) > * {
+  .flex-row-center:not(.image-carousel, .no-shrink) > *, .flex-row-c:not(.image-carousel, .no-shrink) > *, .f-r-center:not(.image-carousel, .no-shrink) > *, .f-r-c:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24635,17 +24635,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-center-top:not(.image-carousel), .flex-row-center-t:not(.image-carousel), .flex-row-c-top:not(.image-carousel), .flex-row-c-t:not(.image-carousel), .f-r-center-top:not(.image-carousel), .f-r-center-t:not(.image-carousel), .f-r-c-top:not(.image-carousel), .f-r-c-t:not(.image-carousel) {
+  .flex-row-center-top:not(.image-carousel, .no-shrink), .flex-row-center-t:not(.image-carousel, .no-shrink), .flex-row-c-top:not(.image-carousel, .no-shrink), .flex-row-c-t:not(.image-carousel, .no-shrink), .f-r-center-top:not(.image-carousel, .no-shrink), .f-r-center-t:not(.image-carousel, .no-shrink), .f-r-c-top:not(.image-carousel, .no-shrink), .f-r-c-t:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center-top:not(.image-carousel).flex-reverse, .flex-row-center-t:not(.image-carousel).flex-reverse, .flex-row-c-top:not(.image-carousel).flex-reverse, .flex-row-c-t:not(.image-carousel).flex-reverse, .f-r-center-top:not(.image-carousel).flex-reverse, .f-r-center-t:not(.image-carousel).flex-reverse, .f-r-c-top:not(.image-carousel).flex-reverse, .f-r-c-t:not(.image-carousel).flex-reverse {
+  .flex-row-center-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-center-t:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-c-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-c-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-center-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-center-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-c-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-c-t:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-center-top:not(.image-carousel) > *, .flex-row-center-t:not(.image-carousel) > *, .flex-row-c-top:not(.image-carousel) > *, .flex-row-c-t:not(.image-carousel) > *, .f-r-center-top:not(.image-carousel) > *, .f-r-center-t:not(.image-carousel) > *, .f-r-c-top:not(.image-carousel) > *, .f-r-c-t:not(.image-carousel) > * {
+  .flex-row-center-top:not(.image-carousel, .no-shrink) > *, .flex-row-center-t:not(.image-carousel, .no-shrink) > *, .flex-row-c-top:not(.image-carousel, .no-shrink) > *, .flex-row-c-t:not(.image-carousel, .no-shrink) > *, .f-r-center-top:not(.image-carousel, .no-shrink) > *, .f-r-center-t:not(.image-carousel, .no-shrink) > *, .f-r-c-top:not(.image-carousel, .no-shrink) > *, .f-r-c-t:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24710,17 +24710,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-center-bottom:not(.image-carousel), .flex-row-center-b:not(.image-carousel), .flex-row-c-bottom:not(.image-carousel), .flex-row-c-b:not(.image-carousel), .f-r-center-bottom:not(.image-carousel), .f-r-center-b:not(.image-carousel), .f-r-c-bottom:not(.image-carousel), .f-r-c-b:not(.image-carousel) {
+  .flex-row-center-bottom:not(.image-carousel, .no-shrink), .flex-row-center-b:not(.image-carousel, .no-shrink), .flex-row-c-bottom:not(.image-carousel, .no-shrink), .flex-row-c-b:not(.image-carousel, .no-shrink), .f-r-center-bottom:not(.image-carousel, .no-shrink), .f-r-center-b:not(.image-carousel, .no-shrink), .f-r-c-bottom:not(.image-carousel, .no-shrink), .f-r-c-b:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-center-bottom:not(.image-carousel).flex-reverse, .flex-row-center-b:not(.image-carousel).flex-reverse, .flex-row-c-bottom:not(.image-carousel).flex-reverse, .flex-row-c-b:not(.image-carousel).flex-reverse, .f-r-center-bottom:not(.image-carousel).flex-reverse, .f-r-center-b:not(.image-carousel).flex-reverse, .f-r-c-bottom:not(.image-carousel).flex-reverse, .f-r-c-b:not(.image-carousel).flex-reverse {
+  .flex-row-center-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-center-b:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-c-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-c-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-center-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-center-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-c-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-c-b:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-center-bottom:not(.image-carousel) > *, .flex-row-center-b:not(.image-carousel) > *, .flex-row-c-bottom:not(.image-carousel) > *, .flex-row-c-b:not(.image-carousel) > *, .f-r-center-bottom:not(.image-carousel) > *, .f-r-center-b:not(.image-carousel) > *, .f-r-c-bottom:not(.image-carousel) > *, .f-r-c-b:not(.image-carousel) > * {
+  .flex-row-center-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-center-b:not(.image-carousel, .no-shrink) > *, .flex-row-c-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-c-b:not(.image-carousel, .no-shrink) > *, .f-r-center-bottom:not(.image-carousel, .no-shrink) > *, .f-r-center-b:not(.image-carousel, .no-shrink) > *, .f-r-c-bottom:not(.image-carousel, .no-shrink) > *, .f-r-c-b:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24785,17 +24785,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-end:not(.image-carousel), .flex-row-e:not(.image-carousel), .f-r-end:not(.image-carousel), .f-r-e:not(.image-carousel) {
+  .flex-row-end:not(.image-carousel, .no-shrink), .flex-row-e:not(.image-carousel, .no-shrink), .f-r-end:not(.image-carousel, .no-shrink), .f-r-e:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end:not(.image-carousel).flex-reverse, .flex-row-e:not(.image-carousel).flex-reverse, .f-r-end:not(.image-carousel).flex-reverse, .f-r-e:not(.image-carousel).flex-reverse {
+  .flex-row-end:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-e:not(.image-carousel, .no-shrink).flex-reverse, .f-r-end:not(.image-carousel, .no-shrink).flex-reverse, .f-r-e:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-end:not(.image-carousel) > *, .flex-row-e:not(.image-carousel) > *, .f-r-end:not(.image-carousel) > *, .f-r-e:not(.image-carousel) > * {
+  .flex-row-end:not(.image-carousel, .no-shrink) > *, .flex-row-e:not(.image-carousel, .no-shrink) > *, .f-r-end:not(.image-carousel, .no-shrink) > *, .f-r-e:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24860,17 +24860,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-end-top:not(.image-carousel), .flex-row-end-t:not(.image-carousel), .flex-row-e-top:not(.image-carousel), .flex-row-e-t:not(.image-carousel), .f-r-end-top:not(.image-carousel), .f-r-end-t:not(.image-carousel), .f-r-e-top:not(.image-carousel), .f-r-e-t:not(.image-carousel) {
+  .flex-row-end-top:not(.image-carousel, .no-shrink), .flex-row-end-t:not(.image-carousel, .no-shrink), .flex-row-e-top:not(.image-carousel, .no-shrink), .flex-row-e-t:not(.image-carousel, .no-shrink), .f-r-end-top:not(.image-carousel, .no-shrink), .f-r-end-t:not(.image-carousel, .no-shrink), .f-r-e-top:not(.image-carousel, .no-shrink), .f-r-e-t:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end-top:not(.image-carousel).flex-reverse, .flex-row-end-t:not(.image-carousel).flex-reverse, .flex-row-e-top:not(.image-carousel).flex-reverse, .flex-row-e-t:not(.image-carousel).flex-reverse, .f-r-end-top:not(.image-carousel).flex-reverse, .f-r-end-t:not(.image-carousel).flex-reverse, .f-r-e-top:not(.image-carousel).flex-reverse, .f-r-e-t:not(.image-carousel).flex-reverse {
+  .flex-row-end-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-end-t:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-e-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-e-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-end-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-end-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-e-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-e-t:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-end-top:not(.image-carousel) > *, .flex-row-end-t:not(.image-carousel) > *, .flex-row-e-top:not(.image-carousel) > *, .flex-row-e-t:not(.image-carousel) > *, .f-r-end-top:not(.image-carousel) > *, .f-r-end-t:not(.image-carousel) > *, .f-r-e-top:not(.image-carousel) > *, .f-r-e-t:not(.image-carousel) > * {
+  .flex-row-end-top:not(.image-carousel, .no-shrink) > *, .flex-row-end-t:not(.image-carousel, .no-shrink) > *, .flex-row-e-top:not(.image-carousel, .no-shrink) > *, .flex-row-e-t:not(.image-carousel, .no-shrink) > *, .f-r-end-top:not(.image-carousel, .no-shrink) > *, .f-r-end-t:not(.image-carousel, .no-shrink) > *, .f-r-e-top:not(.image-carousel, .no-shrink) > *, .f-r-e-t:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -24935,17 +24935,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-end-bottom:not(.image-carousel), .flex-row-end-b:not(.image-carousel), .flex-row-e-bottom:not(.image-carousel), .flex-row-e-b:not(.image-carousel), .f-r-end-bottom:not(.image-carousel), .f-r-end-b:not(.image-carousel), .f-r-e-bottom:not(.image-carousel), .f-r-e-b:not(.image-carousel) {
+  .flex-row-end-bottom:not(.image-carousel, .no-shrink), .flex-row-end-b:not(.image-carousel, .no-shrink), .flex-row-e-bottom:not(.image-carousel, .no-shrink), .flex-row-e-b:not(.image-carousel, .no-shrink), .f-r-end-bottom:not(.image-carousel, .no-shrink), .f-r-end-b:not(.image-carousel, .no-shrink), .f-r-e-bottom:not(.image-carousel, .no-shrink), .f-r-e-b:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-end-bottom:not(.image-carousel).flex-reverse, .flex-row-end-b:not(.image-carousel).flex-reverse, .flex-row-e-bottom:not(.image-carousel).flex-reverse, .flex-row-e-b:not(.image-carousel).flex-reverse, .f-r-end-bottom:not(.image-carousel).flex-reverse, .f-r-end-b:not(.image-carousel).flex-reverse, .f-r-e-bottom:not(.image-carousel).flex-reverse, .f-r-e-b:not(.image-carousel).flex-reverse {
+  .flex-row-end-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-end-b:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-e-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-e-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-end-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-end-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-e-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-e-b:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-end-bottom:not(.image-carousel) > *, .flex-row-end-b:not(.image-carousel) > *, .flex-row-e-bottom:not(.image-carousel) > *, .flex-row-e-b:not(.image-carousel) > *, .f-r-end-bottom:not(.image-carousel) > *, .f-r-end-b:not(.image-carousel) > *, .f-r-e-bottom:not(.image-carousel) > *, .f-r-e-b:not(.image-carousel) > * {
+  .flex-row-end-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-end-b:not(.image-carousel, .no-shrink) > *, .flex-row-e-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-e-b:not(.image-carousel, .no-shrink) > *, .f-r-end-bottom:not(.image-carousel, .no-shrink) > *, .f-r-end-b:not(.image-carousel, .no-shrink) > *, .f-r-e-bottom:not(.image-carousel, .no-shrink) > *, .f-r-e-b:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25010,17 +25010,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-top:not(.image-carousel), .flex-row-t:not(.image-carousel), .f-r-top:not(.image-carousel), .f-r-t:not(.image-carousel) {
+  .flex-row-top:not(.image-carousel, .no-shrink), .flex-row-t:not(.image-carousel, .no-shrink), .f-r-top:not(.image-carousel, .no-shrink), .f-r-t:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row-top:not(.image-carousel).flex-reverse, .flex-row-t:not(.image-carousel).flex-reverse, .f-r-top:not(.image-carousel).flex-reverse, .f-r-t:not(.image-carousel).flex-reverse {
+  .flex-row-top:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-top:not(.image-carousel) > *, .flex-row-t:not(.image-carousel) > *, .f-r-top:not(.image-carousel) > *, .f-r-t:not(.image-carousel) > * {
+  .flex-row-top:not(.image-carousel, .no-shrink) > *, .flex-row-t:not(.image-carousel, .no-shrink) > *, .f-r-top:not(.image-carousel, .no-shrink) > *, .f-r-t:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25085,17 +25085,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-top-start:not(.image-carousel), .flex-row-top-s:not(.image-carousel), .flex-row-t-start:not(.image-carousel), .flex-row-t-s:not(.image-carousel), .f-r-top-start:not(.image-carousel), .f-r-top-s:not(.image-carousel), .f-r-t-start:not(.image-carousel), .f-r-t-s:not(.image-carousel) {
+  .flex-row-top-start:not(.image-carousel, .no-shrink), .flex-row-top-s:not(.image-carousel, .no-shrink), .flex-row-t-start:not(.image-carousel, .no-shrink), .flex-row-t-s:not(.image-carousel, .no-shrink), .f-r-top-start:not(.image-carousel, .no-shrink), .f-r-top-s:not(.image-carousel, .no-shrink), .f-r-t-start:not(.image-carousel, .no-shrink), .f-r-t-s:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-top-start:not(.image-carousel).flex-reverse, .flex-row-top-s:not(.image-carousel).flex-reverse, .flex-row-t-start:not(.image-carousel).flex-reverse, .flex-row-t-s:not(.image-carousel).flex-reverse, .f-r-top-start:not(.image-carousel).flex-reverse, .f-r-top-s:not(.image-carousel).flex-reverse, .f-r-t-start:not(.image-carousel).flex-reverse, .f-r-t-s:not(.image-carousel).flex-reverse {
+  .flex-row-top-start:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-top-s:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-start:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-s:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-start:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-s:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-start:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-s:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-top-start:not(.image-carousel) > *, .flex-row-top-s:not(.image-carousel) > *, .flex-row-t-start:not(.image-carousel) > *, .flex-row-t-s:not(.image-carousel) > *, .f-r-top-start:not(.image-carousel) > *, .f-r-top-s:not(.image-carousel) > *, .f-r-t-start:not(.image-carousel) > *, .f-r-t-s:not(.image-carousel) > * {
+  .flex-row-top-start:not(.image-carousel, .no-shrink) > *, .flex-row-top-s:not(.image-carousel, .no-shrink) > *, .flex-row-t-start:not(.image-carousel, .no-shrink) > *, .flex-row-t-s:not(.image-carousel, .no-shrink) > *, .f-r-top-start:not(.image-carousel, .no-shrink) > *, .f-r-top-s:not(.image-carousel, .no-shrink) > *, .f-r-t-start:not(.image-carousel, .no-shrink) > *, .f-r-t-s:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25160,17 +25160,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-top-center:not(.image-carousel), .flex-row-top-c:not(.image-carousel), .flex-row-t-center:not(.image-carousel), .flex-row-t-c:not(.image-carousel), .f-r-top-center:not(.image-carousel), .f-r-top-c:not(.image-carousel), .f-r-t-center:not(.image-carousel), .f-r-t-c:not(.image-carousel) {
+  .flex-row-top-center:not(.image-carousel, .no-shrink), .flex-row-top-c:not(.image-carousel, .no-shrink), .flex-row-t-center:not(.image-carousel, .no-shrink), .flex-row-t-c:not(.image-carousel, .no-shrink), .f-r-top-center:not(.image-carousel, .no-shrink), .f-r-top-c:not(.image-carousel, .no-shrink), .f-r-t-center:not(.image-carousel, .no-shrink), .f-r-t-c:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-top-center:not(.image-carousel).flex-reverse, .flex-row-top-c:not(.image-carousel).flex-reverse, .flex-row-t-center:not(.image-carousel).flex-reverse, .flex-row-t-c:not(.image-carousel).flex-reverse, .f-r-top-center:not(.image-carousel).flex-reverse, .f-r-top-c:not(.image-carousel).flex-reverse, .f-r-t-center:not(.image-carousel).flex-reverse, .f-r-t-c:not(.image-carousel).flex-reverse {
+  .flex-row-top-center:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-top-c:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-center:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-c:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-center:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-c:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-center:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-c:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-top-center:not(.image-carousel) > *, .flex-row-top-c:not(.image-carousel) > *, .flex-row-t-center:not(.image-carousel) > *, .flex-row-t-c:not(.image-carousel) > *, .f-r-top-center:not(.image-carousel) > *, .f-r-top-c:not(.image-carousel) > *, .f-r-t-center:not(.image-carousel) > *, .f-r-t-c:not(.image-carousel) > * {
+  .flex-row-top-center:not(.image-carousel, .no-shrink) > *, .flex-row-top-c:not(.image-carousel, .no-shrink) > *, .flex-row-t-center:not(.image-carousel, .no-shrink) > *, .flex-row-t-c:not(.image-carousel, .no-shrink) > *, .f-r-top-center:not(.image-carousel, .no-shrink) > *, .f-r-top-c:not(.image-carousel, .no-shrink) > *, .f-r-t-center:not(.image-carousel, .no-shrink) > *, .f-r-t-c:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25235,17 +25235,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-top-end:not(.image-carousel), .flex-row-top-e:not(.image-carousel), .flex-row-t-end:not(.image-carousel), .flex-row-t-e:not(.image-carousel), .f-r-top-end:not(.image-carousel), .f-r-top-e:not(.image-carousel), .f-r-t-end:not(.image-carousel), .f-r-t-e:not(.image-carousel) {
+  .flex-row-top-end:not(.image-carousel, .no-shrink), .flex-row-top-e:not(.image-carousel, .no-shrink), .flex-row-t-end:not(.image-carousel, .no-shrink), .flex-row-t-e:not(.image-carousel, .no-shrink), .f-r-top-end:not(.image-carousel, .no-shrink), .f-r-top-e:not(.image-carousel, .no-shrink), .f-r-t-end:not(.image-carousel, .no-shrink), .f-r-t-e:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-top-end:not(.image-carousel).flex-reverse, .flex-row-top-e:not(.image-carousel).flex-reverse, .flex-row-t-end:not(.image-carousel).flex-reverse, .flex-row-t-e:not(.image-carousel).flex-reverse, .f-r-top-end:not(.image-carousel).flex-reverse, .f-r-top-e:not(.image-carousel).flex-reverse, .f-r-t-end:not(.image-carousel).flex-reverse, .f-r-t-e:not(.image-carousel).flex-reverse {
+  .flex-row-top-end:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-top-e:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-end:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-t-e:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-end:not(.image-carousel, .no-shrink).flex-reverse, .f-r-top-e:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-end:not(.image-carousel, .no-shrink).flex-reverse, .f-r-t-e:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-top-end:not(.image-carousel) > *, .flex-row-top-e:not(.image-carousel) > *, .flex-row-t-end:not(.image-carousel) > *, .flex-row-t-e:not(.image-carousel) > *, .f-r-top-end:not(.image-carousel) > *, .f-r-top-e:not(.image-carousel) > *, .f-r-t-end:not(.image-carousel) > *, .f-r-t-e:not(.image-carousel) > * {
+  .flex-row-top-end:not(.image-carousel, .no-shrink) > *, .flex-row-top-e:not(.image-carousel, .no-shrink) > *, .flex-row-t-end:not(.image-carousel, .no-shrink) > *, .flex-row-t-e:not(.image-carousel, .no-shrink) > *, .f-r-top-end:not(.image-carousel, .no-shrink) > *, .f-r-top-e:not(.image-carousel, .no-shrink) > *, .f-r-t-end:not(.image-carousel, .no-shrink) > *, .f-r-t-e:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25310,17 +25310,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-bottom:not(.image-carousel), .flex-row-b:not(.image-carousel), .f-r-bottom:not(.image-carousel), .f-r-b:not(.image-carousel) {
+  .flex-row-bottom:not(.image-carousel, .no-shrink), .flex-row-b:not(.image-carousel, .no-shrink), .f-r-bottom:not(.image-carousel, .no-shrink), .f-r-b:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: space-between;
     flex-grow: 1;
   }
-  .flex-row-bottom:not(.image-carousel).flex-reverse, .flex-row-b:not(.image-carousel).flex-reverse, .f-r-bottom:not(.image-carousel).flex-reverse, .f-r-b:not(.image-carousel).flex-reverse {
+  .flex-row-bottom:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-bottom:not(.image-carousel) > *, .flex-row-b:not(.image-carousel) > *, .f-r-bottom:not(.image-carousel) > *, .f-r-b:not(.image-carousel) > * {
+  .flex-row-bottom:not(.image-carousel, .no-shrink) > *, .flex-row-b:not(.image-carousel, .no-shrink) > *, .f-r-bottom:not(.image-carousel, .no-shrink) > *, .f-r-b:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25385,17 +25385,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-bottom-start:not(.image-carousel), .flex-row-bottom-s:not(.image-carousel), .flex-row-b-start:not(.image-carousel), .flex-row-b-s:not(.image-carousel), .f-r-bottom-start:not(.image-carousel), .f-r-bottom-s:not(.image-carousel), .f-r-b-start:not(.image-carousel), .f-r-b-s:not(.image-carousel) {
+  .flex-row-bottom-start:not(.image-carousel, .no-shrink), .flex-row-bottom-s:not(.image-carousel, .no-shrink), .flex-row-b-start:not(.image-carousel, .no-shrink), .flex-row-b-s:not(.image-carousel, .no-shrink), .f-r-bottom-start:not(.image-carousel, .no-shrink), .f-r-bottom-s:not(.image-carousel, .no-shrink), .f-r-b-start:not(.image-carousel, .no-shrink), .f-r-b-s:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .flex-row-bottom-start:not(.image-carousel).flex-reverse, .flex-row-bottom-s:not(.image-carousel).flex-reverse, .flex-row-b-start:not(.image-carousel).flex-reverse, .flex-row-b-s:not(.image-carousel).flex-reverse, .f-r-bottom-start:not(.image-carousel).flex-reverse, .f-r-bottom-s:not(.image-carousel).flex-reverse, .f-r-b-start:not(.image-carousel).flex-reverse, .f-r-b-s:not(.image-carousel).flex-reverse {
+  .flex-row-bottom-start:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-bottom-s:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-start:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-s:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-start:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-s:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-start:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-s:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-bottom-start:not(.image-carousel) > *, .flex-row-bottom-s:not(.image-carousel) > *, .flex-row-b-start:not(.image-carousel) > *, .flex-row-b-s:not(.image-carousel) > *, .f-r-bottom-start:not(.image-carousel) > *, .f-r-bottom-s:not(.image-carousel) > *, .f-r-b-start:not(.image-carousel) > *, .f-r-b-s:not(.image-carousel) > * {
+  .flex-row-bottom-start:not(.image-carousel, .no-shrink) > *, .flex-row-bottom-s:not(.image-carousel, .no-shrink) > *, .flex-row-b-start:not(.image-carousel, .no-shrink) > *, .flex-row-b-s:not(.image-carousel, .no-shrink) > *, .f-r-bottom-start:not(.image-carousel, .no-shrink) > *, .f-r-bottom-s:not(.image-carousel, .no-shrink) > *, .f-r-b-start:not(.image-carousel, .no-shrink) > *, .f-r-b-s:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25460,17 +25460,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-bottom-center:not(.image-carousel), .flex-row-bottom-c:not(.image-carousel), .flex-row-b-center:not(.image-carousel), .flex-row-b-c:not(.image-carousel), .f-r-bottom-center:not(.image-carousel), .f-r-bottom-c:not(.image-carousel), .f-r-b-center:not(.image-carousel), .f-r-b-c:not(.image-carousel) {
+  .flex-row-bottom-center:not(.image-carousel, .no-shrink), .flex-row-bottom-c:not(.image-carousel, .no-shrink), .flex-row-b-center:not(.image-carousel, .no-shrink), .flex-row-b-c:not(.image-carousel, .no-shrink), .f-r-bottom-center:not(.image-carousel, .no-shrink), .f-r-bottom-c:not(.image-carousel, .no-shrink), .f-r-b-center:not(.image-carousel, .no-shrink), .f-r-b-c:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
   }
-  .flex-row-bottom-center:not(.image-carousel).flex-reverse, .flex-row-bottom-c:not(.image-carousel).flex-reverse, .flex-row-b-center:not(.image-carousel).flex-reverse, .flex-row-b-c:not(.image-carousel).flex-reverse, .f-r-bottom-center:not(.image-carousel).flex-reverse, .f-r-bottom-c:not(.image-carousel).flex-reverse, .f-r-b-center:not(.image-carousel).flex-reverse, .f-r-b-c:not(.image-carousel).flex-reverse {
+  .flex-row-bottom-center:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-bottom-c:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-center:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-c:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-center:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-c:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-center:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-c:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-bottom-center:not(.image-carousel) > *, .flex-row-bottom-c:not(.image-carousel) > *, .flex-row-b-center:not(.image-carousel) > *, .flex-row-b-c:not(.image-carousel) > *, .f-r-bottom-center:not(.image-carousel) > *, .f-r-bottom-c:not(.image-carousel) > *, .f-r-b-center:not(.image-carousel) > *, .f-r-b-c:not(.image-carousel) > * {
+  .flex-row-bottom-center:not(.image-carousel, .no-shrink) > *, .flex-row-bottom-c:not(.image-carousel, .no-shrink) > *, .flex-row-b-center:not(.image-carousel, .no-shrink) > *, .flex-row-b-c:not(.image-carousel, .no-shrink) > *, .f-r-bottom-center:not(.image-carousel, .no-shrink) > *, .f-r-bottom-c:not(.image-carousel, .no-shrink) > *, .f-r-b-center:not(.image-carousel, .no-shrink) > *, .f-r-b-c:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -25535,17 +25535,17 @@ form, .form {
   }
 }
 @media screen and (max-width: 700px) {
-  .flex-row-bottom-end:not(.image-carousel), .flex-row-bottom-e:not(.image-carousel), .flex-row-b-end:not(.image-carousel), .flex-row-b-e:not(.image-carousel), .f-r-bottom-end:not(.image-carousel), .f-r-bottom-e:not(.image-carousel), .f-r-b-end:not(.image-carousel), .f-r-b-e:not(.image-carousel) {
+  .flex-row-bottom-end:not(.image-carousel, .no-shrink), .flex-row-bottom-e:not(.image-carousel, .no-shrink), .flex-row-b-end:not(.image-carousel, .no-shrink), .flex-row-b-e:not(.image-carousel, .no-shrink), .f-r-bottom-end:not(.image-carousel, .no-shrink), .f-r-bottom-e:not(.image-carousel, .no-shrink), .f-r-b-end:not(.image-carousel, .no-shrink), .f-r-b-e:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     flex-grow: 1;
   }
-  .flex-row-bottom-end:not(.image-carousel).flex-reverse, .flex-row-bottom-e:not(.image-carousel).flex-reverse, .flex-row-b-end:not(.image-carousel).flex-reverse, .flex-row-b-e:not(.image-carousel).flex-reverse, .f-r-bottom-end:not(.image-carousel).flex-reverse, .f-r-bottom-e:not(.image-carousel).flex-reverse, .f-r-b-end:not(.image-carousel).flex-reverse, .f-r-b-e:not(.image-carousel).flex-reverse {
+  .flex-row-bottom-end:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-bottom-e:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-end:not(.image-carousel, .no-shrink).flex-reverse, .flex-row-b-e:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-end:not(.image-carousel, .no-shrink).flex-reverse, .f-r-bottom-e:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-end:not(.image-carousel, .no-shrink).flex-reverse, .f-r-b-e:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .flex-row-bottom-end:not(.image-carousel) > *, .flex-row-bottom-e:not(.image-carousel) > *, .flex-row-b-end:not(.image-carousel) > *, .flex-row-b-e:not(.image-carousel) > *, .f-r-bottom-end:not(.image-carousel) > *, .f-r-bottom-e:not(.image-carousel) > *, .f-r-b-end:not(.image-carousel) > *, .f-r-b-e:not(.image-carousel) > * {
+  .flex-row-bottom-end:not(.image-carousel, .no-shrink) > *, .flex-row-bottom-e:not(.image-carousel, .no-shrink) > *, .flex-row-b-end:not(.image-carousel, .no-shrink) > *, .flex-row-b-e:not(.image-carousel, .no-shrink) > *, .f-r-bottom-end:not(.image-carousel, .no-shrink) > *, .f-r-bottom-e:not(.image-carousel, .no-shrink) > *, .f-r-b-end:not(.image-carousel, .no-shrink) > *, .f-r-b-e:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -26076,17 +26076,17 @@ p {
   }
 }
 @media screen and (max-width: 700px) {
-  .image-carousel:not(.image-carousel) {
+  .image-carousel:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .image-carousel:not(.image-carousel).flex-reverse {
+  .image-carousel:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .image-carousel:not(.image-carousel) > * {
+  .image-carousel:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -26170,17 +26170,17 @@ p {
   }
 }
 @media screen and (max-width: 700px) and (max-width: 700px) {
-  .image-carousel:not(.image-carousel) {
+  .image-carousel:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .image-carousel:not(.image-carousel).flex-reverse {
+  .image-carousel:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .image-carousel:not(.image-carousel) > * {
+  .image-carousel:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -26479,17 +26479,17 @@ p {
   }
 }
 @media screen and (max-width: 700px) {
-  .link-row:not(.image-carousel) {
+  .link-row:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .link-row:not(.image-carousel).flex-reverse {
+  .link-row:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .link-row:not(.image-carousel) > * {
+  .link-row:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -26554,17 +26554,17 @@ p {
   }
 }
 @media screen and (max-width: 700px) {
-  .link-row-group:not(.image-carousel) {
+  .link-row-group:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  .link-row-group:not(.image-carousel).flex-reverse {
+  .link-row-group:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .link-row-group:not(.image-carousel) > * {
+  .link-row-group:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -27449,17 +27449,17 @@ p {
   }
 }
 @media screen and (max-width: 700px) {
-  .form-row:not(.image-carousel), form div:not(.image-carousel), .form div:not(.image-carousel) {
+  .form-row:not(.image-carousel, .no-shrink), form div:not(.image-carousel, .no-shrink), .form div:not(.image-carousel, .no-shrink) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
   }
-  .form-row:not(.image-carousel).flex-reverse, form div:not(.image-carousel).flex-reverse, .form div:not(.image-carousel).flex-reverse {
+  .form-row:not(.image-carousel, .no-shrink).flex-reverse, form div:not(.image-carousel, .no-shrink).flex-reverse, .form div:not(.image-carousel, .no-shrink).flex-reverse {
     flex-direction: column-reverse;
   }
-  .form-row:not(.image-carousel) > *, form div:not(.image-carousel) > *, .form div:not(.image-carousel) > * {
+  .form-row:not(.image-carousel, .no-shrink) > *, form div:not(.image-carousel, .no-shrink) > *, .form div:not(.image-carousel, .no-shrink) > * {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;

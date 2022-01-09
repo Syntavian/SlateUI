@@ -65,7 +65,7 @@
         }
     }
 
-    &:not(.image-carousel) {
+    &:not(.image-carousel,.no-shrink) {
         @media screen and (max-width: variables.$screen-width-s) {
             @include flex(column, $align, $justify, $grow);
     
