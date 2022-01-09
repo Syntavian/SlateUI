@@ -23,7 +23,7 @@ form, .form {
   padding: 1em;
 }
 
-.link-row > * {
+.link-row > *, .icon-row > * {
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -40,7 +40,7 @@ form, .form {
   width: 100%;
 }
 
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -48,7 +48,7 @@ form, .form {
   box-shadow: gray 0px 1px 3px 0px;
 }
 
-.light.form-input, .light.input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), .form input.light:not([type=submit]), textarea.light, .light.image, .light.box, .light.link, .light.inline-box {
+.light.form-input, .light.input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), .form input.light:not([type=submit]), textarea.light, .light.image, .light.icon, .light.box, .light.link, .light.inline-box {
   box-shadow: #c6c6c6 0px 0px 3px 0px;
 }
 
@@ -56,7 +56,7 @@ form, .form {
   box-shadow: #c6c6c6 0px 1px 3px 0px;
 }
 
-.dark.form-input, .dark.input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), .form input.dark:not([type=submit]), textarea.dark, .dark.image, .dark.box, .dark.link, .dark.inline-box {
+.dark.form-input, .dark.input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), .form input.dark:not([type=submit]), textarea.dark, .dark.image, .dark.icon, .dark.box, .dark.link, .dark.inline-box {
   box-shadow: #393939 0px 0px 3px 0px;
 }
 
@@ -64,7 +64,7 @@ form, .form {
   box-shadow: #393939 0px 1px 3px 0px;
 }
 
-.light-cyan.form-input, .light-cyan.input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), .form input.light-cyan:not([type=submit]), textarea.light-cyan, .light-cyan.image, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
+.light-cyan.form-input, .light-cyan.input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), .form input.light-cyan:not([type=submit]), textarea.light-cyan, .light-cyan.image, .light-cyan.icon, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
   box-shadow: #00d2da 0px 0px 3px 0px;
 }
 
@@ -72,7 +72,7 @@ form, .form {
   box-shadow: #00d2da 0px 1px 3px 0px;
 }
 
-.light-green.form-input, .light-green.input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), .form input.light-green:not([type=submit]), textarea.light-green, .light-green.image, .light-green.box, .light-green.link, .light-green.inline-box {
+.light-green.form-input, .light-green.input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), .form input.light-green:not([type=submit]), textarea.light-green, .light-green.image, .light-green.icon, .light-green.box, .light-green.link, .light-green.inline-box {
   box-shadow: #00e331 0px 0px 3px 0px;
 }
 
@@ -80,7 +80,7 @@ form, .form {
   box-shadow: #00e331 0px 1px 3px 0px;
 }
 
-.dark-green.form-input, .dark-green.input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), .form input.dark-green:not([type=submit]), textarea.dark-green, .dark-green.image, .dark-green.box, .dark-green.link, .dark-green.inline-box {
+.dark-green.form-input, .dark-green.input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), .form input.dark-green:not([type=submit]), textarea.dark-green, .dark-green.image, .dark-green.icon, .dark-green.box, .dark-green.link, .dark-green.inline-box {
   box-shadow: #13850b 0px 0px 3px 0px;
 }
 
@@ -88,7 +88,7 @@ form, .form {
   box-shadow: #13850b 0px 1px 3px 0px;
 }
 
-.dark-blue.form-input, .dark-blue.input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), .form input.dark-blue:not([type=submit]), textarea.dark-blue, .dark-blue.image, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
+.dark-blue.form-input, .dark-blue.input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), .form input.dark-blue:not([type=submit]), textarea.dark-blue, .dark-blue.image, .dark-blue.icon, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
   box-shadow: #0e1981 0px 0px 3px 0px;
 }
 
@@ -208,12 +208,12 @@ form, .form {
   box-shadow: #0e1981 0px 0px 7px 0px inset;
 }
 
-.scroll-handle, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand > * {
+.clickable, a, .scroll-handle, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand > * {
   cursor: pointer;
   user-select: none;
 }
 
-.banner, .expand, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.banner, .expand, .button, input[type=submit], .button-round, .button-round-1, .button-round-2, .button-round-3, .button-round-4, .button-round-5, .button-expand, .button-expand > *, .flex, .f, .image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,7 +221,7 @@ form, .form {
   flex-grow: 0;
 }
 
-.image, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+.image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   min-width: 5em;
   min-height: 5em;
   border-radius: 3px;
@@ -26105,6 +26105,208 @@ p {
   content: ">";
   display: none;
   font-size: 1.25rem;
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .icon-row.shrink-xl:not(.image-carousel) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .icon-row.shrink-xl:not(.image-carousel).flex-reverse {
+    flex-direction: column-reverse;
+  }
+  .icon-row.shrink-xl:not(.image-carousel) > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .icon-row.shrink-l:not(.image-carousel) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .icon-row.shrink-l:not(.image-carousel).flex-reverse {
+    flex-direction: column-reverse;
+  }
+  .icon-row.shrink-l:not(.image-carousel) > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .icon-row.shrink-m:not(.image-carousel) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .icon-row.shrink-m:not(.image-carousel).flex-reverse {
+    flex-direction: column-reverse;
+  }
+  .icon-row.shrink-m:not(.image-carousel) > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .icon-row:not(.image-carousel, .no-shrink) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .icon-row:not(.image-carousel, .no-shrink).flex-reverse {
+    flex-direction: column-reverse;
+  }
+  .icon-row:not(.image-carousel, .no-shrink) > * {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.icon {
+  background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.light.icon {
+  background: linear-gradient(135deg, #ffffff00, #dedede 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.light.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.dark.icon {
+  background: linear-gradient(135deg, #00000000, #222222 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.dark.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.light-cyan.icon {
+  background: linear-gradient(135deg, #ffffff00, #00d6dd 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.light-cyan.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.light-green.icon {
+  background: linear-gradient(135deg, #ffffff00, #00e933 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.light-green.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.dark-green.icon {
+  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.dark-green.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+
+.dark-blue.icon {
+  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  min-width: 2.5em;
+  min-height: 2.5em;
+}
+.dark-blue.icon:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
 
 @media screen and (max-width: 700px) {

@@ -128,6 +128,14 @@
     text-decoration: none;
 }
 
+@mixin icon($primary) {
+    @include gradient-hover-animation($primary);
+    @extend %box;
+    padding: 0.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
 @each $level, $value in variables.$offset-values {
     @each $type-key, $type in variables.$offset-types {
         @each $direction-key, $direction in variables.$offset-directions {
