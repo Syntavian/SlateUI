@@ -27,16 +27,16 @@ JS_REQUIRED_SELECTORS = [
 if __name__ == "__main__":
 
     # A set of both id and class selectors that must be compiled
-    styleSelectors = set(JS_REQUIRED_SELECTORS)
+    style_selectors = set(JS_REQUIRED_SELECTORS)
 
     # Analyse HTML files for style ids and classes
-    for (dirpath, dirnames, filenames) in os.walk(HTML_DIR):
+    for (dir_path, dir_names, file_names) in os.walk(HTML_DIR):
         sub_dir = ""
 
-        if dirpath != HTML_DIR:
-            sub_dir = dirpath.replace(HTML_DIR, "")
-        for html_file_name in [filename for filename in filenames if os.path.splitext(filename)[1] == ".html"]:
-            html_file = open(dirpath + "\\" + html_file_name, "r")
+        if dir_path != HTML_DIR:
+            sub_dir = dir_path.replace(HTML_DIR, "")
+        for html_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".html"]:
+            html_file = open(dir_path + "\\" + html_file_name, "r")
             html_file_text = ""
 
             for html_file_line in html_file.readlines():
@@ -45,46 +45,61 @@ if __name__ == "__main__":
 
             for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:  
                 for tag in tags:
-                    styleSelectors.add(tag)
+                    style_selectors.add(tag)
 
             for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:  
                 for style in tag_styles:
-                    styleSelectors.add(style)
+                    style_selectors.add(style)
 
     input_css = open(SLATE_DIR + "/style.css", "r")
     output_css_file_text = ""
 
-    isInRequiredBlock = False
-    isInKeyframesBlock = True
-    blockLevel = 0
-    activeBlockLevel = 0
+    media_blocks = {}
+
+    is_in_required_block = False
+    is_in_keyframes_block = False
+    is_in_media_block = False
+    current_media_block = ""
+    block_level = 0
+    active_block_level = 0
 
     for input_css_file_line in input_css.readlines():
         line = input_css_file_line.strip()
         if len(line) > 0 and line[-1] == r'{':
             matches = set([a.group(1) for a in  re.finditer(r"(?:[\.# ]?([a-zA-Z][\w-]*?)[ ,.#:>+])", input_css_file_line)])
-            if len(matches) > 0 and any((m in styleSelectors) for m in matches):
-                isInRequiredBlock = True
+            if len(matches) > 0 and any((m in style_selectors) for m in matches):
+                is_in_required_block = True
         if '@' in input_css_file_line:
-            isInRequiredBlock = False
-            activeBlockLevel += 1
-            if 'keyframes' in input_css_file_line:
-                isInKeyframesBlock = True
+            is_in_required_block = False
+            active_block_level += 1
+            if "keyframes" in input_css_file_line:
+                is_in_keyframes_block = True
+            elif "media" in input_css_file_line:
+                is_in_media_block = True
+                current_media_block = input_css_file_line
+                if current_media_block not in media_blocks.keys():
+                    media_blocks[current_media_block] = ''
             else:
                 output_css_file_text = output_css_file_text + input_css_file_line
         if ('{' in input_css_file_line):
-            blockLevel += 1
-        if isInRequiredBlock or isInKeyframesBlock:
+            block_level += 1
+        if is_in_media_block and is_in_required_block:
+            media_blocks[current_media_block] = media_blocks[current_media_block] + input_css_file_line
+        elif is_in_required_block or is_in_keyframes_block:
             output_css_file_text = output_css_file_text + input_css_file_line
         if ('}' in input_css_file_line):
-            blockLevel -= 1
-            if blockLevel < activeBlockLevel and not isInKeyframesBlock:
+            block_level -= 1
+            if block_level < active_block_level and not is_in_keyframes_block and not is_in_media_block:
                 output_css_file_text = output_css_file_text + input_css_file_line
-            if blockLevel <= activeBlockLevel:
-                activeBlockLevel = blockLevel
-                isInRequiredBlock = False
-            if blockLevel == 0: 
-                isInKeyframesBlock = False
+            if block_level <= active_block_level:
+                active_block_level = block_level
+                is_in_required_block = False
+            if block_level == 0: 
+                is_in_keyframes_block = False
+                is_in_media_block = False
+
+    for media_selector, media_block in media_blocks.items():
+        output_css_file_text = output_css_file_text + media_selector + media_block + '}\n'
 
     input_css.close()
 
