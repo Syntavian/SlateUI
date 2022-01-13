@@ -758,50 +758,6 @@ p {
 .button-expand:hover > *.gradient-hover-animation.fill, .dark-blue.button-expand:hover > *.gradient-hover-animation.fill {
   animation: animation-expand-gradient 0.2s ease forwards;
 }
-@keyframes animation-expand {
-  0% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-  100% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-}
-@keyframes animation-shrink {
-  0% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-  100% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-}
-@keyframes animation-expand-gradient {
-  0% {
-    margin: 0em;
-    padding: 0.5em;
-    background-position: 0% 0%;
-  }
-  100% {
-    margin: -0.5em;
-    padding: 1em;
-    background-position: 100% 100%;
-  }
-}
-@keyframes animation-shrink-gradient {
-  0% {
-    margin: -0.5em;
-    padding: 1em;
-    background-position: 100% 100%;
-  }
-  100% {
-    margin: 0em;
-    padding: 0.5em;
-    background-position: 0% 0%;
-  }
-}
 .link-row {
   display: flex;
   flex-direction: row;
@@ -1550,54 +1506,6 @@ p {
   -moz-animation: animation-forward 0.2s ease forwards;
   animation: animation-forward 0.2s ease forwards;
 }
-@-webkit-keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@-moz-keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes animation-forward {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@-webkit-keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-@-moz-keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-@keyframes animation-back {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
 .form-row, form div, .form div {
   display: flex;
   flex-direction: row;
@@ -1713,6 +1621,9 @@ textarea.dark-green {
 textarea.dark-blue {
   min-height: 1.9375em;
   height: 1.9375em;
+}
+* {
+  box-sizing: border-box;
 }
 html {
   width: 100%;
@@ -1889,50 +1800,6 @@ body {
 }
 .scroll-handle.dark-blue {
   background-color: rgba(19, 33, 170, 0.9);
-}
-@keyframes animation-expand {
-  0% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-  100% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-}
-@keyframes animation-shrink {
-  0% {
-    margin: -0.5em;
-    padding: 1em;
-  }
-  100% {
-    margin: 0em;
-    padding: 0.5em;
-  }
-}
-@keyframes animation-expand-gradient {
-  0% {
-    margin: 0em;
-    padding: 0.5em;
-    background-position: 0% 0%;
-  }
-  100% {
-    margin: -0.5em;
-    padding: 1em;
-    background-position: 100% 100%;
-  }
-}
-@keyframes animation-shrink-gradient {
-  0% {
-    margin: -0.5em;
-    padding: 1em;
-    background-position: 100% 100%;
-  }
-  100% {
-    margin: 0em;
-    padding: 0.5em;
-    background-position: 0% 0%;
-  }
 }
 @media screen and (max-width: 1200px) {
   .padding-2, .p-2 {
@@ -3243,5 +3110,141 @@ body {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
+  }
+}
+@keyframes animation-expand {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+}
+@keyframes animation-expand {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+}
+@keyframes animation-shrink {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+}
+@keyframes animation-shrink {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+  }
+}
+@keyframes animation-expand-gradient {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-expand-gradient {
+  0% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+  100% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-shrink-gradient {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+}
+@keyframes animation-shrink-gradient {
+  0% {
+    margin: -0.5em;
+    padding: 1em;
+    background-position: 100% 100%;
+  }
+  100% {
+    margin: 0em;
+    padding: 0.5em;
+    background-position: 0% 0%;
+  }
+}
+@-webkit-keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@-moz-keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes animation-forward {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@-webkit-keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes animation-back {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
