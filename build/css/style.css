@@ -27687,24 +27687,82 @@ p {
   margin-bottom: 0px;
   width: 1em;
   height: 1em;
+  transition: transform 0.2s ease-in-out;
 }
-.form-input[type=checkbox]:checked.light, form input[type=checkbox]:checked.light:not([type=submit]), .form input[type=checkbox]:checked.light:not([type=submit]), form div input[type=checkbox]:checked.light, form div select[type=checkbox]:checked.light, .form div input[type=checkbox]:checked.light, .form div select[type=checkbox]:checked.light, .input[type=checkbox]:checked.light, textarea[type=checkbox]:checked.light {
-  background-color: black;
+.form-input[type=checkbox].light, form input[type=checkbox].light:not([type=submit]), .form input[type=checkbox].light:not([type=submit]), form div input[type=checkbox].light, form div select[type=checkbox].light, .form div input[type=checkbox].light, .form div select[type=checkbox].light, .input[type=checkbox].light, textarea[type=checkbox].light {
+  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
 }
-.form-input[type=checkbox]:checked.dark, form input[type=checkbox]:checked.dark:not([type=submit]), .form input[type=checkbox]:checked.dark:not([type=submit]), form div input[type=checkbox]:checked.dark, form div select[type=checkbox]:checked.dark, .form div input[type=checkbox]:checked.dark, .form div select[type=checkbox]:checked.dark, .input[type=checkbox]:checked.dark, textarea[type=checkbox]:checked.dark {
-  background-color: white;
+.form-input[type=checkbox].light:hover, form input[type=checkbox].light:hover:not([type=submit]), .form input[type=checkbox].light:hover:not([type=submit]), form div input[type=checkbox].light:hover, form div select[type=checkbox].light:hover, .form div input[type=checkbox].light:hover, .form div select[type=checkbox].light:hover, .input[type=checkbox].light:hover, textarea[type=checkbox].light:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
-.form-input[type=checkbox]:checked.light-cyan, form input[type=checkbox]:checked.light-cyan:not([type=submit]), .form input[type=checkbox]:checked.light-cyan:not([type=submit]), form div input[type=checkbox]:checked.light-cyan, form div select[type=checkbox]:checked.light-cyan, .form div input[type=checkbox]:checked.light-cyan, .form div select[type=checkbox]:checked.light-cyan, .input[type=checkbox]:checked.light-cyan, textarea[type=checkbox]:checked.light-cyan {
-  background-color: black;
+.form-input[type=checkbox].dark, form input[type=checkbox].dark:not([type=submit]), .form input[type=checkbox].dark:not([type=submit]), form div input[type=checkbox].dark, form div select[type=checkbox].dark, .form div input[type=checkbox].dark, .form div select[type=checkbox].dark, .input[type=checkbox].dark, textarea[type=checkbox].dark {
+  background: linear-gradient(135deg, #ffffff00, #e6e6e6 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
 }
-.form-input[type=checkbox]:checked.light-green, form input[type=checkbox]:checked.light-green:not([type=submit]), .form input[type=checkbox]:checked.light-green:not([type=submit]), form div input[type=checkbox]:checked.light-green, form div select[type=checkbox]:checked.light-green, .form div input[type=checkbox]:checked.light-green, .form div select[type=checkbox]:checked.light-green, .input[type=checkbox]:checked.light-green, textarea[type=checkbox]:checked.light-green {
-  background-color: black;
+.form-input[type=checkbox].dark:hover, form input[type=checkbox].dark:hover:not([type=submit]), .form input[type=checkbox].dark:hover:not([type=submit]), form div input[type=checkbox].dark:hover, form div select[type=checkbox].dark:hover, .form div input[type=checkbox].dark:hover, .form div select[type=checkbox].dark:hover, .input[type=checkbox].dark:hover, textarea[type=checkbox].dark:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
 }
-.form-input[type=checkbox]:checked.dark-green, form input[type=checkbox]:checked.dark-green:not([type=submit]), .form input[type=checkbox]:checked.dark-green:not([type=submit]), form div input[type=checkbox]:checked.dark-green, form div select[type=checkbox]:checked.dark-green, .form div input[type=checkbox]:checked.dark-green, .form div select[type=checkbox]:checked.dark-green, .input[type=checkbox]:checked.dark-green, textarea[type=checkbox]:checked.dark-green {
-  background-color: white;
+.form-input[type=checkbox].light-cyan, form input[type=checkbox].light-cyan:not([type=submit]), .form input[type=checkbox].light-cyan:not([type=submit]), form div input[type=checkbox].light-cyan, form div select[type=checkbox].light-cyan, .form div input[type=checkbox].light-cyan, .form div select[type=checkbox].light-cyan, .input[type=checkbox].light-cyan, textarea[type=checkbox].light-cyan {
+  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
 }
-.form-input[type=checkbox]:checked.dark-blue, form input[type=checkbox]:checked.dark-blue:not([type=submit]), .form input[type=checkbox]:checked.dark-blue:not([type=submit]), form div input[type=checkbox]:checked.dark-blue, form div select[type=checkbox]:checked.dark-blue, .form div input[type=checkbox]:checked.dark-blue, .form div select[type=checkbox]:checked.dark-blue, .input[type=checkbox]:checked.dark-blue, textarea[type=checkbox]:checked.dark-blue {
-  background-color: white;
+.form-input[type=checkbox].light-cyan:hover, form input[type=checkbox].light-cyan:hover:not([type=submit]), .form input[type=checkbox].light-cyan:hover:not([type=submit]), form div input[type=checkbox].light-cyan:hover, form div select[type=checkbox].light-cyan:hover, .form div input[type=checkbox].light-cyan:hover, .form div select[type=checkbox].light-cyan:hover, .input[type=checkbox].light-cyan:hover, textarea[type=checkbox].light-cyan:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+.form-input[type=checkbox].light-green, form input[type=checkbox].light-green:not([type=submit]), .form input[type=checkbox].light-green:not([type=submit]), form div input[type=checkbox].light-green, form div select[type=checkbox].light-green, .form div input[type=checkbox].light-green, .form div select[type=checkbox].light-green, .input[type=checkbox].light-green, textarea[type=checkbox].light-green {
+  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.form-input[type=checkbox].light-green:hover, form input[type=checkbox].light-green:hover:not([type=submit]), .form input[type=checkbox].light-green:hover:not([type=submit]), form div input[type=checkbox].light-green:hover, form div select[type=checkbox].light-green:hover, .form div input[type=checkbox].light-green:hover, .form div select[type=checkbox].light-green:hover, .input[type=checkbox].light-green:hover, textarea[type=checkbox].light-green:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+.form-input[type=checkbox].dark-green, form input[type=checkbox].dark-green:not([type=submit]), .form input[type=checkbox].dark-green:not([type=submit]), form div input[type=checkbox].dark-green, form div select[type=checkbox].dark-green, .form div input[type=checkbox].dark-green, .form div select[type=checkbox].dark-green, .input[type=checkbox].dark-green, textarea[type=checkbox].dark-green {
+  background: linear-gradient(135deg, #ffffff00, #e6e6e6 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.form-input[type=checkbox].dark-green:hover, form input[type=checkbox].dark-green:hover:not([type=submit]), .form input[type=checkbox].dark-green:hover:not([type=submit]), form div input[type=checkbox].dark-green:hover, form div select[type=checkbox].dark-green:hover, .form div input[type=checkbox].dark-green:hover, .form div select[type=checkbox].dark-green:hover, .input[type=checkbox].dark-green:hover, textarea[type=checkbox].dark-green:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+.form-input[type=checkbox].dark-blue, form input[type=checkbox].dark-blue:not([type=submit]), .form input[type=checkbox].dark-blue:not([type=submit]), form div input[type=checkbox].dark-blue, form div select[type=checkbox].dark-blue, .form div input[type=checkbox].dark-blue, .form div select[type=checkbox].dark-blue, .input[type=checkbox].dark-blue, textarea[type=checkbox].dark-blue {
+  background: linear-gradient(135deg, #ffffff00, #e6e6e6 25%, #ffffff00);
+  background-size: 200% 200%;
+  -webkit-animation: animation-back 0.2s ease forwards;
+  -moz-animation: animation-back 0.2s ease forwards;
+  animation: animation-back 0.2s ease forwards;
+}
+.form-input[type=checkbox].dark-blue:hover, form input[type=checkbox].dark-blue:hover:not([type=submit]), .form input[type=checkbox].dark-blue:hover:not([type=submit]), form div input[type=checkbox].dark-blue:hover, form div select[type=checkbox].dark-blue:hover, .form div input[type=checkbox].dark-blue:hover, .form div select[type=checkbox].dark-blue:hover, .input[type=checkbox].dark-blue:hover, textarea[type=checkbox].dark-blue:hover {
+  -webkit-animation: animation-forward 0.2s ease forwards;
+  -moz-animation: animation-forward 0.2s ease forwards;
+  animation: animation-forward 0.2s ease forwards;
+}
+.form-input[type=checkbox]:checked, form input[type=checkbox]:checked:not([type=submit]), .form input[type=checkbox]:checked:not([type=submit]), form div input[type=checkbox]:checked, form div select[type=checkbox]:checked, .form div input[type=checkbox]:checked, .form div select[type=checkbox]:checked, .input[type=checkbox]:checked, textarea[type=checkbox]:checked {
+  transform: rotate(45deg);
 }
 
 form, .form {

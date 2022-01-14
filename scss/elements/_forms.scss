@@ -37,15 +37,17 @@
         margin-bottom: 0px;
         width: 1em;
         height: 1em;
-    
-        &:checked {
-            @each $name, $theme in variables.$themes {
-                $text: map.get($theme, "text-colour");
-                
-                &.#{$name} {
-                    background-color: $text;
-                }
+        transition: transform 0.2s ease-in-out;
+        @each $name, $theme in variables.$themes {
+            $text: map.get($theme, "text-colour");
+            
+            &.#{$name} {
+                @include prototypes.gradient-hover-animation($text);
             }
+        }
+
+        &:checked {
+            transform: rotate(45deg);
         }
     }
 }
