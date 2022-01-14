@@ -233,323 +233,323 @@ form, .form {
 }
 
 .width-1, .w-1 {
-  width: 10%;
+  width: 10% !important;
 }
 
 .height-1, .h-1 {
-  height: 10%;
+  height: 10% !important;
 }
 
 .size-1, .s-1 {
-  min-width: 10%;
-  width: 10%;
-  min-height: 10%;
-  height: 10%;
+  min-width: 10% !important;
+  width: 10% !important;
+  min-height: 10% !important;
+  height: 10% !important;
 }
 
 .width-1em, .w-1em {
-  min-width: 1em;
-  width: 1em;
+  min-width: 1em !important;
+  width: 1em !important;
 }
 
 .height-1em, .h-1em {
-  min-height: 1em;
-  height: 1em;
+  min-height: 1em !important;
+  height: 1em !important;
 }
 
 .size-1em, .s-1em {
-  min-width: 1em;
-  width: 1em;
-  min-height: 1em;
-  height: 1em;
+  min-width: 1em !important;
+  width: 1em !important;
+  min-height: 1em !important;
+  height: 1em !important;
 }
 
 .width-2, .w-2 {
-  width: 20%;
+  width: 20% !important;
 }
 
 .height-2, .h-2 {
-  height: 20%;
+  height: 20% !important;
 }
 
 .size-2, .s-2 {
-  min-width: 20%;
-  width: 20%;
-  min-height: 20%;
-  height: 20%;
+  min-width: 20% !important;
+  width: 20% !important;
+  min-height: 20% !important;
+  height: 20% !important;
 }
 
 .width-2em, .w-2em {
-  min-width: 2em;
-  width: 2em;
+  min-width: 2em !important;
+  width: 2em !important;
 }
 
 .height-2em, .h-2em {
-  min-height: 2em;
-  height: 2em;
+  min-height: 2em !important;
+  height: 2em !important;
 }
 
 .size-2em, .s-2em {
-  min-width: 2em;
-  width: 2em;
-  min-height: 2em;
-  height: 2em;
+  min-width: 2em !important;
+  width: 2em !important;
+  min-height: 2em !important;
+  height: 2em !important;
 }
 
 .width-3, .w-3 {
-  width: 30%;
+  width: 30% !important;
 }
 
 .height-3, .h-3 {
-  height: 30%;
+  height: 30% !important;
 }
 
 .size-3, .s-3 {
-  min-width: 30%;
-  width: 30%;
-  min-height: 30%;
-  height: 30%;
+  min-width: 30% !important;
+  width: 30% !important;
+  min-height: 30% !important;
+  height: 30% !important;
 }
 
 .width-3em, .w-3em {
-  min-width: 3em;
-  width: 3em;
+  min-width: 3em !important;
+  width: 3em !important;
 }
 
 .height-3em, .h-3em {
-  min-height: 3em;
-  height: 3em;
+  min-height: 3em !important;
+  height: 3em !important;
 }
 
 .size-3em, .s-3em {
-  min-width: 3em;
-  width: 3em;
-  min-height: 3em;
-  height: 3em;
+  min-width: 3em !important;
+  width: 3em !important;
+  min-height: 3em !important;
+  height: 3em !important;
 }
 
 .width-4, .w-4 {
-  width: 40%;
+  width: 40% !important;
 }
 
 .height-4, .h-4 {
-  height: 40%;
+  height: 40% !important;
 }
 
 .size-4, .s-4 {
-  min-width: 40%;
-  width: 40%;
-  min-height: 40%;
-  height: 40%;
+  min-width: 40% !important;
+  width: 40% !important;
+  min-height: 40% !important;
+  height: 40% !important;
 }
 
 .width-4em, .w-4em {
-  min-width: 4em;
-  width: 4em;
+  min-width: 4em !important;
+  width: 4em !important;
 }
 
 .height-4em, .h-4em {
-  min-height: 4em;
-  height: 4em;
+  min-height: 4em !important;
+  height: 4em !important;
 }
 
 .size-4em, .s-4em {
-  min-width: 4em;
-  width: 4em;
-  min-height: 4em;
-  height: 4em;
+  min-width: 4em !important;
+  width: 4em !important;
+  min-height: 4em !important;
+  height: 4em !important;
 }
 
 .width-5, .w-5 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .height-5, .h-5 {
-  height: 50%;
+  height: 50% !important;
 }
 
 .size-5, .s-5 {
-  min-width: 50%;
-  width: 50%;
-  min-height: 50%;
-  height: 50%;
+  min-width: 50% !important;
+  width: 50% !important;
+  min-height: 50% !important;
+  height: 50% !important;
 }
 
 .width-5em, .w-5em {
-  min-width: 5em;
-  width: 5em;
+  min-width: 5em !important;
+  width: 5em !important;
 }
 
 .height-5em, .h-5em {
-  min-height: 5em;
-  height: 5em;
+  min-height: 5em !important;
+  height: 5em !important;
 }
 
 .size-5em, .s-5em {
-  min-width: 5em;
-  width: 5em;
-  min-height: 5em;
-  height: 5em;
+  min-width: 5em !important;
+  width: 5em !important;
+  min-height: 5em !important;
+  height: 5em !important;
 }
 
 .width-6, .w-6 {
-  width: 60%;
+  width: 60% !important;
 }
 
 .height-6, .h-6 {
-  height: 60%;
+  height: 60% !important;
 }
 
 .size-6, .s-6 {
-  min-width: 60%;
-  width: 60%;
-  min-height: 60%;
-  height: 60%;
+  min-width: 60% !important;
+  width: 60% !important;
+  min-height: 60% !important;
+  height: 60% !important;
 }
 
 .width-6em, .w-6em {
-  min-width: 6em;
-  width: 6em;
+  min-width: 6em !important;
+  width: 6em !important;
 }
 
 .height-6em, .h-6em {
-  min-height: 6em;
-  height: 6em;
+  min-height: 6em !important;
+  height: 6em !important;
 }
 
 .size-6em, .s-6em {
-  min-width: 6em;
-  width: 6em;
-  min-height: 6em;
-  height: 6em;
+  min-width: 6em !important;
+  width: 6em !important;
+  min-height: 6em !important;
+  height: 6em !important;
 }
 
 .width-7, .w-7 {
-  width: 70%;
+  width: 70% !important;
 }
 
 .height-7, .h-7 {
-  height: 70%;
+  height: 70% !important;
 }
 
 .size-7, .s-7 {
-  min-width: 70%;
-  width: 70%;
-  min-height: 70%;
-  height: 70%;
+  min-width: 70% !important;
+  width: 70% !important;
+  min-height: 70% !important;
+  height: 70% !important;
 }
 
 .width-7em, .w-7em {
-  min-width: 7em;
-  width: 7em;
+  min-width: 7em !important;
+  width: 7em !important;
 }
 
 .height-7em, .h-7em {
-  min-height: 7em;
-  height: 7em;
+  min-height: 7em !important;
+  height: 7em !important;
 }
 
 .size-7em, .s-7em {
-  min-width: 7em;
-  width: 7em;
-  min-height: 7em;
-  height: 7em;
+  min-width: 7em !important;
+  width: 7em !important;
+  min-height: 7em !important;
+  height: 7em !important;
 }
 
 .width-8, .w-8 {
-  width: 80%;
+  width: 80% !important;
 }
 
 .height-8, .h-8 {
-  height: 80%;
+  height: 80% !important;
 }
 
 .size-8, .s-8 {
-  min-width: 80%;
-  width: 80%;
-  min-height: 80%;
-  height: 80%;
+  min-width: 80% !important;
+  width: 80% !important;
+  min-height: 80% !important;
+  height: 80% !important;
 }
 
 .width-8em, .w-8em {
-  min-width: 8em;
-  width: 8em;
+  min-width: 8em !important;
+  width: 8em !important;
 }
 
 .height-8em, .h-8em {
-  min-height: 8em;
-  height: 8em;
+  min-height: 8em !important;
+  height: 8em !important;
 }
 
 .size-8em, .s-8em {
-  min-width: 8em;
-  width: 8em;
-  min-height: 8em;
-  height: 8em;
+  min-width: 8em !important;
+  width: 8em !important;
+  min-height: 8em !important;
+  height: 8em !important;
 }
 
 .width-9, .w-9 {
-  width: 90%;
+  width: 90% !important;
 }
 
 .height-9, .h-9 {
-  height: 90%;
+  height: 90% !important;
 }
 
 .size-9, .s-9 {
-  min-width: 90%;
-  width: 90%;
-  min-height: 90%;
-  height: 90%;
+  min-width: 90% !important;
+  width: 90% !important;
+  min-height: 90% !important;
+  height: 90% !important;
 }
 
 .width-9em, .w-9em {
-  min-width: 9em;
-  width: 9em;
+  min-width: 9em !important;
+  width: 9em !important;
 }
 
 .height-9em, .h-9em {
-  min-height: 9em;
-  height: 9em;
+  min-height: 9em !important;
+  height: 9em !important;
 }
 
 .size-9em, .s-9em {
-  min-width: 9em;
-  width: 9em;
-  min-height: 9em;
-  height: 9em;
+  min-width: 9em !important;
+  width: 9em !important;
+  min-height: 9em !important;
+  height: 9em !important;
 }
 
 .width-10, .w-10 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .height-10, .h-10 {
-  height: 100%;
+  height: 100% !important;
 }
 
 .size-10, .s-10 {
-  min-width: 100%;
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
+  min-width: 100% !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  height: 100% !important;
 }
 
 .width-10em, .w-10em {
-  min-width: 10em;
-  width: 10em;
+  min-width: 10em !important;
+  width: 10em !important;
 }
 
 .height-10em, .h-10em {
-  min-height: 10em;
-  height: 10em;
+  min-height: 10em !important;
+  height: 10em !important;
 }
 
 .size-10em, .s-10em {
-  min-width: 10em;
-  width: 10em;
-  min-height: 10em;
-  height: 10em;
+  min-width: 10em !important;
+  width: 10em !important;
+  min-height: 10em !important;
+  height: 10em !important;
 }
 
 .padding-top-0, .p-t-0 {

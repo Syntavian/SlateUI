@@ -5,35 +5,35 @@
 
 @for $i from 1 through 10 { 
     .width-#{$i}, .w-#{$i} {
-        width: #{10% * $i};
+        width: #{10% * $i} !important;
     }
 
     .height-#{$i}, .h-#{$i} {
-        height: #{10% * $i};
+        height: #{10% * $i} !important;
     }
 
     .size-#{$i}, .s-#{$i} {
-        min-width: #{10% * $i};
-        width: #{10% * $i};
-        min-height: #{10% * $i};
-        height: #{10% * $i};
+        min-width: #{10% * $i} !important;
+        width: #{10% * $i} !important;
+        min-height: #{10% * $i} !important;
+        height: #{10% * $i} !important;
     }
 
     .width-#{$i}em, .w-#{$i}em {
-        min-width: #{$i}em;
-        width: #{$i}em;
+        min-width: #{$i}em !important;
+        width: #{$i}em !important;
     }
 
     .height-#{$i}em, .h-#{$i}em {
-        min-height: #{$i}em;
-        height: #{$i}em;
+        min-height: #{$i}em !important;
+        height: #{$i}em !important;
     }
 
     .size-#{$i}em, .s-#{$i}em {
-        min-width: #{$i}em;
-        width: #{$i}em;
-        min-height: #{$i}em;
-        height: #{$i}em;
+        min-width: #{$i}em !important;
+        width: #{$i}em !important;
+        min-height: #{$i}em !important;
+        height: #{$i}em !important;
     }
 }
 
