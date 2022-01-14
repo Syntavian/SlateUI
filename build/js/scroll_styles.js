@@ -83,4 +83,12 @@ if (scrollBar && scrollHandle) {
     }, {
         passive: false
     });
+
+    const observer = new ResizeObserver(() => {
+        updateScrollBar();
+    });
+    
+    document.querySelectorAll('textarea').forEach((element) => {
+        observer.observe(element);
+    });
 }
