@@ -21,7 +21,6 @@
 
     .#{$name}.box {
         @extend %box;
-        background-color: $primary;
         color: $text;
     }
 
@@ -31,7 +30,6 @@
 
     .#{$name}.inline-box {
         @extend %inline-box;
-        background-color: $primary;
         color: $text;
     }
 

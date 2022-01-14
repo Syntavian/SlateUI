@@ -17,6 +17,7 @@
 @use 'elements/forms';
 
 * {
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
     box-sizing: border-box;
 }
 

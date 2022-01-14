@@ -19,7 +19,7 @@
     $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
-    .#{$name}.fill {
+    .#{$name}.fill, .#{$name}.box, .#{$name}.inline-box {
         background-color: $primary;
         color: $text;
 
