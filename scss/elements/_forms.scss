@@ -38,16 +38,24 @@
         width: 1em;
         height: 1em;
         transition: transform 0.2s ease-in-out;
+
         @each $name, $theme in variables.$themes {
-            $text: map.get($theme, "text-colour");
-            
+            $colours: map.get($theme, "colours");
+            $primary: map.get($colours, "primary");
+
             &.#{$name} {
-                @include prototypes.gradient-hover-animation($text);
+                @include prototypes.gradient-hover-animation($primary);
             }
         }
 
         &:checked {
-            transform: rotate(45deg);
+            @each $name, $theme in variables.$themes {
+                $text: map.get($theme, "text-colour");
+    
+                &.#{$name} {
+                    @include prototypes.gradient-hover-animation($text);
+                }
+            }
         }
     }
 }
