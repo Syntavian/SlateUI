@@ -41,17 +41,13 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
-def append(current_string: str, *appending_strings: str, separator: str = ' '):
-    result_string = current_string + separator + separator.join(appending_strings)
-    return result_string
-
 def remove_whitespace(string: str, separator: str = ' ') -> str:
     return separator.join(string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
 
 def remove_symbol_spaces(string: str) -> str:
     result = ""
     last_index = 0
-    for match in re.finditer(r'. \W .|\W .|. \W', string):
+    for match in re.finditer(r' *[^\w ] *', string):
         index = match.start()
         result = result + string[last_index:index] + remove_whitespace(match.group(0), '')
         last_index = match.end()
@@ -112,28 +108,28 @@ if __name__ == "__main__":
             active_block_level += 1
             if "keyframes" in input_css_file_line:
                 is_in_keyframes_block = True
-                current_keyframes_block = ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+                current_keyframes_block = remove_whitespace(input_css_file_line) + ' '
                 if current_keyframes_block not in keyframes_blocks.keys():
                     keyframes_blocks[current_keyframes_block] = ''
             elif "media" in input_css_file_line:
                 is_in_media_block = True
-                current_media_block = ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+                current_media_block = remove_whitespace(input_css_file_line) + ' '
                 if current_media_block not in media_blocks.keys():
                     media_blocks[current_media_block] = ''
             else:
-                output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
         if ('{' in input_css_file_line):
             block_level += 1
         if is_in_media_block and is_in_required_block:
-            media_blocks[current_media_block] = media_blocks[current_media_block] + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+            media_blocks[current_media_block] = media_blocks[current_media_block] + remove_whitespace(input_css_file_line) + ' '
         elif is_in_keyframes_block:
-            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + remove_whitespace(input_css_file_line) + ' '
         elif is_in_required_block:
-            output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+            output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
         if ('}' in input_css_file_line):
             block_level -= 1
             if block_level < active_block_level and not is_in_keyframes_block and not is_in_media_block:
-                output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
+                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
             if block_level <= active_block_level:
                 active_block_level = block_level
                 is_in_required_block = False
@@ -148,6 +144,8 @@ if __name__ == "__main__":
         output_css_file_text = output_css_file_text + keyframes_block
 
     input_css.close()
+
+    output_css_file_text = remove_symbol_spaces(output_css_file_text)
 
     output_css = open(CSS_OUTPUT_DIR + "/slate.css", "w")
     output_css.write(output_css_file_text)
@@ -166,15 +164,17 @@ if __name__ == "__main__":
             for js_file_line in js_file.readlines():
                 if "import" not in js_file_line and js_file_line != "\n" and js_file_line != "\r":
                     if "//" in js_file_line:
-                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + ' '.join(js_file_line.replace(js_file_line[js_file_line.find("//"):], " ").replace("export", " ").replace("\n", " ").replace("\r", " ").split()) + ' '
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace(js_file_line[js_file_line.find("//"):], ' ').replace("export", ' ')) + ' '
                     else:
-                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + ' '.join(js_file_line.replace("export", " ").replace("\n", " ").replace("\r", " ").split()) + ' '
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace("export", ' ')) + ' '
             js_file.close()
 
     output_js_file_text = ""
 
     for js_file_name in JS_FILE_ORDER:
         output_js_file_text = output_js_file_text + js_file_texts[js_file_name]
+
+    output_js_file_text = remove_symbol_spaces(output_js_file_text)
 
     output_js = open(JS_OUTPUT_DIR + "/slate.js", "w")
     output_js.write(output_js_file_text)
