@@ -2,8 +2,19 @@ import os
 import re
 
 HTML_DIR = "./build"
-SLATE_DIR = "./scss_compiled"
-OUTPUT_DIR = "./build/css"
+SLATE_CSS_DIR = "./scss_compiled"
+SLATE_JS_DIR = "./js"
+CSS_OUTPUT_DIR = "./build/css"
+JS_OUTPUT_DIR = "./build/js"
+JS_FILE_ORDER = [
+    "utils.js",
+    "button_styles.js",
+    "image_styles.js",
+    "sticky_styles.js",
+    "scroll_styles.js",
+    "layout_styles.js",
+    "theme_styles.js",
+]
 CSS_REQUIRED_SELECTORS = [
     "*",
 ]
@@ -57,7 +68,7 @@ if __name__ == "__main__":
                 for style in tag_styles:
                     style_selectors.add(style)
 
-    input_css = open(SLATE_DIR + "/style.css", "r")
+    input_css = open(SLATE_CSS_DIR + "/style.css", "r")
     output_css_file_text = ""
 
     keyframes_blocks = {}
@@ -122,5 +133,32 @@ if __name__ == "__main__":
 
     input_css.close()
 
-    output_css = open(OUTPUT_DIR + "/style.css", "w")
+    output_css = open(CSS_OUTPUT_DIR + "/slate.css", "w")
     output_css.write(output_css_file_text)
+
+    js_file_texts = {}
+
+    for (dir_path, dir_names, file_names) in os.walk(SLATE_JS_DIR):
+        sub_dir = ""
+
+        if dir_path != SLATE_JS_DIR:
+            sub_dir = dir_path.replace(SLATE_JS_DIR, "")
+        for js_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".js"]:
+            js_file = open(dir_path + "\\" + js_file_name, "r")
+            js_file_texts[js_file_name] = ""
+
+            for js_file_line in js_file.readlines():
+                if "import" not in js_file_line and js_file_line != "\n" and js_file_line != "\r":
+                    if "//" in js_file_line:
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + ' '.join(js_file_line.replace(js_file_line[js_file_line.find("//"):], " ").replace("export", " ").replace("\n", " ").replace("\r", " ").split()) + ' '
+                    else:
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + ' '.join(js_file_line.replace("export", " ").replace("\n", " ").replace("\r", " ").split()) + ' '
+            js_file.close()
+
+    output_js_file_text = ""
+
+    for js_file_name in JS_FILE_ORDER:
+        output_js_file_text = output_js_file_text + js_file_texts[js_file_name]
+
+    output_js = open(JS_OUTPUT_DIR + "/slate.js", "w")
+    output_js.write(output_js_file_text)

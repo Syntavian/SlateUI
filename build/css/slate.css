@@ -230,8 +230,13 @@ form, .form {
 .margin-bottom-m, .m-b-m {
   margin-bottom: 1em;
 }
-.margin-m, .m-m {
-  margin: 1em;
+.margin-horizontal-m, .m-h-m {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.margin-vertical-m, .m-v-m {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .c-m-m > * {
   margin: 1em;
@@ -1970,8 +1975,13 @@ body {
   .margin-bottom-m, .m-b-m {
     margin-bottom: 0.75em;
   }
-  .margin-m, .m-m {
-    margin: 0.75em;
+  .margin-horizontal-m, .m-h-m {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+  }
+  .margin-vertical-m, .m-v-m {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
   }
   .c-m-m > * {
     margin: 0.75em;
@@ -2175,8 +2185,13 @@ body {
   .margin-bottom-m, .m-b-m {
     margin-bottom: 0.6em;
   }
-  .margin-m, .m-m {
-    margin: 0.6em;
+  .margin-horizontal-m, .m-h-m {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+  }
+  .margin-vertical-m, .m-v-m {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
   }
   .c-m-m > * {
     margin: 0.6em;
@@ -2412,8 +2427,13 @@ body {
   .margin-bottom-m, .m-b-m {
     margin-bottom: 0.45em;
   }
-  .margin-m, .m-m {
-    margin: 0.45em;
+  .margin-horizontal-m, .m-h-m {
+    margin-left: 0.45em;
+    margin-right: 0.45em;
+  }
+  .margin-vertical-m, .m-v-m {
+    margin-top: 0.45em;
+    margin-bottom: 0.45em;
   }
   .c-m-m > * {
     margin: 0.45em;
