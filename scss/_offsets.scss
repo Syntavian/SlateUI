@@ -5,11 +5,29 @@
 
 @for $i from 1 through 10 { 
     .width-#{$i}, .w-#{$i} {
+        min-width: #{10% * $i} !important;
         width: #{10% * $i} !important;
+
+        &-max {
+            max-width: #{10% * $i} !important;
+        }
+
+        &-min {
+            min-width: #{10% * $i} !important;
+        }
     }
 
     .height-#{$i}, .h-#{$i} {
+        min-height: #{10% * $i} !important;
         height: #{10% * $i} !important;
+
+        &-max {
+            max-height: #{10% * $i} !important;
+        }
+
+        &-min {
+            min-height: #{10% * $i} !important;
+        }
     }
 
     .size-#{$i}, .s-#{$i} {
@@ -17,16 +35,42 @@
         width: #{10% * $i} !important;
         min-height: #{10% * $i} !important;
         height: #{10% * $i} !important;
+
+        &-max {
+            max-width: #{10% * $i} !important;
+            max-height: #{10% * $i} !important;
+        }
+
+        &-min {
+            min-width: #{10% * $i} !important;
+            min-height: #{10% * $i} !important;
+        }
     }
 
     .width-#{$i}em, .w-#{$i}em {
         min-width: #{$i}em !important;
         width: #{$i}em !important;
+
+        &-max {
+            max-width: #{$i}em !important;
+        }
+
+        &-min {
+            min-width: #{$i}em !important;
+        }
     }
 
     .height-#{$i}em, .h-#{$i}em {
         min-height: #{$i}em !important;
         height: #{$i}em !important;
+
+        &-max {
+            max-height: #{$i}em !important;
+        }
+
+        &-min {
+            min-height: #{$i}em !important;
+        }
     }
 
     .size-#{$i}em, .s-#{$i}em {
@@ -34,6 +78,16 @@
         width: #{$i}em !important;
         min-height: #{$i}em !important;
         height: #{$i}em !important;
+
+        &-max {
+            max-width: #{$i}em !important;
+            max-height: #{$i}em !important;
+        }
+
+        &-min {
+            min-width: #{$i}em !important;
+            min-height: #{$i}em !important;
+        }
     }
 }
 

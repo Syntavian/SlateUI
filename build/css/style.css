@@ -180,6 +180,7 @@ form, .form {
   height: 4em !important;
 }
 .width-5, .w-5 {
+  min-width: 50% !important;
   width: 50% !important;
 }
 .height-5em, .h-5em {
@@ -187,7 +188,11 @@ form, .form {
   height: 5em !important;
 }
 .width-10, .w-10 {
+  min-width: 100% !important;
   width: 100% !important;
+}
+.height-10em-max, .h-10em-max {
+  max-height: 10em !important;
 }
 .padding-2, .p-2 {
   padding: 2em;
