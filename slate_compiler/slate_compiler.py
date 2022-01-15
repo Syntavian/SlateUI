@@ -41,8 +41,24 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
-if __name__ == "__main__":
+def append(current_string: str, *appending_strings: str, separator: str = ' '):
+    result_string = current_string + separator + separator.join(appending_strings)
+    return result_string
 
+def remove_whitespace(string: str, separator: str = ' ') -> str:
+    return separator.join(string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
+
+def remove_symbol_spaces(string: str) -> str:
+    result = ""
+    last_index = 0
+    for match in re.finditer(r'. \W .|\W .|. \W', string):
+        index = match.start()
+        result = result + string[last_index:index] + remove_whitespace(match.group(0), '')
+        last_index = match.end()
+    result = result + string[last_index:]
+    return result
+
+if __name__ == "__main__":
     # A set of both id and class selectors that must be compiled
     style_selectors = set(REQUIRED_STYLES)
 
