@@ -2,8 +2,8 @@ import os
 import re
 
 HTML_DIR = "./build"
-SLATE_DIR = "./build/css"
-OUTPUT_DIR = "./build/compile"
+SLATE_DIR = "./scss_compiled"
+OUTPUT_DIR = "./build/css"
 CSS_REQUIRED_SELECTORS = [
     "*",
 ]
