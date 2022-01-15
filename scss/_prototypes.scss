@@ -16,6 +16,7 @@
 
 @mixin flex-row($justify, $align, $grow: 1) {
     @include flex(row, $justify, $align, $grow);
+    width: 100%;
 
     &.shrink-xl:not(.image-carousel) {
         @media screen and (max-width: variables.$screen-width-xl) {
