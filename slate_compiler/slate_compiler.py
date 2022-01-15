@@ -96,28 +96,28 @@ if __name__ == "__main__":
             active_block_level += 1
             if "keyframes" in input_css_file_line:
                 is_in_keyframes_block = True
-                current_keyframes_block = input_css_file_line
+                current_keyframes_block = ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
                 if current_keyframes_block not in keyframes_blocks.keys():
                     keyframes_blocks[current_keyframes_block] = ''
             elif "media" in input_css_file_line:
                 is_in_media_block = True
-                current_media_block = input_css_file_line
+                current_media_block = ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
                 if current_media_block not in media_blocks.keys():
                     media_blocks[current_media_block] = ''
             else:
-                output_css_file_text = output_css_file_text + input_css_file_line
+                output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
         if ('{' in input_css_file_line):
             block_level += 1
         if is_in_media_block and is_in_required_block:
-            media_blocks[current_media_block] = media_blocks[current_media_block] + input_css_file_line
+            media_blocks[current_media_block] = media_blocks[current_media_block] + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
         elif is_in_keyframes_block:
-            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + input_css_file_line
+            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
         elif is_in_required_block:
-            output_css_file_text = output_css_file_text + input_css_file_line
+            output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
         if ('}' in input_css_file_line):
             block_level -= 1
             if block_level < active_block_level and not is_in_keyframes_block and not is_in_media_block:
-                output_css_file_text = output_css_file_text + input_css_file_line
+                output_css_file_text = output_css_file_text + ' '.join(input_css_file_line.replace("\n", " ").replace("\r", " ").split()) + ' '
             if block_level <= active_block_level:
                 active_block_level = block_level
                 is_in_required_block = False
@@ -126,7 +126,7 @@ if __name__ == "__main__":
                 is_in_media_block = False
 
     for media_selector, media_block in media_blocks.items():
-        output_css_file_text = output_css_file_text + media_selector + media_block + '}\n'
+        output_css_file_text = output_css_file_text + media_selector + media_block + '} '
 
     for keyframes_selector, keyframes_block in keyframes_blocks.items():
         output_css_file_text = output_css_file_text + keyframes_block
