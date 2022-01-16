@@ -15,6 +15,7 @@
 @use 'elements/links';
 @use 'elements/backgrounds';
 @use 'elements/forms';
+@use 'elements/canvas';
 
 * {
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;

@@ -40,7 +40,7 @@ form, .form {
   width: 100%;
 }
 
-.form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
+canvas, .canvas, .form-input, .input, form div input, form div textarea, form div select, .form div input, .form div select, form input:not([type=submit]), form textarea, .form input:not([type=submit]), .form textarea, textarea, textarea.light, textarea.dark, textarea.light-cyan, textarea.light-green, textarea.dark-green, textarea.dark-blue, .image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   box-shadow: gray 0px 0px 3px 0px;
 }
 
@@ -48,7 +48,7 @@ form, .form {
   box-shadow: gray 0px 1px 3px 0px;
 }
 
-.light.form-input, .light.input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), .form input.light:not([type=submit]), textarea.light, .light.image, .light.icon, .light.box, .light.link, .light.inline-box {
+canvas.light, .light.canvas, .light.form-input, .light.input, form div input.light, form div select.light, .form div input.light, .form div select.light, form input.light:not([type=submit]), .form input.light:not([type=submit]), textarea.light, .light.image, .light.icon, .light.box, .light.link, .light.inline-box {
   box-shadow: #c6c6c6 0px 0px 3px 0px;
 }
 
@@ -56,7 +56,7 @@ form, .form {
   box-shadow: #c6c6c6 0px 1px 3px 0px;
 }
 
-.dark.form-input, .dark.input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), .form input.dark:not([type=submit]), textarea.dark, .dark.image, .dark.icon, .dark.box, .dark.link, .dark.inline-box {
+canvas.dark, .dark.canvas, .dark.form-input, .dark.input, form div input.dark, form div select.dark, .form div input.dark, .form div select.dark, form input.dark:not([type=submit]), .form input.dark:not([type=submit]), textarea.dark, .dark.image, .dark.icon, .dark.box, .dark.link, .dark.inline-box {
   box-shadow: #393939 0px 0px 3px 0px;
 }
 
@@ -64,7 +64,7 @@ form, .form {
   box-shadow: #393939 0px 1px 3px 0px;
 }
 
-.light-cyan.form-input, .light-cyan.input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), .form input.light-cyan:not([type=submit]), textarea.light-cyan, .light-cyan.image, .light-cyan.icon, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
+canvas.light-cyan, .light-cyan.canvas, .light-cyan.form-input, .light-cyan.input, form div input.light-cyan, form div select.light-cyan, .form div input.light-cyan, .form div select.light-cyan, form input.light-cyan:not([type=submit]), .form input.light-cyan:not([type=submit]), textarea.light-cyan, .light-cyan.image, .light-cyan.icon, .light-cyan.box, .light-cyan.link, .light-cyan.inline-box {
   box-shadow: #00d2da 0px 0px 3px 0px;
 }
 
@@ -72,7 +72,7 @@ form, .form {
   box-shadow: #00d2da 0px 1px 3px 0px;
 }
 
-.light-green.form-input, .light-green.input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), .form input.light-green:not([type=submit]), textarea.light-green, .light-green.image, .light-green.icon, .light-green.box, .light-green.link, .light-green.inline-box {
+canvas.light-green, .light-green.canvas, .light-green.form-input, .light-green.input, form div input.light-green, form div select.light-green, .form div input.light-green, .form div select.light-green, form input.light-green:not([type=submit]), .form input.light-green:not([type=submit]), textarea.light-green, .light-green.image, .light-green.icon, .light-green.box, .light-green.link, .light-green.inline-box {
   box-shadow: #00e331 0px 0px 3px 0px;
 }
 
@@ -80,7 +80,7 @@ form, .form {
   box-shadow: #00e331 0px 1px 3px 0px;
 }
 
-.dark-green.form-input, .dark-green.input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), .form input.dark-green:not([type=submit]), textarea.dark-green, .dark-green.image, .dark-green.icon, .dark-green.box, .dark-green.link, .dark-green.inline-box {
+canvas.dark-green, .dark-green.canvas, .dark-green.form-input, .dark-green.input, form div input.dark-green, form div select.dark-green, .form div input.dark-green, .form div select.dark-green, form input.dark-green:not([type=submit]), .form input.dark-green:not([type=submit]), textarea.dark-green, .dark-green.image, .dark-green.icon, .dark-green.box, .dark-green.link, .dark-green.inline-box {
   box-shadow: #13850b 0px 0px 3px 0px;
 }
 
@@ -88,7 +88,7 @@ form, .form {
   box-shadow: #13850b 0px 1px 3px 0px;
 }
 
-.dark-blue.form-input, .dark-blue.input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), .form input.dark-blue:not([type=submit]), textarea.dark-blue, .dark-blue.image, .dark-blue.icon, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
+canvas.dark-blue, .dark-blue.canvas, .dark-blue.form-input, .dark-blue.input, form div input.dark-blue, form div select.dark-blue, .form div input.dark-blue, .form div select.dark-blue, form input.dark-blue:not([type=submit]), .form input.dark-blue:not([type=submit]), textarea.dark-blue, .dark-blue.image, .dark-blue.icon, .dark-blue.box, .dark-blue.link, .dark-blue.inline-box {
   box-shadow: #0e1981 0px 0px 3px 0px;
 }
 
@@ -28387,6 +28387,37 @@ textarea.dark-blue {
     margin-right: 0px;
   }
 }
+canvas, .canvas {
+  border: 0px;
+  border-radius: 0.25em;
+  width: 100%;
+  height: 100%;
+}
+canvas.light, .canvas.light {
+  border: 1px solid #c6c6c6;
+  background-color: white;
+}
+canvas.dark, .canvas.dark {
+  border: 1px solid #393939;
+  background-color: black;
+}
+canvas.light-cyan, .canvas.light-cyan {
+  border: 1px solid #00d2da;
+  background-color: white;
+}
+canvas.light-green, .canvas.light-green {
+  border: 1px solid #00e331;
+  background-color: white;
+}
+canvas.dark-green, .canvas.dark-green {
+  border: 1px solid #13850b;
+  background-color: black;
+}
+canvas.dark-blue, .canvas.dark-blue {
+  border: 1px solid #0e1981;
+  background-color: black;
+}
+
 * {
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
   box-sizing: border-box;

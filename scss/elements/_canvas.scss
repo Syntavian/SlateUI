@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
+
+canvas, .canvas {
+    @include prototypes.border-radius();
+    @extend %shadow-1;
+    width: 100%;
+    height: 100%;
+
+    @each $name, $theme in variables.$themes {
+        $colours: map.get($theme, "colours");
+        $shifted-2: map.get($colours, "shifted-2");
+        $text: map.get($theme, "text-colour");
+
+        &.#{$name} {
+            border: 1px solid $shifted-2;
+            background-color: invert($text);
+        }
+    }   
+}

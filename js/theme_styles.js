@@ -1,4 +1,4 @@
-const elementQuery = "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border']";
+const elementQuery = "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border'],canvas,.canvas";
 
 let themeSwitchers = document.querySelectorAll(".theme-selector");
 let themedElements = document.querySelectorAll(elementQuery);
