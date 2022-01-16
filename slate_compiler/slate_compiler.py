@@ -1,5 +1,6 @@
 import os
 import re
+from urllib import response
 
 HTML_DIR = "./build"
 SLATE_CSS_DIR = "./scss_compiled"
@@ -42,16 +43,39 @@ REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
 def remove_whitespace(string: str, separator: str = ' ') -> str:
-    return separator.join(string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
+    modified_string = ""
+    index = 0
+    last_index = 0
+    for match in re.finditer(r'".*?"|\'.*?\'|`.*?`|@media.*?{|calc\(.*?\)', string):
+        if ' ' in match.group(0):
+            index = match.start()
+            modified_string = modified_string + string[last_index:index] + match.group(0).replace(' ', "!/~/#/")
+            last_index= match.end()
+    modified_string = modified_string + string[last_index:]
+    result = separator.join(modified_string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
+    if "!/~/#/" in result:
+        result = result.replace("!/~/#/", ' ')
+    return result
 
 def remove_symbol_spaces(string: str) -> str:
+    modified_string = ""
+    index = 0
+    last_index = 0
+    for match in re.finditer(r'".*?"|\'.*?\'|`.*?`|@media.*?{|calc\(.*?\)', string):
+        if ' ' in match.group(0):
+            index = match.start()
+            modified_string = modified_string + string[last_index:index] + match.group(0).replace(' ', "?/~/#/")
+            last_index= match.end()
+    modified_string = modified_string + string[last_index:]
     result = ""
     last_index = 0
-    for match in re.finditer(r' *[^\w ] *', string):
+    for match in re.finditer(r' *[^\w ] *', modified_string):
         index = match.start()
-        result = result + string[last_index:index] + remove_whitespace(match.group(0), '')
+        result = result + modified_string[last_index:index] + remove_whitespace(match.group(0), '')
         last_index = match.end()
-    result = result + string[last_index:]
+    result = result + modified_string[last_index:]
+    if "?/~/#/" in result:
+        result = result.replace("?/~/#/", ' ')
     return result
 
 if __name__ == "__main__":
