@@ -41,31 +41,27 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
-def remove_whitespace(string: str, separator: str = ' ', end: str = ' ') -> str:
-    modified_string = ""
+def substitute_quotes_whitespace(string: str, substitution: str = "!/~/#/"):
+    result = ""
     index = 0
     last_index = 0
     for match in re.finditer(r'".*?"|\'.*?\'|`.*?`|@media.*?{|calc\(.*?\)', string):
         if ' ' in match.group(0):
             index = match.start()
-            modified_string = modified_string + string[last_index:index] + match.group(0).replace(' ', "!/~/#/")
+            result = result + string[last_index:index] + match.group(0).replace(' ', substitution)
             last_index= match.end()
-    modified_string = modified_string + string[last_index:]
+    result = result + string[last_index:]
+    return result
+
+def remove_whitespace(string: str, separator: str = ' ', end: str = ' ') -> str:
+    modified_string = substitute_quotes_whitespace(string)
     result = separator.join(modified_string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
     if "!/~/#/" in result:
         result = result.replace("!/~/#/", ' ')
     return result
 
 def remove_symbol_spaces(string: str) -> str:
-    modified_string = ""
-    index = 0
-    last_index = 0
-    for match in re.finditer(r'".*?"|\'.*?\'|`.*?`|@media.*?{|calc\(.*?\)', string):
-        if ' ' in match.group(0):
-            index = match.start()
-            modified_string = modified_string + string[last_index:index] + match.group(0).replace(' ', "?/~/#/")
-            last_index= match.end()
-    modified_string = modified_string + string[last_index:]
+    modified_string = substitute_quotes_whitespace(string, "?/~/#/")
     result = ""
     last_index = 0
     for match in re.finditer(r' *[^\w ] *', modified_string):
@@ -78,10 +74,11 @@ def remove_symbol_spaces(string: str) -> str:
     return result
 
 if __name__ == "__main__":
-    # A set of both id and class selectors that must be compiled
+    # A set of id and class selectors that must be compiled.
     style_selectors = set(REQUIRED_STYLES)
 
-    # Analyse HTML files for style ids and classes
+    # HTML
+    # Analyse HTML files for tags, ids, and classes.
     for (dir_path, dir_names, file_names) in os.walk(HTML_DIR):
         sub_dir = ""
 
@@ -103,6 +100,8 @@ if __name__ == "__main__":
                 for style in tag_styles:
                     style_selectors.add(style)
 
+    # CSS
+    # ...
     input_css = open(SLATE_CSS_DIR + "/style.css", "r")
     output_css_file_text = ""
 
@@ -173,6 +172,8 @@ if __name__ == "__main__":
     output_css = open(CSS_OUTPUT_DIR + "/slate.css", "w")
     output_css.write(output_css_file_text)
 
+    # JS
+    # ...
     js_file_texts = {}
 
     for (dir_path, dir_names, file_names) in os.walk(SLATE_JS_DIR):
