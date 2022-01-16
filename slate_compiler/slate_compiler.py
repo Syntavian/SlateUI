@@ -1,6 +1,5 @@
 import os
 import re
-from urllib import response
 
 HTML_DIR = "./build"
 SLATE_CSS_DIR = "./scss_compiled"
@@ -42,7 +41,7 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
-def remove_whitespace(string: str, separator: str = ' ') -> str:
+def remove_whitespace(string: str, separator: str = ' ', end: str = ' ') -> str:
     modified_string = ""
     index = 0
     last_index = 0
@@ -71,7 +70,7 @@ def remove_symbol_spaces(string: str) -> str:
     last_index = 0
     for match in re.finditer(r' *[^\w ] *', modified_string):
         index = match.start()
-        result = result + modified_string[last_index:index] + remove_whitespace(match.group(0), '')
+        result = result + modified_string[last_index:index] + remove_whitespace(match.group(0), '', '')
         last_index = match.end()
     result = result + modified_string[last_index:]
     if "?/~/#/" in result:
@@ -132,28 +131,28 @@ if __name__ == "__main__":
             active_block_level += 1
             if "keyframes" in input_css_file_line:
                 is_in_keyframes_block = True
-                current_keyframes_block = remove_whitespace(input_css_file_line) + ' '
+                current_keyframes_block = remove_whitespace(input_css_file_line)
                 if current_keyframes_block not in keyframes_blocks.keys():
                     keyframes_blocks[current_keyframes_block] = ''
             elif "media" in input_css_file_line:
                 is_in_media_block = True
-                current_media_block = remove_whitespace(input_css_file_line) + ' '
+                current_media_block = remove_whitespace(input_css_file_line)
                 if current_media_block not in media_blocks.keys():
                     media_blocks[current_media_block] = ''
             else:
-                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
+                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line)
         if ('{' in input_css_file_line):
             block_level += 1
         if is_in_media_block and is_in_required_block:
-            media_blocks[current_media_block] = media_blocks[current_media_block] + remove_whitespace(input_css_file_line) + ' '
+            media_blocks[current_media_block] = media_blocks[current_media_block] + remove_whitespace(input_css_file_line)
         elif is_in_keyframes_block:
-            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + remove_whitespace(input_css_file_line) + ' '
+            keyframes_blocks[current_keyframes_block] = keyframes_blocks[current_keyframes_block] + remove_whitespace(input_css_file_line)
         elif is_in_required_block:
-            output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
+            output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line)
         if ('}' in input_css_file_line):
             block_level -= 1
             if block_level < active_block_level and not is_in_keyframes_block and not is_in_media_block:
-                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line) + ' '
+                output_css_file_text = output_css_file_text + remove_whitespace(input_css_file_line)
             if block_level <= active_block_level:
                 active_block_level = block_level
                 is_in_required_block = False
@@ -188,9 +187,9 @@ if __name__ == "__main__":
             for js_file_line in js_file.readlines():
                 if "import" not in js_file_line and js_file_line != "\n" and js_file_line != "\r":
                     if "//" in js_file_line:
-                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace(js_file_line[js_file_line.find("//"):], ' ').replace("export", ' ')) + ' '
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace(js_file_line[js_file_line.find("//"):], ' ').replace("export", ' '))
                     else:
-                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace("export", ' ')) + ' '
+                        js_file_texts[js_file_name] = js_file_texts[js_file_name] + remove_whitespace(js_file_line.replace("export", ' '))
             js_file.close()
 
     output_js_file_text = ""
