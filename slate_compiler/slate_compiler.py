@@ -78,21 +78,27 @@ def remove_symbol_spaces(string: str) -> str:
         result = result.replace("?/~/#/", ' ')
     return result
 
-class AnyEventCompileEventHandler(FileSystemEventHandler):
+class ModifiedEventCompileEventHandler(FileSystemEventHandler):
     def __init__(self) -> None:
         super().__init__()
+        self.event_batch = set()
 
-    def on_any_event(self, event):
-        print(event)
+    def on_modified(self, event):
+        self.event_batch.add(event)
+
+    def update(self):
+        print(self.event_batch)
+        self.event_batch.clear()
 
 if __name__ == "__main__":
-    event_handler = AnyEventCompileEventHandler()
+    event_handler = ModifiedEventCompileEventHandler()
     observer = Observer()
     observer.schedule(event_handler, SLATE_CSS_DIR)
     observer.start()
     try:
         while True:
             time.sleep(1)
+            event_handler.update()
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
