@@ -28423,6 +28423,11 @@ canvas.dark-blue, .canvas.dark-blue {
   top: 0px;
   left: 0px;
 }
+.fade {
+  width: 100vw;
+  height: 100vh;
+}
+
 * {
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
   box-sizing: border-box;

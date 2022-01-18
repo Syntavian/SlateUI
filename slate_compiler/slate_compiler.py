@@ -1,5 +1,10 @@
 import os
 import re
+import sys
+import time
+import logging
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
 HTML_DIR = "./build"
 SLATE_CSS_DIR = "./scss_compiled"
@@ -73,7 +78,27 @@ def remove_symbol_spaces(string: str) -> str:
         result = result.replace("?/~/#/", ' ')
     return result
 
+class AnyEventCompileEventHandler(FileSystemEventHandler):
+    def __init__(self) -> None:
+        super().__init__()
+
+    def on_any_event(self, event):
+        print(event)
+
 if __name__ == "__main__":
+    event_handler = AnyEventCompileEventHandler()
+    observer = Observer()
+    observer.schedule(event_handler, SLATE_CSS_DIR)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+    exit()
+
     # A set of id and class selectors that must be compiled.
     style_selectors = set(REQUIRED_STYLES)
 

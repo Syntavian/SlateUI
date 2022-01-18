@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "sass:color";
+@use '../variables';
+@use '../prototypes';
+
+.fade {
+    width: 100vw;
+    height: 100vh;
+}
