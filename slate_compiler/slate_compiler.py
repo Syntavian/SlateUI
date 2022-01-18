@@ -1,8 +1,7 @@
 import os
 import re
-import sys
+import subprocess
 import time
-import logging
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -91,6 +90,7 @@ class ModifiedEventCompileEventHandler(FileSystemEventHandler):
         self.event_batch.clear()
 
 if __name__ == "__main__":
+    subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
     event_handler = ModifiedEventCompileEventHandler()
     observer = Observer()
     observer.schedule(event_handler, SLATE_CSS_DIR)
