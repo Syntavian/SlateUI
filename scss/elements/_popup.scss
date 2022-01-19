@@ -3,15 +3,9 @@
 @use '../variables';
 @use '../prototypes';
 
-.floating {
+.popup {
     @extend %box;
     position: fixed;
     top: 0px;
     left: 0px;
-
-    // .handle-titlebar {}
-
-    // .handle-scrollbar {}
-
-    // .handle-resize {}
 }

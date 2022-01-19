@@ -77,34 +77,7 @@ def remove_symbol_spaces(string: str) -> str:
         result = result.replace("?/~/#/", ' ')
     return result
 
-class ModifiedEventCompileEventHandler(FileSystemEventHandler):
-    def __init__(self) -> None:
-        super().__init__()
-        self.event_batch = set()
-
-    def on_modified(self, event):
-        self.event_batch.add(event)
-
-    def update(self):
-        print(self.event_batch)
-        self.event_batch.clear()
-
-if __name__ == "__main__":
-    subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
-    event_handler = ModifiedEventCompileEventHandler()
-    observer = Observer()
-    observer.schedule(event_handler, SLATE_CSS_DIR)
-    observer.start()
-    try:
-        while True:
-            time.sleep(1)
-            event_handler.update()
-    except KeyboardInterrupt:
-        observer.stop()
-    observer.join()
-
-    exit()
-
+def recompile():
     # A set of id and class selectors that must be compiled.
     style_selectors = set(REQUIRED_STYLES)
 
@@ -233,3 +206,34 @@ if __name__ == "__main__":
 
     output_js = open(JS_OUTPUT_DIR + "/slate.js", "w")
     output_js.write(output_js_file_text)
+
+class ModifiedEventCompileEventHandler(FileSystemEventHandler):
+    def __init__(self) -> None:
+        super().__init__()
+        self.event_batch = set()
+
+    def on_modified(self, event):
+        self.event_batch.add(event)
+
+    def update(self):
+        if len(self.event_batch) != 0:
+            [print(v.src_path[v.src_path.rindex('/') + 1:]) for v in self.event_batch]
+            recompile()
+        self.event_batch.clear()
+
+if __name__ == "__main__":
+    subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
+    event_handler = ModifiedEventCompileEventHandler()
+    observer = Observer()
+    observer.schedule(event_handler, SLATE_CSS_DIR)
+    observer.schedule(event_handler, SLATE_JS_DIR)
+    observer.schedule(event_handler, HTML_DIR)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+            event_handler.update()
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+    exit()
