@@ -5,9 +5,10 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-HTML_DIR = "./build"
+SLATE_HTML_DIR = "./html"
 SLATE_CSS_DIR = "./scss_compiled"
 SLATE_JS_DIR = "./js"
+HTML_OUTPUT_DIR = "./build"
 CSS_OUTPUT_DIR = "./build/css"
 JS_OUTPUT_DIR = "./build/js"
 JS_FILE_ORDER = [
@@ -77,17 +78,138 @@ def remove_symbol_spaces(string: str) -> str:
         result = result.replace("?/~/#/", ' ')
     return result
 
+def merge_string_arguments(args):
+    corrected_line_values = []
+    is_string = False
+
+    for value in args:
+        if value.count('"') == 1 or value.count("'") == 1:
+            if not is_string:
+                corrected_line_values.append(value)
+                is_string = True
+            else:
+                corrected_line_values[-1] = corrected_line_values[-1] + ' ' + value
+                is_string = False
+        else:
+            if is_string:
+                corrected_line_values[-1] = corrected_line_values[-1] + ' ' + value
+            else:
+                corrected_line_values.append(value)
+
+    return corrected_line_values
+
+def identify_substitutions(text):
+    args = []
+    before = ""
+    after = ""
+
+    if r"<!--" in text and r"-->" in text:
+        comment_start = text.find(r"<!--")
+        comment_end = text.find(r"-->")
+        before = text[0:comment_start]
+        after = text[comment_end + 3:]
+        args = text[comment_start + 4:comment_end].strip().split()
+    args = merge_string_arguments(args)
+
+    return {'args': args, 'before': before, 'after': after, 'continue': (r"<!--" in after and r"-->" in after)}
+
+def extract_variables(arguments, templates, variables):
+    result_variables = variables
+
+    for argument in arguments:
+        if '=' in argument:
+            variable = argument.split("=")
+            if variable[1][0] == "":
+                pass
+            elif variable[1][0] == '"':
+                result_variables[variable[0]] = variable[1].replace('"', "")
+            elif variable[1][0] == '$':
+                try:
+                    result_variables[variable[0]] = variables[variable[0]]
+                except:
+                    result_variables[variable[0]] = ""
+            else:
+                result_variables[variable[0]] = process_template(variable[1], templates, variables)
+
+    return result_variables
+
+def perform_substitution(text, substitution, templates, variables):
+    result_text = text + substitution['before']
+    variables = extract_variables(substitution['args'], templates, variables)
+
+    if substitution['args'][0][0] == '$':
+        result_text = result_text + variables[substitution['args'][0]]
+    else:
+        result_text = result_text + process_template(substitution['args'][0], templates, variables)
+    if not substitution['continue']:
+        result_text = result_text + substitution['after']
+
+    return result_text, variables
+
+def process_template(template_name, templates, variables):
+    template = templates[template_name]
+
+    return process_text(template, variables, templates)
+
+def process_text(text, variables, templates):
+    result_text = ""
+    substitution = identify_substitutions(text)
+
+    if len(substitution['args']) > 0: 
+        result_text, variables = perform_substitution(result_text, substitution, templates, variables)
+        if substitution['continue']:
+            while substitution['continue']:
+                substitution = identify_substitutions(substitution['after'])
+                if len(substitution['args']) > 0: 
+                    result_text, variables = perform_substitution(result_text, substitution, templates, variables)
+    else:
+        result_text = text
+
+    return result_text
+
 def recompile():
     # A set of id and class selectors that must be compiled.
     style_selectors = set(REQUIRED_STYLES)
 
     # HTML
-    # Analyse HTML files for tags, ids, and classes.
-    for (dir_path, dir_names, file_names) in os.walk(HTML_DIR):
+    # Build compiled HTML
+    print("Compiling Slate HTML...")
+    templates = {}
+
+    for (dirpath, dirnames, filenames) in os.walk(SLATE_HTML_DIR + "/components"):
+        for template_file_name in filenames:
+            template_file = open(dirpath + "\\" + template_file_name, "r")
+            template_file_name_text = os.path.splitext(template_file_name)[0]
+            templates[template_file_name_text] = ""
+            for line in template_file.readlines():
+                templates[template_file_name_text] = templates[template_file_name_text] + line
+            template_file.close()
+
+    PAGES_DIR = SLATE_HTML_DIR + "/pages"
+
+    for (dirpath, dirnames, filenames) in os.walk(PAGES_DIR):
         sub_dir = ""
 
-        if dir_path != HTML_DIR:
-            sub_dir = dir_path.replace(HTML_DIR, "")
+        if dirpath != PAGES_DIR:
+            sub_dir = dirpath.replace(PAGES_DIR, "")
+        for page_file_name in filenames:
+            page_file = open(dirpath + "\\" + page_file_name, "r")
+            page_file_text = ""
+
+            for page_file_line in page_file.readlines():
+                page_file_text = page_file_text + page_file_line
+            page_file.close()
+
+            variables = {}
+            current_page_result = process_text(page_file_text, variables, templates)
+
+            output_file = open(HTML_OUTPUT_DIR + sub_dir + "\\" + page_file_name, "w")
+            output_file.write(current_page_result)
+            output_file.close()
+
+    # Analyse HTML files for tags, ids, and classes.
+    print("Finding required styles...")
+    for (dir_path, dir_names, file_names) in os.walk(HTML_OUTPUT_DIR):
         for html_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".html"]:
             html_file = open(dir_path + "\\" + html_file_name, "r")
             html_file_text = ""
@@ -106,6 +228,7 @@ def recompile():
 
     # CSS
     # ...
+    print("Compiling Slate CSS...")
     input_css = open(SLATE_CSS_DIR + "/style.css", "r")
     output_css_file_text = ""
 
@@ -166,7 +289,7 @@ def recompile():
     for media_selector, media_block in media_blocks.items():
         output_css_file_text = output_css_file_text + media_selector + media_block + '} '
 
-    for keyframes_selector, keyframes_block in keyframes_blocks.items():
+    for keyframes_block in keyframes_blocks.values():
         output_css_file_text = output_css_file_text + keyframes_block
 
     input_css.close()
@@ -178,13 +301,10 @@ def recompile():
 
     # JS
     # ...
+    print("Compiling Slate JS...")
     js_file_texts = {}
 
     for (dir_path, dir_names, file_names) in os.walk(SLATE_JS_DIR):
-        sub_dir = ""
-
-        if dir_path != SLATE_JS_DIR:
-            sub_dir = dir_path.replace(SLATE_JS_DIR, "")
         for js_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".js"]:
             js_file = open(dir_path + "\\" + js_file_name, "r")
             js_file_texts[js_file_name] = ""
@@ -207,6 +327,8 @@ def recompile():
     output_js = open(JS_OUTPUT_DIR + "/slate.js", "w")
     output_js.write(output_js_file_text)
 
+    print("Done\n")
+
 class ModifiedEventCompileEventHandler(FileSystemEventHandler):
     def __init__(self) -> None:
         super().__init__()
@@ -217,17 +339,21 @@ class ModifiedEventCompileEventHandler(FileSystemEventHandler):
 
     def update(self):
         if len(self.event_batch) != 0:
-            [print(v.src_path[v.src_path.rindex('/') + 1:]) for v in self.event_batch]
+            print("\nChanges in:", end=' ')
+            [print(v.src_path[v.src_path.rindex('/') + 1:], end=' ') for v in self.event_batch]
+            print('\n')
             recompile()
         self.event_batch.clear()
 
 if __name__ == "__main__":
     subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
+    time.sleep(1)
+    recompile()
     event_handler = ModifiedEventCompileEventHandler()
     observer = Observer()
     observer.schedule(event_handler, SLATE_CSS_DIR)
     observer.schedule(event_handler, SLATE_JS_DIR)
-    observer.schedule(event_handler, HTML_DIR)
+    observer.schedule(event_handler, SLATE_HTML_DIR, recursive=True)
     observer.start()
     try:
         while True:

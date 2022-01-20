@@ -21,7 +21,6 @@ function updateBanners() {
                 element.style.top = "0px";
 
                 element.parentElement.insertBefore(placeholder, element);
-                
             }
         } else {
             element.style.top = "0px";
