@@ -89,12 +89,7 @@
 }
 
 @mixin gradient($primary) {
-    @if color.blackness($primary) > 50% {
-        background: linear-gradient(135deg, variables.$alpha-dark, lighten($primary, 10%) 25%, variables.$alpha-dark);
-    }
-    @else {
-        background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
-    }
+    background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
 }
 
 @mixin gradient-hover-animation($primary) {

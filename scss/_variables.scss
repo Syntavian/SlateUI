@@ -34,7 +34,6 @@ $white: #ffffff;
 $black: #000000;
 
 $alpha: #ffffff00;
-$alpha-dark: #00000000;
 
 @function get-contrasting-bw($color) {
     @if color.blackness($color) > 50% {

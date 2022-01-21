@@ -26648,7 +26648,7 @@ p {
 }
 
 .dark.icon {
-  background: linear-gradient(135deg, #00000000, #222222 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -26702,7 +26702,7 @@ p {
 }
 
 .dark-green.icon {
-  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, #000100 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -26720,7 +26720,7 @@ p {
 }
 
 .dark-blue.icon {
-  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -26820,7 +26820,7 @@ p {
 .button, .button-expand > *, .button-round-5, .button-round-4, .button-round-3, .button-round-2, .button-round-1, .button-round, input[type=submit] {
   border: 0px;
   border-radius: 0.25em;
-  background-color: #00000000;
+  background-color: #ffffff00;
   min-width: min-content;
   min-height: min-content;
   padding: 0.5em;
@@ -27236,7 +27236,7 @@ p {
 }
 
 .dark.link {
-  background: linear-gradient(135deg, #00000000, #222222 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -27284,7 +27284,7 @@ p {
 }
 
 .dark-green.link {
-  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, #000100 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -27300,7 +27300,7 @@ p {
 }
 
 .dark-blue.link {
-  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28134,7 +28134,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox].dark, form input[type=checkbox].dark:not([type=submit]), .form input[type=checkbox].dark:not([type=submit]), form div input[type=checkbox].dark, form div select[type=checkbox].dark, .form div input[type=checkbox].dark, .form div select[type=checkbox].dark, .input[type=checkbox].dark, textarea[type=checkbox].dark {
-  background: linear-gradient(135deg, #00000000, #222222 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28170,7 +28170,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox].dark-green, form input[type=checkbox].dark-green:not([type=submit]), .form input[type=checkbox].dark-green:not([type=submit]), form div input[type=checkbox].dark-green, form div select[type=checkbox].dark-green, .form div input[type=checkbox].dark-green, .form div select[type=checkbox].dark-green, .input[type=checkbox].dark-green, textarea[type=checkbox].dark-green {
-  background: linear-gradient(135deg, #00000000, #0e5f08 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, #000100 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28182,7 +28182,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox].dark-blue, form input[type=checkbox].dark-blue:not([type=submit]), .form input[type=checkbox].dark-blue:not([type=submit]), form div input[type=checkbox].dark-blue, form div select[type=checkbox].dark-blue, .form div input[type=checkbox].dark-blue, .form div select[type=checkbox].dark-blue, .input[type=checkbox].dark-blue, textarea[type=checkbox].dark-blue {
-  background: linear-gradient(135deg, #00000000, #0a125c 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28194,7 +28194,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox]:checked.light, form input[type=checkbox]:checked.light:not([type=submit]), .form input[type=checkbox]:checked.light:not([type=submit]), form div input[type=checkbox]:checked.light, form div select[type=checkbox]:checked.light, .form div input[type=checkbox]:checked.light, .form div select[type=checkbox]:checked.light, .input[type=checkbox]:checked.light, textarea[type=checkbox]:checked.light {
-  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28218,7 +28218,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox]:checked.light-cyan, form input[type=checkbox]:checked.light-cyan:not([type=submit]), .form input[type=checkbox]:checked.light-cyan:not([type=submit]), form div input[type=checkbox]:checked.light-cyan, form div select[type=checkbox]:checked.light-cyan, .form div input[type=checkbox]:checked.light-cyan, .form div select[type=checkbox]:checked.light-cyan, .input[type=checkbox]:checked.light-cyan, textarea[type=checkbox]:checked.light-cyan {
-  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28230,7 +28230,7 @@ p {
   animation: animation-forward 0.2s ease forwards;
 }
 .form-input[type=checkbox]:checked.light-green, form input[type=checkbox]:checked.light-green:not([type=submit]), .form input[type=checkbox]:checked.light-green:not([type=submit]), form div input[type=checkbox]:checked.light-green, form div select[type=checkbox]:checked.light-green, .form div input[type=checkbox]:checked.light-green, .form div select[type=checkbox]:checked.light-green, .input[type=checkbox]:checked.light-green, textarea[type=checkbox]:checked.light-green {
-  background: linear-gradient(135deg, #00000000, #1a1a1a 25%, #00000000);
+  background: linear-gradient(135deg, #ffffff00, black 25%, #ffffff00);
   background-size: 200% 200%;
   -webkit-animation: animation-back 0.2s ease forwards;
   -moz-animation: animation-back 0.2s ease forwards;
@@ -28427,6 +28427,241 @@ canvas.dark-blue, .canvas.dark-blue {
 .fade {
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(#ffffff00, #ffffff);
+}
+.fade-down {
+  background: linear-gradient(#ffffff00, #ffffff);
+}
+.fade-up {
+  background: linear-gradient(#ffffff, #ffffff00);
+}
+.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #ffffff);
+}
+.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #ffffff);
+}
+.fade-horizontal {
+  background: linear-gradient(#ffffff00, #ffffff, #ffffff00);
+}
+.fade-horizontal-outside {
+  background: linear-gradient(#ffffff, #ffffff00, #ffffff);
+}
+.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #ffffff, #ffffff00);
+}
+.fade-vertical-outside {
+  background: linear-gradient(90deg, #ffffff, #ffffff00, #ffffff);
+}
+.fade-outside {
+  background: linear-gradient(#ffffff, #ffffff00, #ffffff), linear-gradient(90deg, #ffffff, #ffffff00, #ffffff);
+}
+.fade-radial {
+  background: radial-gradient(#ffffff 30%, #ffffff00);
+}
+
+.light.fade {
+  background: linear-gradient(#ffffff00, #f7f7f7);
+}
+.light.fade-down {
+  background: linear-gradient(#ffffff00, #f7f7f7);
+}
+.light.fade-up {
+  background: linear-gradient(#f7f7f7, #ffffff00);
+}
+.light.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #f7f7f7);
+}
+.light.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #f7f7f7);
+}
+.light.fade-horizontal {
+  background: linear-gradient(#ffffff00, #f7f7f7, #ffffff00);
+}
+.light.fade-horizontal-outside {
+  background: linear-gradient(#f7f7f7, #ffffff00, #f7f7f7);
+}
+.light.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #f7f7f7, #ffffff00);
+}
+.light.fade-vertical-outside {
+  background: linear-gradient(90deg, #f7f7f7, #ffffff00, #f7f7f7);
+}
+.light.fade-outside {
+  background: linear-gradient(#f7f7f7, #ffffff00, #f7f7f7), linear-gradient(90deg, #f7f7f7, #ffffff00, #f7f7f7);
+}
+.light.fade-radial {
+  background: radial-gradient(#f7f7f7 30%, #ffffff00);
+}
+
+.dark.fade {
+  background: linear-gradient(#ffffff00, #080808);
+}
+.dark.fade-down {
+  background: linear-gradient(#ffffff00, #080808);
+}
+.dark.fade-up {
+  background: linear-gradient(#080808, #ffffff00);
+}
+.dark.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #080808);
+}
+.dark.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #080808);
+}
+.dark.fade-horizontal {
+  background: linear-gradient(#ffffff00, #080808, #ffffff00);
+}
+.dark.fade-horizontal-outside {
+  background: linear-gradient(#080808, #ffffff00, #080808);
+}
+.dark.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #080808, #ffffff00);
+}
+.dark.fade-vertical-outside {
+  background: linear-gradient(90deg, #080808, #ffffff00, #080808);
+}
+.dark.fade-outside {
+  background: linear-gradient(#080808, #ffffff00, #080808), linear-gradient(90deg, #080808, #ffffff00, #080808);
+}
+.dark.fade-radial {
+  background: radial-gradient(#080808 30%, #ffffff00);
+}
+
+.light-cyan.fade {
+  background: linear-gradient(#ffffff00, #11f7ff);
+}
+.light-cyan.fade-down {
+  background: linear-gradient(#ffffff00, #11f7ff);
+}
+.light-cyan.fade-up {
+  background: linear-gradient(#11f7ff, #ffffff00);
+}
+.light-cyan.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #11f7ff);
+}
+.light-cyan.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #11f7ff);
+}
+.light-cyan.fade-horizontal {
+  background: linear-gradient(#ffffff00, #11f7ff, #ffffff00);
+}
+.light-cyan.fade-horizontal-outside {
+  background: linear-gradient(#11f7ff, #ffffff00, #11f7ff);
+}
+.light-cyan.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #11f7ff, #ffffff00);
+}
+.light-cyan.fade-vertical-outside {
+  background: linear-gradient(90deg, #11f7ff, #ffffff00, #11f7ff);
+}
+.light-cyan.fade-outside {
+  background: linear-gradient(#11f7ff, #ffffff00, #11f7ff), linear-gradient(90deg, #11f7ff, #ffffff00, #11f7ff);
+}
+.light-cyan.fade-radial {
+  background: radial-gradient(#11f7ff 30%, #ffffff00);
+}
+
+.light-green.fade {
+  background: linear-gradient(#ffffff00, #1dff4e);
+}
+.light-green.fade-down {
+  background: linear-gradient(#ffffff00, #1dff4e);
+}
+.light-green.fade-up {
+  background: linear-gradient(#1dff4e, #ffffff00);
+}
+.light-green.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #1dff4e);
+}
+.light-green.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #1dff4e);
+}
+.light-green.fade-horizontal {
+  background: linear-gradient(#ffffff00, #1dff4e, #ffffff00);
+}
+.light-green.fade-horizontal-outside {
+  background: linear-gradient(#1dff4e, #ffffff00, #1dff4e);
+}
+.light-green.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #1dff4e, #ffffff00);
+}
+.light-green.fade-vertical-outside {
+  background: linear-gradient(90deg, #1dff4e, #ffffff00, #1dff4e);
+}
+.light-green.fade-outside {
+  background: linear-gradient(#1dff4e, #ffffff00, #1dff4e), linear-gradient(90deg, #1dff4e, #ffffff00, #1dff4e);
+}
+.light-green.fade-radial {
+  background: radial-gradient(#1dff4e 30%, #ffffff00);
+}
+
+.dark-green.fade {
+  background: linear-gradient(#ffffff00, #073004);
+}
+.dark-green.fade-down {
+  background: linear-gradient(#ffffff00, #073004);
+}
+.dark-green.fade-up {
+  background: linear-gradient(#073004, #ffffff00);
+}
+.dark-green.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #073004);
+}
+.dark-green.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #073004);
+}
+.dark-green.fade-horizontal {
+  background: linear-gradient(#ffffff00, #073004, #ffffff00);
+}
+.dark-green.fade-horizontal-outside {
+  background: linear-gradient(#073004, #ffffff00, #073004);
+}
+.dark-green.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #073004, #ffffff00);
+}
+.dark-green.fade-vertical-outside {
+  background: linear-gradient(90deg, #073004, #ffffff00, #073004);
+}
+.dark-green.fade-outside {
+  background: linear-gradient(#073004, #ffffff00, #073004), linear-gradient(90deg, #073004, #ffffff00, #073004);
+}
+.dark-green.fade-radial {
+  background: radial-gradient(#073004 30%, #ffffff00);
+}
+
+.dark-blue.fade {
+  background: linear-gradient(#ffffff00, #05092e);
+}
+.dark-blue.fade-down {
+  background: linear-gradient(#ffffff00, #05092e);
+}
+.dark-blue.fade-up {
+  background: linear-gradient(#05092e, #ffffff00);
+}
+.dark-blue.fade-left {
+  background: linear-gradient(270deg, #ffffff00, #05092e);
+}
+.dark-blue.fade-right {
+  background: linear-gradient(90deg, #ffffff00, #05092e);
+}
+.dark-blue.fade-horizontal {
+  background: linear-gradient(#ffffff00, #05092e, #ffffff00);
+}
+.dark-blue.fade-horizontal-outside {
+  background: linear-gradient(#05092e, #ffffff00, #05092e);
+}
+.dark-blue.fade-vertical {
+  background: linear-gradient(90deg, #ffffff00, #05092e, #ffffff00);
+}
+.dark-blue.fade-vertical-outside {
+  background: linear-gradient(90deg, #05092e, #ffffff00, #05092e);
+}
+.dark-blue.fade-outside {
+  background: linear-gradient(#05092e, #ffffff00, #05092e), linear-gradient(90deg, #05092e, #ffffff00, #05092e);
+}
+.dark-blue.fade-radial {
+  background: radial-gradient(#05092e 30%, #ffffff00);
 }
 
 .popup {
@@ -28473,7 +28708,7 @@ body {
   right: 0.1em;
   width: 0.5em;
   height: calc(100vh - 0.2em);
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .scroll-handle {
@@ -28484,7 +28719,7 @@ body {
   width: 100%;
   height: 10em;
   background-color: rgba(127, 127, 127, 0.7);
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .background {
@@ -28502,16 +28737,11 @@ body {
   height: min-content;
 }
 
-.screen-fade {
-  width: 100vw;
-  background: linear-gradient(#ffffff00, #ffffff);
-}
-.screen-fade.dark {
-  background: linear-gradient(#00000000, #000000);
-}
-
 .screen-overlay {
-  position: absolute;
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   min-height: 100vh;
 }

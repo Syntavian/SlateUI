@@ -9,7 +9,7 @@
     @extend %clickable;
     @include prototypes.border-radius();
 
-    background-color: variables.$alpha-dark;
+    background-color: variables.$alpha;
     min-width: min-content;
     min-height: min-content;
     padding: variables.$s-offset;
