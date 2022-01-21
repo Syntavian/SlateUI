@@ -224,7 +224,7 @@ canvas.dark-blue, .dark-blue.canvas, .dark-blue.form-input, .dark-blue.input, fo
 .popup, .floating, .image, .icon, .light.icon, .dark.icon, .light-cyan.icon, .light-green.icon, .dark-green.icon, .dark-blue.icon, .light.box, .dark.box, .light-cyan.box, .light-green.box, .dark-green.box, .dark-blue.box, .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
   min-width: 5em;
   min-height: 5em;
-  border-radius: 3px;
+  border-radius: 0.25em;
 }
 
 .link, .light.link, .dark.link, .light-cyan.link, .light-green.link, .dark-green.link, .dark-blue.link, .light.inline-box, .dark.inline-box, .light-cyan.inline-box, .light-green.inline-box, .dark-green.inline-box, .dark-blue.inline-box {
@@ -21209,6 +21209,46 @@ canvas.dark-blue, .dark-blue.canvas, .dark-blue.form-input, .dark-blue.input, fo
 }
 .dark-blue.border-10-inverted {
   border: 10px solid #faf6d1;
+}
+
+.border-radius-1 {
+  border-radius: 0.25em;
+}
+
+.border-radius-2 {
+  border-radius: 0.5em;
+}
+
+.border-radius-3 {
+  border-radius: 0.75em;
+}
+
+.border-radius-4 {
+  border-radius: 1em;
+}
+
+.border-radius-5 {
+  border-radius: 1.25em;
+}
+
+.border-radius-6 {
+  border-radius: 1.5em;
+}
+
+.border-radius-7 {
+  border-radius: 1.75em;
+}
+
+.border-radius-8 {
+  border-radius: 2em;
+}
+
+.border-radius-9 {
+  border-radius: 2.25em;
+}
+
+.border-radius-10 {
+  border-radius: 2.5em;
 }
 
 .fixed-tl-1 {

@@ -331,7 +331,7 @@
     @extend %flex;
     min-width: 5em;
     min-height: 5em;
-    border-radius: 3px;
+    border-radius: 0.25em;
 }
 
 %inline-box {
