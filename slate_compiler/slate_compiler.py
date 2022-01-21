@@ -2,6 +2,7 @@ import os
 import re
 import subprocess
 import time
+import threading
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -329,6 +330,16 @@ def recompile():
 
     print("Done\n")
 
+class ThreadHandler:
+    def __init__(self):
+        self.recompile_thread = None
+
+    def handle_new_compile(self):
+        if self.recompile_thread:
+            self.recompile_thread.join()
+        self.recompile_thread = threading.Thread(target=recompile)
+        self.recompile_thread.start()
+
 class ModifiedEventCompileEventHandler(FileSystemEventHandler):
     def __init__(self) -> None:
         super().__init__()
@@ -337,15 +348,16 @@ class ModifiedEventCompileEventHandler(FileSystemEventHandler):
     def on_modified(self, event):
         self.event_batch.add(event)
 
-    def update(self):
+    def update(self, thread_handler: ThreadHandler):
         if len(self.event_batch) != 0:
             print("\nChanges in:", end=' ')
             [print(v.src_path[v.src_path.rindex('/') + 1:], end=' ') for v in self.event_batch]
             print('\n')
-            recompile()
+            thread_handler.handle_new_compile()
         self.event_batch.clear()
 
 if __name__ == "__main__":
+    thread_handler = ThreadHandler()
     subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
     time.sleep(1)
     recompile()
@@ -358,7 +370,7 @@ if __name__ == "__main__":
     try:
         while True:
             time.sleep(1)
-            event_handler.update()
+            event_handler.update(thread_handler)
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
