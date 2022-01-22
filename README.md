@@ -1,6 +1,10 @@
 # SlateUI
 
-## Create Optimised Build
+SlateUI is basic web application styling framework based with the goal of speeding up development of apps with vanilla HTML, JS, & CSS.
+
+SlateUI is built with Sass to produce a large library of prebuilt styles you can apply to your HTML, and the build tool will compile the styles you use into a minified CSS file to minimise the final app size.
+
+## Create Optimised Build From Dev
 ```
 python dev\slate_build_dev.py
 ```
