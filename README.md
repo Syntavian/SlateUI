@@ -6,5 +6,5 @@ SlateUI is built with Sass to produce a large library of prebuilt styles you can
 
 ## Create Optimised Build From Dev
 ```
-python dev\slate_build_dev.py
+python dev/slate_build_dev.py
 ```
