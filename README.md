@@ -2,5 +2,5 @@
 
 ## Create Optimised Build
 ```
-python dev\slate_compiler.py
+python dev\slate_build_dev.py
 ```
