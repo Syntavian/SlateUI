@@ -6,12 +6,13 @@ import threading
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-SLATE_HTML_DIR = "./html"
-SLATE_CSS_DIR = "./scss_compiled"
-SLATE_JS_DIR = "./js"
-HTML_OUTPUT_DIR = "./build"
-CSS_OUTPUT_DIR = "./build/css"
-JS_OUTPUT_DIR = "./build/js"
+SLATE_HTML_DIR = "./build/app/html"
+SLATE_CSS_DIR = "./dev/css"
+SLATE_JS_DIR = "./dev/js"
+SLATE_CSS_OUTPUT_DIR = "./dev/css"
+HTML_OUTPUT_DIR = "./build/app/public"
+SLATE_CSS_OUTPUT_DIR = "./build/app/public/css"
+JS_OUTPUT_DIR = "./build/app/public/js"
 JS_FILE_ORDER = [
     "utils.js",
     "button_styles.js",
@@ -297,7 +298,7 @@ def recompile():
 
     output_css_file_text = remove_symbol_spaces(output_css_file_text)
 
-    output_css = open(CSS_OUTPUT_DIR + "/slate.css", "w")
+    output_css = open(SLATE_CSS_OUTPUT_DIR + "/slate.css", "w")
     output_css.write(output_css_file_text)
 
     # JS
@@ -358,7 +359,7 @@ class ModifiedEventCompileEventHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     thread_handler = ThreadHandler()
-    subprocess.Popen(["sass", "--watch", "scss:scss_compiled"])
+    subprocess.Popen(["sass", "--watch", "dev\scss:dev\css"])
     time.sleep(1)
     recompile()
     event_handler = ModifiedEventCompileEventHandler()
