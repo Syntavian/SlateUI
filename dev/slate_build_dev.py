@@ -6,10 +6,10 @@ import threading
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-SLATE_HTML_DIR = "./build/app/html"
+SLATE_HTML_DIR = "./build/html"
 SLATE_CSS_DIR = "./dev/css"
 SLATE_JS_DIR = "./dev/js"
-SLATE_CSS_OUTPUT_DIR = "./dev/css"
+BUILD_SLATE_CSS_DIR = "./build/slate_ui"
 HTML_OUTPUT_DIR = "./build/app/public"
 SLATE_CSS_OUTPUT_DIR = "./build/app/public/css"
 JS_OUTPUT_DIR = "./build/app/public/js"
@@ -230,8 +230,19 @@ def recompile():
 
     # CSS
     # ...
+    print("Transfering Slate CSS...")
+
+    dev_css_file = open(SLATE_CSS_DIR + "/style.css", "r")
+    dev_css = dev_css_file.read()
+    dev_css_file.close()
+
+    build_css_file = open(BUILD_SLATE_CSS_DIR + "/style.css", "w")
+    build_css_file.write(dev_css)
+    build_css_file.close()
+
+    #...
     print("Compiling Slate CSS...")
-    input_css = open(SLATE_CSS_DIR + "/style.css", "r")
+    input_css_file = open(BUILD_SLATE_CSS_DIR + "/style.css", "r")
     output_css_file_text = ""
 
     keyframes_blocks = {}
@@ -248,7 +259,7 @@ def recompile():
     block_level = 0
     active_block_level = 0
 
-    for input_css_file_line in input_css.readlines():
+    for input_css_file_line in input_css_file.readlines():
         line = input_css_file_line.strip()
         if len(line) > 0 and line[-1] == r'{':
             matches = set([(a.group(1), a.group(2)) for a in  re.finditer(r"(?:[\.# ]?([a-zA-Z][\w-]*?)[ ,.#:>+])|^(\*) ", input_css_file_line)])
@@ -294,12 +305,13 @@ def recompile():
     for keyframes_block in keyframes_blocks.values():
         output_css_file_text = output_css_file_text + keyframes_block
 
-    input_css.close()
+    input_css_file.close()
 
     output_css_file_text = remove_symbol_spaces(output_css_file_text)
 
     output_css = open(SLATE_CSS_OUTPUT_DIR + "/slate.css", "w")
     output_css.write(output_css_file_text)
+    output_css.close()
 
     # JS
     # ...
@@ -328,7 +340,7 @@ def recompile():
 
     output_js = open(JS_OUTPUT_DIR + "/slate.js", "w")
     output_js.write(output_js_file_text)
-
+    output_js.close()
     print("Done\n")
 
 class ThreadHandler:
