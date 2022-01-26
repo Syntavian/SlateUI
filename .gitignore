@@ -1,2 +1,3 @@
 .vscode/
 dev/css/*
+__pycache__

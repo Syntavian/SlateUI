@@ -2,9 +2,11 @@ import os
 import re
 import subprocess
 import time
-import threading
 from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+from python.string_utils import *
+from python.html_templating import *
+from python.thread_handler import ThreadHandler
+from python.compile_event_handler import ModifiedEventCompileEventHandler
 
 SLATE_HTML_DIR = "./build/html"
 SLATE_CSS_DIR = "./dev/css"
@@ -47,127 +49,6 @@ JS_REQUIRED_SELECTORS = [
 REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
-
-def substitute_quotes_whitespace(string: str, substitution: str = "!/~/#/"):
-    result = ""
-    index = 0
-    last_index = 0
-    for match in re.finditer(r'".*?"|\'.*?\'|`.*?`|@media.*?{|calc\(.*?\)', string):
-        if ' ' in match.group(0):
-            index = match.start()
-            result = result + string[last_index:index] + match.group(0).replace(' ', substitution)
-            last_index= match.end()
-    result = result + string[last_index:]
-    return result
-
-def remove_whitespace(string: str, separator: str = ' ', end: str = ' ') -> str:
-    modified_string = substitute_quotes_whitespace(string)
-    result = separator.join(modified_string.replace('\n', separator).replace('\r', separator).replace('\t', separator).replace('\t', separator).replace('\v', separator).replace('\f', separator).split())
-    if "!/~/#/" in result:
-        result = result.replace("!/~/#/", ' ')
-    return result
-
-def remove_symbol_spaces(string: str) -> str:
-    modified_string = substitute_quotes_whitespace(string, "?/~/#/")
-    result = ""
-    last_index = 0
-    for match in re.finditer(r' *[^\w ] *', modified_string):
-        index = match.start()
-        result = result + modified_string[last_index:index] + remove_whitespace(match.group(0), '', '')
-        last_index = match.end()
-    result = result + modified_string[last_index:]
-    if "?/~/#/" in result:
-        result = result.replace("?/~/#/", ' ')
-    return result
-
-def merge_string_arguments(args):
-    corrected_line_values = []
-    is_string = False
-
-    for value in args:
-        if value.count('"') == 1 or value.count("'") == 1:
-            if not is_string:
-                corrected_line_values.append(value)
-                is_string = True
-            else:
-                corrected_line_values[-1] = corrected_line_values[-1] + ' ' + value
-                is_string = False
-        else:
-            if is_string:
-                corrected_line_values[-1] = corrected_line_values[-1] + ' ' + value
-            else:
-                corrected_line_values.append(value)
-
-    return corrected_line_values
-
-def identify_substitutions(text):
-    args = []
-    before = ""
-    after = ""
-
-    if r"<!--" in text and r"-->" in text:
-        comment_start = text.find(r"<!--")
-        comment_end = text.find(r"-->")
-        before = text[0:comment_start]
-        after = text[comment_end + 3:]
-        args = text[comment_start + 4:comment_end].strip().split()
-    args = merge_string_arguments(args)
-
-    return {'args': args, 'before': before, 'after': after, 'continue': (r"<!--" in after and r"-->" in after)}
-
-def extract_variables(arguments, templates, variables):
-    result_variables = variables
-
-    for argument in arguments:
-        if '=' in argument:
-            variable = argument.split("=")
-            if variable[1][0] == "":
-                pass
-            elif variable[1][0] == '"':
-                result_variables[variable[0]] = variable[1].replace('"', "")
-            elif variable[1][0] == '$':
-                try:
-                    result_variables[variable[0]] = variables[variable[0]]
-                except:
-                    result_variables[variable[0]] = ""
-            else:
-                result_variables[variable[0]] = process_template(variable[1], templates, variables)
-
-    return result_variables
-
-def perform_substitution(text, substitution, templates, variables):
-    result_text = text + substitution['before']
-    variables = extract_variables(substitution['args'], templates, variables)
-
-    if substitution['args'][0][0] == '$':
-        result_text = result_text + variables[substitution['args'][0]]
-    else:
-        result_text = result_text + process_template(substitution['args'][0], templates, variables)
-    if not substitution['continue']:
-        result_text = result_text + substitution['after']
-
-    return result_text, variables
-
-def process_template(template_name, templates, variables):
-    template = templates[template_name]
-
-    return process_text(template, variables, templates)
-
-def process_text(text, variables, templates):
-    result_text = ""
-    substitution = identify_substitutions(text)
-
-    if len(substitution['args']) > 0: 
-        result_text, variables = perform_substitution(result_text, substitution, templates, variables)
-        if substitution['continue']:
-            while substitution['continue']:
-                substitution = identify_substitutions(substitution['after'])
-                if len(substitution['args']) > 0: 
-                    result_text, variables = perform_substitution(result_text, substitution, templates, variables)
-    else:
-        result_text = text
-
-    return result_text
 
 def recompile():
     # A set of id and class selectors that must be compiled.
@@ -343,34 +224,8 @@ def recompile():
     output_js.close()
     print("Done\n")
 
-class ThreadHandler:
-    def __init__(self):
-        self.recompile_thread = None
-
-    def handle_new_compile(self):
-        if self.recompile_thread:
-            self.recompile_thread.join()
-        self.recompile_thread = threading.Thread(target=recompile)
-        self.recompile_thread.start()
-
-class ModifiedEventCompileEventHandler(FileSystemEventHandler):
-    def __init__(self) -> None:
-        super().__init__()
-        self.event_batch = set()
-
-    def on_modified(self, event):
-        self.event_batch.add(event)
-
-    def update(self, thread_handler: ThreadHandler):
-        if len(self.event_batch) != 0:
-            print("\nChanges in:", end=' ')
-            [print(v.src_path[v.src_path.rindex('/') + 1:], end=' ') for v in self.event_batch]
-            print('\n')
-            thread_handler.handle_new_compile()
-        self.event_batch.clear()
-
 if __name__ == "__main__":
-    thread_handler = ThreadHandler()
+    thread_handler = ThreadHandler(recompile)
     subprocess.Popen(["sass", "--watch", "dev\scss:dev\css"])
     time.sleep(1)
     recompile()
