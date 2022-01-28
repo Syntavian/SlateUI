@@ -4,7 +4,7 @@ import subprocess
 import time
 from watchdog.observers import Observer
 from python.string_utils import *
-from python.html_templating import *
+
 from python.thread_handler import ThreadHandler
 from python.compile_event_handler import ModifiedEventCompileEventHandler
 
@@ -15,99 +15,8 @@ BUILD_SLATE_CSS_DIR = "./build/slate_ui"
 HTML_OUTPUT_DIR = "./build/app/public"
 SLATE_CSS_OUTPUT_DIR = "./build/app/public/css"
 JS_OUTPUT_DIR = "./build/app/public/js"
-JS_FILE_ORDER = [
-    "utils.js",
-    "button_styles.js",
-    "image_styles.js",
-    "sticky_styles.js",
-    "scroll_styles.js",
-    "layout_styles.js",
-    "theme_styles.js",
-]
-CSS_REQUIRED_SELECTORS = [
-    "*",
-]
-JS_REQUIRED_SELECTORS = [
-    "sticky",
-    "div",
-    "sticky-placeholder",
-    "theme-selector",
-    "select",
-    "span",
-    "option",
-    "active",
-    "inactive",
-    "placeholder",
-    "button",
-    "fill",
-    "disabled",
-    "image",
-    "image-carousel",
-    "scroll-bar",
-    "scroll-handle",
-]
-REQUIRED_STYLES = []
-REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
-REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
 def recompile():
-    # A set of id and class selectors that must be compiled.
-    style_selectors = set(REQUIRED_STYLES)
-
-    # HTML
-    # Build compiled HTML
-    print("Compiling Slate HTML...")
-    templates = {}
-
-    for (dirpath, dirnames, filenames) in os.walk(SLATE_HTML_DIR + "/components"):
-        for template_file_name in filenames:
-            template_file = open(dirpath + "\\" + template_file_name, "r")
-            template_file_name_text = os.path.splitext(template_file_name)[0]
-            templates[template_file_name_text] = ""
-            for line in template_file.readlines():
-                templates[template_file_name_text] = templates[template_file_name_text] + line
-            template_file.close()
-
-    PAGES_DIR = SLATE_HTML_DIR + "/pages"
-
-    for (dirpath, dirnames, filenames) in os.walk(PAGES_DIR):
-        sub_dir = ""
-
-        if dirpath != PAGES_DIR:
-            sub_dir = dirpath.replace(PAGES_DIR, "")
-        for page_file_name in filenames:
-            page_file = open(dirpath + "\\" + page_file_name, "r")
-            page_file_text = ""
-
-            for page_file_line in page_file.readlines():
-                page_file_text = page_file_text + page_file_line
-            page_file.close()
-
-            variables = {}
-            current_page_result = process_text(page_file_text, variables, templates)
-
-            output_file = open(HTML_OUTPUT_DIR + sub_dir + "\\" + page_file_name, "w")
-            output_file.write(current_page_result)
-            output_file.close()
-
-    # Analyse HTML files for tags, ids, and classes.
-    print("Finding required styles...")
-    for (dir_path, dir_names, file_names) in os.walk(HTML_OUTPUT_DIR):
-        for html_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".html"]:
-            html_file = open(dir_path + "\\" + html_file_name, "r")
-            html_file_text = ""
-
-            for html_file_line in html_file.readlines():
-                html_file_text = html_file_text + html_file_line
-            html_file.close()
-
-            for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:  
-                for tag in tags:
-                    style_selectors.add(tag)
-
-            for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:  
-                for style in tag_styles:
-                    style_selectors.add(style)
 
     # CSS
     # ...
