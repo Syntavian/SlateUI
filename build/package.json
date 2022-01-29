@@ -1,0 +1,12 @@
+{
+  "name": "slate_project",
+  "version": "1.0.0",
+  "description": "A project built with Slate UI",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo no test script",
+    "build": "python slate_build.py"
+  },
+  "author": "",
+  "license": "MIT"
+}
