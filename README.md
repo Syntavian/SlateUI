@@ -8,3 +8,24 @@ SlateUI is built with Sass to produce a large library of prebuilt styles you can
 ```
 python dev/slate_build_dev.py
 ```
+
+### Build Mapping
+```
+dev......       ┌──>build
+        ⁞       │       ⁞
+        python──┘       app..........
+        ⁞               ⁞           ⁞
+        js──────────┐   ⁞       ┌──>public...
+        ⁞           │   ⁞       │           ⁞
+    ┌───scss        └───⁞───────│───┌──────>js
+    │   ⁞               ⁞       │   │       ⁞
+    └──>css─────┐       ⁞       │   │   ┌──>css
+                │       ⁞       │   │   │
+                │       html────┘   │   │
+                │       ⁞           │   │
+                │       js──────────┘   │
+                │       ⁞               │
+                │       css─────────────│
+                │       ⁞               │
+                └──────>slate_ui────────┘
+```

@@ -1,0 +1,11 @@
+{
+  "name": "slate_ui",
+  "version": "1.0.0",
+  "description": "Slate UI",
+  "scripts": {
+    "start": "node build/app/app.js",
+    "build": "python dev/slate_build_dev.py"
+  },
+  "author": "Syntavian",
+  "license": "MIT"
+}
