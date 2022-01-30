@@ -7,5 +7,11 @@
     "build": "python dev/slate_build_dev.py"
   },
   "author": "Syntavian",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.4.7"
+  }
 }

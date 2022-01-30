@@ -1,0 +1,19 @@
+{
+  "name": "slate_project",
+  "version": "1.0.0",
+  "description": "A project built with Slate UI",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "node lib/app.js",
+    "test": "echo no test script",
+    "build": "python slate/slate.py"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.4.7"
+  }
+}
