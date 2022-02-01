@@ -13,5 +13,8 @@
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
   }
 }

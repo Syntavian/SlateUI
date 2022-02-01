@@ -4,7 +4,8 @@
   "description": "A project built with Slate UI",
   "main": "js/app.js",
   "scripts": {
-    "start": "node lib/app.js",
+    "start": "node lib/index.js",
+    "dev": "nodemon lib/index.js",
     "test": "echo no test script",
     "build": "python slate/slate.py"
   },
