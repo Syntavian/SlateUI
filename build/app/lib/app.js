@@ -19,7 +19,7 @@ http.createServer((request, response) => {
     fs.readFile(contentPath, (error, content) => {
         if (error) {
             response.writeHead(500);
-            response.end(`Error: ${error}`);
+            response.end(`${error}`);
         } else {
             response.writeHead(200, { "Content-Type": extensionContent[path.extname(contentPath)] });
             response.end(content, "utf-8");
