@@ -14,7 +14,7 @@ const extensionContent = {
 };
 
 http.createServer((request, response) => {
-    const contentPath = (request.url === "/") ? publicPath + "/index.html" : publicPath + request.url;
+    const contentPath = publicPath + ((request.url === "/") ? "/index.html" : request.url);
     
     fs.readFile(contentPath, (error, content) => {
         if (error) {
