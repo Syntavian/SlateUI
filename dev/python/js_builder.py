@@ -8,5 +8,5 @@ JS_FILE_ORDER = [
     "theme_styles.js",
 ]
 
-def compile_js():
+def build_js():
     pass

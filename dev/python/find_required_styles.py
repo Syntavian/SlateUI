@@ -28,7 +28,7 @@ REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
 def find_required_styles(_html_dir):
-    # A set of id and class selectors that must be compiled.
+    # A set of id and class selectors that must be built.
     style_selectors = set(REQUIRED_STYLES)
     # Analyse HTML files for tags, ids, and classes.
     print("Finding required styles...")

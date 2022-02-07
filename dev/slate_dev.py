@@ -6,7 +6,7 @@ from watchdog.observers import Observer
 from python.string_utils import *
 
 from python.thread_handler import ThreadHandler
-from python.compile_event_handler import ModifiedEventCompileEventHandler
+from python.build_event_handler import ModifiedEventBuildEventHandler
 
 SLATE_HTML_DIR = "./build/html"
 SLATE_CSS_DIR = "./dev/css"
@@ -16,7 +16,7 @@ HTML_OUTPUT_DIR = "./build/app/public"
 SLATE_CSS_OUTPUT_DIR = "./build/app/public/css"
 JS_OUTPUT_DIR = "./build/app/public/js"
 
-def recompile():
+def rebuild():
 
     # CSS
     # ...
@@ -134,11 +134,11 @@ def recompile():
     print("Done\n")
 
 if __name__ == "__main__":
-    thread_handler = ThreadHandler(recompile)
+    thread_handler = ThreadHandler(rebuild)
     subprocess.Popen(["sass", "--watch", "dev\scss:dev\css"])
     time.sleep(1)
-    recompile()
-    event_handler = ModifiedEventCompileEventHandler()
+    rebuild()
+    event_handler = ModifiedEventBuildEventHandler()
     observer = Observer()
     observer.schedule(event_handler, SLATE_CSS_DIR)
     observer.schedule(event_handler, SLATE_JS_DIR)

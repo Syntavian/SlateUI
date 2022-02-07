@@ -1,8 +1,8 @@
 import os
 from python.html_templating import *
 
-def compile_html(_html_in_dir, _html_out_dir):
-    # Build compiled HTML
+def build_html(_html_in_dir, _html_out_dir):
+    # Build HTML
     print("Compiling Slate HTML...")
     templates = {}
 
