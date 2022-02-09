@@ -2,8 +2,6 @@ import os
 from python.html_templating import *
 
 def build_html(_html_in_dir, _html_out_dir):
-    # Build HTML
-    print("Compiling Slate HTML...")
     templates = {}
 
     for (dirpath, dirnames, filenames) in os.walk(_html_in_dir + "/components"):
