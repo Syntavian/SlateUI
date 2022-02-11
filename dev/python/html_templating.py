@@ -1,5 +1,12 @@
-def merge_string_arguments(args):
-    corrected_line_values = []
+class HTMLSubstitution:
+    def __init__(self, args: list[str], before: str, after: str, continues: bool) -> None:
+        self.args = args
+        self.before = before
+        self.after = after
+        self.continues = continues
+
+def merge_string_arguments(args: list[str]) -> list[str]:
+    corrected_line_values: list[str] = []
     is_string = False
 
     for value in args:
@@ -18,10 +25,12 @@ def merge_string_arguments(args):
 
     return corrected_line_values
 
-def identify_substitutions(text):
-    args = []
+def identify_substitutions(text: str) -> HTMLSubstitution:
+    args: list[str] = []
     before = ""
     after = ""
+
+    # TODO: Remove the reliance on HTML comment tags by specifying new syntax.
 
     if r"<!--" in text and r"-->" in text:
         comment_start = text.find(r"<!--")
@@ -31,9 +40,11 @@ def identify_substitutions(text):
         args = text[comment_start + 4:comment_end].strip().split()
     args = merge_string_arguments(args)
 
-    return {'args': args, 'before': before, 'after': after, 'continue': (r"<!--" in after and r"-->" in after)}
+    continues = (r"<!--" in after and r"-->" in after)
 
-def extract_variables(arguments, templates, variables):
+    return HTMLSubstitution(args, before, after, continues)
+
+def extract_variables(arguments: list[str], templates: list[str], variables: list[str]) -> list[str]:
     result_variables = variables
 
     for argument in arguments:
@@ -53,34 +64,34 @@ def extract_variables(arguments, templates, variables):
 
     return result_variables
 
-def perform_substitution(text, substitution, templates, variables):
-    result_text = text + substitution['before']
-    variables = extract_variables(substitution['args'], templates, variables)
+def perform_substitution(text: str, substitution: HTMLSubstitution, templates: list[str], variables: list[str]) -> tuple[str, list[str]]:
+    result_text = text + substitution.before
+    variables = extract_variables(substitution.args, templates, variables)
 
-    if substitution['args'][0][0] == '$':
-        result_text = result_text + variables[substitution['args'][0]]
+    if substitution.args[0][0] == '$':
+        result_text = result_text + variables[substitution.args[0]]
     else:
-        result_text = result_text + process_template(substitution['args'][0], templates, variables)
-    if not substitution['continue']:
-        result_text = result_text + substitution['after']
+        result_text = result_text + process_template(substitution.args[0], templates, variables)
+    if not substitution.continues:
+        result_text = result_text + substitution.after
 
     return result_text, variables
 
-def process_template(template_name, templates, variables):
+def process_template(template_name: str, variables: list[str], templates: list[str]) -> str:
     template = templates[template_name]
 
     return process_text(template, variables, templates)
 
-def process_text(text, variables, templates):
+def process_text(text: str, variables: list[str], templates: list[str]) -> str:
     result_text = ""
     substitution = identify_substitutions(text)
 
-    if len(substitution['args']) > 0: 
+    if len(substitution.args) > 0: 
         result_text, variables = perform_substitution(result_text, substitution, templates, variables)
-        if substitution['continue']:
-            while substitution['continue']:
-                substitution = identify_substitutions(substitution['after'])
-                if len(substitution['args']) > 0: 
+        if substitution.continues:
+            while substitution.continues:
+                substitution = identify_substitutions(substitution.after)
+                if len(substitution.args) > 0: 
                     result_text, variables = perform_substitution(result_text, substitution, templates, variables)
     else:
         result_text = text
