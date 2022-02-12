@@ -1,11 +1,11 @@
-from directories import *
-from html_builder import build_html
-from css_builder import build_css
-from js_builder import build_js
-from find_required_styles import find_required_styles
-from transfer_file import transfer
+from python.directories import *
+from python.html_builder import build_html
+from python.css_builder import build_css
+from python.js_builder import build_js
+from python.find_required_styles import find_required_styles
+from python.transfer_file import transfer
 
-def build(path = "./"):
+def build(path: str = "./") -> None:
     # Create working HTML in public dir from HTML templates in src.
     build_html(path + HTML_DIR, path + HTML_OUT_DIR)
     # Transfer the SCSS output in dev to slate.css in build. @SLATE_OMIT_NEXT_LINE

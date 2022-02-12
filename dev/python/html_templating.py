@@ -69,11 +69,11 @@ def perform_substitution(text: str, substitution: HTMLSubstitution, templates: l
     variables = extract_variables(substitution.args, templates, variables)
 
     if substitution.args[0][0] == '$':
-        result_text = result_text + variables[substitution.args[0]]
+        result_text: str = result_text + variables[substitution.args[0]]
     else:
-        result_text = result_text + process_template(substitution.args[0], templates, variables)
+        result_text: str = result_text + process_template(substitution.args[0], templates, variables)
     if not substitution.continues:
-        result_text = result_text + substitution.after
+        result_text: str = result_text + substitution.after
 
     return result_text, variables
 

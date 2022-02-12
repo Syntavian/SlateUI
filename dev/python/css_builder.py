@@ -1,6 +1,6 @@
 
 import re
-from dev.python.string_utils import *
+from python.string_utils import *
 
 def build_css(_css_in_dirs, _css_out_dir, style_selectors):
     input_css_file = open(_css_in_dirs[0] + "/style.css", "r")

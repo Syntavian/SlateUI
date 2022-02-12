@@ -1,5 +1,5 @@
 import os
-from dev.python.string_utils import *
+from python.string_utils import *
 
 JS_FILE_ORDER = [
     "utils.js",
