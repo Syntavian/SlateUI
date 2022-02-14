@@ -11,7 +11,7 @@ from python.signature_generator import SIGNATURE_IGNORE, SIGNATURE
 
 if __name__ == "__main__":
     # Verify the project structure.
-    for (dirpath, dirnames, filenames) in os.walk("."):
+    for dirpath, dirnames, filenames in os.walk("."):
         if any([x in dirpath for x in SIGNATURE_IGNORE]):
             continue
         dir_contents = dirnames
@@ -20,7 +20,7 @@ if __name__ == "__main__":
             print(f"Error: Project signature mismatch at: '{dirpath}' requires: '{SIGNATURE[dirpath]}'.")
             exit()
     # Start SASS watch to compile SCSS into CSS every time there is a change.
-    subprocess.Popen(["sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"])
+    # subprocess.Popen(["sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"])
     # Wait for SASS to complete then build Slate once on run.
     time.sleep(1)
     build()

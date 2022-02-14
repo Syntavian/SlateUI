@@ -1,3 +1,5 @@
+# SLATE
+SLATE_DIR = "build/app/slate"
 # HTML
 HTML_DIR = "build/app/src/public/html"
 HTML_OUT_DIR = "build/app/public"
@@ -5,7 +7,6 @@ HTML_OUT_DIR = "build/app/public"
 # @SLATE_OMIT_NEXT_LINE
 SCSS_PREBUILD_DIR="dev/scss"
 CSS_PREBUILD_DIR="dev/css"
-SLATE_CSS_DIR = "build/app/slate"
 BUILD_CSS_DIR = "build/app/src/css"
 CSS_OUT_DIR = "build/app/public/css"
 # JS
