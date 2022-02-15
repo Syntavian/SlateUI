@@ -22,7 +22,7 @@ SIGNATURE: dict[str, list[str]] = {
     r".\dev\js": ['lib', 'src'],
     r".\dev\js\lib": [],
     r".\dev\js\src": ['button_styles.js', 'image_styles.js', 'layout_styles.js', 'scroll_styles.js', 'sticky_styles.js', 'theme_styles.js', 'utils.js'],
-    r".\dev\python": ['build.py', 'build_event_handler.py', 'css_builder.py', 'directories.py', 'find_required_styles.py', 'html_builder.py', 'html_templating.py', 'js_builder.py', 'signature_generator.py', 'string_utils.py', 'thread_handler.py', 'transfer_file.py'],
+    r".\dev\python": ['build.py', 'build_event_handler.py', 'css_builder.py', 'directories.py', 'file_utils.py', 'find_required_styles.py', 'html_builder.py', 'html_templating.py', 'js_builder.py', 'signature_generator.py', 'string_utils.py', 'thread_handler.py', 'transfer_file.py'],
     r".\dev\scss": ['elements', 'style.scss', '_borders.scss', '_fixed.scss', '_layout.scss', '_offsets.scss', '_prototypes.scss', '_shadow.scss', '_text.scss', '_variables.scss', '_z-index.scss'],
     r".\dev\scss\elements": ['_backgrounds.scss', '_box.scss', '_buttons.scss', '_canvas.scss', '_fade.scss', '_floating.scss', '_forms.scss', '_images.scss', '_links.scss', '_popup.scss'],
 }
@@ -53,4 +53,4 @@ def generate(_path: str = ".") -> dict[str, list[str]]:
 if __name__ == "__main__":
     result = generate()
     for k, v in result.items():
-        print(f"r\"{k}\": {v},")
+        print(f"    r\"{k}\": {v},")

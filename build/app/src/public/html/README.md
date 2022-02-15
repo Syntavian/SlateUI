@@ -7,18 +7,18 @@
 
 ## Local variable
 ```
-get: $localVar
+get: $localVariable
 set: 
- - string: $localVar="text"
- - component: $localVar=@componentName
+ - string: $localVariable="text"
+ - component: $localVariable=@componentName
 ```
 
 ## Global variable
 ```
-get: %GlobalVar
+get: %globalVariable
 set: 
- - string: %GlobalVar="text"
- - component: %GlobalVar=@componentName
+ - string: %globalVariable="text"
+ - component: %globalVariable=@componentName
 ```
 
 ## Conditionals
@@ -48,4 +48,3 @@ value ? valueTrue : valueFalse
 ```
 *@componentName
 ```
-
