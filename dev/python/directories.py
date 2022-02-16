@@ -7,7 +7,7 @@ HTML_OUT_DIR = "build/app/public"
 # @SLATE_OMIT_NEXT_LINE
 SCSS_PREBUILD_DIR="dev/scss"
 CSS_PREBUILD_DIR="dev/css"
-BUILD_CSS_DIR = "build/app/src/css"
+CSS_DIR = "build/app/src/css"
 CSS_OUT_DIR = "build/app/public/css"
 # JS
 # @SLATE_OMIT_NEXT_LINE

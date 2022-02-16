@@ -28,8 +28,13 @@ if __name__ == "__main__":
     event_handler = ModifiedEventBuildEventHandler()
     # Create an observer for file update events.
     observer = Observer()
-    # Schedule the event handler to run on events in dev css directory.
+    # Schedule the event handler to run on events in relevant directories.
+    observer.schedule(event_handler, SLATE_DIR)
+    observer.schedule(event_handler, HTML_DIR)
     observer.schedule(event_handler, CSS_PREBUILD_DIR)
+    observer.schedule(event_handler, CSS_DIR)
+    observer.schedule(event_handler, JS_PREBUILD_DIR)
+    observer.schedule(event_handler, JS_DIR)
     observer.start()
     # Create the thread handler for build threads. 
     thread_handler = ThreadHandler(build)
