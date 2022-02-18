@@ -1,70 +1,90 @@
 from enum import Enum
 import os
 import re
-from textwrap import wrap
+from typing import Any, Literal
 from python.html_templating import *
 from python.file_utils import *
 
-class Wrapper(Enum):
+class WrapperType(Enum):
     INVALID   = 0
     ALL       = 1
     PAGE      = 2
     COMPONENT = 3
 
-def within_slate(_regex):
+class Wrapper:
+    def __init__(self, type, before, after, wrapped_object):
+        self.type = type
+        self.before = before
+        self.after = after
+        self.wrapped_object = wrapped_object
+
+def within_slate(_regex: str) -> str:
     return f"<!--#.*?({_regex}).*?#-->"
 
-def find_string_values(_text):
+def find_string_values(_text: str) -> list[str | Any]:
     matches = re.finditer(within_slate(r"(?:\".*?\")|(?:'.*?')"), _text)
     return [match.group(1) for match in matches]
 
-def find_wrappers(_html):
+def fast_check_wrapper(_html: str) -> bool:
+    if re.search(within_slate('\*'), _html):
+        return True
+    return False
+
+def find_wrappers(_html: str) -> list[str | Any]:
     wrapper_matches = re.finditer(within_slate(r"\*(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)\S*"), _html)
     return [match.group(1) for match in wrapper_matches]
 
-def get_wrapper_type(_wrapper):
+def get_wrapper_type(_wrapper: str) -> Literal[WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID]:
     if re.search(r"\*@\w+", _wrapper):
-        return Wrapper.COMPONENT
+        return WrapperType.COMPONENT
     if re.search(r"\*\w+", _wrapper):
-        return Wrapper.PAGE
+        return WrapperType.PAGE
     if re.search(r"\* |\*$", _wrapper):
-        return Wrapper.ALL
+        return WrapperType.ALL
     print(f"Error: wrapper {_wrapper} is invalid")
-    return Wrapper.INVALID
+    return WrapperType.INVALID
 
-def compute_wrapper(_wrappers_ref, _html):
-    pass
+def exit_invalid_root_wrapper():
+    print("Error: root HTML wrapper is not valid.")
+    exit()
+
+def compute_wrapper(_html: str, _is_root: bool) -> Wrapper | None:
+    # Find and validate the wrapper.
+    wrapper_matches = find_wrappers(_html)
+
+    if not wrapper_matches:
+        if _is_root: exit_invalid_root_wrapper()
+        return
+    elif len(wrapper_matches) > 1:
+        if _is_root: exit_invalid_root_wrapper()
+        print("Error: multiple wrapper selectors are not valid.")
+        return
+
+    wrapper = wrapper_matches[0]
+    wrapper_type = get_wrapper_type(wrapper)
+
+    if _is_root and wrapper_type != WrapperType.ALL:
+        exit_invalid_root_wrapper()
+
+    type = WrapperType.ALL
+    
+    return
 
 def build_html(_slate_dir, _html_in_dir, _html_out_dir):
     # variableName: value
-    global_variables = {}
-    # wrappedObject: { before: HTML, after: HTML }
-    wrappers = {}
-    root = ""
+    global_variables: dict[str, str] = {}
+    # wrappedObject: [{ 'before': HTML, 'after': HTML }]
+    wrappers: dict[str, list[Wrapper]] = {}
+    # Get the root HTML wrapper from slate.html.
     with open(f"{_slate_dir}/slate.html", "r") as root_html:
         root = root_html.read() 
-
-        # Find the wrapper
-        wrapper_matches = find_wrappers(root)
-
-        print(wrapper_matches)
-
-        for match in wrapper_matches:
-            print(match)
-            print(get_wrapper_type(match))
-
-        if not wrapper_matches or len(wrapper_matches) > 1 or get_wrapper_type(wrapper_matches[0]) != Wrapper.ALL:
-            print("Error: root HTML is not a valid wrapper.")
-            exit()
-
-    print("root", '\n', root)
-
-    string_matches = find_string_values(root)
-
-    for match in string_matches:
-        print(match)
-
-    exit()
+        if not fast_check_wrapper(root):
+            exit_invalid_root_wrapper()
+        wrapper: Wrapper | None = compute_wrapper(root)
+        if wrapper:
+            if not wrappers[wrapper.wrapped_object]:
+                wrappers[wrapper.wrapped_object] = []
+            wrappers[wrapper.wrapped_object].append(wrapper)    
 
     components = {}
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/components"):
