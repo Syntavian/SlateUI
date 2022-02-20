@@ -17,11 +17,12 @@ def slate_tag() -> str:
 def strip_slate_tag(_slate_tag: str) -> str:
     """Return the contents of a Slate HTML tag."""
     match = re.search(r"(?:<#((?:.|\s)*?)\/>)|(?:<!--#((?:.|\s)*?)\/-->)", _slate_tag)
-    if match.group(1):
-        return match.group(1)
-    return match.group(2)
+    if match.group(1): result = match.group(1)
+    else: result = match.group(2)
+    result = re.sub(r" (?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", '', result).strip()
+    return result
 
-def get_slate_tags(_html: str) -> Iterator[Match[str]]:
+def get_slate_tags(_html: str) -> list[Match[str]]:
     """Return every match of a Slate tag within the provided HTML."""
     matches = re.finditer(slate_tag(), _html)
     return [match for match in matches]

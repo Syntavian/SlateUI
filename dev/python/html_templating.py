@@ -1,3 +1,6 @@
+from python.wrapper import Wrapper
+from python.component import Component
+
 class HTMLSubstitution:
     def __init__(self, args: list[str], before: str, after: str, continues: bool) -> None:
         self.args = args
@@ -80,20 +83,20 @@ def perform_substitution(text: str, substitution: HTMLSubstitution, templates: l
 def process_template(template_name: str, variables: list[str], templates: list[str]) -> str:
     template = templates[template_name]
 
-    return process_text(template, variables, templates)
+    return process_html(template, variables, templates)
 
-def process_text(text: str, variables: list[str], templates: list[str]) -> str:
-    result_text = ""
-    substitution = identify_substitutions(text)
+def process_html(_html: str, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
+    result_html = ""
+    substitution = identify_substitutions(_html)
 
     if len(substitution.args) > 0: 
-        result_text, variables = perform_substitution(result_text, substitution, templates, variables)
+        result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
         if substitution.continues:
             while substitution.continues:
                 substitution = identify_substitutions(substitution.after)
                 if len(substitution.args) > 0: 
-                    result_text, variables = perform_substitution(result_text, substitution, templates, variables)
+                    result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
     else:
-        result_text = text
+        result_html = _html
 
-    return result_text
+    return result_html

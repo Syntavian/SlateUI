@@ -20,10 +20,15 @@ if __name__ == "__main__":
             print(f"Error: Project signature mismatch at: '{dirpath}' requires: '{SIGNATURE[dirpath]}'.")
             exit()
     # Start SASS watch to compile SCSS into CSS every time there is a change.
+
     # subprocess.Popen(["sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"])
+    
     # Wait for SASS to complete then build Slate once on run.
     time.sleep(1)
     build()
+
+    exit()
+
     # Create the event handler to store and handle file modification events in the project.
     event_handler = ModifiedEventBuildEventHandler()
     # Create an observer for file update events.

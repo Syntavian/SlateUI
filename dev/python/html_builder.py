@@ -1,9 +1,9 @@
 import os
 import re
 from typing import Iterator, Literal, Match
-from dev.python.component import *
-from dev.python.error_utils import *
-from dev.python.wrapper import *
+from python.component import *
+from python.error_utils import *
+from python.wrapper import *
 from python.html_templating import *
 from python.file_utils import *
 from python.slate_html_utils import *
@@ -60,9 +60,39 @@ def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _
         return True
     return False
 
+def reset_variables(_variables: dict[str, str], _global_variables: dict[str, str]) -> None:
+    _variables = {}
+    for k, v in _global_variables:
+        _variables[k] = v
+
+# TODO: Create arg type Enum.
+def determine_argument_type(_argument: str) -> str:
+    if '=' in _argument:
+        if _argument[0] == '$':
+            return 'variable'
+        elif _argument[0] == '%':
+            return 'global'
+        else:
+            return None
+
+def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
+    variable_assignment_split = re.split(r"=(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", _variable_assignment)
+    return (variable_assignment_split[0].strip(), variable_assignment_split[1].strip())
+
+def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches: list[Match[str]]) -> None:
+    for match in _slate_tag_matches:
+        # TODO: split arguments with a better method than new line.
+        arguments = re.split(r"\s(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", strip_slate_tag(match.group(1)))
+        for argument in arguments:
+            if determine_argument_type(argument) == 'global':
+                variable, value = split_variable_assignment(argument)
+                _global_variables[variable] = value
+
 def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Global variables store
     global_variables: dict[str, str] = {}
+    # Local variables store
+    variables: dict[str, str]  = {}
     # Component definitions
     components: dict[str, Component] = {}
     # Wrapper definitions
@@ -71,6 +101,7 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     with open(f"{_slate_dir}/slate.html", "r") as root_html_file:
         root_html = root_html_file.read() 
         slate_tag_matches = get_slate_tags(root_html)
+        apply_global_variables(global_variables, slate_tag_matches)
         if not handle_wrapper_build(root_html, slate_tag_matches, wrappers, True):
             exit_exception("Root HTML wrapper is not valid.")
 
@@ -79,19 +110,29 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
             with open(dirpath + "\\" + component_file_name, "r") as component_html_file:
                 component_file_name_text = get_file_name(component_file_name)
                 component_html = component_html_file.read()
-                slate_tag_matches = [slate_tag_match for slate_tag_match in get_slate_tags(component_html)]
+                slate_tag_matches = get_slate_tags(component_html)
+                apply_global_variables(global_variables, slate_tag_matches)
                 if not handle_wrapper_build(component_html, slate_tag_matches, wrappers):
                     components[f"@{component_file_name_text}"] = Component(component_html, slate_tag_matches) 
 
-    PAGES_DIR = _html_in_dir + "/pages"
-    for dirpath, dirnames, filenames in os.walk(f"{PAGES_DIR}"):
+    for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
         sub_dir = ""
-        variables = {}
+        for page_file_name in filenames:
+            with open(dirpath + "\\" + page_file_name, "r") as page_html_file:
+                page_html = page_html_file.read()
+                slate_tag_matches = get_slate_tags(page_html)
+                apply_global_variables(global_variables, slate_tag_matches)
+
+    PAGES_DIR = _html_in_dir + "/pages"
+    for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
+        sub_dir = ""
+        reset_variables(variables, global_variables)
         if dirpath != PAGES_DIR:
             sub_dir = dirpath.replace(PAGES_DIR, "")
         for page_file_name in filenames:
-            with open(dirpath + "\\" + page_file_name, "r") as page_file:
-                page_file_text = page_file.read()
-            current_page_result = process_text(page_file_text, variables, components)
+            page_html = ""
+            with open(dirpath + "\\" + page_file_name, "r") as page_html_file:
+                page_html = page_html_file.read()
+            current_page_result = process_html(page_html, variables, components)
             with open(_html_out_dir + sub_dir + "\\" + page_file_name, "w") as output_file:
                 output_file.write(current_page_result)
