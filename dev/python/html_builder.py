@@ -1,3 +1,4 @@
+import functools
 import os
 import re
 from enum import Enum
@@ -12,14 +13,25 @@ class WrapperType(Enum):
     COMPONENT = 3
 
 class Wrapper:
-    def __init__(self, type, before, after, wrapped_object):
-        self.type = type
-        self.before = before
-        self.after = after
-        self.wrapped_object = wrapped_object
+    def __init__(
+        self, 
+        _type: Literal[WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID], 
+        _before: str, 
+        _after: str, 
+        _wrapped_object: str,
+        _tag_matches: list[Match[str]]
+    ) -> None:
+        self.type = _type
+        self.before = _before
+        self.after = _after
+        self.wrapped_object = _wrapped_object
+        self.tag_matches = _tag_matches
 
-    def __str__(self) -> str:
-        return f"{self.type}\n{self.before}\n{self.wrapped_object}\n{self.after}\n"
+
+class Component:
+    def __init__(self, _html: str, _tag_matches: list[Match[str]]) -> None:
+        self.html = _html
+        self.tag_matches = _tag_matches
 
 
 def exception(_message: str) -> None:
@@ -77,7 +89,7 @@ def get_wrapper_type(_wrapper: str) -> Literal[WrapperType.COMPONENT, WrapperTyp
     exception(f"wrapper {_wrapper} is not valid.")
     return WrapperType.INVALID
 
-def build_wrapper(_html: str, _slate_tag_match: Match[str], _is_root: bool = False) -> Wrapper | None:
+def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: list[Match[str]], _is_root: bool = False) -> Wrapper | None:
     # Find and validate the wrapper.
     wrapper = get_wrapper(_slate_tag_match.group(1))
     if not wrapper: return None
@@ -87,13 +99,13 @@ def build_wrapper(_html: str, _slate_tag_match: Match[str], _is_root: bool = Fal
     if wrapper_type == WrapperType.INVALID:
         exception("Wrapper is not valid.")
         return
-    return Wrapper(wrapper_type, _html[:_slate_tag_match.start()], _html[_slate_tag_match.end():], wrapper.group(1))
+    return Wrapper(wrapper_type, _html[:_slate_tag_match.start()], _html[_slate_tag_match.end():], wrapper.group(1), _slate_tag_matches)
 
 def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _wrappers: dict[str, list[Wrapper]], _is_root: bool = False) -> bool:
     wrapper: Wrapper | None = None
     for slate_tag_match in _slate_tag_matches:
         if fast_check_wrapper(slate_tag_match.group(1)):
-            newWrapper = build_wrapper(_html, slate_tag_match, _is_root)
+            newWrapper = build_wrapper(_html, slate_tag_match, _slate_tag_matches, _is_root)
             if newWrapper:
                 if not wrapper:
                     wrapper = newWrapper
@@ -109,7 +121,7 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Global variables store
     global_variables: dict[str, str] = {}
     # Component definitions
-    components: dict[str, dict[str, str | Match]] = {}
+    components: dict[str, Component] = {}
     # Wrapper definitions
     wrappers: dict[str, list[Wrapper]] = {}
     # Get the root HTML wrapper from slate.html.
@@ -118,7 +130,6 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
         slate_tag_matches = get_slate_tags(root_html)
         if not handle_wrapper_build(root_html, slate_tag_matches, wrappers, True):
             exit_exception("Root HTML wrapper is not valid.")
-            pass
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/components"):
         for component_file_name in filenames:
@@ -127,7 +138,7 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
                 component_html = component_html_file.read()
                 slate_tag_matches = [slate_tag_match for slate_tag_match in get_slate_tags(component_html)]
                 if not handle_wrapper_build(component_html, slate_tag_matches, wrappers):
-                    components[f"@{component_file_name_text}"] = { "html": component_html, "tag_matches": slate_tag_matches} 
+                    components[f"@{component_file_name_text}"] = Component(component_html, slate_tag_matches) 
 
     PAGES_DIR = _html_in_dir + "/pages"
     for dirpath, dirnames, filenames in os.walk(f"{PAGES_DIR}"):
