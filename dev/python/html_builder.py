@@ -1,69 +1,12 @@
-import functools
 import os
 import re
-from enum import Enum
-from typing import Any, Iterator, Literal, Match
+from typing import Iterator, Literal, Match
+from dev.python.component import *
+from dev.python.error_utils import *
+from dev.python.wrapper import *
 from python.html_templating import *
 from python.file_utils import *
-
-class WrapperType(Enum):
-    INVALID   = 0
-    ALL       = 1
-    PAGE      = 2
-    COMPONENT = 3
-
-class Wrapper:
-    def __init__(
-        self, 
-        _type: Literal[WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID], 
-        _before: str, 
-        _after: str, 
-        _wrapped_object: str,
-        _tag_matches: list[Match[str]]
-    ) -> None:
-        self.type = _type
-        self.before = _before
-        self.after = _after
-        self.wrapped_object = _wrapped_object
-        self.tag_matches = _tag_matches
-
-
-class Component:
-    def __init__(self, _html: str, _tag_matches: list[Match[str]]) -> None:
-        self.html = _html
-        self.tag_matches = _tag_matches
-
-
-def exception(_message: str) -> None:
-    print(f"Error: {_message}")
-
-def exit_exception(_message: str) -> None:
-    exception(f"{_message} Exiting.")
-    exit()
-
-
-def containing(_regex: str) -> str:
-    return f"((?:.|\s)*(?:{_regex})(?:.|\s)*)"
-
-
-def find_string_values(_text: str) -> list[str | Any]:
-    matches = re.finditer(r"((?:\".*?\")|(?:'.*?'))", _text)
-    return [match.group(1) for match in matches]
-
-
-def slate_tag() -> str:
-    return f"((?:<#(?:.|\s)*?\/>)|(?:<!--#(?:.|\s)*?\/-->))"
-
-def strip_slate_tag(_slate_tag: str) -> str:
-    match = re.search(r"(?:<#((?:.|\s)*?)\/>)|(?:<!--#((?:.|\s)*?)\/-->)", _slate_tag)
-    if match.group(1):
-        return match.group(1)
-    return match.group(2)
-
-def get_slate_tags(_html: str) -> Iterator[Match[str]]:
-    matches = re.finditer(slate_tag(), _html)
-    return matches
-
+from python.slate_html_utils import *
 
 def fast_check_wrapper(_html: str) -> bool:
     if re.search(containing('\*'), _html):
