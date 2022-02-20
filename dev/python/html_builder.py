@@ -88,6 +88,12 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
                 variable, value = split_variable_assignment(argument)
                 _global_variables[variable] = value
 
+class Page:
+    def __init__(self, _path: str, _html: str, _tag_matches: list[Match[str]]) -> None:
+        self.path = _path
+        self.html = _html
+        self.tag_matches = _tag_matches
+
 def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Global variables store
     global_variables: dict[str, str] = {}
@@ -97,6 +103,9 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     components: dict[str, Component] = {}
     # Wrapper definitions
     wrappers: dict[str, list[Wrapper]] = {}
+    # Page definitions
+    pages: dict[str, list[Page]] = {}
+
     # Get the root HTML wrapper from slate.html.
     with open(f"{_slate_dir}/slate.html", "r") as root_html_file:
         root_html = root_html_file.read() 
@@ -116,12 +125,15 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
                     components[f"@{component_file_name_text}"] = Component(component_html, slate_tag_matches) 
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
-        sub_dir = ""
         for page_file_name in filenames:
-            with open(dirpath + "\\" + page_file_name, "r") as page_html_file:
+            file_path = f"{dirpath}/{page_file_name}"
+            with open(file_path, "r") as page_html_file:
                 page_html = page_html_file.read()
                 slate_tag_matches = get_slate_tags(page_html)
                 apply_global_variables(global_variables, slate_tag_matches)
+                pages[file_path] = Page(file_path, page_html, slate_tag_matches) 
+
+    exit()
 
     PAGES_DIR = _html_in_dir + "/pages"
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
