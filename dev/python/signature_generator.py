@@ -2,10 +2,9 @@ import os
 
 # The required Slate project structure to successfully build.
 SIGNATURE: dict[str, list[str]] = {
-    r".": ['build', 'dev'],
+    r".": ['build', 'dev', 'TODO.txt'],
     r".\build": ['app'],
-    r".\build\app": ['lib', 'public', 'slate', 'src'],
-    r".\build\app\lib": [],
+    r".\build\app": ['public', 'slate', 'src'],
     r".\build\app\public": ['css', 'img', 'js', 'index.html'],
     r".\build\app\public\css": ['slate.css'],
     r".\build\app\public\img": [],
@@ -19,16 +18,20 @@ SIGNATURE: dict[str, list[str]] = {
     r".\build\app\src\public\js": ['index.js'],
     r".\dev": ['css', 'js', 'python', 'scss', 'slate_dev.py'],
     r".\dev\css": ['style.css'],
-    r".\dev\js": ['lib', 'src'],
-    r".\dev\js\lib": [],
+    r".\dev\js": ['src'],
     r".\dev\js\src": ['button_styles.js', 'image_styles.js', 'layout_styles.js', 'scroll_styles.js', 'sticky_styles.js', 'theme_styles.js', 'utils.js'],
-    r".\dev\python": ['build.py', 'build_event_handler.py', 'css_builder.py', 'directories.py', 'file_utils.py', 'find_required_styles.py', 'html_builder.py', 'html_templating.py', 'js_builder.py', 'signature_generator.py', 'string_utils.py', 'thread_handler.py', 'transfer_file.py'],
+    r".\dev\python": ['css_build', 'html_build', 'js_build', 'utils', 'build.py', 'build_event_handler.py', 'directories.py', 'signature_generator.py', 'thread_handler.py'],
+    r".\dev\python\css_build": ['css_builder.py', 'find_required_styles.py'],
+    r".\dev\python\html_build": ['component.py', 'html_builder.py', 'html_templating.py', 'page.py', 'wrapper.py'],
+    r".\dev\python\js_build": ['js_builder.py'],
+    r".\dev\python\utils": ['error_utils.py', 'file_utils.py', 'html_utils.py', 'string_utils.py'],
     r".\dev\scss": ['elements', 'style.scss', '_borders.scss', '_fixed.scss', '_layout.scss', '_offsets.scss', '_prototypes.scss', '_shadow.scss', '_text.scss', '_variables.scss', '_z-index.scss'],
     r".\dev\scss\elements": ['_backgrounds.scss', '_box.scss', '_buttons.scss', '_canvas.scss', '_fade.scss', '_floating.scss', '_forms.scss', '_images.scss', '_links.scss', '_popup.scss'],
 }
 
 SIGNATURE_IGNORE = [
     "node_modules",
+    "lib",
     ".github",
     ".gitignore",
     ".git",
