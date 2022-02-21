@@ -3,7 +3,7 @@ import time
 import os
 from watchdog.observers import Observer
 from python.directories import *
-from python.string_utils import *
+from python.utils.string_utils import *
 from python.build import build
 from python.thread_handler import ThreadHandler
 from python.build_event_handler import ModifiedEventBuildEventHandler
@@ -19,10 +19,12 @@ if __name__ == "__main__":
         if (dirpath in SIGNATURE.keys() and not all([x in dir_contents for x in SIGNATURE[dirpath]])):
             print(f"Error: Project signature mismatch at: '{dirpath}' requires: '{SIGNATURE[dirpath]}'.")
             exit()
-    # Start SASS watch to compile SCSS into CSS every time there is a change.
 
-    # subprocess.Popen(["sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"])
-    
+    # Start SASS watch to compile SCSS into CSS every time there is a change.
+    subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"], shell=True)
+
+    subprocess.Popen(["npx", "babel", "dev/js/src", "--watch", "--out-file", "dev/js/lib/slate.js"], shell=True)
+
     # Wait for SASS to complete then build Slate once on run.
     time.sleep(1)
     build()

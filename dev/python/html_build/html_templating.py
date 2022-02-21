@@ -1,5 +1,5 @@
-from python.wrapper import Wrapper
-from python.component import Component
+from python.html_build.wrapper import Wrapper
+from python.html_build.component import Component
 
 class HTMLSubstitution:
     def __init__(self, args: list[str], before: str, after: str, continues: bool) -> None:

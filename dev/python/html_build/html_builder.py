@@ -1,12 +1,13 @@
 import os
 import re
 from typing import Iterator, Literal, Match
-from python.component import *
-from python.error_utils import *
-from python.wrapper import *
-from python.html_templating import *
-from python.file_utils import *
-from python.slate_html_utils import *
+from python.html_build.page import Page
+from python.html_build.component import Component
+from python.html_build.wrapper import Wrapper, WrapperType
+from python.utils.file_utils import *
+from python.utils.html_utils import *
+from python.utils.error_utils import *
+from python.html_build.html_templating import *
 
 def fast_check_wrapper(_html: str) -> bool:
     if re.search(containing('\*'), _html):
@@ -88,11 +89,6 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
                 variable, value = split_variable_assignment(argument)
                 _global_variables[variable] = value
 
-class Page:
-    def __init__(self, _path: str, _html: str, _tag_matches: list[Match[str]]) -> None:
-        self.path = _path
-        self.html = _html
-        self.tag_matches = _tag_matches
 
 def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Global variables store
