@@ -17,7 +17,7 @@ function updateBanners() {
                 element.style.position = "fixed";
                 element.style.zIndex = 99;
                 elementStyle = getComputedStyle(element);
-                element.setAttribute("originalpostion", getElementStyleAsNumber(elementStyle.top));
+                element.setAttribute("originalPosition", getElementStyleAsNumber(elementStyle.top));
                 element.style.top = "0px";
 
                 element.parentElement.insertBefore(placeholder, element);
@@ -29,8 +29,8 @@ function updateBanners() {
             placeholder.style.height = getElementStylesAsNumberSum(elementStyle.height) + "px";
             placeholder.style.width = getElementStylesAsNumberSum(elementStyle.width, elementStyle.marginLeft, elementStyle.marginRight) + "px";
 
-            if (window.scrollY <= Number(element.getAttribute("originalpostion"))) {
-                element.style.top = Number(element.getAttribute("originalpostion")) - window.scrollY + "px";
+            if (window.scrollY <= Number(element.getAttribute("originalPosition"))) {
+                element.style.top = Number(element.getAttribute("originalPosition")) - window.scrollY + "px";
             }
         }
     }
@@ -39,7 +39,7 @@ function updateBanners() {
 function resetBanners() {
     for (let element of sticky) {
         element.removeAttribute('style');
-        element.removeAttribute('originalpostion');
+        element.removeAttribute('originalPosition');
 
         if (Array.prototype.indexOf.call(element.parentElement.children, element) - 1 >= 0) {
             let placeholder = element.parentElement.children[Array.prototype.indexOf.call(element.parentElement.children, element) - 1];
