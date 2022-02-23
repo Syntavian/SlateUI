@@ -100,7 +100,7 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Wrapper definitions
     wrappers: dict[str, list[Wrapper]] = {}
     # Page definitions
-    pages: dict[str, list[Page]] = {}
+    pages: dict[str, Page] = {}
 
     # Get the root HTML wrapper from slate.html.
     with open(f"{_slate_dir}/slate.html", "r") as root_html_file:
@@ -129,18 +129,7 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
                 apply_global_variables(global_variables, slate_tag_matches)
                 pages[file_path] = Page(file_path, page_html, slate_tag_matches) 
 
-    exit()
-
-    PAGES_DIR = _html_in_dir + "/pages"
-    for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
-        sub_dir = ""
+    for page_path, page in pages.items():
         reset_variables(variables, global_variables)
-        if dirpath != PAGES_DIR:
-            sub_dir = dirpath.replace(PAGES_DIR, "")
-        for page_file_name in filenames:
-            page_html = ""
-            with open(dirpath + "\\" + page_file_name, "r") as page_html_file:
-                page_html = page_html_file.read()
-            current_page_result = process_html(page_html, variables, components)
-            with open(_html_out_dir + sub_dir + "\\" + page_file_name, "w") as output_file:
-                output_file.write(current_page_result)
+        current_page_result = process_html(page.html, variables, components, wrappers)
+
