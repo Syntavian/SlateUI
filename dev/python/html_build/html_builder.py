@@ -63,7 +63,7 @@ def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _
 
 def reset_variables(_variables: dict[str, str], _global_variables: dict[str, str]) -> None:
     _variables = {}
-    for k, v in _global_variables:
+    for k, v in _global_variables.items():
         _variables[k] = v
 
 # TODO: Create arg type Enum.
@@ -122,14 +122,18 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
         for page_file_name in filenames:
-            file_path = f"{dirpath}/{page_file_name}"
+            file_path = f"{dirpath}/{page_file_name}".replace('\\', '/')
             with open(file_path, "r") as page_html_file:
                 page_html = page_html_file.read()
                 slate_tag_matches = get_slate_tags(page_html)
                 apply_global_variables(global_variables, slate_tag_matches)
-                pages[file_path] = Page(file_path, page_html, slate_tag_matches) 
+                pages[file_path] = Page(file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tag_matches) 
 
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
-        current_page_result = process_html(page.html, variables, components, wrappers)
 
+        print(page_path)
+
+        # current_page_result = process_html(page.html, variables, components, wrappers)
+
+        print(f"{_html_in_dir}{page.path}")
