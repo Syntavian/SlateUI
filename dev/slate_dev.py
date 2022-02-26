@@ -21,9 +21,9 @@ if __name__ == "__main__":
             exit()
 
     # Start SASS watch to compile SCSS into CSS every time there is a change.
-    # subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"], shell=True)
+    subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"], shell=True)
     # Start Babel watch to build JS every time there is a change.
-    # subprocess.Popen(["npx", "babel", "dev/js/src", "--watch", "--out-file", "dev/js/lib/slate.js"], shell=True)
+    subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--watch", "--out-file", f"{SLATE_DIR}/slate.js"], shell=True)
 
     # Wait for SASS to complete then build Slate once on run.
     time.sleep(1)
@@ -40,8 +40,6 @@ if __name__ == "__main__":
     observer.schedule(event_handler, HTML_DIR)
     observer.schedule(event_handler, CSS_PREBUILD_DIR)
     observer.schedule(event_handler, CSS_DIR)
-    observer.schedule(event_handler, JS_PREBUILD_DIR)
-    observer.schedule(event_handler, JS_DIR)
     observer.start()
     # Create the thread handler for build threads. 
     thread_handler = ThreadHandler(build)
