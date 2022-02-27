@@ -1,6 +1,7 @@
 import os
 import re
 from typing import Iterator, Literal, Match
+from python.debug import debug
 from python.html_build.page import Page
 from python.html_build.component import Component
 from python.html_build.wrapper import Wrapper, WrapperType
@@ -9,11 +10,13 @@ from python.utils.html_utils import *
 from python.utils.error_utils import *
 from python.html_build.html_templating import *
 
+@debug
 def fast_check_wrapper(_html: str) -> bool:
     if re.search(containing('\*'), _html):
         return True
     return False
 
+@debug
 def get_wrapper(_slate_tag_content: str) -> Match[str]:
     wrapper_matches = [wrapper_match for wrapper_match in re.finditer(containing(r"\*(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)\S*"), strip_slate_tag(_slate_tag_content))] 
     if not wrapper_matches:
@@ -23,6 +26,7 @@ def get_wrapper(_slate_tag_content: str) -> Match[str]:
         return
     return wrapper_matches[0]
 
+@debug
 def get_wrapper_type(_wrapper: str) -> Literal[WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID]:
     if re.search(r"\*@\w+", _wrapper):
         return WrapperType.COMPONENT
@@ -33,6 +37,7 @@ def get_wrapper_type(_wrapper: str) -> Literal[WrapperType.COMPONENT, WrapperTyp
     exception(f"wrapper {_wrapper} is not valid.")
     return WrapperType.INVALID
 
+@debug
 def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: list[Match[str]], _is_root: bool = False) -> Wrapper | None:
     # Find and validate the wrapper.
     wrapper = get_wrapper(_slate_tag_match.group(1))
@@ -45,6 +50,7 @@ def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: 
         return
     return Wrapper(wrapper_type, _html[:_slate_tag_match.start()], _html[_slate_tag_match.end():], wrapper.group(1), _slate_tag_matches)
 
+@debug
 def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _wrappers: dict[str, list[Wrapper]], _is_root: bool = False) -> bool:
     wrapper: Wrapper | None = None
     for slate_tag_match in _slate_tag_matches:
@@ -61,12 +67,14 @@ def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _
         return True
     return False
 
+@debug
 def reset_variables(_variables: dict[str, str], _global_variables: dict[str, str]) -> None:
     _variables = {}
     for k, v in _global_variables.items():
         _variables[k] = v
 
 # TODO: Create arg type Enum.
+@debug
 def determine_argument_type(_argument: str) -> str:
     if '=' in _argument:
         if _argument[0] == '$':
@@ -76,10 +84,12 @@ def determine_argument_type(_argument: str) -> str:
         else:
             return None
 
+@debug
 def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
     variable_assignment_split = re.split(r"=(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", _variable_assignment)
     return (variable_assignment_split[0].strip(), variable_assignment_split[1].strip())
 
+@debug
 def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches: list[Match[str]]) -> None:
     for match in _slate_tag_matches:
         # TODO: split arguments with a better method than new line.
@@ -90,6 +100,7 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
                 _global_variables[variable] = value
 
 
+@debug
 def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     # Global variables store
     global_variables: dict[str, str] = {}

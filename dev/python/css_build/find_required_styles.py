@@ -1,5 +1,6 @@
 import os
 import re
+from python.debug import debug
 
 CSS_REQUIRED_SELECTORS = [
     "*",
@@ -27,11 +28,11 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
+@debug
 def find_required_styles(_html_dir):
     # A set of id and class selectors that must be built.
     style_selectors = set(REQUIRED_STYLES)
     # Analyse HTML files for tags, ids, and classes.
-    print("Finding required styles...")
     for (dir_path, dir_names, file_names) in os.walk(_html_dir):
         for html_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".html"]:
             html_file = open(dir_path + "\\" + html_file_name, "r")

@@ -1,6 +1,8 @@
 import os
+from python.debug import debug
 from python.utils.string_utils import *
 
+@debug
 def build_js(_js_in_dir, _js_out_dir):
     js_file_contents = {}
 

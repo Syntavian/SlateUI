@@ -1,3 +1,4 @@
+from python.debug import debug
 from python.html_build.page import Page
 from python.html_build.wrapper import Wrapper
 from python.html_build.component import Component
@@ -9,6 +10,7 @@ class HTMLSubstitution:
         self.after = after
         self.continues = continues
 
+@debug
 def merge_string_arguments(args: list[str]) -> list[str]:
     corrected_line_values: list[str] = []
     is_string = False
@@ -29,6 +31,7 @@ def merge_string_arguments(args: list[str]) -> list[str]:
 
     return corrected_line_values
 
+@debug
 def identify_substitutions(text: str) -> HTMLSubstitution:
     args: list[str] = []
     before = ""
@@ -48,6 +51,7 @@ def identify_substitutions(text: str) -> HTMLSubstitution:
 
     return HTMLSubstitution(args, before, after, continues)
 
+@debug
 def extract_variables(arguments: list[str], templates: list[str], variables: list[str]) -> list[str]:
     result_variables = variables
 
@@ -68,6 +72,7 @@ def extract_variables(arguments: list[str], templates: list[str], variables: lis
 
     return result_variables
 
+@debug
 def perform_substitution(text: str, substitution: HTMLSubstitution, templates: list[str], variables: list[str]) -> tuple[str, list[str]]:
     result_text = text + substitution.before
     variables = extract_variables(substitution.args, templates, variables)
@@ -86,6 +91,7 @@ def process_template(template_name: str, variables: list[str], templates: list[s
 
     return process_html(template, variables, templates)
 
+@debug
 def process_html(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
     result_html = ""
     substitution = identify_substitutions(_page.tag_matches)

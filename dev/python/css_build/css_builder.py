@@ -1,7 +1,9 @@
 
 import re
+from python.debug import debug
 from python.utils.string_utils import *
 
+@debug
 def build_css(_slate_css_dir, _css_in_dir, _css_out_dir, style_selectors):
     input_css_file = open(f"{_slate_css_dir}/slate.css", "r")
     output_css_file_text = ""
