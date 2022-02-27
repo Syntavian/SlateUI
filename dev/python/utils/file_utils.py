@@ -1,13 +1,13 @@
 import os
 from python.utils.error_utils import exception
 
-def get_file_vars(_file: str):
+def get_file_vars(_file: str) -> tuple[str]:
     return os.path.splitext(_file)
 
-def get_file_name(_file: str):
+def get_file_name(_file: str) -> str:
     return get_file_vars(_file)[0]
 
-def get_ext(_file: str):
+def get_ext(_file: str) -> str:
     return get_file_vars(_file)[1]
 
 def transfer(_origin_path: str, _destination_path: str) -> bool:

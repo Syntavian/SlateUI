@@ -101,7 +101,7 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
 
 
 @debug
-def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
+def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     # Global variables store
     global_variables: dict[str, str] = {}
     # Local variables store

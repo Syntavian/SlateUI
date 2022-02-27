@@ -1,9 +1,9 @@
 from threading import Thread
 
 class ThreadHandler:
-    def __init__(self, target) -> None:
+    def __init__(self, _target) -> None:
         self.rebuild_thread: Thread | None = None
-        self.target = target
+        self.target = _target
 
     def handle_new_build(self) -> None:
         self.stop()

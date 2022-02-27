@@ -4,7 +4,7 @@ from python.debug import debug
 from python.utils.string_utils import *
 
 @debug
-def build_css(_slate_css_dir, _css_in_dir, _css_out_dir, style_selectors):
+def build_css(_slate_css_dir: str, _css_in_dir: str, _css_out_dir: str, _style_selectors: set[str]) -> None:
     input_css_file = open(f"{_slate_css_dir}/slate.css", "r")
     output_css_file_text = ""
 
@@ -26,7 +26,7 @@ def build_css(_slate_css_dir, _css_in_dir, _css_out_dir, style_selectors):
         line = input_css_file_line.strip()
         if len(line) > 0 and line[-1] == r'{':
             matches = set([(a.group(1), a.group(2)) for a in  re.finditer(r"(?:[\.# ]?([a-zA-Z][\w-]*?)[ ,.#:>+])|^(\*) ", input_css_file_line)])
-            if len(matches) > 0 and any((m[0] in style_selectors or m[1] in style_selectors) for m in matches):
+            if len(matches) > 0 and any((m[0] in _style_selectors or m[1] in _style_selectors) for m in matches):
                 is_in_required_block = True
         if '@' in input_css_file_line:
             is_in_required_block = False

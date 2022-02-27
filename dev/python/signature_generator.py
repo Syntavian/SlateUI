@@ -10,7 +10,7 @@ SIGNATURE: dict[str, list[str]] = {
     r".\build\app\src\public\html": ['components', 'pages'],
     r".\dev": ['css', 'js', 'python', 'scss', 'slate_dev.py'],
     r".\dev\js": ['button_styles.js', 'image_styles.js', 'layout_styles.js', 'main.js', 'scroll_styles.js', 'sticky_styles.js', 'theme_styles.js', 'utils.js'],
-    r".\dev\python": ['css_build', 'html_build', 'js_build', 'utils', 'build.py', 'build_event_handler.py', 'directories.py', 'signature_generator.py', 'thread_handler.py'],
+    r".\dev\python": ['css_build', 'html_build', 'js_build', 'utils', 'build.py', 'build_event_handler.py', 'debug.py', 'directories.py', 'signature_generator.py', 'thread_handler.py'],
     r".\dev\python\css_build": ['css_builder.py', 'find_required_styles.py'],
     r".\dev\python\html_build": ['component.py', 'html_builder.py', 'html_templating.py', 'page.py', 'wrapper.py'],
     r".\dev\python\js_build": ['js_builder.py'],

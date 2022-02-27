@@ -3,7 +3,7 @@ from python.debug import debug
 from python.utils.string_utils import *
 
 @debug
-def build_js(_js_in_dir, _js_out_dir):
+def build_js(_js_in_dir: str, _js_out_dir: str) -> None:
     js_file_contents = {}
 
     for (dir_path, dir_names, file_names) in os.walk(_js_in_dir):
