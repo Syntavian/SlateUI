@@ -2,8 +2,8 @@
 import re
 from python.utils.string_utils import *
 
-def build_css(_css_in_dirs, _css_out_dir, style_selectors):
-    input_css_file = open(_css_in_dirs[0] + "/style.css", "r")
+def build_css(_slate_css_dir, _css_in_dir, _css_out_dir, style_selectors):
+    input_css_file = open(f"{_slate_css_dir}/slate.css", "r")
     output_css_file_text = ""
 
     keyframes_blocks = {}

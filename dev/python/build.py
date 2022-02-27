@@ -13,7 +13,7 @@ def build(path: str = "./") -> None:
     # From the built HTML in public determine the required styles to build into optimised CSS.
     style_selectors = find_required_styles(path + HTML_OUT_DIR)
     # Create the public app CSS using the discovered CSS selectors.
-    build_css((SLATE_DIR, CSS_DIR), path + CSS_OUT_DIR, style_selectors)
+    build_css(SLATE_DIR, CSS_DIR, path + CSS_OUT_DIR, style_selectors)
     # TODO: run Babel for Slate JS before transfer (dev/js/src --> dev/js/lib).
     # Optimise and transfer Slate JS to build public. @SLATE_OMIT_NEXT_LINE
     build_js(path + SLATE_DIR, path + JS_OUT_DIR)

@@ -1,3 +1,4 @@
+from python.html_build.page import Page
 from python.html_build.wrapper import Wrapper
 from python.html_build.component import Component
 
@@ -85,9 +86,9 @@ def process_template(template_name: str, variables: list[str], templates: list[s
 
     return process_html(template, variables, templates)
 
-def process_html(_html: str, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
+def process_html(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
     result_html = ""
-    substitution = identify_substitutions(_html)
+    substitution = identify_substitutions(_page.tag_matches)
 
     if len(substitution.args) > 0: 
         result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
@@ -97,6 +98,6 @@ def process_html(_html: str, _variables: dict[str, str], _components: dict[str, 
                 if len(substitution.args) > 0: 
                     result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
     else:
-        result_html = _html
+        result_html = _page.html
 
     return result_html

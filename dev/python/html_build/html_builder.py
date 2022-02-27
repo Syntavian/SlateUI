@@ -132,9 +132,9 @@ def build_html(_slate_dir, _html_in_dir, _html_out_dir) -> None:
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
 
-        # current_page_result = process_html(page.html, variables, components, wrappers)
+        html_page_result = process_html(page, variables, components, wrappers)
 
         OUTPUT_HTML_PATH = f"{_html_out_dir}{page.path}"
         os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)
         with open(OUTPUT_HTML_PATH, "w") as html_output_file:
-            html_output_file.write(page.html)
+            html_output_file.write(html_page_result)
