@@ -3,6 +3,7 @@ import re
 from typing import Iterator, Literal, Match
 from python.debug import debug
 from python.html_build.page import Page
+from python.html_build.argument_type import ArgumentType
 from python.html_build.component import Component
 from python.html_build.wrapper import Wrapper, WrapperType
 from python.utils.file_utils import *
@@ -12,7 +13,7 @@ from python.html_build.html_templating import *
 
 @debug
 def fast_check_wrapper(_html: str) -> bool:
-    if re.search(containing('\*'), _html):
+    if re.search(containing(r"\*"), _html):
         return True
     return False
 
@@ -73,16 +74,30 @@ def reset_variables(_variables: dict[str, str], _global_variables: dict[str, str
     for k, v in _global_variables.items():
         _variables[k] = v
 
-# TODO: Create arg type Enum.
 @debug
-def determine_argument_type(_argument: str) -> str:
+def determine_argument_type(_argument: str) -> Literal[ArgumentType.VARIABLE_ASSIGNMENT, ArgumentType.GLOBAL_ASSIGNMENT, ArgumentType.INVALID, ArgumentType.ROOT_WRAPPER, ArgumentType.COMPONENT_WRAPPER, ArgumentType.PAGE_WRAPPER, ArgumentType.VARIABLE, ArgumentType.GLOBAL, ArgumentType.COMPONENT, ArgumentType.PAGE]:
     if '=' in _argument:
         if _argument[0] == '$':
-            return 'variable'
+            return ArgumentType.VARIABLE_ASSIGNMENT
         elif _argument[0] == '%':
-            return 'global'
+            return ArgumentType.GLOBAL_ASSIGNMENT
         else:
-            return None
+            return ArgumentType.INVALID
+    elif _argument[0] == '*':
+        if len(_argument) == 1:
+            return ArgumentType.ROOT_WRAPPER
+        elif _argument[1] == '@':
+            return ArgumentType.COMPONENT_WRAPPER
+        else:
+            return ArgumentType.PAGE_WRAPPER
+    elif _argument[0] == '$':
+        return ArgumentType.VARIABLE
+    elif _argument[0] == '%':
+        return ArgumentType.GLOBAL
+    elif _argument[0] == '@':
+        return ArgumentType.COMPONENT
+    else:
+        return ArgumentType.PAGE
 
 @debug
 def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
@@ -95,7 +110,7 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
         # TODO: split arguments with a better method than new line.
         arguments = re.split(r"\s(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", strip_slate_tag(match.group(1)))
         for argument in arguments:
-            if determine_argument_type(argument) == 'global':
+            if determine_argument_type(argument) == ArgumentType.GLOBAL:
                 variable, value = split_variable_assignment(argument)
                 _global_variables[variable] = value
 
@@ -143,7 +158,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
 
-        html_page_result = process_html(page, variables, components, wrappers)
+        html_page_result = process_html_page(page, variables, components, wrappers)
 
         OUTPUT_HTML_PATH = f"{_html_out_dir}{page.path}"
         os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)

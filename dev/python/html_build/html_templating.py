@@ -89,10 +89,10 @@ def perform_substitution(_text: str, _substitution: HTMLSubstitution, _templates
 def process_template(_template_name: str, _variables: list[str], _templates: list[str]) -> str:
     template = _templates[_template_name]
 
-    return process_html(template, _variables, _templates)
+    return process_html_page(template, _variables, _templates)
 
 @debug
-def process_html(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
+def process_html_page(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
     result_html = ""
     substitution = identify_substitutions(_page.tag_matches)
 
