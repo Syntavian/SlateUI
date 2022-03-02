@@ -5,3 +5,6 @@ class Page:
         self.path = _path
         self.html = _html
         self.tag_matches = _tag_matches
+
+    def __str__(self) -> str:
+        return f"Page<{self.path}>"

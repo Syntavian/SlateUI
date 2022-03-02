@@ -108,9 +108,11 @@ def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
 def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches: list[Match[str]]) -> None:
     for match in _slate_tag_matches:
         # TODO: split arguments with a better method than new line.
-        arguments = re.split(r"\s(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", strip_slate_tag(match.group(1)))
+        arguments = re.split(r"((?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$).*?)(?=(?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)|$)", strip_slate_tag(match.group(1)))
+        print(strip_slate_tag(match.group(1)))
+        print(arguments)
         for argument in arguments:
-            if determine_argument_type(argument) == ArgumentType.GLOBAL:
+            if determine_argument_type(argument) == ArgumentType.GLOBAL_ASSIGNMENT:
                 variable, value = split_variable_assignment(argument)
                 _global_variables[variable] = value
 

@@ -22,3 +22,6 @@ class Wrapper:
         self.after = _after
         self.wrapped_object = _wrapped_object
         self.tag_matches = _tag_matches
+
+    def __str__(self) -> str:
+        return f"Wrapper<{self.type}, {self.wrapped_object}>"
