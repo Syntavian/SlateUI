@@ -18,6 +18,12 @@ def fast_check_wrapper(_html: str) -> bool:
     return False
 
 @debug
+def fast_check_global_assignment(_html: str) -> bool:
+    if re.search(containing(r"%.*="), _html):
+        return True
+    return False
+
+@debug
 def get_wrapper(_slate_tag_content: str) -> Match[str]:
     wrapper_matches = [wrapper_match for wrapper_match in re.finditer(containing(r"\*(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)\S*"), strip_slate_tag(_slate_tag_content))] 
     if not wrapper_matches:
@@ -105,16 +111,23 @@ def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
     return (variable_assignment_split[0].strip(), variable_assignment_split[1].strip())
 
 @debug
+def split_slate_arguments(_slate_tag_match: Match[str]):
+    arguments_string = strip_slate_tag(_slate_tag_match.group(1))
+    split_arguments_string = re.split(r"((?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$).*?)(?=(?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)|$)", arguments_string)
+    arguments = []
+    for argument in split_arguments_string:
+        if len(argument) > 0 and not re.match(r"\s", argument): arguments.append(argument)
+    return arguments
+
+@debug
 def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches: list[Match[str]]) -> None:
     for match in _slate_tag_matches:
-        # TODO: split arguments with a better method than new line.
-        arguments = re.split(r"((?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$).*?)(?=(?<!=)[\s@$%*](?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)|$)", strip_slate_tag(match.group(1)))
-        print(strip_slate_tag(match.group(1)))
-        print(arguments)
+        arguments = split_slate_arguments(match)
         for argument in arguments:
-            if determine_argument_type(argument) == ArgumentType.GLOBAL_ASSIGNMENT:
-                variable, value = split_variable_assignment(argument)
-                _global_variables[variable] = value
+            if fast_check_global_assignment(argument):
+                if determine_argument_type(argument) == ArgumentType.GLOBAL_ASSIGNMENT:
+                    variable, value = split_variable_assignment(argument)
+                    _global_variables[variable] = value
 
 
 @debug
