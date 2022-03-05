@@ -3,3 +3,4 @@
 dev/css/*
 node_modules
 __pycache__
+*.log

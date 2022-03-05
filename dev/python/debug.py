@@ -1,59 +1,19 @@
 # https://realpython.com/primer-on-python-decorators/
 import functools
 import inspect
+import time
 import re
-from typing import Iterable, Any
+from python.utils.string_utils import *
+from python.utils.console_utils import *
 
-COLOURS = {
-    "BLACK": "\033[1;30;40m",
-    "RED": "\033[1;31;40m",
-    "GREEN": "\033[1;32;40m",
-    "YELLOW": "\033[1;33;40m",
-    "BLUE": "\033[1;34;40m",
-    "PURPLE": "\033[1;35;40m",
-    "CYAN": "\033[1;36;40m",
-    "WHITE": "\033[1;37;40m",
-}
+WRITE_LOG_FILE = True
 
-COLOUR_MAP = {
-    0: COLOURS["BLACK"],
-    1: COLOURS["RED"],
-    2: COLOURS["GREEN"],
-    3: COLOURS["YELLOW"],
-    4: COLOURS["BLUE"],
-    5: COLOURS["PURPLE"],
-    6: COLOURS["CYAN"],
-    7: COLOURS["WHITE"],
-}
-
-level = 0
-
-def redact_spacing(text: str) -> str:
-    return re.sub(r"\s+", ' ', text)
-
-def colour(_text: str, _colour: str = COLOURS["GREEN"], _reset: bool = True) -> str:
-    return f"{_colour}{_text}{COLOURS['WHITE'] * _reset}"
-
-def indent(_levels: int, _colour_offset: int = 0) -> str:
-    return colour(f"{'|   ' * _levels}", COLOUR_MAP[(_levels + _colour_offset) % 3 + 3])
-
-def redact_overflow(_text: str, _max_length: int = 100) -> str:
-    if len(_text) > _max_length:
-        return f"{_text[:98]}..."
-    else:
-        return _text
-
-def repeat(_text: str, _times: int, _separator: str = '\n', _end: str = '') -> str:
-    return f"{_text}{_separator}" * (_times - 1) + f"{_text}" + _end
-
-def repeat_function(_function, _times: int, _args: Iterable[Iterable] = []) -> list:
-    return [_function(*(_args[i])) for i in range(_times)]
-
-def repeat_string_function(_function, _times: int, _args: Iterable[Iterable] = [], _separator: str = '\n', _end: str = '') -> str:
-    return _separator.join(repeat_function(_function, _times, _args)) + _end
-
-def format_value(_value: Any):
-    return redact_overflow(redact_spacing(str(_value)))
+def write_debug_log(_text: str) -> None:
+    print(_text)
+    if WRITE_LOG_FILE:
+        with open('debug.py.log', 'a') as log:
+            for line in _text.split('\n'):
+                log.write(re.sub(r".\[1;3.;40m", "", line + '\n'))
 
 def debug(_func):
     """Print the function signature and return value"""
@@ -61,13 +21,18 @@ def debug(_func):
     def wrapper_debug(*args, **kwargs):
         global level
         arg_spec = inspect.getfullargspec(_func)
-        args_repr = [f"{indent(level + 1)}{arg_spec[0][index]}={format_value(argument)}" for index, argument in enumerate(args)]                   
-        kwargs_repr = [f"{indent(level + 1)}{key}={format_value(argument)}" for key, argument in kwargs.items()]  
-        signature = ",\n".join(args_repr + kwargs_repr)           
-        print(f"{repeat_string_function(indent, 2, [[level], (level, 1)])}{colour('> ', COLOURS['GREEN'])}{_func.__name__} called" + f" with:\n{signature}" * (not not signature))
+        args_repr = [f"{indent(level + 1)}{arg_spec[0][index]} = {colour(format_value(argument), COLOURS['CYAN'])}" for index, argument in enumerate(args)]
+        kwargs_repr = [f"{indent(level + 1)}{key} = {colour(format_value(argument), COLOURS['CYAN'])}" for key, argument in kwargs.items()]  
+        signature = ",\n".join(args_repr + kwargs_repr)
+        output = f"{repeat_string_function(indent, 2, [[level], (level, 1)])}{colour('>', COLOURS['GREEN'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} called" + f" with:\n{signature}" * (not not signature)
+        write_debug_log(output)
         level += 1
+        start_time = time.perf_counter()
         value = _func(*args, **kwargs)
+        end_time = time.perf_counter()
+        run_time = end_time - start_time
         level -= 1
-        print(f"{repeat_string_function(indent, 2, [[level + 1], (level, 1)])}{colour('< ', COLOURS['RED'])}{_func.__name__} returned {format_value(value)}")
+        output = f"{repeat_string_function(indent, 2, [[level + 1], (level, 1)])}{colour('<', COLOURS['RED'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} returned {colour(format_value(value), COLOURS['CYAN'])} in {colour(f'{run_time:.4f}', COLOURS['GREEN' if run_time < 0.1 else 'RED'])} secs"
+        write_debug_log(output)
         return value
     return wrapper_debug
