@@ -130,6 +130,25 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
                     _global_variables[variable] = value
 
 
+class Argument:
+    def __init__(self) -> None:
+        pass
+
+class Tag:
+    """A Slate tag holding a position and arguments"""
+    def __init__(self, _position: int, _arguments: list[Argument]) -> None:
+        self.position = _position
+        self.arguments = _arguments
+
+
+@debug
+def compute_slate_tags(_html: str, _global_variables: dict[str, str]) -> list[Tag]:
+    slate_tag_matches = get_slate_tags(_html)
+    apply_global_variables(_global_variables, slate_tag_matches)
+    slate_tags = []
+    return slate_tags
+
+
 @debug
 def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     # Global variables store
@@ -146,9 +165,8 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     # Get the root HTML wrapper from slate.html.
     with open(f"{_slate_dir}/slate.html", "r") as root_html_file:
         root_html = root_html_file.read() 
-        slate_tag_matches = get_slate_tags(root_html)
-        apply_global_variables(global_variables, slate_tag_matches)
-        if not handle_wrapper_build(root_html, slate_tag_matches, wrappers, True):
+        slate_tags = compute_slate_tags(root_html, global_variables)
+        if not handle_wrapper_build(root_html, slate_tags, wrappers, True):
             exit_exception("Root HTML wrapper is not valid.")
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/components"):
@@ -156,19 +174,17 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
             with open(dirpath + "\\" + component_file_name, "r") as component_html_file:
                 component_file_name_text = get_file_name(component_file_name)
                 component_html = component_html_file.read()
-                slate_tag_matches = get_slate_tags(component_html)
-                apply_global_variables(global_variables, slate_tag_matches)
-                if not handle_wrapper_build(component_html, slate_tag_matches, wrappers):
-                    components[f"@{component_file_name_text}"] = Component(component_html, slate_tag_matches) 
+                slate_tags = compute_slate_tags(component_html, global_variables)
+                if not handle_wrapper_build(component_html, slate_tags, wrappers):
+                    components[f"@{component_file_name_text}"] = Component(component_html, slate_tags) 
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
         for page_file_name in filenames:
             file_path = f"{dirpath}/{page_file_name}".replace('\\', '/')
             with open(file_path, "r") as page_html_file:
                 page_html = page_html_file.read()
-                slate_tag_matches = get_slate_tags(page_html)
-                apply_global_variables(global_variables, slate_tag_matches)
-                pages[file_path] = Page(file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tag_matches) 
+                slate_tags = compute_slate_tags(page_html, global_variables)
+                pages[file_path] = Page(file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tags) 
 
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
