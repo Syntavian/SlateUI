@@ -41,15 +41,18 @@ SIGNATURE_IGNORE = [
     r"\dev\css",
 ]
 
+
 def generate(_path: str = ".") -> dict[str, list[str]]:
     signature = {}
     for dirpath, dirnames, filenames in os.walk(_path):
         if any([x in dirpath for x in SIGNATURE_IGNORE]):
             continue
         dir_contents = [x for x in dirnames if x not in SIGNATURE_IGNORE]
-        dir_contents.extend([x for x in filenames if x not in SIGNATURE_IGNORE and not any([y in x for y in SIGNATURE_IGNORE])])
+        dir_contents.extend([x for x in filenames if x not in SIGNATURE_IGNORE and not any(
+            [y in x for y in SIGNATURE_IGNORE])])
         signature[dirpath] = dir_contents
     return signature
+
 
 if __name__ == "__main__":
     result = generate()

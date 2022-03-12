@@ -15,17 +15,34 @@ $xl-offset: 2em;
 $xxl-offset: 3em;
 $xxxl-offset: 5em;
 
-$offset-types: ("p": padding, "m": margin);
-$offset-directions: ("t": top, "b": bottom, "l": left, "r": right);
-$offset-values: ("n": $n-offset, "xs": $xs-offset, "s": $s-offset, "m": $m-offset, "l": $l-offset, "xl": $xl-offset, "xxl": $xxl-offset, "xxxl": $xxxl-offset);
+$offset-types: (
+    "p": padding,
+    "m": margin,
+);
+$offset-directions: (
+    "t": top,
+    "b": bottom,
+    "l": left,
+    "r": right,
+);
+$offset-values: (
+    "n": $n-offset,
+    "xs": $xs-offset,
+    "s": $s-offset,
+    "m": $m-offset,
+    "l": $l-offset,
+    "xl": $xl-offset,
+    "xxl": $xxl-offset,
+    "xxxl": $xxxl-offset,
+);
 
 $fonts: "Century Gothic", Arial, sans-serif;
 
 $font-size: 1rem;
 
-$h1-size: $font-size * 4.0;
+$h1-size: $font-size * 4;
 $h2-size: $font-size * 2.5;
-$h3-size: $font-size * 2.0;
+$h3-size: $font-size * 2;
 $h4-size: $font-size * 1.75;
 $h5-size: $font-size * 1.5;
 $h6-size: $font-size * 1.25;
@@ -37,18 +54,16 @@ $alpha: #ffffff00;
 
 @function get-contrasting-bw($color) {
     @if color.blackness($color) > 50% {
-        @return white; 
-    }
-    @else {
-        @return black; 
+        @return white;
+    } @else {
+        @return black;
     }
 }
 
 @function color-tone-shift($color, $amount: 5%) {
     @if color.blackness($color) < 50% {
         @return color.scale($color, $lightness: -$amount);
-    }
-    @else {
+    } @else {
         @return color.scale($color, $lightness: $amount);
     }
 }
@@ -56,28 +71,33 @@ $alpha: #ffffff00;
 $themes: ();
 
 @mixin add-theme($name, $primary) {
-    $themes: map.merge($themes, ($name: (
-        "colours": (
-            "primary": $primary, 
-            "secondary": color.adjust($primary, $hue: 30deg), 
-            "tertiary": color.adjust($primary, $hue: 60deg), 
-            "darkened-1": color.scale($primary, $lightness: -10%),
-            "darkened-2": color.scale($primary, $lightness: -20%),
-            "lightened-1": color.scale($primary, $lightness: 10%),
-            "lightened-2": color.scale($primary, $lightness: 20%),
-            "shifted-1": color-tone-shift($primary, 10%),
-            "shifted-2": color-tone-shift($primary, 20%),
-            "shifted-3": color-tone-shift($primary, 30%),
-            "inverted": color.invert($primary),
-            "complement": color.complement($primary), 
-        ),
-        "text-colour": get-contrasting-bw($primary),
-        "fonts": $fonts,
-        "font-size": $font-size,
-        "padding": $s-offset,
-        "margin": $s-offset,
-        "rounding": 0.25em,
-    ))) !global;
+    $themes: map.merge(
+        $themes,
+        (
+            $name: (
+                "colours": (
+                    "primary": $primary,
+                    "secondary": color.adjust($primary, $hue: 30deg),
+                    "tertiary": color.adjust($primary, $hue: 60deg),
+                    "darkened-1": color.scale($primary, $lightness: -10%),
+                    "darkened-2": color.scale($primary, $lightness: -20%),
+                    "lightened-1": color.scale($primary, $lightness: 10%),
+                    "lightened-2": color.scale($primary, $lightness: 20%),
+                    "shifted-1": color-tone-shift($primary, 10%),
+                    "shifted-2": color-tone-shift($primary, 20%),
+                    "shifted-3": color-tone-shift($primary, 30%),
+                    "inverted": color.invert($primary),
+                    "complement": color.complement($primary),
+                ),
+                "text-colour": get-contrasting-bw($primary),
+                "fonts": $fonts,
+                "font-size": $font-size,
+                "padding": $s-offset,
+                "margin": $s-offset,
+                "rounding": 0.25em,
+            ),
+        )
+    ) !global;
 }
 
 @include add-theme("light", #f7f7f7);

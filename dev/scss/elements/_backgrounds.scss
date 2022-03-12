@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
 @each $name, $theme in variables.$themes {
     $colours: map.get($theme, "colours");
@@ -19,7 +19,9 @@
     $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
-    .#{$name}.fill, .#{$name}.box, .#{$name}.inline-box {
+    .#{$name}.fill,
+    .#{$name}.box,
+    .#{$name}.inline-box {
         background-color: $primary;
         color: $text;
 
@@ -133,13 +135,23 @@
     }
 
     %#{$name}-gradient {
-        background: linear-gradient(135deg, variables.$alpha, $shifted-1 25%, variables.$alpha);
+        background: linear-gradient(
+            135deg,
+            variables.$alpha,
+            $shifted-1 25%,
+            variables.$alpha
+        );
 
         &.fill {
-            background: linear-gradient(135deg, $primary, $shifted-1 25%, $primary);
+            background: linear-gradient(
+                135deg,
+                $primary,
+                $shifted-1 25%,
+                $primary
+            );
         }
     }
-    
+
     %#{$name}-gradient-hover-animation {
         @extend %#{$name}-gradient;
         background-size: 200% 200%;
@@ -154,12 +166,12 @@
             animation: animation-back 0.2s ease forwards;
         }
     }
-    
+
     .gradient.#{$name} {
         @extend %#{$name}-gradient;
     }
-    
-    .gradient-hover-animation.#{$name}{
+
+    .gradient-hover-animation.#{$name} {
         @extend %#{$name}-gradient-hover-animation;
     }
 }
@@ -177,31 +189,55 @@
 }
 
 @-webkit-keyframes animation-forward {
-    0%{background-position:0% 0%}
-    100%{background-position:100% 100%}
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 @-moz-keyframes animation-forward {
-    0%{background-position:0% 0%}
-    100%{background-position:100% 100%}
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
-@keyframes animation-forward { 
-    0%{background-position:0% 0%}
-    100%{background-position:100% 100%}
+@keyframes animation-forward {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 @-webkit-keyframes animation-back {
-    0%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 @-moz-keyframes animation-back {
-    0%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 @keyframes animation-back {
-    0%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }

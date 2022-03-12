@@ -1,27 +1,28 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'offsets';
-@use 'borders';
-@use 'fixed';
-@use 'shadow';
-@use 'layout';
-@use 'prototypes';
-@use 'z-index';
-@use 'text';
-@use 'elements/box';
-@use 'elements/images';
-@use 'elements/buttons';
-@use 'elements/links';
-@use 'elements/backgrounds';
-@use 'elements/forms';
-@use 'elements/canvas';
-@use 'elements/floating';
-@use 'elements/fade';
-@use 'elements/popup';
+@use "variables";
+@use "offsets";
+@use "borders";
+@use "fixed";
+@use "shadow";
+@use "layout";
+@use "prototypes";
+@use "z-index";
+@use "text";
+@use "elements/box";
+@use "elements/images";
+@use "elements/buttons";
+@use "elements/links";
+@use "elements/backgrounds";
+@use "elements/forms";
+@use "elements/canvas";
+@use "elements/floating";
+@use "elements/fade";
+@use "elements/popup";
 
 * {
-    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out,
+        shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
     box-sizing: border-box;
 }
 
@@ -39,7 +40,8 @@ body {
     margin: 0px;
 }
 
-.clickable, a {
+.clickable,
+a {
     @extend %clickable;
 }
 
@@ -106,23 +108,23 @@ body {
 
 .expand {
     @extend %flex;
-    
-    > * { 
+
+    > * {
         animation: animation-shrink 0.2s ease forwards;
 
         &.gradient-hover-animation {
             animation: animation-shrink-gradient 0.2s ease forwards;
         }
-    } 
+    }
 
     &:hover {
-        > * { 
+        > * {
             animation: animation-expand 0.2s ease forwards;
-        
+
             &.gradient-hover-animation {
                 animation: animation-expand-gradient 0.2s ease forwards;
             }
-        } 
+        }
     }
 }
 
@@ -200,8 +202,8 @@ body {
     .expand {
         > .gradient-hover-animation.#{$name} {
             animation: animation-shrink-gradient 0.2s ease forwards;
-        } 
-    
+        }
+
         &:hover > .gradient-hover-animation.#{$name} {
             animation: animation-expand-gradient 0.2s ease forwards;
         }
@@ -213,21 +215,49 @@ body {
 }
 
 @keyframes animation-expand {
-    0%{margin: 0em; padding: 0.5em;}
-    100%{margin: -0.5em; padding: 1em;}
+    0% {
+        margin: 0em;
+        padding: 0.5em;
+    }
+    100% {
+        margin: -0.5em;
+        padding: 1em;
+    }
 }
 
 @keyframes animation-shrink {
-0%{margin: -0.5em; padding: 1em;}
-100%{margin: 0em; padding: 0.5em;}
+    0% {
+        margin: -0.5em;
+        padding: 1em;
+    }
+    100% {
+        margin: 0em;
+        padding: 0.5em;
+    }
 }
 
 @keyframes animation-expand-gradient {
-    0%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
-    100%{margin: #{-0.5em}; padding: #{1em}; background-position: 100% 100%;}
+    0% {
+        margin: 0em;
+        padding: #{0.5em};
+        background-position: 0% 0%;
+    }
+    100% {
+        margin: #{-0.5em};
+        padding: #{1em};
+        background-position: 100% 100%;
+    }
 }
 
 @keyframes animation-shrink-gradient {
-    0%{margin: #{-0.5em}; padding: #{1em}; background-position: 100% 100%;}
-    100%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
+    0% {
+        margin: #{-0.5em};
+        padding: #{1em};
+        background-position: 100% 100%;
+    }
+    100% {
+        margin: 0em;
+        padding: #{0.5em};
+        background-position: 0% 0%;
+    }
 }

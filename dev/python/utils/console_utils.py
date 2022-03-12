@@ -22,8 +22,10 @@ COLOUR_MAP = {
 
 level = 0
 
+
 def colour(_text: str, _colour: str = COLOURS["GREEN"], _reset: bool = True) -> str:
     return f"{_colour}{_text}{COLOURS['WHITE'] * _reset}"
+
 
 def indent(_levels: int, _colour_offset: int = 0) -> str:
     return colour(f"{'|   ' * _levels}", COLOUR_MAP[(_levels + _colour_offset) % 3 + 3])

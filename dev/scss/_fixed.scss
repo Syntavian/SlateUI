@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'prototypes';
+@use "variables";
+@use "prototypes";
 
 @mixin fixed($scalar: 1) {
     @for $i from 1 through 5 {
@@ -10,19 +10,19 @@
             top: #{$i * $scalar}em;
             left: #{$i * $scalar}em;
         }
-    
+
         .fixed-tr-#{$i} {
             position: fixed;
             top: #{$i * $scalar}em;
             right: #{$i * $scalar}em;
         }
-    
+
         .fixed-bl-#{$i} {
             position: fixed;
             bottom: #{$i * $scalar}em;
             left: #{$i * $scalar}em;
         }
-    
+
         .fixed-br-#{$i} {
             position: fixed;
             bottom: #{$i * $scalar}em;

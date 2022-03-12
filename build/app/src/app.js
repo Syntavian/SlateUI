@@ -4,7 +4,7 @@ const path = require("path");
 
 const publicPath = "./public";
 const extensionContent = {
-    ".html": "text/html", 
+    ".html": "text/html",
     ".js": "text/javascript",
     ".css": "text/css",
     ".json": "application/json",
@@ -14,14 +14,17 @@ const extensionContent = {
 };
 
 http.createServer((request, response) => {
-    const contentPath = publicPath + ((request.url === "/") ? "/index.html" : request.url);
-    
+    const contentPath =
+        publicPath + (request.url === "/" ? "/index.html" : request.url);
+
     fs.readFile(contentPath, (error, content) => {
         if (error) {
             response.writeHead(500);
             response.end(`${error}`);
         } else {
-            response.writeHead(200, { "Content-Type": extensionContent[path.extname(contentPath)] });
+            response.writeHead(200, {
+                "Content-Type": extensionContent[path.extname(contentPath)],
+            });
             response.end(content, "utf-8");
         }
     });

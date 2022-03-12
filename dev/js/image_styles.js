@@ -10,23 +10,38 @@ function cycleCarousel(index, offset, maxDimension) {
     let maxIndex = 0;
     let maxPosition = 0;
 
-    for (let i = 0; i < imageCarouselElement.querySelectorAll(".image,.placeholder").length; i++) {
-        let child = imageCarouselElement.querySelectorAll(".image,.placeholder")[i];
+    for (
+        let i = 0;
+        i < imageCarouselElement.querySelectorAll(".image,.placeholder").length;
+        i++
+    ) {
+        let child = imageCarouselElement.querySelectorAll(
+            ".image,.placeholder"
+        )[i];
         if (Number(child.style.zIndex) > maxIndex) {
             maxIndex = Number(child.style.zIndex);
             maxPosition = i;
         }
     }
 
-    if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset].classList.contains("placeholder")) {
+    if (
+        imageCarouselElement
+            .querySelectorAll(".image,.placeholder")
+            [maxPosition + offset].classList.contains("placeholder")
+    ) {
         return;
     }
 
     let pastMax = false;
 
-    for (let child of imageCarouselElement.querySelectorAll(".image,.placeholder")) {
+    for (let child of imageCarouselElement.querySelectorAll(
+        ".image,.placeholder"
+    )) {
         if (!pastMax) {
-            if (child.style.zIndex == maxIndex || (offset < 0 && Number(child.style.zIndex) - offset == maxIndex)) {
+            if (
+                child.style.zIndex == maxIndex ||
+                (offset < 0 && Number(child.style.zIndex) - offset == maxIndex)
+            ) {
                 pastMax = true;
             }
             child.style.zIndex = Number(child.style.zIndex) - offset;
@@ -40,18 +55,42 @@ function cycleCarousel(index, offset, maxDimension) {
             child.style.display = "flex";
         }
 
-        child.style.width = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
-        child.style.height = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
-        child.style.minWidth = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
-        child.style.minHeight = maxDimension + maxDimension / 2 * (Number(child.style.zIndex) / maxIndex) + "px";
+        child.style.width =
+            maxDimension +
+            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
+            "px";
+        child.style.height =
+            maxDimension +
+            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
+            "px";
+        child.style.minWidth =
+            maxDimension +
+            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
+            "px";
+        child.style.minHeight =
+            maxDimension +
+            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
+            "px";
     }
 
-    if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
-        imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.add("disabled");
+    if (
+        imageCarouselElement
+            .querySelectorAll(".image,.placeholder")
+            [maxPosition + offset + 1].classList.contains("placeholder")
+    ) {
+        imageCarouselElement.children[
+            imageCarouselElement.children.length - 1
+        ].classList.add("disabled");
     } else {
-        imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.remove("disabled");
+        imageCarouselElement.children[
+            imageCarouselElement.children.length - 1
+        ].classList.remove("disabled");
     }
-    if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset - 1].classList.contains("placeholder")) {
+    if (
+        imageCarouselElement
+            .querySelectorAll(".image,.placeholder")
+            [maxPosition + offset - 1].classList.contains("placeholder")
+    ) {
         imageCarouselElement.children[0].classList.add("disabled");
     } else {
         imageCarouselElement.children[0].classList.remove("disabled");
@@ -99,16 +138,19 @@ function initialiseImageCarousel(index) {
     }
 
     for (let i = 0; i < imageCarouselElement.children.length; i++) {
-
-        let zIndex = -Math.abs(i - Math.floor(imageCarouselElement.children.length / 2)) + zIndexOffset;
+        let zIndex =
+            -Math.abs(
+                i - Math.floor(imageCarouselElement.children.length / 2)
+            ) + zIndexOffset;
         imageCarouselElement.children[i].style.zIndex = zIndex;
 
         if (zIndex < 0) {
             imageCarouselElement.children[i].style.display = "none";
         }
 
-        let newSize = maxImageSize + maxImageSize / 2 * (zIndex / zIndexOffset);
-        maxCarouselSize = (maxCarouselSize < newSize) ? newSize : maxCarouselSize;
+        let newSize =
+            maxImageSize + (maxImageSize / 2) * (zIndex / zIndexOffset);
+        maxCarouselSize = maxCarouselSize < newSize ? newSize : maxCarouselSize;
         let formattedSize = px(newSize);
 
         imageCarouselElement.children[i].style.width = formattedSize;
@@ -118,8 +160,12 @@ function initialiseImageCarousel(index) {
     }
 
     for (let i = 0; i < imageCarouselElement.children.length; i++) {
-        imageCarouselElement.children[i].style.marginLeft = px(-maxCarouselSize / 4);
-        imageCarouselElement.children[i].style.marginRight = px(-maxCarouselSize / 4);
+        imageCarouselElement.children[i].style.marginLeft = px(
+            -maxCarouselSize / 4
+        );
+        imageCarouselElement.children[i].style.marginRight = px(
+            -maxCarouselSize / 4
+        );
     }
 
     let leftButton = document.createElement("div");
@@ -128,7 +174,10 @@ function initialiseImageCarousel(index) {
     let leftButtonStyle = getComputedStyle(imageCarouselElement, "::before");
     let rightButtonStyle = getComputedStyle(imageCarouselElement, "::after");
 
-    leftButton.textContent = leftButtonStyle.content.slice(1,leftButtonStyle.content.length - 1);
+    leftButton.textContent = leftButtonStyle.content.slice(
+        1,
+        leftButtonStyle.content.length - 1
+    );
     if (currentButtonTheme) {
         leftButton.classList.value = currentButtonTheme;
     } else {
@@ -138,7 +187,10 @@ function initialiseImageCarousel(index) {
     leftButton.style.fontWeight = leftButtonStyle.fontWeight;
     leftButton.style.zIndex = zIndexOffset + 1;
 
-    rightButton.textContent = rightButtonStyle.content.slice(1,rightButtonStyle.content.length - 1);
+    rightButton.textContent = rightButtonStyle.content.slice(
+        1,
+        rightButtonStyle.content.length - 1
+    );
     if (currentButtonTheme) {
         rightButton.classList.value = currentButtonTheme;
     } else {
@@ -151,18 +203,25 @@ function initialiseImageCarousel(index) {
     imageCarouselElement.prepend(leftButton);
     imageCarouselElement.append(rightButton);
 
-    leftButton.addEventListener("click", e => cycleCarousel(index, -1, maxImageSize));
-    rightButton.addEventListener("click", e => cycleCarousel(index, 1, maxImageSize));
+    leftButton.addEventListener("click", (e) =>
+        cycleCarousel(index, -1, maxImageSize)
+    );
+    rightButton.addEventListener("click", (e) =>
+        cycleCarousel(index, 1, maxImageSize)
+    );
 }
 
 function resetCarousel(index) {
     let imageCarouselElement = imageCarousels[index];
-    currentButtonTheme = imageCarouselElement.querySelectorAll(".button")[0].classList.value;
+    currentButtonTheme =
+        imageCarouselElement.querySelectorAll(".button")[0].classList.value;
 
-    for (let child of imageCarouselElement.querySelectorAll(".placeholder,.button")) {
+    for (let child of imageCarouselElement.querySelectorAll(
+        ".placeholder,.button"
+    )) {
         child.parentElement.removeChild(child);
     }
-    
+
     for (let child of imageCarouselElement.querySelectorAll(".image")) {
         child.style = "";
     }
@@ -180,6 +239,6 @@ for (let i = 0; i < imageCarousels.length; i++) {
     initialiseImageCarousel(i);
 }
 
-window.addEventListener("resize", e => {
+window.addEventListener("resize", (e) => {
     resetCarousels();
 });

@@ -28,6 +28,7 @@ REQUIRED_STYLES = []
 REQUIRED_STYLES.extend(CSS_REQUIRED_SELECTORS)
 REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
+
 @debug
 def find_required_styles(_html_path: str) -> set[str]:
     # A set of id and class selectors that must be built.
@@ -42,11 +43,11 @@ def find_required_styles(_html_path: str) -> set[str]:
                 html_file_text = html_file_text + html_file_line
             html_file.close()
 
-            for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:  
+            for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:
                 for tag in tags:
                     style_selectors.add(tag)
 
-            for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:  
+            for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:
                 for style in tag_styles:
                     style_selectors.add(style)
     return style_selectors

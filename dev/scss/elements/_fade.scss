@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
 .fade {
     width: 100vw;
@@ -25,30 +25,57 @@
     }
 
     &-horizontal {
-        background: linear-gradient(variables.$alpha, variables.$white, variables.$alpha);
+        background: linear-gradient(
+            variables.$alpha,
+            variables.$white,
+            variables.$alpha
+        );
 
         &-outside {
-            background: linear-gradient(variables.$white, variables.$alpha, variables.$white);
+            background: linear-gradient(
+                variables.$white,
+                variables.$alpha,
+                variables.$white
+            );
         }
     }
 
     &-vertical {
-        background: linear-gradient(90deg, variables.$alpha, variables.$white, variables.$alpha);
+        background: linear-gradient(
+            90deg,
+            variables.$alpha,
+            variables.$white,
+            variables.$alpha
+        );
 
         &-outside {
-            background: linear-gradient(90deg, variables.$white, variables.$alpha, variables.$white);
+            background: linear-gradient(
+                90deg,
+                variables.$white,
+                variables.$alpha,
+                variables.$white
+            );
         }
     }
 
     &-outside {
-        background: linear-gradient(variables.$white, variables.$alpha, variables.$white), linear-gradient(90deg, variables.$white, variables.$alpha, variables.$white);
+        background: linear-gradient(
+                variables.$white,
+                variables.$alpha,
+                variables.$white
+            ),
+            linear-gradient(
+                90deg,
+                variables.$white,
+                variables.$alpha,
+                variables.$white
+            );
     }
 
     &-radial {
         background: radial-gradient(variables.$white 30%, variables.$alpha);
     }
 }
-
 
 @each $name, $theme in variables.$themes {
     $colours: map.get($theme, "colours");
@@ -60,42 +87,60 @@
         &-down {
             background: linear-gradient(variables.$alpha, $primary);
         }
-    
+
         &-up {
             background: linear-gradient($primary, variables.$alpha);
         }
-    
+
         &-left {
             background: linear-gradient(270deg, variables.$alpha, $primary);
         }
-    
+
         &-right {
             background: linear-gradient(90deg, variables.$alpha, $primary);
         }
-    
+
         &-horizontal {
-            background: linear-gradient(variables.$alpha, $primary, variables.$alpha);
-    
+            background: linear-gradient(
+                variables.$alpha,
+                $primary,
+                variables.$alpha
+            );
+
             &-outside {
-                background: linear-gradient($primary, variables.$alpha, $primary);
+                background: linear-gradient(
+                    $primary,
+                    variables.$alpha,
+                    $primary
+                );
             }
         }
-    
+
         &-vertical {
-            background: linear-gradient(90deg, variables.$alpha, $primary, variables.$alpha);
-    
+            background: linear-gradient(
+                90deg,
+                variables.$alpha,
+                $primary,
+                variables.$alpha
+            );
+
             &-outside {
-                background: linear-gradient(90deg, $primary, variables.$alpha, $primary);
+                background: linear-gradient(
+                    90deg,
+                    $primary,
+                    variables.$alpha,
+                    $primary
+                );
             }
         }
-    
+
         &-outside {
-            background: linear-gradient($primary, variables.$alpha, $primary), linear-gradient(90deg, $primary, variables.$alpha, $primary);
+            background: linear-gradient($primary, variables.$alpha, $primary),
+                linear-gradient(90deg, $primary, variables.$alpha, $primary);
         }
-    
+
         &-radial {
             background: radial-gradient($primary 30%, variables.$alpha);
         }
     }
 }
-

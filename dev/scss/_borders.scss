@@ -1,10 +1,14 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'prototypes';
+@use "variables";
+@use "prototypes";
 
 .border {
-    border: 1px solid map.get(map.get(map.get(variables.$themes, "light"), "colours"), "shifted-1");
+    border: 1px solid
+        map.get(
+            map.get(map.get(variables.$themes, "light"), "colours"),
+            "shifted-1"
+        );
 }
 
 @each $name, $theme in variables.$themes {
@@ -125,11 +129,11 @@
 
             &-primary {
                 border: 1px solid $primary;
-    
+
                 &-complement {
                     border: 1px solid complement($primary);
                 }
-    
+
                 &-inverted {
                     border: 1px solid invert($primary);
                 }

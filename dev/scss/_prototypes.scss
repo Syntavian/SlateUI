@@ -21,7 +21,7 @@
     &.shrink-xl:not(.image-carousel) {
         @media screen and (max-width: variables.$screen-width-xl) {
             @include flex(column, $align, $justify, $grow);
-    
+
             &.flex-reverse {
                 flex-direction: column-reverse;
             }
@@ -37,7 +37,7 @@
     &.shrink-l:not(.image-carousel) {
         @media screen and (max-width: variables.$screen-width-l) {
             @include flex(column, $align, $justify, $grow);
-    
+
             &.flex-reverse {
                 flex-direction: column-reverse;
             }
@@ -53,7 +53,7 @@
     &.shrink-m:not(.image-carousel) {
         @media screen and (max-width: variables.$screen-width-m) {
             @include flex(column, $align, $justify, $grow);
-    
+
             &.flex-reverse {
                 flex-direction: column-reverse;
             }
@@ -66,10 +66,10 @@
         }
     }
 
-    &:not(.image-carousel,.no-shrink) {
+    &:not(.image-carousel, .no-shrink) {
         @media screen and (max-width: variables.$screen-width-s) {
             @include flex(column, $align, $justify, $grow);
-    
+
             &.flex-reverse {
                 flex-direction: column-reverse;
             }
@@ -90,10 +90,19 @@
 
 @mixin gradient($primary) {
     @if color.blackness($primary) > 50% {
-        background: linear-gradient(135deg, variables.$alpha, lighten($primary, 10%) 25%, variables.$alpha);
-    }
-    @else {
-        background: linear-gradient(135deg, variables.$alpha, darken($primary, 10%) 25%, variables.$alpha);
+        background: linear-gradient(
+            135deg,
+            variables.$alpha,
+            lighten($primary, 10%) 25%,
+            variables.$alpha
+        );
+    } @else {
+        background: linear-gradient(
+            135deg,
+            variables.$alpha,
+            darken($primary, 10%) 25%,
+            variables.$alpha
+        );
     }
 }
 
@@ -162,7 +171,7 @@
         %#{$type}-#{$level} {
             #{$type}: $value;
         }
-    }    
+    }
 }
 
 @for $i from -1 through 10 {
@@ -171,7 +180,7 @@
     }
 }
 
-@for $i from 1 through 10 { 
+@for $i from 1 through 10 {
     %width-#{$i} {
         width: #{10% * $i};
     }
@@ -232,19 +241,19 @@
     %shadow-#{$i} {
         box-shadow: gray 0px 0px ($i + 2px) 0px;
     }
-    
+
     %shadow-up-#{$i} {
         box-shadow: gray 0px -#{$i}px ($i + 2px) 0px;
     }
-    
+
     %shadow-down-#{$i} {
         box-shadow: gray 0px #{$i}px ($i + 2px) 0px;
     }
-    
+
     %shadow-right-#{$i} {
         box-shadow: gray #{$i}px 0px ($i + 2px) 0px;
     }
-    
+
     %shadow-left-#{$i} {
         box-shadow: gray -#{$i}px 0px ($i + 2px) 0px;
     }
@@ -252,62 +261,62 @@
     %shadow-inset-#{$i} {
         box-shadow: gray 0px 0px ($i + 2px) 0px inset;
     }
-    
+
     %shadow-inset-up-#{$i} {
         box-shadow: gray 0px -#{$i}px ($i + 2px) 0px inset;
     }
-    
+
     %shadow-inset-down-#{$i} {
         box-shadow: gray 0px #{$i}px ($i + 2px) 0px inset;
     }
-    
+
     %shadow-inset-right-#{$i} {
         box-shadow: gray #{$i}px 0px ($i + 2px) 0px inset;
     }
-    
+
     %shadow-inset-left-#{$i} {
         box-shadow: gray -#{$i}px 0px ($i + 2px) 0px inset;
     }
 
     @each $name, $theme in variables.$themes {
         $colour: map.get(map.get($theme, "colours"), "shifted-2");
-    
+
         %shadow-#{$i}.#{$name} {
             box-shadow: $colour 0px 0px ($i + 2px) 0px;
         }
-        
+
         %shadow-up-#{$i}.#{$name} {
             box-shadow: $colour 0px -#{$i}px ($i + 2px) 0px;
         }
-        
+
         %shadow-down-#{$i}.#{$name} {
             box-shadow: $colour 0px #{$i}px ($i + 2px) 0px;
         }
-        
+
         %shadow-right-#{$i}.#{$name} {
             box-shadow: $colour #{$i}px 0px ($i + 2px) 0px;
         }
-        
+
         %shadow-left-#{$i}.#{$name} {
             box-shadow: $colour -#{$i}px 0px ($i + 2px) 0px;
         }
-    
+
         %shadow-inset-#{$i}.#{$name} {
             box-shadow: $colour 0px 0px ($i + 2px) 0px inset;
         }
-        
+
         %shadow-inset-up-#{$i}.#{$name} {
             box-shadow: $colour 0px -#{$i}px ($i + 2px) 0px inset;
         }
-        
+
         %shadow-inset-down-#{$i}.#{$name} {
             box-shadow: $colour 0px #{$i}px ($i + 2px) 0px inset;
         }
-        
+
         %shadow-inset-right-#{$i}.#{$name} {
             box-shadow: $colour #{$i}px 0px ($i + 2px) 0px inset;
         }
-        
+
         %shadow-inset-left-#{$i}.#{$name} {
             box-shadow: $colour -#{$i}px 0px ($i + 2px) 0px inset;
         }

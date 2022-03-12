@@ -1,5 +1,6 @@
 from threading import Thread
 
+
 class ThreadHandler:
     def __init__(self, _target) -> None:
         self.rebuild_thread: Thread | None = None
@@ -11,5 +12,5 @@ class ThreadHandler:
         self.rebuild_thread.start()
 
     def stop(self) -> None:
-        if self.rebuild_thread: 
+        if self.rebuild_thread:
             self.rebuild_thread.join()

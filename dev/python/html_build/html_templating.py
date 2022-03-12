@@ -3,12 +3,14 @@ from python.html_build.page import Page
 from python.html_build.wrapper import Wrapper
 from python.html_build.component import Component
 
+
 class HTMLSubstitution:
     def __init__(self, _args: list[str], _before: str, _after: str, _continues: bool) -> None:
         self.args = _args
         self.before = _before
         self.after = _after
         self.continues = _continues
+
 
 @debug
 def merge_string_arguments(_args: list[str]) -> list[str]:
@@ -31,6 +33,7 @@ def merge_string_arguments(_args: list[str]) -> list[str]:
 
     return corrected_line_values
 
+
 @debug
 def identify_substitutions(_text: str) -> HTMLSubstitution:
     args: list[str] = []
@@ -51,6 +54,7 @@ def identify_substitutions(_text: str) -> HTMLSubstitution:
 
     return HTMLSubstitution(args, before, after, continues)
 
+
 @debug
 def extract_variables(_arguments: list[str], _templates: list[str], _variables: list[str]) -> list[str]:
     result_variables = _variables
@@ -68,9 +72,11 @@ def extract_variables(_arguments: list[str], _templates: list[str], _variables: 
                 except:
                     result_variables[variable[0]] = ""
             else:
-                result_variables[variable[0]] = process_template(variable[1], _templates, _variables)
+                result_variables[variable[0]] = process_template(
+                    variable[1], _templates, _variables)
 
     return result_variables
+
 
 @debug
 def perform_substitution(_text: str, _substitution: HTMLSubstitution, _templates: list[str], _variables: list[str]) -> tuple[str, list[str]]:
@@ -80,29 +86,34 @@ def perform_substitution(_text: str, _substitution: HTMLSubstitution, _templates
     if _substitution.args[0][0] == '$':
         result_text: str = result_text + _variables[_substitution.args[0]]
     else:
-        result_text: str = result_text + process_template(_substitution.args[0], _templates, _variables)
+        result_text: str = result_text + \
+            process_template(_substitution.args[0], _templates, _variables)
     if not _substitution.continues:
         result_text: str = result_text + _substitution.after
 
     return result_text, _variables
+
 
 def process_template(_template_name: str, _variables: list[str], _templates: list[str]) -> str:
     template = _templates[_template_name]
 
     return process_html_page(template, _variables, _templates)
 
+
 @debug
 def process_html_page(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
     result_html = ""
     substitution = identify_substitutions(_page.tag_matches)
 
-    if len(substitution.args) > 0: 
-        result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
+    if len(substitution.args) > 0:
+        result_html, _variables = perform_substitution(
+            result_html, substitution, _components, _variables)
         if substitution.continues:
             while substitution.continues:
                 substitution = identify_substitutions(substitution.after)
-                if len(substitution.args) > 0: 
-                    result_html, _variables = perform_substitution(result_html, substitution, _components, _variables)
+                if len(substitution.args) > 0:
+                    result_html, _variables = perform_substitution(
+                        result_html, substitution, _components, _variables)
     else:
         result_html = _page.html
 

@@ -1,9 +1,10 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
-.button, input[type='submit'] {
+.button,
+input[type="submit"] {
     @extend %flex;
     @extend %shadow-3;
     @extend %clickable;
@@ -59,7 +60,8 @@
     $inverted: map.get($colours, "inverted");
     $complement: map.get($colours, "complement");
 
-    .#{$name}.button, input[type='submit'].#{$name} {
+    .#{$name}.button,
+    input[type="submit"].#{$name} {
         border: none;
         &.disabled {
             color: $shifted-2;
@@ -81,15 +83,16 @@
 
 .button-expand {
     @extend %flex;
-    
-    > * { 
+
+    > * {
         @extend .button;
-    } 
+    }
 }
 
 @each $name, $theme in variables.$themes {
-    .button-expand, .#{$name}.button-expand {
-        > * { 
+    .button-expand,
+    .#{$name}.button-expand {
+        > * {
             animation: animation-shrink 0.2s ease forwards;
 
             &.gradient-hover-animation {
@@ -99,10 +102,10 @@
                     animation: animation-shrink-gradient 0.2s ease forwards;
                 }
             }
-        } 
-    
+        }
+
         &:hover {
-            > * { 
+            > * {
                 animation: animation-expand 0.2s ease forwards;
 
                 &.gradient-hover-animation {
@@ -112,27 +115,55 @@
                         animation: animation-expand-gradient 0.2s ease forwards;
                     }
                 }
-            } 
+            }
         }
     }
 }
 
 @keyframes animation-expand {
-    0%{margin: 0em; padding: #{0.5em};}
-    100%{margin: #{-0.5em}; padding: #{0.5em + 0.5em};}
+    0% {
+        margin: 0em;
+        padding: #{0.5em};
+    }
+    100% {
+        margin: #{-0.5em};
+        padding: #{0.5em + 0.5em};
+    }
 }
 
 @keyframes animation-shrink {
-    0%{margin: #{-0.5em}; padding: #{0.5em + 0.5em};}
-    100%{margin: 0em; padding: #{0.5em};}
+    0% {
+        margin: #{-0.5em};
+        padding: #{0.5em + 0.5em};
+    }
+    100% {
+        margin: 0em;
+        padding: #{0.5em};
+    }
 }
 
 @keyframes animation-expand-gradient {
-    0%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
-    100%{margin: #{-0.5em}; padding: #{0.5em + 0.5em}; background-position: 100% 100%;}
+    0% {
+        margin: 0em;
+        padding: #{0.5em};
+        background-position: 0% 0%;
+    }
+    100% {
+        margin: #{-0.5em};
+        padding: #{0.5em + 0.5em};
+        background-position: 100% 100%;
+    }
 }
 
 @keyframes animation-shrink-gradient {
-    0%{margin: #{-0.5em}; padding: #{0.5em + 0.5em}; background-position: 100% 100%;}
-    100%{margin: 0em; padding: #{0.5em}; background-position: 0% 0%;}
+    0% {
+        margin: #{-0.5em};
+        padding: #{0.5em + 0.5em};
+        background-position: 100% 100%;
+    }
+    100% {
+        margin: 0em;
+        padding: #{0.5em};
+        background-position: 0% 0%;
+    }
 }

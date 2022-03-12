@@ -1,158 +1,196 @@
 @use "sass:map";
 @use "sass:color";
-@use 'variables';
-@use 'prototypes';
+@use "variables";
+@use "prototypes";
 
-.flex, .f {
+.flex,
+.f {
     @extend %flex;
 }
 
-.flex-column, .f-c {
+.flex-column,
+.f-c {
     @include prototypes.flex-column(space-between, center);
 
-    &-start, &-s {
+    &-start,
+    &-s {
         @include prototypes.flex-column(flex-start, center);
 
-        &-left, &-l {
+        &-left,
+        &-l {
             @include prototypes.flex-column(flex-start, flex-start);
         }
-    
-        &-right, &-r {
+
+        &-right,
+        &-r {
             @include prototypes.flex-column(flex-start, flex-end);
         }
     }
 
-    &-center, &-c {
+    &-center,
+    &-c {
         @include prototypes.flex-column(center, center);
 
-        &-left, &-l {
+        &-left,
+        &-l {
             @include prototypes.flex-column(center, flex-start);
         }
-    
-        &-right, &-r {
+
+        &-right,
+        &-r {
             @include prototypes.flex-column(center, flex-end);
         }
     }
 
-    &-end, &-e {
+    &-end,
+    &-e {
         @include prototypes.flex-column(flex-end, center);
 
-        &-left, &-l {
+        &-left,
+        &-l {
             @include prototypes.flex-column(flex-end, flex-start);
         }
-    
-        &-right, &-r {
+
+        &-right,
+        &-r {
             @include prototypes.flex-column(flex-end, flex-end);
         }
     }
 
-    &-left, &-l {
+    &-left,
+    &-l {
         @include prototypes.flex-column(space-between, flex-start);
 
-        &-start, &-s {
+        &-start,
+        &-s {
             @include prototypes.flex-column(flex-start, flex-start);
         }
-    
-        &-center, &-c {
+
+        &-center,
+        &-c {
             @include prototypes.flex-column(center, flex-start);
         }
-    
-        &-end, &-e {
+
+        &-end,
+        &-e {
             @include prototypes.flex-column(flex-end, flex-start);
         }
     }
 
-    &-right, &-r {
+    &-right,
+    &-r {
         @include prototypes.flex-column(space-between, flex-end);
 
-        &-start, &-s {
+        &-start,
+        &-s {
             @include prototypes.flex-column(flex-start, flex-end);
         }
-    
-        &-center, &-c {
+
+        &-center,
+        &-c {
             @include prototypes.flex-column(center, flex-end);
         }
-    
-        &-end, &-e {
+
+        &-end,
+        &-e {
             @include prototypes.flex-column(flex-end, flex-end);
         }
     }
 }
 
-.flex-row, .f-r {
+.flex-row,
+.f-r {
     @include prototypes.flex-row(space-between, center);
 
-    &-start, &-s {
+    &-start,
+    &-s {
         @include prototypes.flex-row(flex-start, center);
 
-        &-top, &-t {
+        &-top,
+        &-t {
             @include prototypes.flex-row(flex-start, flex-start);
         }
-    
-        &-bottom, &-b {
+
+        &-bottom,
+        &-b {
             @include prototypes.flex-row(flex-start, flex-end);
         }
     }
 
-    &-center, &-c {
+    &-center,
+    &-c {
         @include prototypes.flex-row(center, center);
 
-        &-top, &-t {
+        &-top,
+        &-t {
             @include prototypes.flex-row(center, flex-start);
         }
-    
-        &-bottom, &-b {
+
+        &-bottom,
+        &-b {
             @include prototypes.flex-row(center, flex-end);
         }
     }
 
-    &-end, &-e {
+    &-end,
+    &-e {
         @include prototypes.flex-row(flex-end, center);
 
-        &-top, &-t {
+        &-top,
+        &-t {
             @include prototypes.flex-row(flex-end, flex-start);
         }
-    
-        &-bottom, &-b {
+
+        &-bottom,
+        &-b {
             @include prototypes.flex-row(flex-end, flex-end);
         }
     }
 
-    &-top, &-t {
+    &-top,
+    &-t {
         @include prototypes.flex-row(space-between, flex-start);
 
-        &-start, &-s {
+        &-start,
+        &-s {
             @include prototypes.flex-row(flex-start, flex-start);
         }
-    
-        &-center, &-c {
+
+        &-center,
+        &-c {
             @include prototypes.flex-row(center, flex-start);
         }
-    
-        &-end, &-e {
+
+        &-end,
+        &-e {
             @include prototypes.flex-row(flex-end, flex-start);
         }
     }
 
-    &-bottom, &-b {
+    &-bottom,
+    &-b {
         @include prototypes.flex-row(space-between, flex-end);
 
-        &-start, &-s {
+        &-start,
+        &-s {
             @include prototypes.flex-row(flex-start, flex-end);
         }
-    
-        &-center, &-c {
+
+        &-center,
+        &-c {
             @include prototypes.flex-row(center, flex-end);
         }
-    
-        &-end, &-e {
+
+        &-end,
+        &-e {
             @include prototypes.flex-row(flex-end, flex-end);
         }
     }
 }
 
 @for $i from 0 through 10 {
-    .flex-grow-#{$i}, .f-g-#{$i} {
+    .flex-grow-#{$i},
+    .f-g-#{$i} {
         flex-grow: #{$i};
     }
 }

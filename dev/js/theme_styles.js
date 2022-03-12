@@ -1,4 +1,5 @@
-const elementQuery = "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border'],canvas,.canvas";
+const elementQuery =
+    "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border'],canvas,.canvas";
 
 let themeSwitchers = document.querySelectorAll(".theme-selector");
 let themedElements = document.querySelectorAll(elementQuery);
@@ -20,21 +21,31 @@ function updateThemeSwitchers() {
         let style = getComputedStyle(button);
         let select = button.querySelector("select");
         select.style.width = Number(style.width.replace("px", "")) + 18 + "px";
-        select.style.height = Number(style.height.replace("px", "")) + 18 + "px";
+        select.style.height =
+            Number(style.height.replace("px", "")) + 18 + "px";
     }
 }
 
 function initialiseThemeSwitcher(button) {
     let label = document.createElement("span");
-    label.textContent = getComputedStyle(button, "::before").content.replaceAll('"', '');
+    label.textContent = getComputedStyle(button, "::before").content.replaceAll(
+        '"',
+        ""
+    );
     button.appendChild(label);
     let themes = getComputedStyle(button, "::after").content;
     let select = document.createElement("select");
     let style = getComputedStyle(button);
     select.style.width = style.width;
     select.style.height = style.height;
-    for (let string of themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')) {
-        let splitString = string.split(':');
+    for (let string of themes
+        .replaceAll('\\"', "")
+        .replaceAll('"', "")
+        .replaceAll(" ", "")
+        .replaceAll("(", "")
+        .replaceAll(")", "")
+        .split(",")) {
+        let splitString = string.split(":");
         if (splitString.length === 4) {
             let text = splitString[0];
             let option = document.createElement("option");
@@ -56,10 +67,14 @@ function initialiseThemeSwitcher(button) {
         element.classList.add(currentTheme);
     }
 
-    button.addEventListener("mouseleave", e => {select.blur();});
-    select.addEventListener("change", e => {switchElementThemes(select.value.toLowerCase());});
-    window.addEventListener("resize", e => {
-        updateThemeSwitchers(); 
+    button.addEventListener("mouseleave", (e) => {
+        select.blur();
+    });
+    select.addEventListener("change", (e) => {
+        switchElementThemes(select.value.toLowerCase());
+    });
+    window.addEventListener("resize", (e) => {
+        updateThemeSwitchers();
     });
 }
 

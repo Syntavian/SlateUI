@@ -1,9 +1,10 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
-canvas, .canvas {
+canvas,
+.canvas {
     @include prototypes.border-radius();
     @extend %shadow-1;
     width: 100%;
@@ -18,5 +19,5 @@ canvas, .canvas {
             border: 1px solid $shifted-2;
             background-color: invert($text);
         }
-    }   
+    }
 }

@@ -6,6 +6,7 @@ from python.js_build.js_builder import build_js
 from python.css_build.find_required_styles import find_required_styles
 from python.utils.file_utils import transfer
 
+
 @debug
 def build(_path: str = "./") -> None:
     # Create working HTML in public dir from HTML templates in src.

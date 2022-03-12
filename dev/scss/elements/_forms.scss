@@ -1,13 +1,14 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
 .form-row {
     @include prototypes.flex-row(flex-start, flex-start);
     @extend %width-10;
 
-    .form-input, .input { 
+    .form-input,
+    .input {
         @extend %width-6;
     }
 }
@@ -17,10 +18,11 @@
     text-align: end;
 }
 
-.form-input, .input {
+.form-input,
+.input {
     @include prototypes.border-radius();
     @extend %shadow-1;
-    @extend %margin-horizontal-s; 
+    @extend %margin-horizontal-s;
     @extend %padding-xs;
     @extend %margin-top-xs;
     resize: vertical;
@@ -50,7 +52,7 @@
         &:checked {
             @each $name, $theme in variables.$themes {
                 $text: map.get($theme, "text-colour");
-    
+
                 &.#{$name} {
                     @include prototypes.gradient-hover-animation($text);
                 }
@@ -59,7 +61,8 @@
     }
 }
 
-form, .form {
+form,
+.form {
     @include prototypes.flex-column(flex-start, center);
     @extend %padding-1;
 
@@ -69,8 +72,10 @@ form, .form {
         label {
             @extend .form-label;
         }
-    
-        input, textarea, select {
+
+        input,
+        textarea,
+        select {
             @extend .form-input;
         }
     }
@@ -79,7 +84,8 @@ form, .form {
         @extend .form-label;
     }
 
-    input:not([type="submit"]), textarea {
+    input:not([type="submit"]),
+    textarea {
         @extend .form-input;
     }
 }
@@ -114,7 +120,9 @@ textarea {
     $complement: map.get($colours, "complement");
     $text: map.get($theme, "text-colour");
 
-    .#{$name}.form-input, input.#{$name}, .#{$name}.input {
+    .#{$name}.form-input,
+    input.#{$name},
+    .#{$name}.input {
         border: 1px solid $shifted-2;
         color: $text;
         background-color: invert($text);
@@ -128,12 +136,14 @@ textarea {
 }
 
 @media screen and (max-width: variables.$screen-width-m) {
-
-    form, .form {
+    form,
+    .form {
         width: 100% !important;
     }
 
-    .form-row, form div, .form div {
+    .form-row,
+    form div,
+    .form div {
         @include prototypes.flex-column(space-between, flex-start);
 
         label {
@@ -142,7 +152,7 @@ textarea {
             margin-left: 0px;
             margin-right: 0px;
         }
-    
+
         input:not([type="checkbox"]) {
             width: 100% !important;
             margin-left: 0px;
@@ -150,14 +160,18 @@ textarea {
         }
     }
 
-    .form-label, form label, .form label {
+    .form-label,
+    form label,
+    .form label {
         text-align: start;
         width: 100% !important;
         margin-left: 0px;
         margin-right: 0px;
     }
 
-    .form-input:not([type="checkbox"]), form input:not([type="checkbox"]), .form input:not([type="checkbox"]) {
+    .form-input:not([type="checkbox"]),
+    form input:not([type="checkbox"]),
+    .form input:not([type="checkbox"]) {
         width: 100% !important;
         margin-left: 0px;
         margin-right: 0px;

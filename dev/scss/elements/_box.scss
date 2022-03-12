@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:color";
-@use '../variables';
-@use '../prototypes';
+@use "../variables";
+@use "../prototypes";
 
 @each $name, $theme in variables.$themes {
     $colours: map.get($theme, "colours");
