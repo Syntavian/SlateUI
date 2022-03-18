@@ -1,4 +1,5 @@
 **/lib/*
+coverage/
 .vscode/
 dev/css/*
 node_modules

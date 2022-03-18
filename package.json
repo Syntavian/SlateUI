@@ -5,7 +5,8 @@
   "scripts": {
     "prep": "npm install -ci && cd build/app && npm install -ci",
     "build": "python dev/slate_dev.py",
-    "test-py": "cd dev && python -m pytest python/"
+    "test-py": "cd dev && python -m pytest python/",
+    "test-js": "jest"
   },
   "author": "Syntavian",
   "license": "MIT",
