@@ -5,9 +5,9 @@
   "main": "js/app.js",
   "private": true,
   "scripts": {
-    "start": "node lib/app.js",
-    "dev": "nodemon lib/app.js",
-    "test": "echo no test script",
+    "start": "python slate/slate.py && node lib/app.js",
+    "dev": "python slate/slate.py watch && nodemon lib/app.js",
+    "test": "jest",
     "build": "python slate/slate.py"
   },
   "author": "",
