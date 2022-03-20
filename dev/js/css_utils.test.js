@@ -1,4 +1,7 @@
-import { getElementStyleAsNumber, getElementStylesAsNumberSum } from "./utils";
+import {
+    getElementStyleAsNumber,
+    getElementStylesAsNumberSum,
+} from "./css_utils";
 
 describe("getElementStyleAsNumber()", () => {
     test("should remove 'px' and return the number", () => {
