@@ -1,4 +1,5 @@
 from watchdog.events import FileSystemEventHandler
+
 from python.thread_handler import ThreadHandler
 
 

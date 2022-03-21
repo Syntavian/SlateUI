@@ -1,9 +1,9 @@
+from python.css_build.css_builder import build_css
+from python.css_build.find_required_styles import find_required_styles
 from python.debug import debug
 from python.directories import *
 from python.html_build.html_builder import build_html
-from python.css_build.css_builder import build_css
 from python.js_build.js_builder import build_js
-from python.css_build.find_required_styles import find_required_styles
 from python.utils.file_utils import transfer
 
 

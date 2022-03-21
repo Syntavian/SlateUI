@@ -1,5 +1,5 @@
 import re
-from typing import Iterator, Match, Any
+from typing import Any, Iterator, Match
 
 
 def containing(_regex: str) -> str:

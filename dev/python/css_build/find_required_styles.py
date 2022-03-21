@@ -1,5 +1,6 @@
 import os
 import re
+
 from python.debug import debug
 
 CSS_REQUIRED_SELECTORS = [

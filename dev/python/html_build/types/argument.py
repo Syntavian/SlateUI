@@ -12,3 +12,8 @@ class ArgumentType(Enum):
     COMPONENT_WRAPPER = 7
     COMPONENT = 8
     PAGE = 9
+
+
+class Argument:
+    def __init__(self) -> None:
+        pass

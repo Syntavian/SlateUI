@@ -1,10 +1,11 @@
 # https://realpython.com/primer-on-python-decorators/
 import functools
 import inspect
-import time
 import re
-from python.utils.string_utils import *
+import time
+
 from python.utils.console_utils import *
+from python.utils.string_utils import *
 
 WRITE_LOG_FILE = True
 

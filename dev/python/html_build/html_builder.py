@@ -1,15 +1,17 @@
 import os
 import re
 from typing import Iterator, Literal, Match
+
 from python.debug import debug
-from python.html_build.page import Page
-from python.html_build.argument_type import ArgumentType
-from python.html_build.component import Component
-from python.html_build.wrapper import Wrapper, WrapperType
+from python.html_build.html_templating import *
+from python.html_build.types.argument import ArgumentType
+from python.html_build.types.component import Component
+from python.html_build.types.page import Page
+from python.html_build.types.tag import Tag
+from python.html_build.types.wrapper import Wrapper, WrapperType
+from python.utils.error_utils import *
 from python.utils.file_utils import *
 from python.utils.html_utils import *
-from python.utils.error_utils import *
-from python.html_build.html_templating import *
 
 
 @debug
@@ -146,19 +148,6 @@ def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches
                 if determine_argument_type(argument) == ArgumentType.GLOBAL_ASSIGNMENT:
                     variable, value = split_variable_assignment(argument)
                     _global_variables[variable] = value
-
-
-class Argument:
-    def __init__(self) -> None:
-        pass
-
-
-class Tag:
-    """A Slate tag holding a position and arguments"""
-
-    def __init__(self, _position: int, _arguments: list[Argument]) -> None:
-        self.position = _position
-        self.arguments = _arguments
 
 
 @debug
