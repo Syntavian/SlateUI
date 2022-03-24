@@ -1,6 +1,7 @@
 import {
     getElementStyleAsNumber,
     getElementStylesAsNumberSum,
+    px,
 } from "./css_utils";
 
 describe("getElementStyleAsNumber()", () => {
@@ -24,5 +25,11 @@ describe("getElementStylesAsNumberSum()", () => {
     });
     test("should remove all 'px' and return the sum of all numbers", () => {
         expect(getElementStylesAsNumberSum("", "3", "4px")).toBe(7);
+    });
+});
+
+describe("px()", () => {
+    test("should add 'px' to the end of a value", () => {
+        expect(px("0")).toBe("0px");
     });
 });

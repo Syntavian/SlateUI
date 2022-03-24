@@ -9,3 +9,7 @@ export function getElementStylesAsNumberSum(...styles) {
     }
     return sum;
 }
+
+export function px(value) {
+    return value + "px";
+}

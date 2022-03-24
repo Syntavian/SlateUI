@@ -1,9 +1,7 @@
+import { px } from "./css_utils";
+
 let imageCarousels = document.querySelectorAll(".image-carousel");
 let currentButtonTheme = "";
-
-function px(value) {
-    return value + "px";
-}
 
 function cycleCarousel(index, offset, maxDimension) {
     let imageCarouselElement = imageCarousels[index];
