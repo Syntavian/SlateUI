@@ -1,7 +1,7 @@
 from python.debug import debug
-from python.html_build.component import Component
-from python.html_build.page import Page
-from python.html_build.wrapper import Wrapper
+from python.html_build.types.component import Component
+from python.html_build.types.page import Page
+from python.html_build.types.wrapper import Wrapper
 
 
 class HTMLSubstitution:
