@@ -102,6 +102,7 @@ def process_template(_template_name: str, _variables: list[str], _templates: lis
 
 @debug
 def process_html_page(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
+    '''Build a HTML page from templates'''
     result_html = ""
     substitution = identify_substitutions(_page.tag_matches)
 
