@@ -1,6 +1,7 @@
 **/lib/*
 coverage/
 .vscode/
+.pytest_cache
 dev/css/*
 node_modules
 __pycache__

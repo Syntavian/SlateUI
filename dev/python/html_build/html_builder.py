@@ -167,6 +167,14 @@ def compute_slate_tags(_html: str, _global_variables: dict[str, str]) -> list[Ta
     slate_tag_matches = get_slate_tags(_html)
     apply_global_variables(_global_variables, slate_tag_matches)
     slate_tags = []
+    for slate_tag_match in slate_tag_matches:
+        slate_tags.append(Tag(
+            slate_tag_match.start(),
+            slate_tag_match.end() - slate_tag_match.start(),
+            [slate_tag_match.group(1)]
+        ))
+    for slate_tag in slate_tags:
+        print(slate_tag)
     return slate_tags
 
 

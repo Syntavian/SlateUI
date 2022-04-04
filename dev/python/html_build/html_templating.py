@@ -1,3 +1,4 @@
+from difflib import Match
 from python.debug import debug
 from python.html_build.types.component import Component
 from python.html_build.types.page import Page
@@ -35,7 +36,7 @@ def merge_string_arguments(_args: list[str]) -> list[str]:
 
 
 @debug
-def identify_substitutions(_text: str) -> HTMLSubstitution:
+def identify_substitutions(_matches: list[Match[str]]) -> HTMLSubstitution:
     args: list[str] = []
     before = ""
     after = ""
