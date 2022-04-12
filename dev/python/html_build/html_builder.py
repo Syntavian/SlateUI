@@ -4,7 +4,7 @@ from typing import Iterator, Literal, Match
 
 from python.debug import debug
 from python.html_build.html_templating import *
-from python.html_build.types.argument import ArgumentType
+from python.html_build.types.argument import Argument, ArgumentType
 from python.html_build.types.component import Component
 from python.html_build.types.page import Page
 from python.html_build.types.tag import Tag
@@ -73,13 +73,13 @@ def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: 
 
 
 @debug
-def handle_wrapper_build(_html: str, _slate_tag_matches: Iterator[Match[str]], _wrappers: dict[str, list[Wrapper]], _is_root: bool = False) -> bool:
+def handle_wrapper_build(_html: str, _slate_tags: list[Tag], _wrappers: dict[str, list[Wrapper]], _is_root: bool = False) -> bool:
     '''Add a wrapper to _wrappers if one is found in _slate_tag_matches'''
     wrapper: Wrapper | None = None
-    for slate_tag_match in _slate_tag_matches:
+    for slate_tag_match in _slate_tags:
         if fast_check_wrapper(slate_tag_match.group(1)):
             newWrapper = build_wrapper(
-                _html, slate_tag_match, _slate_tag_matches, _is_root)
+                _html, slate_tag_match, _slate_tags, _is_root)
             if newWrapper:
                 if not wrapper:
                     wrapper = newWrapper
@@ -137,7 +137,7 @@ def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
 
 
 @debug
-def split_slate_arguments(_slate_tag_match: Match[str]):
+def split_slate_arguments(_slate_tag_match: Match[str]) -> list[str]:
     '''Split a slate tag match into its component arguments'''
     arguments_string = strip_slate_tag(_slate_tag_match.group(1))
     split_arguments_string = re.split(
@@ -150,28 +150,36 @@ def split_slate_arguments(_slate_tag_match: Match[str]):
 
 
 @debug
-def apply_global_variables(_global_variables: dict[str, str], _slate_tag_matches: list[Match[str]]) -> None:
-    '''Add all global variables from _slate_tag_matches into the _global_variables dict'''
-    for match in _slate_tag_matches:
-        arguments = split_slate_arguments(match)
-        for argument in arguments:
-            if fast_check_global_assignment(argument):
-                if determine_argument_type(argument) == ArgumentType.GLOBAL_ASSIGNMENT:
-                    variable, value = split_variable_assignment(argument)
-                    _global_variables[variable] = value
+def apply_global_variable(_global_variables: dict[str, str], _argument: str) -> None:
+    '''Add global variable from _argument into the _global_variables dict'''
+    variable, value = split_variable_assignment(_argument)
+    _global_variables[variable] = value
+
+
+@debug
+def process_arguments(_arguments: list[str], _global_variables: dict[str, str]) -> list[Argument]:
+    processed_arguments = []
+    for argument in _arguments:
+        argument_type = determine_argument_type(argument)
+        if (argument_type == ArgumentType.GLOBAL_ASSIGNMENT):
+            apply_global_variable(_global_variables, argument)
+            continue
+        processed_arguments.append(Argument(argument, argument_type))
+    return processed_arguments
 
 
 @debug
 def compute_slate_tags(_html: str, _global_variables: dict[str, str]) -> list[Tag]:
     '''Find and return all slate tags in _html, adding global variables to _global_variables'''
-    slate_tag_matches = get_slate_tags(_html)
-    apply_global_variables(_global_variables, slate_tag_matches)
     slate_tags = []
+    slate_tag_matches = get_slate_tags(_html)
     for slate_tag_match in slate_tag_matches:
+        arguments = split_slate_arguments(slate_tag_match)
+        processed_arguments = process_arguments(arguments, _global_variables)
         slate_tags.append(Tag(
             slate_tag_match.start(),
             slate_tag_match.end() - slate_tag_match.start(),
-            [slate_tag_match.group(1)]
+            processed_arguments
         ))
     for slate_tag in slate_tags:
         print(slate_tag)

@@ -8,3 +8,9 @@ class Tag:
         self.position = _position
         self.length = _length
         self.arguments = _arguments
+
+    def __str__(self):
+        arguments = ""
+        for argument in self.arguments:
+            arguments += f"\n\t{argument}"
+        return f"position: {self.position}\nlength: {self.length}\narguments: {arguments}\n"

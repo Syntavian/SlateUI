@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import Literal
 
 
 class ArgumentType(Enum):
@@ -15,5 +16,9 @@ class ArgumentType(Enum):
 
 
 class Argument:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, _value: str, _type: Literal[ArgumentType.VARIABLE_ASSIGNMENT, ArgumentType.GLOBAL_ASSIGNMENT, ArgumentType.INVALID, ArgumentType.ROOT_WRAPPER, ArgumentType.COMPONENT_WRAPPER, ArgumentType.PAGE_WRAPPER, ArgumentType.VARIABLE, ArgumentType.GLOBAL, ArgumentType.COMPONENT, ArgumentType.PAGE]) -> None:
+        self.value = _value
+        self.type = _type
+
+    def __str__(self):
+        return f"value: {self.value}\ntype: {self.type}\n"
