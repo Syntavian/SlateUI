@@ -57,10 +57,10 @@ def get_wrapper_type(_wrapper: str) -> Literal[WrapperType.COMPONENT, WrapperTyp
 
 
 @debug
-def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: list[Match[str]], _is_root: bool = False) -> Wrapper | None:
+def build_wrapper(_html: str, _slate_tag: Tag, _slate_tag_matches: list[Tag], _is_root: bool = False) -> Wrapper | None:
     '''Create a Wrapper instance'''
     # Find and validate the wrapper.
-    wrapper = get_wrapper(_slate_tag_match.group(1))
+    wrapper = get_wrapper(_slate_tag.text)
     if not wrapper:
         return None
     wrapper_type = get_wrapper_type(wrapper.group(1))
@@ -69,17 +69,17 @@ def build_wrapper(_html: str, _slate_tag_match: Match[str], _slate_tag_matches: 
     if wrapper_type == WrapperType.INVALID:
         exception("Wrapper is not valid.")
         return
-    return Wrapper(wrapper_type, _html[:_slate_tag_match.start()], _html[_slate_tag_match.end():], wrapper.group(1), _slate_tag_matches)
+    return Wrapper(wrapper_type, _html[:_slate_tag.position], _html[_slate_tag.position + _slate_tag.length:], wrapper.group(1), _slate_tag_matches)
 
 
 @debug
 def handle_wrapper_build(_html: str, _slate_tags: list[Tag], _wrappers: dict[str, list[Wrapper]], _is_root: bool = False) -> bool:
     '''Add a wrapper to _wrappers if one is found in _slate_tag_matches'''
     wrapper: Wrapper | None = None
-    for slate_tag_match in _slate_tags:
-        if fast_check_wrapper(slate_tag_match.group(1)):
+    for slate_tag in _slate_tags:
+        if fast_check_wrapper(slate_tag.text):
             newWrapper = build_wrapper(
-                _html, slate_tag_match, _slate_tags, _is_root)
+                _html, slate_tag, _slate_tags, _is_root)
             if newWrapper:
                 if not wrapper:
                     wrapper = newWrapper
@@ -187,6 +187,7 @@ def compute_slate_tags(_html: str, _global_variables: dict[str, str]) -> tuple[l
         slate_tags.append(Tag(
             slate_tag_match.start(),
             slate_tag_match.end() - slate_tag_match.start(),
+            slate_tag_match.group(1),
             processed_arguments
         ))
     for slate_tag in slate_tags:

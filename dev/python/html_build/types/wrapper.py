@@ -1,5 +1,7 @@
 from enum import Enum
-from typing import Literal, Match
+from typing import Literal
+
+from python.html_build.types.tag import Tag
 
 
 class WrapperType(Enum):
@@ -18,13 +20,13 @@ class Wrapper:
         _before: str,
         _after: str,
         _wrapped_object: str,
-        _tag_matches: list[Match[str]]
+        _tags: list[Tag]
     ) -> None:
         self.type = _type
         self.before = _before
         self.after = _after
         self.wrapped_object = _wrapped_object
-        self.tag_matches = _tag_matches
+        self.tags = _tags
 
     def __str__(self) -> str:
         return f"Wrapper<{self.type}, {self.wrapped_object}>"

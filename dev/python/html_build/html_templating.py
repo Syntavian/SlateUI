@@ -2,6 +2,7 @@ from difflib import Match
 from python.debug import debug
 from python.html_build.types.component import Component
 from python.html_build.types.page import Page
+from python.html_build.types.tag import Tag
 from python.html_build.types.wrapper import Wrapper
 
 
@@ -36,7 +37,7 @@ def merge_string_arguments(_args: list[str]) -> list[str]:
 
 
 @debug
-def identify_substitutions(_matches: list[Match[str]]) -> HTMLSubstitution:
+def identify_substitutions(_matches: list[Tag]) -> HTMLSubstitution:
     args: list[str] = []
     before = ""
     after = ""
@@ -105,7 +106,7 @@ def process_template(_template_name: str, _variables: list[str], _templates: lis
 def process_html_page(_page: Page, _variables: dict[str, str], _components: dict[str, Component], _wrappers: dict[str, list[Wrapper]]) -> str:
     '''Build a HTML page from templates'''
     result_html = ""
-    substitution = identify_substitutions(_page.tag_matches)
+    substitution = identify_substitutions(_page.tags)
 
     if len(substitution.args) > 0:
         result_html, _variables = perform_substitution(
