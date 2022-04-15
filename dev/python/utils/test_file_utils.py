@@ -3,7 +3,7 @@ from python.utils.file_utils import *
 
 class TestGetFileVars:
     def test_get_file_vars(self):
-        assert get_file_vars("abc.xyz") == ("abc",  ".xyz")
+        assert get_file_vars("abc.xyz") == ("abc", ".xyz")
 
 
 class TestGetFileName:

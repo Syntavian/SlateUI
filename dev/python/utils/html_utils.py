@@ -20,14 +20,14 @@ def slate_tag() -> str:
 
 def strip_slate_tag(_slate_tag: str) -> str:
     """Return the contents of a Slate HTML tag."""
-    match = re.search(
-        r"(?:<#((?:.|\s)*?)\/>)|(?:<!--#((?:.|\s)*?)\/-->)", _slate_tag)
+    match = re.search(r"(?:<#((?:.|\s)*?)\/>)|(?:<!--#((?:.|\s)*?)\/-->)", _slate_tag)
     if match.group(1):
         result = match.group(1)
     else:
         result = match.group(2)
     result = re.sub(
-        r" (?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", '', result).strip()
+        r" (?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", "", result
+    ).strip()
     return result
 
 

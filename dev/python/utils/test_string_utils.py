@@ -17,8 +17,10 @@ class TestRedactOverflow:
         assert redact_overflow("abcdefghijklmnopqrstuvwxyz", 5) == "abcde..."
 
     def test_redact_overflow_same(self):
-        assert redact_overflow("abcdefghijklmnopqrstuvwxyz",
-                               100) == "abcdefghijklmnopqrstuvwxyz"
+        assert (
+            redact_overflow("abcdefghijklmnopqrstuvwxyz", 100)
+            == "abcdefghijklmnopqrstuvwxyz"
+        )
 
 
 class TestRepeat:
@@ -26,10 +28,10 @@ class TestRepeat:
         assert repeat("abc", 3) == "abc\nabc\nabc"
 
     def test_repeat_no_separator(self):
-        assert repeat("abc", 3, '') == "abcabcabc"
+        assert repeat("abc", 3, "") == "abcabcabc"
 
     def test_repeat_end(self):
-        assert repeat("abc", 3, '', 'end') == "abcabcabcend"
+        assert repeat("abc", 3, "", "end") == "abcabcabcend"
 
     def test_repeat_end_newline(self):
-        assert repeat("abc", 3, _end='end') == "abc\nabc\nabcend"
+        assert repeat("abc", 3, _end="end") == "abc\nabc\nabcend"

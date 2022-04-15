@@ -16,11 +16,16 @@ class Wrapper:
 
     def __init__(
         self,
-        _type: Literal[WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID],
+        _type: Literal[
+            WrapperType.COMPONENT,
+            WrapperType.PAGE,
+            WrapperType.ALL,
+            WrapperType.INVALID,
+        ],
         _before: str,
         _after: str,
         _wrapped_object: str,
-        _tags: list[Tag]
+        _tags: list[Tag],
     ) -> None:
         self.type = _type
         self.before = _before

@@ -26,6 +26,5 @@ def transfer(_origin_path: str, _destination_path: str) -> bool:
         out_file.close()
         return True
     except:
-        exception(
-            f"Issue transferring file: {_origin_path} to: {_destination_path}")
+        exception(f"Issue transferring file: {_origin_path} to: {_destination_path}")
         return False

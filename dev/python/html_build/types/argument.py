@@ -16,7 +16,22 @@ class ArgumentType(Enum):
 
 
 class Argument:
-    def __init__(self, _value: str, _type: Literal[ArgumentType.VARIABLE_ASSIGNMENT, ArgumentType.GLOBAL_ASSIGNMENT, ArgumentType.INVALID, ArgumentType.ROOT_WRAPPER, ArgumentType.COMPONENT_WRAPPER, ArgumentType.PAGE_WRAPPER, ArgumentType.VARIABLE, ArgumentType.GLOBAL, ArgumentType.COMPONENT, ArgumentType.PAGE]) -> None:
+    def __init__(
+        self,
+        _value: str,
+        _type: Literal[
+            ArgumentType.VARIABLE_ASSIGNMENT,
+            ArgumentType.GLOBAL_ASSIGNMENT,
+            ArgumentType.INVALID,
+            ArgumentType.ROOT_WRAPPER,
+            ArgumentType.COMPONENT_WRAPPER,
+            ArgumentType.PAGE_WRAPPER,
+            ArgumentType.VARIABLE,
+            ArgumentType.GLOBAL,
+            ArgumentType.COMPONENT,
+            ArgumentType.PAGE,
+        ],
+    ) -> None:
         self.value = _value
         self.type = _type
 

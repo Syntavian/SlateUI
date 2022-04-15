@@ -36,7 +36,11 @@ def find_required_styles(_html_path: str) -> set[str]:
     style_selectors = set(REQUIRED_STYLES)
     # Analyse HTML files for tags, ids, and classes.
     for (dir_path, dir_names, file_names) in os.walk(_html_path):
-        for html_file_name in [filename for filename in file_names if os.path.splitext(filename)[1] == ".html"]:
+        for html_file_name in [
+            filename
+            for filename in file_names
+            if os.path.splitext(filename)[1] == ".html"
+        ]:
             html_file = open(dir_path + "\\" + html_file_name, "r")
             html_file_text = ""
 
@@ -44,11 +48,19 @@ def find_required_styles(_html_path: str) -> set[str]:
                 html_file_text = html_file_text + html_file_line
             html_file.close()
 
-            for tags in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'<(\w+?)[ />]', html_file_text)]:
+            for tags in [
+                styleClassIndex.group(1).split()
+                for styleClassIndex in re.finditer(r"<(\w+?)[ />]", html_file_text)
+            ]:
                 for tag in tags:
                     style_selectors.add(tag)
 
-            for tag_styles in [styleClassIndex.group(1).split() for styleClassIndex in re.finditer(r'(?:class|id)="(.+?)"', html_file_text)]:
+            for tag_styles in [
+                styleClassIndex.group(1).split()
+                for styleClassIndex in re.finditer(
+                    r'(?:class|id)="(.+?)"', html_file_text
+                )
+            ]:
                 for style in tag_styles:
                     style_selectors.add(style)
     return style_selectors
