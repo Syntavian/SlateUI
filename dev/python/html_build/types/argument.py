@@ -36,4 +36,4 @@ class Argument:
         self.type = _type
 
     def __str__(self):
-        return f"value: {self.value}\ntype: {self.type}\n"
+        return f"\tvalue: {self.value}\n\ttype: {self.type}\n"

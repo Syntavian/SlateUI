@@ -15,5 +15,5 @@ class Tag:
     def __str__(self):
         arguments = ""
         for argument in self.arguments:
-            arguments += f"\n\t{argument}"
+            arguments += f"\n{argument}"
         return f"position: {self.position}\nlength: {self.length}\narguments: {arguments}\n"

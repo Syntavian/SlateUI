@@ -1,3 +1,4 @@
+import re
 from enum import Enum
 from typing import Literal
 
@@ -34,4 +35,8 @@ class Wrapper:
         self.tags = _tags
 
     def __str__(self) -> str:
-        return f"Wrapper<{self.type}, {self.wrapped_object}>"
+        tags = ""
+        for tag in self.tags:
+            tags += f"{tag}"
+        tags = re.sub(r"\n", "\n\t", tags)
+        return f"Wrapper<{self.type}, {self.wrapped_object}>\ntags:\n\t{tags}"

@@ -1,6 +1,6 @@
 import os
 import re
-from typing import Iterator, Literal, Match
+from typing import Literal, Match
 
 from python.debug import debug
 from python.html_build.html_templating import *
@@ -219,7 +219,7 @@ def process_arguments(
 @debug
 def compute_slate_tags(
     _html: str, _global_variables: dict[str, str]
-) -> tuple[list[str], bool]:
+) -> tuple[list[Tag], bool]:
     """Find and return all slate tags in _html, adding global variables to _global_variables"""
     slate_tags = []
     is_wrapper_html = False
@@ -291,6 +291,15 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                 pages[file_path] = Page(
                     file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tags
                 )
+
+    for key in components:
+        print(components[key])
+
+    for key in wrappers:
+        for wrapper in wrappers[key]:
+            print(wrapper)
+
+    print(global_variables, "\n")
 
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
