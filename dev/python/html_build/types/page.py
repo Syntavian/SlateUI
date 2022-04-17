@@ -1,5 +1,3 @@
-from typing import Match
-
 from python.html_build.types.tag import Tag
 
 

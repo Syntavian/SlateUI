@@ -45,7 +45,7 @@ def debug(_func):
         end_time = time.perf_counter()
         run_time = end_time - start_time
         level -= 1
-        output = f"{repeat_string_function(indent, 2, [[level + 1], (level, 1)])}{colour('<', COLOURS['RED'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} returned {colour(format_value(value), COLOURS['CYAN'])} in {colour(f'{run_time:.4f}', COLOURS['GREEN' if run_time < 0.1 else 'RED'])} secs"
+        output = f"{repeat_string_function(indent, 2, [[level + 1], (level, 1)])}{colour('<', COLOURS['RED'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} returned {colour(format_value(value), COLOURS['CYAN'])} in {colour(f'{run_time:.4f}', COLOURS['GREEN' if run_time < 0.01 else 'RED'])} secs"
         write_debug_log(output)
         return value
 

@@ -1,14 +1,14 @@
 import os
 import re
-from typing import Literal, Match
+from typing import Match
 
-from python.debug import debug
+from python.debug import *
 from python.html_build.html_templating import *
-from python.html_build.types.argument import Argument, ArgumentType
-from python.html_build.types.component import Component
-from python.html_build.types.page import Page
-from python.html_build.types.tag import Tag
-from python.html_build.types.wrapper import Wrapper, WrapperType
+from python.html_build.types.argument import *
+from python.html_build.types.component import *
+from python.html_build.types.page import *
+from python.html_build.types.tag import *
+from python.html_build.types.wrapper import *
 from python.utils.error_utils import *
 from python.utils.file_utils import *
 from python.utils.html_utils import *
@@ -49,23 +49,6 @@ def get_wrapper(_slate_tag_content: str) -> Match[str]:
 
 
 @debug
-def get_wrapper_type(
-    _wrapper: str,
-) -> Literal[
-    WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID
-]:
-    """Return the type of a wrapper"""
-    if re.search(r"\*@\w+", _wrapper):
-        return WrapperType.COMPONENT
-    if re.search(r"\*\w+", _wrapper):
-        return WrapperType.PAGE
-    if re.search(r"\* |\*$", _wrapper):
-        return WrapperType.ALL
-    exception(f"wrapper {_wrapper} is not valid.")
-    return WrapperType.INVALID
-
-
-@debug
 def build_wrapper(
     _html: str, _slate_tag: Tag, _slate_tag_matches: list[Tag], _is_root: bool = False
 ) -> Wrapper | None:
@@ -74,7 +57,7 @@ def build_wrapper(
     wrapper = get_wrapper(_slate_tag.text)
     if not wrapper:
         return None
-    wrapper_type = get_wrapper_type(wrapper.group(1))
+    wrapper_type = determine_wrapper_type(wrapper.group(1))
     if _is_root and wrapper_type != WrapperType.ALL:
         exit_exception("Root HTML wrapper is not valid.")
     if wrapper_type == WrapperType.INVALID:
@@ -125,46 +108,6 @@ def reset_variables(
 
 
 @debug
-def determine_argument_type(
-    _argument: str,
-) -> Literal[
-    ArgumentType.VARIABLE_ASSIGNMENT,
-    ArgumentType.GLOBAL_ASSIGNMENT,
-    ArgumentType.INVALID,
-    ArgumentType.ROOT_WRAPPER,
-    ArgumentType.COMPONENT_WRAPPER,
-    ArgumentType.PAGE_WRAPPER,
-    ArgumentType.VARIABLE,
-    ArgumentType.GLOBAL,
-    ArgumentType.COMPONENT,
-    ArgumentType.PAGE,
-]:
-    """Return the Argument type of _argument based on the identifier and whether it is an assignment"""
-    if "=" in _argument:
-        if _argument[0] == "$":
-            return ArgumentType.VARIABLE_ASSIGNMENT
-        elif _argument[0] == "%":
-            return ArgumentType.GLOBAL_ASSIGNMENT
-        else:
-            return ArgumentType.INVALID
-    elif _argument[0] == "*":
-        if len(_argument) == 1:
-            return ArgumentType.ROOT_WRAPPER
-        elif _argument[1] == "@":
-            return ArgumentType.COMPONENT_WRAPPER
-        else:
-            return ArgumentType.PAGE_WRAPPER
-    elif _argument[0] == "$":
-        return ArgumentType.VARIABLE
-    elif _argument[0] == "%":
-        return ArgumentType.GLOBAL
-    elif _argument[0] == "@":
-        return ArgumentType.COMPONENT
-    else:
-        return ArgumentType.PAGE
-
-
-@debug
 def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
     """Split a variable assignment argument into the key and value components"""
     variable_assignment_split = re.split(
@@ -199,6 +142,7 @@ def apply_global_variable(_global_variables: dict[str, str], _argument: str) -> 
 def process_arguments(
     _arguments: list[str], _global_variables: dict[str, str]
 ) -> tuple[list[Argument], bool]:
+    """Returns a list of Argument instances and sets all global variable arguments for each argument in the string _arguments, along with a boolean True if one of the arguments denotes is a wrapper type"""
     processed_arguments = []
     has_wrapper_argument = False
     for argument in _arguments:
@@ -239,8 +183,8 @@ def compute_slate_tags(
                 processed_arguments,
             )
         )
-    for slate_tag in slate_tags:
-        print(slate_tag)
+    # for slate_tag in slate_tags:
+    #     print(slate_tag)
     return (slate_tags, is_wrapper_html)
 
 
@@ -292,14 +236,15 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                     file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tags
                 )
 
-    for key in components:
-        print(components[key])
+    # for key in components:
+    #     print(components[key])
 
-    for key in wrappers:
-        for wrapper in wrappers[key]:
-            print(wrapper)
+    # for key in wrappers:
+    #     for wrapper in wrappers[key]:
+    #         print(wrapper)
 
-    print(global_variables, "\n")
+    # for key in global_variables:
+    #     print(f"{key}: {global_variables[key]}\n")
 
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
