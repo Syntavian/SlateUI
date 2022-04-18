@@ -1,21 +1,17 @@
-import re
-
+from python.utils.console_utils import describe
 from python.html_build.types.tag import Tag
 
 
 class Component:
-    """An HTML Component."""
+    """A HTML Component."""
 
     def __init__(self, _html: str, _tags: list[Tag]) -> None:
-        self.html = _html
-        self.tags = _tags
+        self._html = _html
+        self._tags = _tags
 
     def __str__(self) -> str:
-        html = re.sub(r"\s", " ", self.html)
-        tags = ""
-        for tag in self.tags:
-            tags += f"{tag}"
-        tags = re.sub(r"\n", "\n\t", tags)
-        if len(html) <= 20:
-            return f"Component<{html}>\n{tags}"
-        return f"Component<{html[:10]}...{html[-10:]}>\ntags:\n\t{tags}"
+        return describe(
+            "Component",
+            html=self._html,
+            tags=self._tags,
+        )

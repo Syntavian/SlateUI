@@ -4,6 +4,7 @@ from typing import Literal
 
 from python.debug import debug
 from python.html_build.types.tag import Tag
+from python.utils.console_utils import describe
 from python.utils.error_utils import exception
 
 
@@ -14,12 +15,15 @@ class WrapperType(Enum):
     COMPONENT = 3
 
 
+WrapperTypeMember = Literal[
+    WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID
+]
+
+
 @debug
 def determine_wrapper_type(
     _wrapper: str,
-) -> Literal[
-    WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID
-]:
+) -> WrapperTypeMember:
     """Return the type of a wrapper"""
     if re.search(r"\*@\w+", _wrapper):
         return WrapperType.COMPONENT
@@ -36,26 +40,24 @@ class Wrapper:
 
     def __init__(
         self,
-        _type: Literal[
-            WrapperType.COMPONENT,
-            WrapperType.PAGE,
-            WrapperType.ALL,
-            WrapperType.INVALID,
-        ],
+        _type: WrapperTypeMember,
         _before: str,
         _after: str,
         _wrapped_object: str,
         _tags: list[Tag],
     ) -> None:
-        self.type = _type
-        self.before = _before
-        self.after = _after
-        self.wrapped_object = _wrapped_object
-        self.tags = _tags
+        self._type = _type
+        self._before = _before
+        self._after = _after
+        self._wrapped_object = _wrapped_object
+        self._tags = _tags
 
     def __str__(self) -> str:
-        tags = ""
-        for tag in self.tags:
-            tags += f"{tag}"
-        tags = re.sub(r"\n", "\n\t", tags)
-        return f"Wrapper<{self.type}, {self.wrapped_object}>\ntags:\n\t{tags}"
+        return describe(
+            "Wrapper",
+            type=self._type,
+            before=self._before,
+            after=self._after,
+            wrapped_object=self._wrapped_object,
+            tags=self._tags,
+        )

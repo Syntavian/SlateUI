@@ -1,11 +1,12 @@
 from python.html_build.types.tag import Tag
+from python.utils.console_utils import describe
 
 
 class Page:
     def __init__(self, _path: str, _html: str, _tags: list[Tag]) -> None:
-        self.path = _path
-        self.html = _html
-        self.tags = _tags
+        self._path = _path
+        self._html = _html
+        self._tags = _tags
 
     def __str__(self) -> str:
-        return f"Page<{self.path}>"
+        return describe("Page", path=self._path, html=self._html, tags=self._tags)

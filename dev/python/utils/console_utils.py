@@ -1,3 +1,5 @@
+from python.utils.string_utils import format_value
+
 COLOURS = {
     "BLACK": "\033[1;30;40m",
     "RED": "\033[1;31;40m",
@@ -27,5 +29,22 @@ def colour(_text: str, _colour: str = COLOURS["GREEN"], _reset: bool = True) -> 
     return f"{_colour}{_text}{COLOURS['WHITE'] * _reset}"
 
 
-def indent(_levels: int, _colour_offset: int = 0) -> str:
-    return colour(f"{'|   ' * _levels}", COLOUR_MAP[(_levels + _colour_offset) % 3 + 3])
+def indent(_levels: int = 1) -> str:
+    return f"{'|   ' * _levels}"
+
+
+def coloured_indent(_levels: int = 1, _colour_offset: int = 0) -> str:
+    return colour(indent(_levels), COLOUR_MAP[(_levels + _colour_offset) % 3 + 3])
+
+
+def describe(_class_name: str, **_kwargs):
+    args_representation = ""
+    for key in _kwargs:
+        if isinstance(_kwargs[key], list):
+            args_representation += f"\n{indent()}{key}:"
+            for value in _kwargs[key]:
+                for line in f"{value}".split("\n"):
+                    args_representation += f"\n{indent(2)}{line}"
+        else:
+            args_representation += f"\n{indent()}{key}: {format_value(_kwargs[key])},"
+    return f"{_class_name} <{args_representation}\n>"

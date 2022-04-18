@@ -30,7 +30,7 @@ def repeat_string_function(
 
 
 def format_value(_value: Any):
-    return redact_overflow(redact_spacing(str(_value)))
+    return redact_overflow(redact_spacing(str(_value))).strip()
 
 
 def substitute_quotes_whitespace(_string: str, _substitution: str = "!/~/#/") -> str:

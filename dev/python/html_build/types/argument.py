@@ -2,6 +2,7 @@ from enum import Enum
 from typing import Literal
 
 from python.debug import debug
+from python.utils.console_utils import describe
 
 
 class ArgumentType(Enum):
@@ -17,10 +18,7 @@ class ArgumentType(Enum):
     PAGE = 9
 
 
-@debug
-def determine_argument_type(
-    _argument: str,
-) -> Literal[
+ArgumentTypeMember = Literal[
     ArgumentType.VARIABLE_ASSIGNMENT,
     ArgumentType.GLOBAL_ASSIGNMENT,
     ArgumentType.INVALID,
@@ -31,7 +29,13 @@ def determine_argument_type(
     ArgumentType.GLOBAL,
     ArgumentType.COMPONENT,
     ArgumentType.PAGE,
-]:
+]
+
+
+@debug
+def determine_argument_type(
+    _argument: str,
+) -> ArgumentTypeMember:
     """Return the Argument type of _argument based on the identifier and whether it is an assignment"""
     if "=" in _argument:
         if _argument[0] == "$":
@@ -61,21 +65,26 @@ class Argument:
     def __init__(
         self,
         _value: str,
-        _type: Literal[
-            ArgumentType.VARIABLE_ASSIGNMENT,
-            ArgumentType.GLOBAL_ASSIGNMENT,
-            ArgumentType.INVALID,
-            ArgumentType.ROOT_WRAPPER,
-            ArgumentType.COMPONENT_WRAPPER,
-            ArgumentType.PAGE_WRAPPER,
-            ArgumentType.VARIABLE,
-            ArgumentType.GLOBAL,
-            ArgumentType.COMPONENT,
-            ArgumentType.PAGE,
-        ],
+        _type: ArgumentTypeMember,
     ) -> None:
-        self.value = _value
-        self.type = _type
+        self._value = _value
+        self._type = _type
+
+    @property
+    def value(self) -> str:
+        return self._value
+
+    @property
+    def type(self) -> ArgumentTypeMember:
+        return self._type
+
+    @value.setter
+    def value(self, _new_value: str) -> None:
+        self._value = _new_value
+
+    @type.setter
+    def type(self, _new_type: ArgumentTypeMember) -> None:
+        self._type = _new_type
 
     def __str__(self):
-        return f"\tvalue: {self.value}\n\ttype: {self.type}\n"
+        return describe("Argument", value=self._value, type=self._type)

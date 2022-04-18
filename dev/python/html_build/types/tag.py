@@ -1,4 +1,5 @@
 from python.html_build.types.argument import Argument
+from python.utils.console_utils import describe
 
 
 class Tag:
@@ -13,7 +14,6 @@ class Tag:
         self.arguments = _arguments
 
     def __str__(self):
-        arguments = ""
-        for argument in self.arguments:
-            arguments += f"\n{argument}"
-        return f"position: {self.position}\nlength: {self.length}\narguments: {arguments}\n"
+        return describe(
+            "Tag", position=self.position, length=self.length, arguments=self.arguments
+        )

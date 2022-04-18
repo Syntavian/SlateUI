@@ -86,12 +86,12 @@ def process_html_page(
     result_html = ""
     # substitution = identify_substitutions(_page.tags)
 
-    if len(_page.tags) > 0:
-        for tag in _page.tags:
+    if len(_page._tags) > 0:
+        for tag in _page._tags:
             result_html = perform_substitution(
-                _page.html, tag, _variables, _components, _wrappers
+                _page._html, tag, _variables, _components, _wrappers
             )
     else:
-        result_html = _page.html
+        result_html = _page._html
 
     return result_html

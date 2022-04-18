@@ -90,9 +90,9 @@ def handle_wrapper_build(
                 else:
                     exit_exception("Multi-wrapper HTML is not valid.")
     if wrapper:
-        if wrapper.wrapped_object not in _wrappers.keys():
-            _wrappers[wrapper.wrapped_object] = []
-        _wrappers[wrapper.wrapped_object].append(wrapper)
+        if wrapper._wrapped_object not in _wrappers.keys():
+            _wrappers[wrapper._wrapped_object] = []
+        _wrappers[wrapper._wrapped_object].append(wrapper)
         return True
     return False
 
@@ -183,8 +183,8 @@ def compute_slate_tags(
                 processed_arguments,
             )
         )
-    # for slate_tag in slate_tags:
-    #     print(slate_tag)
+    for slate_tag in slate_tags:
+        print(slate_tag, "\n")
     return (slate_tags, is_wrapper_html)
 
 
@@ -236,22 +236,25 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                     file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tags
                 )
 
-    # for key in components:
-    #     print(components[key])
+    for key in components:
+        print(components[key], "\n")
 
-    # for key in wrappers:
-    #     for wrapper in wrappers[key]:
-    #         print(wrapper)
+    for key in wrappers:
+        for wrapper in wrappers[key]:
+            print(wrapper, "\n")
 
-    # for key in global_variables:
-    #     print(f"{key}: {global_variables[key]}\n")
+    for key in pages:
+        print(pages[key], "\n")
+
+    for key in global_variables:
+        print(f"{key}: {global_variables[key]}\n")
 
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
 
         html_page_result = process_html_page(page, variables, components, wrappers)
 
-        OUTPUT_HTML_PATH = f"{_html_out_dir}{page.path}"
+        OUTPUT_HTML_PATH = f"{_html_out_dir}{page._path}"
         os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)
         with open(OUTPUT_HTML_PATH, "w") as html_output_file:
             html_output_file.write(html_page_result)
