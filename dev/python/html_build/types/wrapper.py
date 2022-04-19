@@ -36,7 +36,7 @@ def determine_wrapper_type(
 
 
 class Wrapper:
-    """An HTML Wrapper component."""
+    """A HTML Wrapper component."""
 
     def __init__(
         self,

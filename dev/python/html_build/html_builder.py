@@ -15,22 +15,6 @@ from python.utils.html_utils import *
 
 
 @debug
-def fast_check_wrapper(_html: str) -> bool:
-    """Return True if _html possibly contains a wrapper identifier"""
-    if re.search(containing(r"\*"), _html):
-        return True
-    return False
-
-
-@debug
-def fast_check_global_assignment(_argument: str) -> bool:
-    """Return True if _argument is an assignment"""
-    if re.search(containing(r"%.*="), _argument):
-        return True
-    return False
-
-
-@debug
 def get_wrapper(_slate_tag_content: str) -> Match[str]:
     """Return a wrapper match if one is found, exception if multiple are found"""
     wrapper_matches = [
@@ -82,13 +66,12 @@ def handle_wrapper_build(
     """Add a wrapper to _wrappers if one is found in _slate_tag_matches"""
     wrapper: Wrapper | None = None
     for slate_tag in _slate_tags:
-        if fast_check_wrapper(slate_tag.text):
-            newWrapper = build_wrapper(_html, slate_tag, _slate_tags, _is_root)
-            if newWrapper:
-                if not wrapper:
-                    wrapper = newWrapper
-                else:
-                    exit_exception("Multi-wrapper HTML is not valid.")
+        newWrapper = build_wrapper(_html, slate_tag, _slate_tags, _is_root)
+        if newWrapper:
+            if not wrapper:
+                wrapper = newWrapper
+            else:
+                exit_exception("Multi-wrapper HTML is not valid.")
     if wrapper:
         if wrapper._wrapped_object not in _wrappers.keys():
             _wrappers[wrapper._wrapped_object] = []
@@ -102,18 +85,10 @@ def reset_variables(
     _variables: dict[str, str], _global_variables: dict[str, str]
 ) -> None:
     """Empty _variables dict before adding the content of _global_variables to it"""
-    _variables = {}
+    _variables.clear()
     for k, v in _global_variables.items():
         _variables[k] = v
-
-
-@debug
-def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
-    """Split a variable assignment argument into the key and value components"""
-    variable_assignment_split = re.split(
-        r"=(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", _variable_assignment
-    )
-    return (variable_assignment_split[0].strip(), variable_assignment_split[1].strip())
+    print(_variables)
 
 
 @debug
@@ -132,13 +107,6 @@ def split_slate_arguments(_slate_tag_match: Match[str]) -> list[str]:
 
 
 @debug
-def apply_global_variable(_global_variables: dict[str, str], _argument: str) -> None:
-    """Add global variable from _argument into the _global_variables dict"""
-    variable, value = split_variable_assignment(_argument)
-    _global_variables[variable] = value
-
-
-@debug
 def process_arguments(
     _arguments: list[str], _global_variables: dict[str, str]
 ) -> tuple[list[Argument], bool]:
@@ -148,7 +116,7 @@ def process_arguments(
     for argument in _arguments:
         argument_type = determine_argument_type(argument)
         if argument_type == ArgumentType.GLOBAL_ASSIGNMENT:
-            apply_global_variable(_global_variables, argument)
+            apply_variable(_global_variables, argument)
             continue
         elif argument_type in [
             ArgumentType.ROOT_WRAPPER,

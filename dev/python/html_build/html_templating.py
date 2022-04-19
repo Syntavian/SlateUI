@@ -1,4 +1,7 @@
+import re
+
 from python.debug import debug
+from python.html_build.types.argument import Argument, ArgumentType
 from python.html_build.types.component import Component
 from python.html_build.types.page import Page
 from python.html_build.types.tag import Tag
@@ -6,73 +9,49 @@ from python.html_build.types.wrapper import Wrapper
 
 
 @debug
-def merge_string_arguments(_args: list[str]) -> list[str]:
-    corrected_line_values: list[str] = []
-    is_string = False
-
-    for value in _args:
-        if value.count('"') == 1 or value.count("'") == 1:
-            if not is_string:
-                corrected_line_values.append(value)
-                is_string = True
-            else:
-                corrected_line_values[-1] = corrected_line_values[-1] + " " + value
-                is_string = False
-        else:
-            if is_string:
-                corrected_line_values[-1] = corrected_line_values[-1] + " " + value
-            else:
-                corrected_line_values.append(value)
-
-    return corrected_line_values
+def split_variable_assignment(_variable_assignment: str) -> tuple[str, str]:
+    """Split a variable assignment argument into the key and value components"""
+    variable_assignment_split = re.split(
+        r"=(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)", _variable_assignment
+    )
+    return (variable_assignment_split[0].strip(), variable_assignment_split[1].strip())
 
 
 @debug
-def extract_variables(
-    _arguments: list[str], _templates: list[str], _variables: list[str]
-) -> list[str]:
-    result_variables = _variables
-
-    for argument in _arguments:
-        if "=" in argument:
-            variable = argument.split("=")
-            if variable[1][0] == "":
-                pass
-            elif variable[1][0] == '"':
-                result_variables[variable[0]] = variable[1].replace('"', "")
-            elif variable[1][0] == "$":
-                try:
-                    result_variables[variable[0]] = _variables[variable[0]]
-                except:
-                    result_variables[variable[0]] = ""
-            else:
-                result_variables[variable[0]] = process_template(
-                    variable[1], _templates, _variables
-                )
-
-    return result_variables
+def apply_variable(_variables: dict[str, str], _argument: Argument | str) -> None:
+    """Add global variable from _argument into the _global_variables dict"""
+    variable, value = (
+        split_variable_assignment(_argument.value)
+        if isinstance(_argument, Argument)
+        else split_variable_assignment(_argument)
+    )
+    _variables[variable] = value
 
 
 @debug
 def perform_substitution(
     _html: str,
     _tag: Tag,
-    _variables: list[str],
+    _variables: dict[str, str],
     _components: dict[str, Component],
     _wrappers: dict[str, list[Wrapper]],
 ) -> tuple[str, list[str]]:
+    # Local copy of _variables for this substitution
+    variables = _variables.copy()
     result_html = _html[0 : _tag.position]
-    _variables = extract_variables(_tag.arguments, _variables)
 
+    print(variables)
+    print(_tag)
+
+    for argument in _tag.arguments:
+        if argument.type == ArgumentType.VARIABLE_ASSIGNMENT:
+            apply_variable(variables, argument)
+
+    if _tag.arguments[0].type == ArgumentType.COMPONENT:
+        result_html += _components[_tag.arguments[0].value].html
+    print(result_html)
+    exit()
     return result_html
-
-
-@debug
-def process_template(
-    _template_name: str, _variables: list[str], _templates: list[str]
-) -> str:
-    template = _templates[_template_name]
-    return process_html_page(template, _variables, _templates)
 
 
 @debug
