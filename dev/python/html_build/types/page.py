@@ -1,5 +1,5 @@
 from python.html_build.types.tag import Tag
-from python.utils.console_utils import describe
+from python.utils.console_utils import describe_class
 
 
 class Page:
@@ -9,4 +9,4 @@ class Page:
         self._tags = _tags
 
     def __str__(self) -> str:
-        return describe("Page", path=self._path, html=self._html, tags=self._tags)
+        return describe_class("Page", path=self._path, html=self._html, tags=self._tags)

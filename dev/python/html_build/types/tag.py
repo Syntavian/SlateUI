@@ -1,5 +1,5 @@
 from python.html_build.types.argument import Argument
-from python.utils.console_utils import describe
+from python.utils.console_utils import describe_class
 
 
 class Tag:
@@ -14,6 +14,6 @@ class Tag:
         self.arguments = _arguments
 
     def __str__(self):
-        return describe(
+        return describe_class(
             "Tag", position=self.position, length=self.length, arguments=self.arguments
         )

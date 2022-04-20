@@ -4,7 +4,7 @@ from typing import Literal
 
 from python.debug import debug
 from python.html_build.types.tag import Tag
-from python.utils.console_utils import describe
+from python.utils.console_utils import describe_class
 from python.utils.error_utils import exception
 
 
@@ -53,7 +53,7 @@ class Wrapper:
         self._tags = _tags
 
     def __str__(self) -> str:
-        return describe(
+        return describe_class(
             "Wrapper",
             type=self._type,
             before=self._before,

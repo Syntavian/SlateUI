@@ -1,3 +1,4 @@
+from typing import Any
 from python.utils.string_utils import format_value
 
 COLOURS = {
@@ -37,7 +38,11 @@ def coloured_indent(_levels: int = 1, _colour_offset: int = 0) -> str:
     return colour(indent(_levels), COLOUR_MAP[(_levels + _colour_offset) % 3 + 3])
 
 
-def describe(_class_name: str, **_kwargs):
+def describe(_variable_name: str, _variable_value: Any):
+    return f"{_variable_name}: {format_value(_variable_value)},"
+
+
+def describe_class(_class_name: str, **_kwargs):
     args_representation = ""
     for key in _kwargs:
         if isinstance(_kwargs[key], list):
@@ -46,5 +51,5 @@ def describe(_class_name: str, **_kwargs):
                 for line in f"{value}".split("\n"):
                     args_representation += f"\n{indent(2)}{line}"
         else:
-            args_representation += f"\n{indent()}{key}: {format_value(_kwargs[key])},"
+            args_representation += f"\n{indent()}{describe(key, _kwargs[key])}"
     return f"{_class_name} <{args_representation}\n>"

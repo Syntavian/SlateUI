@@ -2,7 +2,7 @@ from enum import Enum
 from typing import Literal
 
 from python.debug import debug
-from python.utils.console_utils import describe
+from python.utils.console_utils import describe_class
 
 
 class ArgumentType(Enum):
@@ -87,4 +87,4 @@ class Argument:
         self._type = _new_type
 
     def __str__(self):
-        return describe("Argument", value=self._value, type=self._type)
+        return describe_class("Argument", value=self._value, type=self._type)
