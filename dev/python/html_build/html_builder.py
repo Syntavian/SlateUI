@@ -38,7 +38,7 @@ def build_wrapper(
 ) -> Wrapper | None:
     """Create a Wrapper instance"""
     # Find and validate the wrapper.
-    wrapper = get_wrapper(_slate_tag.text)
+    wrapper = get_wrapper(_slate_tag._text)
     if not wrapper:
         return None
     wrapper_type = determine_wrapper_type(wrapper.group(1))
@@ -49,8 +49,8 @@ def build_wrapper(
         return
     return Wrapper(
         wrapper_type,
-        _html[: _slate_tag.position],
-        _html[_slate_tag.position + _slate_tag.length :],
+        _html[: _slate_tag._position],
+        _html[_slate_tag._position + _slate_tag._length :],
         wrapper.group(1),
         _slate_tag_matches,
     )

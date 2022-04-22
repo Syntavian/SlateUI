@@ -18,7 +18,7 @@ class Component:
         return self._tags
 
     @html.setter
-    def value(self, _new_html: str) -> None:
+    def html(self, _new_html: str) -> None:
         self._html = _new_html
 
     @tags.setter

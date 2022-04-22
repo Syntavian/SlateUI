@@ -29,8 +29,7 @@ def apply_variable(_variables: dict[str, str], _argument: Argument | str) -> Non
 
 
 @debug
-def perform_substitution(
-    _html: str,
+def build_substitution(
     _tag: Tag,
     _variables: dict[str, str],
     _components: dict[str, Component],
@@ -38,17 +37,17 @@ def perform_substitution(
 ) -> tuple[str, list[str]]:
     # Local copy of _variables for this substitution
     variables = _variables.copy()
-    result_html = _html[0 : _tag.position]
+    result_html = ""
 
     print(variables)
     print(_tag)
 
-    for argument in _tag.arguments:
+    for argument in _tag._arguments:
         if argument.type == ArgumentType.VARIABLE_ASSIGNMENT:
             apply_variable(variables, argument)
 
-    if _tag.arguments[0].type == ArgumentType.COMPONENT:
-        result_html += _components[_tag.arguments[0].value].html
+    if _tag._arguments[0].type == ArgumentType.COMPONENT:
+        result_html += _components[_tag._arguments[0].value].html
     print(result_html)
     exit()
     return result_html
@@ -63,13 +62,17 @@ def process_html_page(
 ) -> str:
     """Build a HTML page from templates"""
     result_html = ""
-    # substitution = identify_substitutions(_page.tags)
 
     if len(_page._tags) > 0:
-        for tag in _page._tags:
-            result_html = perform_substitution(
-                _page._html, tag, _variables, _components, _wrappers
-            )
+        for index, tag in enumerate(_page._tags):
+            if index > 0:
+                last_tag = _page._tags[index - 1]
+                result_html += _page.html[
+                    last_tag.position + last_tag.length : tag.position
+                ]
+            else:
+                result_html += _page.html[0 : tag.position]
+            result_html += build_substitution(tag, _variables, _components, _wrappers)
     else:
         result_html = _page._html
 
