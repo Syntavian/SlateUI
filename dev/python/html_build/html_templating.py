@@ -42,14 +42,45 @@ def build_substitution(
     print(variables)
     print(_tag)
 
-    for argument in _tag._arguments:
-        if argument.type == ArgumentType.VARIABLE_ASSIGNMENT:
-            apply_variable(variables, argument)
+    for argument in _tag.arguments:
+        match argument.type:
+            case ArgumentType.VARIABLE_ASSIGNMENT:
+                apply_variable(variables, argument)
+            case ArgumentType.COMPONENT:
+                result_html += process_component(_components[argument.value], _variables, _components, _wrappers)
+            case ArgumentType.VARIABLE:
+                result_html += _variables[argument.value]
 
-    if _tag._arguments[0].type == ArgumentType.COMPONENT:
-        result_html += _components[_tag._arguments[0].value].html
-    print(result_html)
-    exit()
+    return result_html
+
+
+@debug
+def process_component_like(
+    _component: Component,
+    _variables: dict[str, str],
+    _components: dict[str, Component],
+    _wrappers: dict[str, list[Wrapper]],
+) -> str:
+    """Build a HTML component from templates"""
+    result_html = ""
+
+    result_html += _component.html 
+
+    return result_html
+
+
+@debug
+def process_component(
+    _component: Component,
+    _variables: dict[str, str],
+    _components: dict[str, Component],
+    _wrappers: dict[str, list[Wrapper]],
+) -> str:
+    """Build a HTML component from templates"""
+    result_html = ""
+
+    result_html += _component.html 
+
     return result_html
 
 
@@ -63,10 +94,10 @@ def process_html_page(
     """Build a HTML page from templates"""
     result_html = ""
 
-    if len(_page._tags) > 0:
-        for index, tag in enumerate(_page._tags):
+    if len(_page.tags) > 0:
+        for index, tag in enumerate(_page.tags):
             if index > 0:
-                last_tag = _page._tags[index - 1]
+                last_tag = _page.tags[index - 1]
                 result_html += _page.html[
                     last_tag.position + last_tag.length : tag.position
                 ]
@@ -74,6 +105,6 @@ def process_html_page(
                 result_html += _page.html[0 : tag.position]
             result_html += build_substitution(tag, _variables, _components, _wrappers)
     else:
-        result_html = _page._html
+        result_html = _page.html
 
     return result_html

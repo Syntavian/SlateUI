@@ -5,6 +5,7 @@
   "scripts": {
     "prep": "npm install -ci && cd build/app && npm install -ci",
     "build": "python dev/slate_dev.py",
+    "build-css": "npx sass dev/scss:dev/css",
     "test-py": "cd dev && python -m pytest python/",
     "test-js": "jest"
   },
