@@ -27,7 +27,7 @@ if __name__ == "__main__":
             exit()
 
     # Start SASS watch to compile SCSS into CSS every time there is a change.
-    # subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}"], shell=True)
+    # subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}", "--style", "compressed"], shell=True)
     # Start Babel watch to build JS every time there is a change.
     # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--watch", "--out-file", f"{SLATE_DIR}/slate.js"], shell=True)
 
