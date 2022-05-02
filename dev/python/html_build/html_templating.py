@@ -47,24 +47,13 @@ def build_substitution(
             case ArgumentType.VARIABLE_ASSIGNMENT:
                 apply_variable(variables, argument)
             case ArgumentType.COMPONENT:
-                result_html += process_component(_components[argument.value], _variables, _components, _wrappers)
+                result_html += process_component(
+                    _components[argument.value], _variables, _components, _wrappers
+                )
+            case ArgumentType.GLOBAL:
+                result_html += _variables[argument.value]
             case ArgumentType.VARIABLE:
                 result_html += _variables[argument.value]
-
-    return result_html
-
-
-@debug
-def process_component_like(
-    _component: Component,
-    _variables: dict[str, str],
-    _components: dict[str, Component],
-    _wrappers: dict[str, list[Wrapper]],
-) -> str:
-    """Build a HTML component from templates"""
-    result_html = ""
-
-    result_html += _component.html 
 
     return result_html
 
@@ -79,7 +68,7 @@ def process_component(
     """Build a HTML component from templates"""
     result_html = ""
 
-    result_html += _component.html 
+    result_html += _component.html
 
     return result_html
 
