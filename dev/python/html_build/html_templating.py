@@ -35,6 +35,7 @@ def build_substitution(
     _components: dict[str, Component],
     _wrappers: dict[str, list[Wrapper]],
 ) -> tuple[str, list[str]]:
+    """Substitute a Slate Tag for processed HTML content based on the Tag's content and current state of _variables, _components, and _wrappers"""
     # Local copy of _variables for this substitution
     variables = _variables.copy()
     result_html = ""
@@ -65,9 +66,15 @@ def process_component(
     _components: dict[str, Component],
     _wrappers: dict[str, list[Wrapper]],
 ) -> str:
-    """Build a HTML component from templates"""
+    """Build a HTML component substitution from _variables, _components, and _wrappers"""
     result_html = ""
+    wrappers = []
 
+    if _component.id in _wrappers.keys():
+        wrappers = _wrappers[_component.id]
+
+    # for wrapper in wrappers:
+    #     result_html += wrapper.before
     result_html += _component.html
 
     return result_html

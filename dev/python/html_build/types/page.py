@@ -4,8 +4,8 @@ from python.utils.console_utils import describe_class
 
 
 class Page(Component):
-    def __init__(self, _path: str, _html: str, _tags: list[Tag]) -> None:
-        super().__init__(_html, _tags)
+    def __init__(self, _id: str, _path: str, _html: str, _tags: list[Tag]) -> None:
+        super().__init__(_id, _html, _tags)
         self._path = _path
 
     @property

@@ -191,7 +191,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                     component_html, slate_tags, wrappers
                 ):
                     components[f"@{component_file_name_text}"] = Component(
-                        component_html, slate_tags
+                        f"@{component_file_name_text}", component_html, slate_tags
                     )
 
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
@@ -201,7 +201,9 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                 page_html = page_html_file.read()
                 (slate_tags, _) = compute_slate_tags(page_html, global_variables)
                 pages[file_path] = Page(
-                    file_path.split(f"{_html_in_dir}/pages")[1], page_html, slate_tags
+                    file_path.split(file_path, f"{_html_in_dir}/pages")[1],
+                    page_html,
+                    slate_tags,
                 )
 
     for key in components:
