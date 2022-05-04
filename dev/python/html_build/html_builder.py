@@ -170,7 +170,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     # Page definitions
     pages: dict[str, Page] = {}
 
-    # Get the root HTML wrapper from slate.html.
+    # Get and build the root HTML wrapper from slate.html, if this fails the build cannot complete and must exit
     with open(f"{_slate_dir}/slate.html", "r") as root_html_file:
         root_html = root_html_file.read()
         (slate_tags, is_wrapper_html) = compute_slate_tags(root_html, global_variables)
@@ -179,6 +179,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
         ):
             exit_exception("Root HTML wrapper is not valid.")
 
+    # Get and build components and wrappers from the components directory
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/components"):
         for component_file_name in filenames:
             with open(dirpath + "\\" + component_file_name, "r") as component_html_file:
@@ -194,6 +195,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                         f"@{component_file_name_text}", component_html, slate_tags
                     )
 
+    # Get and build pages from the pages directory
     for dirpath, dirnames, filenames in os.walk(f"{_html_in_dir}/pages"):
         for page_file_name in filenames:
             file_path = f"{dirpath}/{page_file_name}".replace("\\", "/")
@@ -206,6 +208,26 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                     slate_tags,
                 )
 
+    # Debug remove
+    debug_print(global_variables, components, wrappers, pages)
+
+    for page_path, page in pages.items():
+        reset_variables(variables, global_variables)
+
+        html_page_result = process_html_page(page, variables, components, wrappers)
+
+        OUTPUT_HTML_PATH = f"{_html_out_dir}{page._path}"
+        os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)
+        with open(OUTPUT_HTML_PATH, "w") as html_output_file:
+            html_output_file.write(html_page_result)
+
+
+def debug_print(
+    global_variables: dict[str, str] = {},
+    components: dict[str, Component] = {},
+    wrappers: dict[str, list[Wrapper]] = {},
+    pages: dict[str, Page] = {},
+):
     for key in components:
         print(components[key], "\n")
 
@@ -218,13 +240,3 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
 
     for key in global_variables:
         print(f"{key}: {global_variables[key]}\n")
-
-    for page_path, page in pages.items():
-        reset_variables(variables, global_variables)
-
-        html_page_result = process_html_page(page, variables, components, wrappers)
-
-        OUTPUT_HTML_PATH = f"{_html_out_dir}{page._path}"
-        os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)
-        with open(OUTPUT_HTML_PATH, "w") as html_output_file:
-            html_output_file.write(html_page_result)
