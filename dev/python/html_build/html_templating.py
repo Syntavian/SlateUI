@@ -5,7 +5,7 @@ from python.html_build.types.argument import Argument, ArgumentType
 from python.html_build.types.component import Component
 from python.html_build.types.page import Page
 from python.html_build.types.tag import Tag
-from python.html_build.types.wrapper import Wrapper
+from python.html_build.types.wrapper import ComputedWrapper, Wrapper
 
 
 @debug
@@ -43,13 +43,14 @@ def build_substitution(
     print(variables)
     print(_tag)
 
-    for argument in _tag.arguments:
+    for argument in reversed(_tag.arguments):
         match argument.type:
             case ArgumentType.VARIABLE_ASSIGNMENT:
                 apply_variable(variables, argument)
+                print(variables)
             case ArgumentType.COMPONENT:
                 result_html += process_component(
-                    _components[argument.value], _variables, _components, _wrappers
+                    _components[argument.value], variables, _components, _wrappers
                 )
             case ArgumentType.GLOBAL:
                 result_html += _variables[argument.value]
@@ -60,47 +61,67 @@ def build_substitution(
 
 
 @debug
+def process_wrapper(
+    _wrapper: Wrapper,
+    _variables: dict[str, str],
+    _components: dict[str, Component],
+) -> ComputedWrapper:
+    return ComputedWrapper(_wrapper.before, _wrapper.after)
+
+
+@debug
 def process_component(
     _component: Component,
     _variables: dict[str, str],
     _components: dict[str, Component],
     _wrappers: dict[str, list[Wrapper]],
+    _is_page: bool = False,
 ) -> str:
     """Build a HTML component substitution from _variables, _components, and _wrappers"""
     result_html = ""
     wrappers = []
 
-    if _component.id in _wrappers.keys():
-        wrappers = _wrappers[_component.id]
+    # Add the root HTML Wrapper to the component Wrappers list
+    if _is_page:
+        wrappers.append(process_wrapper(_wrappers["*"][0], _variables, _components))
 
-    # for wrapper in wrappers:
-    #     result_html += wrapper.before
-    result_html += _component.html
+    if _component.id in _wrappers.keys():
+        wrappers.extend(
+            [
+                process_wrapper(wrapper, _variables, _components)
+                for wrapper in _wrappers[_component.id]
+            ]
+        )
+
+    for wrapper in wrappers:
+        result_html += wrapper.before
+
+    if len(_component.tags) > 0:
+        for index, tag in enumerate(_component.tags):
+            if index > 0:
+                last_tag = _component.tags[index - 1]
+                result_html += _component.html[
+                    last_tag.position + last_tag.length : tag.position
+                ]
+            else:
+                result_html += _component.html[0 : tag.position]
+            result_html += build_substitution(tag, _variables, _components, _wrappers)
+    else:
+        result_html += _component.html
+
+    for wrapper in reversed(wrappers):
+        result_html += wrapper.after
 
     return result_html
 
 
 @debug
-def process_html_page(
+def process_page(
     _page: Page,
     _variables: dict[str, str],
     _components: dict[str, Component],
     _wrappers: dict[str, list[Wrapper]],
 ) -> str:
     """Build a HTML page from templates"""
-    result_html = ""
 
-    if len(_page.tags) > 0:
-        for index, tag in enumerate(_page.tags):
-            if index > 0:
-                last_tag = _page.tags[index - 1]
-                result_html += _page.html[
-                    last_tag.position + last_tag.length : tag.position
-                ]
-            else:
-                result_html += _page.html[0 : tag.position]
-            result_html += build_substitution(tag, _variables, _components, _wrappers)
-    else:
-        result_html = _page.html
-
-    return result_html
+    return process_component(_page, _variables, _components, _wrappers, True)

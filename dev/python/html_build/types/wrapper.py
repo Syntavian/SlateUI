@@ -10,13 +10,13 @@ from python.utils.error_utils import exception
 
 class WrapperType(Enum):
     INVALID = 0
-    ALL = 1
+    ROOT = 1
     PAGE = 2
     COMPONENT = 3
 
 
 WrapperTypeMember = Literal[
-    WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ALL, WrapperType.INVALID
+    WrapperType.COMPONENT, WrapperType.PAGE, WrapperType.ROOT, WrapperType.INVALID
 ]
 
 
@@ -30,7 +30,7 @@ def determine_wrapper_type(
     if re.search(r"\*\w+", _wrapper):
         return WrapperType.PAGE
     if re.search(r"\* |\*$", _wrapper):
-        return WrapperType.ALL
+        return WrapperType.ROOT
     exception()(f"wrapper {_wrapper} is not valid.")
     return WrapperType.INVALID
 
@@ -52,6 +52,26 @@ class Wrapper:
         self._wrapped_object = _wrapped_object
         self._tags = _tags
 
+    @property
+    def type(self) -> WrapperTypeMember:
+        return self._type
+
+    @property
+    def before(self) -> str:
+        return self._before
+
+    @property
+    def after(self) -> str:
+        return self._after
+
+    @property
+    def wrapped_object(self) -> str:
+        return self._wrapped_object
+
+    @property
+    def tags(self) -> list[Tag]:
+        return self._tags
+
     def __str__(self) -> str:
         return describe_class(
             "Wrapper",
@@ -60,4 +80,31 @@ class Wrapper:
             after=self._after,
             wrapped_object=self._wrapped_object,
             tags=self._tags,
+        )
+
+
+class ComputedWrapper:
+    """A HTML Wrapper component's computed HTML content."""
+
+    def __init__(
+        self,
+        _before: str,
+        _after: str,
+    ) -> None:
+        self._before = _before
+        self._after = _after
+
+    @property
+    def before(self) -> str:
+        return self._before
+
+    @property
+    def after(self) -> str:
+        return self._after
+
+    def __str__(self) -> str:
+        return describe_class(
+            "ComputedWrapper",
+            before=self._before,
+            after=self._after,
         )

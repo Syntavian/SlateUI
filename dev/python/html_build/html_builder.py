@@ -42,7 +42,7 @@ def build_wrapper(
     if not wrapper:
         return None
     wrapper_type = determine_wrapper_type(wrapper.group(1))
-    if _is_root and wrapper_type != WrapperType.ALL:
+    if _is_root and wrapper_type != WrapperType.ROOT:
         exit_exception("Root HTML wrapper is not valid.")
     if wrapper_type == WrapperType.INVALID:
         exception("Wrapper is not valid.")
@@ -203,7 +203,8 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
                 page_html = page_html_file.read()
                 (slate_tags, _) = compute_slate_tags(page_html, global_variables)
                 pages[file_path] = Page(
-                    file_path.split(file_path, f"{_html_in_dir}/pages")[1],
+                    file_path,
+                    file_path.split(f"{_html_in_dir}/pages")[1],
                     page_html,
                     slate_tags,
                 )
@@ -214,7 +215,7 @@ def build_html(_slate_dir: str, _html_in_dir: str, _html_out_dir: str) -> None:
     for page_path, page in pages.items():
         reset_variables(variables, global_variables)
 
-        html_page_result = process_html_page(page, variables, components, wrappers)
+        html_page_result = process_page(page, variables, components, wrappers)
 
         OUTPUT_HTML_PATH = f"{_html_out_dir}{page._path}"
         os.makedirs(os.path.dirname(OUTPUT_HTML_PATH), exist_ok=True)
