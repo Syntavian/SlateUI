@@ -1,2 +1,6 @@
 .vscode/
 dev/css/*
+node_modules
+__pycache__/
+coverage/
+*.py.log
