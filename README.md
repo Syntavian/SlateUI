@@ -5,6 +5,7 @@ SlateUI is simple web application styling framework with the goal of speeding up
 SlateUI is built with Sass to produce a large library of prebuilt styles you can apply to your HTML, and the build tool will build the styles you use into a minified CSS file to minimise the final app size.
 
 ## Create Optimised Build From Dev
-```
+
+```text
 python dev/slate_build_dev.py
 ```

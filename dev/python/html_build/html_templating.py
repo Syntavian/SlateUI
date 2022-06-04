@@ -66,6 +66,8 @@ def process_wrapper(
     _variables: dict[str, str],
     _components: dict[str, Component],
 ) -> ComputedWrapper:
+    """Process a wrapper and return the processed HTML content"""
+
     return ComputedWrapper(_wrapper.before, _wrapper.after)
 
 
