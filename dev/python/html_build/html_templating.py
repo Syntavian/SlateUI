@@ -1,11 +1,32 @@
 import re
 
-from python.debug import debug
-from python.html_build.types.argument import Argument, ArgumentType
-from python.html_build.types.component import Component
-from python.html_build.types.page import Page
-from python.html_build.types.tag import Tag
-from python.html_build.types.wrapper import ComputedWrapper, Wrapper
+from python.debug import *
+from python.html_build.types.argument import *
+from python.html_build.types.component import *
+from python.html_build.types.page import *
+from python.html_build.types.tag import *
+from python.html_build.types.wrapper import *
+from python.utils.error_utils import *
+from python.utils.file_utils import *
+from python.utils.html_utils import *
+
+
+@debug
+def get_wrapper(_slate_tag_content: str) -> (Match[str] | None):
+    """Return a wrapper match if one is found, exception if multiple are found"""
+    wrapper_matches = [
+        wrapper_match
+        for wrapper_match in re.finditer(
+            containing(r"\*(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)\S*"),
+            strip_slate_tag(_slate_tag_content),
+        )
+    ]
+    if not wrapper_matches:
+        return
+    elif len(wrapper_matches) > 1:
+        exception("Multiple wrappers found.")
+        return
+    return wrapper_matches[0]
 
 
 @debug
@@ -29,6 +50,24 @@ def apply_variable(_variables: dict[str, str], _argument: Argument | str) -> Non
 
 
 @debug
+def process_variable(
+    _variable_value: str,
+    _variables: dict[str, str],
+    _components: dict[str, Component],
+    _wrappers: dict[str, list[Wrapper]],
+) -> str:
+    """Process a variable"""
+    if _variable_value in _variables.keys():
+        return process_variable(_variables[_variable_value])
+    elif _variable_value in _components.keys():
+        return process_component(
+            _components[_variable_value], _variables, _components, _wrappers
+        )
+    else:
+        return _variable_value[1:-1]
+
+
+@debug
 def build_substitution(
     _tag: Tag,
     _variables: dict[str, str],
@@ -40,22 +79,24 @@ def build_substitution(
     variables = _variables.copy()
     result_html = ""
 
-    print(variables)
     print(_tag)
 
     for argument in reversed(_tag.arguments):
         match argument.type:
             case ArgumentType.VARIABLE_ASSIGNMENT:
                 apply_variable(variables, argument)
-                print(variables)
             case ArgumentType.COMPONENT:
                 result_html += process_component(
                     _components[argument.value], variables, _components, _wrappers
                 )
             case ArgumentType.GLOBAL:
-                result_html += _variables[argument.value]
+                result_html += process_variable(
+                    _variables[argument.value], _variables, _components, _wrappers
+                )
             case ArgumentType.VARIABLE:
-                result_html += _variables[argument.value]
+                result_html += process_variable(
+                    _variables[argument.value], _variables, _components, _wrappers
+                )
 
     return result_html
 
@@ -69,12 +110,33 @@ def process_wrapper(
 ) -> ComputedWrapper:
     """Process a wrapper and return the processed HTML content"""
 
-    # for tag in _wrapper.tags:
-    #     result_html = build_substitution(tag, _variables, _components, _wrappers)
+    is_before_wrapper = True
+    result_html_before_wrapper = ""
+    result_html_after_wrapper = ""
+    for index, tag in enumerate(_wrapper.tags):
+        wrapper = get_wrapper(tag.text)
+        last_tag = _wrapper.tags[index - 1]
+        substitution_start = 0 if index == 0 else last_tag.position + last_tag.length
+        if is_before_wrapper:
+            result_html_before_wrapper += _wrapper.html[
+                substitution_start : tag.position
+            ] + build_substitution(tag, _variables, _components, _wrappers)
+        else:
+            result_html_after_wrapper += _wrapper.html[
+                substitution_start : tag.position
+            ] + build_substitution(tag, _variables, _components, _wrappers)
+        if wrapper:
+            is_before_wrapper = False
+
+    substitution_start = (
+        0 if index == 0 else _wrapper.tags[-1].position + _wrapper.tags[-1].length
+    )
+
+    result_html_after_wrapper += _wrapper.html[substitution_start:]
 
     return ComputedWrapper(
-        _wrapper.html[: _wrapper.wrapper_tag.position],
-        _wrapper.html[_wrapper.wrapper_tag.position + _wrapper.wrapper_tag.length :],
+        result_html_before_wrapper,
+        result_html_after_wrapper,
     )
 
 
@@ -117,6 +179,8 @@ def process_component(
             else:
                 result_html += _component.html[0 : tag.position]
             result_html += build_substitution(tag, _variables, _components, _wrappers)
+        last_tag = _component.tags[-1]
+        result_html += _component.html[last_tag.position + last_tag.length :]
     else:
         result_html += _component.html
 

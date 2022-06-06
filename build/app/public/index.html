@@ -1,17 +1,328 @@
-<# %title='SlateUI Project' %js='
-<script type="module" src="js/slate.js"></script>
-' />
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title><#%title/></title>
+        <title>SlateUI Project</title>
         <link rel="stylesheet" type="text/css" href="css/slate.css" />
         <link rel="icon" href="img/favicon.png" />
     </head>
 
     <body class="fill tertiary no-scrollbar">
-    @content
+    <header class="w-10 p-t-5 m-b-xl">
+    <div class="banner sticky fill transparent m-b-1 p-2">
+        <h1>SlateUI Project</h1>
+        <nav class="link-row">
+    <div class="link-row-group">
+        <a class="link fill"> Home </a>
+        <a class="link fill"> About </a>
+        <a class="link fill"> Contact </a>
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<main class="f-r-t layout-row-center-middle">
+    <div class="f-c-t f-g-1 m-h-l m-b-m p-s shadow-1 fill transparent">
+        <div class="f-r-t shrink-xl m-v-m">
+            <div class="f-c-s m-h-m">
+                <h6>Normal</h6>
+                <div class="break"></div>
+                <button class="button fill m-v-s">Hello</button>
+                <button class="button-round-2 fill m-v-s">Hello</button>
+                <h6>Gradient</h6>
+                <div class="break"></div>
+                <button class="button fill gradient-hover-animation m-v-s">
+                    Hello
+                </button>
+                <button
+                    class="button-round-2 fill gradient-hover-animation m-v-s"
+                >
+                    Hello
+                </button>
+            </div>
+            <div class="f-c-s m-h-m">
+                <h6>Expanding</h6>
+                <div class="break"></div>
+                <div class="button-expand m-v-s">
+                    <button class="gradient-hover-animation button fill">
+                        Hello
+                    </button>
+                </div>
+                <div class="button-expand m-v-s">
+                    <button
+                        class="button-round-2 gradient-hover-animation fill"
+                    >
+                        Hello
+                    </button>
+                </div>
+                <h6>Switches</h6>
+                <div class="break"></div>
+                <div class="button-expand m-v-s">
+                    <button
+                        class="gradient-hover-animation button fill inactive"
+                    >
+                        Hello
+                    </button>
+                </div>
+                <div class="button-expand m-v-s">
+                    <button
+                        class="gradient-hover-animation button-round-2 fill inactive"
+                    >
+                        Hello
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="f-c-s f-g-2 m-h-l m-b-m">
+        <div class="box transparent w-10 m-b-s p-s">
+            <h2>Content</h2>
+        </div>
+        <div class="box transparent w-10 m-s p-s">
+            <h3>Content 2</h3>
+            <div class="break"></div>
+            <p class="p-h-l">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas ac convallis quam, nec pellentesque nisl. Phasellus a
+                luctus risus. Aenean suscipit erat vel nulla tempus, ut
+                efficitur odio blandit. Phasellus id dui accumsan elit bibendum
+                laoreet. Sed convallis dignissim leo, eget mollis ipsum dapibus
+                eu. Vestibulum viverra, arcu sit amet eleifend sagittis, nunc
+                tortor suscipit sem, maximus congue turpis nisl sed justo.
+                Curabitur sagittis mattis velit at bibendum. Nunc nec mauris
+                odio. Morbi euismod fringilla lorem, vel sagittis nisl iaculis
+                vestibulum. Curabitur leo risus, consequat nec ligula quis,
+                vulputate malesuada nisl. Maecenas eu euismod ex. Nullam
+                faucibus lorem sit amet dui finibus, non semper tellus varius.
+                Vestibulum cursus diam felis. In eleifend tortor vulputate
+                tellus aliquam, eget facilisis augue egestas.
+                <br /><br />
+                Curabitur dignissim pulvinar tortor et mattis. Duis egestas,
+                diam mattis suscipit tempus, dui odio convallis nunc, eu
+                scelerisque metus est ut dui. Proin id augue sit amet mauris
+                rhoncus imperdiet id malesuada enim. Fusce vel vulputate risus.
+                Mauris vestibulum ullamcorper pharetra. Aliquam aliquet nisl id
+                felis cursus, nec dictum magna egestas. Proin sodales est ac
+                feugiat semper. Proin est nunc, aliquet quis faucibus porttitor,
+                commodo in ante. Vestibulum a pellentesque ipsum, eu accumsan
+                ligula. Suspendisse potenti. In accumsan rutrum elit congue
+                placerat. Phasellus rhoncus nec libero id sodales. Donec
+                dignissim ipsum vel ex molestie accumsan. Donec pulvinar, neque
+                ac varius suscipit, justo sem dapibus orci, tincidunt euismod
+                est tortor nec mauris. Quisque erat dolor, accumsan auctor
+                libero sed, rutrum condimentum neque.
+                <br /><br />
+                Proin gravida placerat convallis. Sed convallis viverra felis in
+                consectetur. Donec id mollis leo. Vestibulum dui velit, sagittis
+                sed eleifend ac, egestas ac diam. Maecenas a enim in justo
+                lacinia iaculis. Cras in euismod justo. Mauris molestie velit eu
+                purus cursus mattis. Vivamus sit amet justo vel est dignissim
+                pulvinar lobortis in sapien. Nam suscipit sem in quam feugiat,
+                sed dapibus leo malesuada. Quisque vestibulum imperdiet ornare.
+                Proin turpis dui, volutpat ut bibendum et, pulvinar ut ligula.
+                Vestibulum nisi nibh, maximus non rhoncus sed, malesuada eget
+                massa. Aliquam in turpis et neque ornare ornare. Cras suscipit
+                velit et sem faucibus, ut ultricies neque posuere.
+            </p>
+        </div>
+        <div class="box transparent w-10 m-s p-s">
+            <h3>Form</h3>
+            <div class="break"></div>
+            <form class="w-5">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Long long long description text test:</label>
+                    <textarea class="h-10em-max"></textarea>
+                </div>
+                <div>
+                    <label>Select:</label>
+                    <select>
+                        <option>Test 1</option>
+                        <option>Test 2</option>
+                        <option>Test 3</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Checkbox:</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <label>Number:</label>
+                    <input type="number" />
+                </div>
+                <input type="submit" class="gradient-hover-animation fill" />
+            </form>
+        </div>
+        <div class="box transparent w-10 m-s p-s">
+            <h3>Custom Input</h3>
+            <div class="break"></div>
+            <textarea class="w-10 h-5em no-resize"></textarea>
+        </div>
+        <div class="box transparent w-10 m-s p-s">
+            <h3>Canvas</h3>
+            <div class="break"></div>
+            <canvas></canvas>
+        </div>
+        <div class="inline-box transparent block w-10 m-s p-s">
+            <h4 class="f">Text Content</h4>
+            <div class="break"></div>
+            <div class="image-carousel m-l" style="float: right">
+                <img class="image fill" alt="aisd" />
+                <img class="image fill" alt="aiosdgmi" />
+                <img class="image fill" alt="aisdg" />
+                <img class="image fill" alt="8hasndiug" />
+                <img class="image fill" alt="iuerfni" />
+                <img class="image fill" alt="u9adn" />
+                <img class="image fill" alt="aiosdgm" />
+            </div>
+            <p class="p-h-l">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                posuere hendrerit leo vel fringilla. Maecenas vitae interdum
+                odio, nec scelerisque turpis. Morbi malesuada et ex sed pretium.
+                Donec convallis magna sed dolor pretium dictum. Nam feugiat,
+                orci id luctus lacinia, libero quam tincidunt felis, vitae
+                consectetur quam augue ac nisi. Nam at tellus viverra, porttitor
+                neque at, ultricies leo. Curabitur in leo semper, vehicula felis
+                nec, efficitur elit. Nullam at neque a ligula pulvinar efficitur
+                in eget neque. Mauris id odio vel sapien faucibus accumsan a id
+                mi. Mauris ante dolor, viverra ac arcu non, tincidunt dapibus
+                nisi. Cras vitae tincidunt ante, id feugiat ante. Maecenas
+                bibendum ullamcorper urna, non iaculis odio imperdiet fringilla.
+                Vestibulum vestibulum sem malesuada posuere accumsan. Fusce
+                rhoncus nisi at viverra suscipit.
+                <br /><br />
+                Vivamus et elit eget libero ultrices sollicitudin. Pellentesque
+                ut ligula eleifend, sollicitudin libero id, fringilla lorem.
+                Suspendisse eros leo, ultrices at aliquet et, faucibus vitae
+                neque. Proin at ligula non urna pharetra lobortis. Fusce a leo
+                id mauris volutpat ultricies. Pellentesque interdum congue orci
+                at ultricies. Praesent volutpat euismod nisi, in egestas nunc
+                faucibus et. Fusce eget erat dui. Ut ullamcorper lobortis risus
+                sed egestas. Aliquam lacus neque, ullamcorper a risus vitae,
+                scelerisque pharetra urna. Curabitur aliquam nulla ut odio
+                commodo, vitae egestas ex rhoncus. Sed ut efficitur neque, eget
+                volutpat nisl. Maecenas sit amet leo in est dictum efficitur
+                quis quis risus. Maecenas lacinia felis turpis, sit amet
+                sollicitudin quam auctor eu. Curabitur feugiat fringilla cursus.
+            </p>
+        </div>
+        <div class="box transparent w-10 m-s p-s">
+            <div class="f-r c-m-m">
+                <div class="image-carousel">
+                    <img class="image fill" alt="1" />
+                    <img class="image fill" alt="2" />
+                    <img class="image fill" alt="3" />
+                    <img class="image fill" alt="4" />
+                </div>
+                <div class="image-carousel">
+                    <img
+                        class="image fill"
+                        src="img/icon.png"
+                        alt="1"
+                        width="50"
+                    />
+                    <img
+                        class="image fill"
+                        src="img/icon.png"
+                        alt="2"
+                        width="50"
+                    />
+                    <img
+                        class="image fill"
+                        src="img/icon.png"
+                        alt="3"
+                        width="50"
+                    />
+                    <img
+                        class="image fill"
+                        src="img/icon.png"
+                        alt="4"
+                        width="50"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="f-c-s f-g-1 m-h-l m-b-m p-s border-1 border-radius-1 fill transparent"
+    >
+        <div class="f-r-t shrink-xl">
+            <div class="f-c-s">
+                <div class="expand m-v-2">
+                    <div class="box fill">
+                        <img
+                            class="image no-shadow size-4em"
+                            src="img/icon.png"
+                            alt="img"
+                        />
+                    </div>
+                </div>
+                <div class="expand m-v-2">
+                    <div class="box">
+                        <div class="f size-4em">Test</div>
+                    </div>
+                </div>
+                <div class="expand m-v-2">
+                    <div class="box border-1 no-shadow">
+                        <div class="f size-4em">Test</div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-c-s">
+                <div class="expand m-v-2">
+                    <div class="box fill gradient">
+                        <div class="f size-4em">Test</div>
+                    </div>
+                </div>
+                <div class="expand m-v-2">
+                    <div class="box fill gradient-hover-animation">
+                        <div class="f size-4em">Test</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="f fixed-tr-3 z-9999">
+    <div class="button-expand">
+        <button
+            class="theme-selector button-round gradient-hover-animation fill"
+        ></button>
+    </div>
+</div>
+
+<footer class="w-10">
+    <div class="banner fill transparent m-t-1 p-2">
+        <h6>Footer</h6>
+        <div class="w-5 f-r-t">
+            <div class="f">
+                <h6>About</h6>
+            </div>
+            <div class="f">
+                <h6>Links</h6>
+                <div class="icon-row no-shrink">
+                    <a class="icon fill"></a>
+                    <a class="icon fill"></a>
+                    <a class="icon fill"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+
+
+    <script type="module" src="js/slate.js"></script>
 </html>

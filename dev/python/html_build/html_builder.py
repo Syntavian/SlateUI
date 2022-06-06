@@ -15,30 +15,12 @@ from python.utils.html_utils import *
 
 
 @debug
-def get_wrapper(_slate_tag_content: str) -> Match[str]:
-    """Return a wrapper match if one is found, exception if multiple are found"""
-    wrapper_matches = [
-        wrapper_match
-        for wrapper_match in re.finditer(
-            containing(r"\*(?=(?:(?:[^\"]*\"[^\"]*\")|(?:[^']*'[^']*'))*[^\"']*$)\S*"),
-            strip_slate_tag(_slate_tag_content),
-        )
-    ]
-    if not wrapper_matches:
-        return
-    elif len(wrapper_matches) > 1:
-        exception("Multiple wrappers found.")
-        return
-    return wrapper_matches[0]
-
-
-@debug
 def build_wrapper(
     _html: str, _slate_tag: Tag, _slate_tag_matches: list[Tag], _is_root: bool = False
 ) -> Wrapper | None:
     """Create a Wrapper instance"""
     # Find and validate the wrapper.
-    wrapper = get_wrapper(_slate_tag._text)
+    wrapper = get_wrapper(_slate_tag.text)
     if not wrapper:
         return None
     wrapper_type = determine_wrapper_type(wrapper.group(1))
@@ -88,7 +70,6 @@ def reset_variables(
     _variables.clear()
     for k, v in _global_variables.items():
         _variables[k] = v
-    print(_variables)
 
 
 @debug
@@ -151,8 +132,6 @@ def compute_slate_tags(
                 processed_arguments,
             )
         )
-    for slate_tag in slate_tags:
-        print(slate_tag, "\n")
     return (slate_tags, is_wrapper_html)
 
 
