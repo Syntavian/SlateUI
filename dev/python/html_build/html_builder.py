@@ -49,8 +49,8 @@ def build_wrapper(
         return
     return Wrapper(
         wrapper_type,
-        _html[: _slate_tag._position],
-        _html[_slate_tag._position + _slate_tag._length :],
+        _html,
+        _slate_tag,
         wrapper.group(1),
         _slate_tag_matches,
     )

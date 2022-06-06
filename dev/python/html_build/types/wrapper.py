@@ -41,14 +41,14 @@ class Wrapper:
     def __init__(
         self,
         _type: WrapperTypeMember,
-        _before: str,
-        _after: str,
+        _html: str,
+        _wrapper_tag: Tag,
         _wrapped_object: str,
         _tags: list[Tag],
     ) -> None:
         self._type = _type
-        self._before = _before
-        self._after = _after
+        self._html = _html
+        self._wrapper_tag = _wrapper_tag
         self._wrapped_object = _wrapped_object
         self._tags = _tags
 
@@ -57,12 +57,12 @@ class Wrapper:
         return self._type
 
     @property
-    def before(self) -> str:
-        return self._before
+    def html(self) -> str:
+        return self._html
 
     @property
-    def after(self) -> str:
-        return self._after
+    def wrapper_tag(self) -> Tag:
+        return self._wrapper_tag
 
     @property
     def wrapped_object(self) -> str:
@@ -76,8 +76,8 @@ class Wrapper:
         return describe_class(
             "Wrapper",
             type=self._type,
-            before=self._before,
-            after=self._after,
+            html=self._html,
+            wrapper_tag=self._wrapper_tag,
             wrapped_object=self._wrapped_object,
             tags=self._tags,
         )

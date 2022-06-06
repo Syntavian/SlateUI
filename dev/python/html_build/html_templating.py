@@ -65,10 +65,17 @@ def process_wrapper(
     _wrapper: Wrapper,
     _variables: dict[str, str],
     _components: dict[str, Component],
+    _wrappers: dict[str, list[Wrapper]],
 ) -> ComputedWrapper:
     """Process a wrapper and return the processed HTML content"""
 
-    return ComputedWrapper(_wrapper.before, _wrapper.after)
+    # for tag in _wrapper.tags:
+    #     result_html = build_substitution(tag, _variables, _components, _wrappers)
+
+    return ComputedWrapper(
+        _wrapper.html[: _wrapper.wrapper_tag.position],
+        _wrapper.html[_wrapper.wrapper_tag.position + _wrapper.wrapper_tag.length :],
+    )
 
 
 @debug
@@ -81,16 +88,18 @@ def process_component(
 ) -> str:
     """Build a HTML component substitution from _variables, _components, and _wrappers"""
     result_html = ""
-    wrappers = []
+    wrappers: list[ComputedWrapper] = []
 
     # Add the root HTML Wrapper to the component Wrappers list
     if _is_page:
-        wrappers.append(process_wrapper(_wrappers["*"][0], _variables, _components))
+        wrappers.append(
+            process_wrapper(_wrappers["*"][0], _variables, _components, _wrappers)
+        )
 
     if _component.id in _wrappers.keys():
         wrappers.extend(
             [
-                process_wrapper(wrapper, _variables, _components)
+                process_wrapper(wrapper, _variables, _components, _wrappers)
                 for wrapper in _wrappers[_component.id]
             ]
         )
