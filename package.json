@@ -6,18 +6,21 @@
     "prep": "npm install -ci && cd build/app && npm install -ci",
     "build": "python dev/slate_dev.py",
     "build-css": "npx sass dev/scss:dev/css --style compressed",
+    "build-js": "npx swc dev/ts -d dev/js",
     "test-py": "cd dev && python -m pytest python/",
     "test-js": "jest"
   },
   "author": "Syntavian",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11",
-    "browserify": "^17.0.0",
-    "jest": "^27.4.7",
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.197",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^28.1.1",
+    "jest": "^28.1.1",
     "prettier": "^2.5.1",
-    "sass": "^1.49.8"
+    "sass": "^1.49.8",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
   }
 }

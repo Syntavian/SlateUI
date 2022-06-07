@@ -20,7 +20,7 @@ module.exports = {
     collectCoverage: true,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: ["dev/js/**/*.js"],
+    collectCoverageFrom: ["dev/ts/**/*.ts"],
 
     // The directory where Jest should output its coverage files
     coverageDirectory: "dev/coverage",
@@ -93,7 +93,7 @@ module.exports = {
     // notifyMode: "failure-change",
 
     // A preset that is used as a base for Jest's configuration
-    // preset: undefined,
+    preset: "ts-jest",
 
     // Run tests from one or more projects
     // projects: undefined,
@@ -137,7 +137,7 @@ module.exports = {
     // snapshotSerializers: [],
 
     // The test environment that will be used for testing
-    // testEnvironment: "jest-environment-node",
+    testEnvironment: "node",
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
@@ -172,9 +172,9 @@ module.exports = {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: {
-    //     "^.+\\.js$": "babel-jest",
-    // },
+    transform: {
+        "^.+\\.(t|j)sx?$": ["@swc/jest"],
+    },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [

@@ -30,6 +30,6 @@ describe("getElementStylesAsNumberSum()", () => {
 
 describe("px()", () => {
     test("should add 'px' to the end of a value", () => {
-        expect(px("0")).toBe("0px");
+        expect(px(0)).toBe("0px");
     });
 });
