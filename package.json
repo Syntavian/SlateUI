@@ -6,7 +6,7 @@
     "prep": "npm install -ci && cd build/app && npm install -ci",
     "build": "python dev/slate_dev.py",
     "build-css": "npx sass dev/scss:dev/css --style compressed",
-    "build-js": "npx swc dev/ts -d dev/js",
+    "build-js": "npx spack",
     "test-py": "cd dev && python -m pytest python/",
     "test-js": "jest"
   },

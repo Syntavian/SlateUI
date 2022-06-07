@@ -1,5 +1,6 @@
 {
-  "jsc": {
+    "exclude": "\\.test\\.ts$", 
+    "jsc": {
         "parser": {
             "syntax": "typescript",
             "jsx": false,

@@ -1,7 +1,7 @@
 import {
     getElementStyleAsNumber,
     getElementStylesAsNumberSum,
-} from "./utils.js";
+} from "./css_utils";
 
 let sticky = document.querySelectorAll(".sticky");
 
