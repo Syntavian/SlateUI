@@ -1,14 +1,13 @@
+# TODO
 
-DEV BUILD TASKS
+## DEV BUILD TASKS
 
-	- complete HTML build update
-		- handle new slate tag syntax				Done
-		- complete wrapper implementation
-		
-	- implement babel build steps for js
-	
-	- implement better build exception handling
-	
-RELEASE BUILD TASKS
+- complete HTML build update
+- handle new slate tag syntax - Done
+- complete wrapper implementation
+- implement babel build steps for js
+- implement better build exception handling
 
-	- create python builder
+## RELEASE BUILD TASKS
+
+- create python builder

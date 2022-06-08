@@ -2,24 +2,22 @@ import os
 
 # The required Slate project structure to successfully build.
 SIGNATURE: dict[str, list[str]] = {
-    r".": ["build", "dev", ".prettierignore", ".prettierrc", "jest.config.js"],
+    r".": [
+        "build",
+        "dev",
+        ".prettierignore",
+        ".prettierrc",
+        ".swcrc",
+        "jest.config.js",
+        "spack.config.js",
+    ],
     r".\build": ["app"],
     r".\build\app": ["public", "slate", "src", "jest.config.js"],
     r".\build\app\src": ["public", "app.js"],
     r".\build\app\src\public": ["css", "html", "js"],
     r".\build\app\src\public\html": ["components", "pages"],
-    r".\dev": ["css", "js", "python", "scss", "slate_dev.py"],
-    r".\dev\js": [
-        "button_styles.js",
-        "css_utils.js",
-        "css_utils.test.js",
-        "image_styles.js",
-        "layout_styles.js",
-        "main.js",
-        "scroll_styles.js",
-        "sticky_styles.js",
-        "theme_styles.js",
-    ],
+    r".\dev": ["css", "js", "python", "scss", "ts", "slate_dev.py"],
+    r".\dev\js": [],
     r".\dev\python": [
         "css_build",
         "html_build",
@@ -78,6 +76,17 @@ SIGNATURE: dict[str, list[str]] = {
         "_images.scss",
         "_links.scss",
         "_popup.scss",
+    ],
+    r".\dev\ts": [
+        "button_styles.ts",
+        "css_utils.test.ts",
+        "css_utils.ts",
+        "image_styles.ts",
+        "layout_styles.ts",
+        "main.ts",
+        "scroll_styles.ts",
+        "sticky_styles.ts",
+        "theme_styles.ts",
     ],
 }
 

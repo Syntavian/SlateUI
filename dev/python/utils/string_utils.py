@@ -10,7 +10,7 @@ def redact_spacing(text: str) -> str:
 
 def redact_overflow(_text: str, _max_length: int = 100) -> str:
     if len(_text) > _max_length:
-        return f"{_text[:_max_length]}..."
+        return f"{_text[:_max_length].strip()}..."
     else:
         return _text
 

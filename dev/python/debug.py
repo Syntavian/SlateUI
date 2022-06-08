@@ -26,11 +26,11 @@ def debug(_func):
         global level
         arg_spec = inspect.getfullargspec(_func)
         args_repr = [
-            f"{coloured_indent(level + 1)}{arg_spec[0][index]} = {colour(format_value(argument), COLOURS['CYAN'])}"
+            f"{coloured_indent(level + 1)}{arg_spec[0][index]} = {colour(format_value(str(argument).replace('| ', '')), COLOURS['CYAN'])}"
             for index, argument in enumerate(args)
         ]
         kwargs_repr = [
-            f"{coloured_indent(level + 1)}{key} = {colour(format_value(argument), COLOURS['CYAN'])}"
+            f"{coloured_indent(level + 1)}{key} = {colour(format_value(str(argument).replace('| ', '')), COLOURS['CYAN'])}"
             for key, argument in kwargs.items()
         ]
         signature = ",\n".join(args_repr + kwargs_repr)
@@ -45,7 +45,7 @@ def debug(_func):
         end_time = time.perf_counter()
         run_time = end_time - start_time
         level -= 1
-        output = f"{repeat_string_function(coloured_indent, 2, [[level + 1], (level, 1)])}{colour('<', COLOURS['RED'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} returned {colour(format_value(value), COLOURS['CYAN'])} in {colour(f'{run_time:.4f}', COLOURS['GREEN' if run_time < 0.01 else 'RED'])} secs"
+        output = f"{repeat_string_function(coloured_indent, 2, [[level + 1], (level, 1)])}{colour('<', COLOURS['RED'])} {colour(f'{_func.__name__}', COLOURS['CYAN'])} returned {colour(format_value(str(value).replace('| ', '')), COLOURS['CYAN'])} in {colour(f'{run_time:.4f}', COLOURS['GREEN' if run_time < 0.01 else 'RED'])} secs"
         write_debug_log(output)
         return value
 
