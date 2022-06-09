@@ -12,7 +12,7 @@ from python.thread_handler import ThreadHandler
 from python.utils.string_utils import *
 
 if __name__ == "__main__":
-    # Verify the project structure.
+    # Verify the project structure
     for dirpath, dirnames, filenames in os.walk("."):
         if any([x in dirpath for x in SIGNATURE_IGNORE]):
             continue
@@ -26,32 +26,37 @@ if __name__ == "__main__":
             )
             exit()
 
-    # Start SASS watch to compile SCSS into CSS every time there is a change.
-    # subprocess.Popen(["npx", "sass", "--watch", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}", "--style", "compressed"], shell=True)
-    # Start Babel watch to build JS every time there is a change.
-    # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--watch", "--out-file", f"{SLATE_DIR}/slate.js"], shell=True)
 
-    # Wait for SASS to complete then build Slate once on run.
+    # Replace next with additional observers to run required processes
+    #
+    
+    # Run SASS to compile SCSS into CSS
+    # subprocess.Popen(["npx", "sass", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}", "--style", "compressed"])
+
+    # 
+    # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--out-file", f"{SLATE_DIR}/slate.js"])
+
+    # Wait for SASS to complete then build Slate once on run
     build()
 
     exit()
 
-    # Create the event handler to store and handle file modification events in the project.
+    # Create the event handler to store and handle file modification events in the project
     event_handler = ModifiedEventBuildEventHandler()
-    # Create an observer for file update events.
+    # Create an observer for file update events
     observer = Observer()
-    # Schedule the event handler to run on events in relevant directories.
+    # Schedule the event handler to run on events in relevant directories
     observer.schedule(event_handler, SLATE_DIR)
     observer.schedule(event_handler, HTML_DIR)
     observer.schedule(event_handler, CSS_PREBUILD_DIR)
     observer.schedule(event_handler, CSS_DIR)
     observer.start()
-    # Create the thread handler for build threads.
+    # Create the thread handler for build threads
     thread_handler = ThreadHandler(build)
     try:
         while True:
             time.sleep(1)
-            # Call the event handler to run the thread handler every tick if a file event has occurred.
+            # Call the event handler to run the thread handler every tick if a file event has occurred
             event_handler.update(thread_handler)
     finally:
         observer.stop()

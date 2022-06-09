@@ -1,7 +1,4 @@
-import {
-    getElementStyleAsNumber,
-    getElementStylesAsNumberSum,
-} from "./css_utils";
+import { getElementStylesAsNumberSum, pxToNumber } from "./cssUtils";
 
 let sticky = document.querySelectorAll(".sticky");
 
@@ -27,7 +24,7 @@ function updateBanners() {
                 elementStyle = getComputedStyle(element);
                 element.setAttribute(
                     "originalPosition",
-                    getElementStyleAsNumber(elementStyle.top)
+                    pxToNumber(elementStyle.top)
                 );
                 element.style.top = "0px";
 

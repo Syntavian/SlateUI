@@ -32,9 +32,9 @@ REQUIRED_STYLES.extend(JS_REQUIRED_SELECTORS)
 
 @debug
 def find_required_styles(_html_path: str) -> set[str]:
-    # A set of id and class selectors that must be built.
+    # A set of id and class selectors that must be built
     style_selectors = set(REQUIRED_STYLES)
-    # Analyse HTML files for tags, ids, and classes.
+    # Analyse HTML files for tags, ids, and classes
     for (dir_path, dir_names, file_names) in os.walk(_html_path):
         for html_file_name in [
             filename

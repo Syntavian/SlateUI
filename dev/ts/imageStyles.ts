@@ -1,10 +1,14 @@
-import { px } from "./css_utils";
+import { toPx } from "./cssUtils";
 
-let imageCarousels = document.querySelectorAll(".image-carousel");
+const imageCarousels = document.querySelectorAll(".image-carousel");
 let currentButtonTheme = "";
 
-function cycleCarousel(index, offset, maxDimension) {
-    let imageCarouselElement = imageCarousels[index];
+function cycleCarousel(
+    index: number,
+    offset: number,
+    maxDimension: number
+): void {
+    const imageCarouselElement = imageCarousels[index];
     let maxIndex = 0;
     let maxPosition = 0;
 
@@ -32,43 +36,39 @@ function cycleCarousel(index, offset, maxDimension) {
 
     let pastMax = false;
 
-    for (let child of imageCarouselElement.querySelectorAll(
-        ".image,.placeholder"
-    )) {
+    for (let child of Array.from(
+        imageCarouselElement.querySelectorAll(".image,.placeholder")
+    ) as HTMLElement[]) {
+        const zIndex = Number(child.style.zIndex);
+
         if (!pastMax) {
             if (
-                child.style.zIndex == maxIndex ||
-                (offset < 0 && Number(child.style.zIndex) - offset == maxIndex)
+                zIndex == maxIndex ||
+                (offset < 0 && zIndex - offset == maxIndex)
             ) {
                 pastMax = true;
             }
-            child.style.zIndex = Number(child.style.zIndex) - offset;
+            child.style.zIndex = String(zIndex - offset);
         } else {
-            child.style.zIndex = Number(child.style.zIndex) + offset;
+            child.style.zIndex = String(zIndex + offset);
         }
 
-        if (child.style.zIndex < 0) {
+        if (zIndex < 0) {
             child.style.display = "none";
         } else {
             child.style.display = "flex";
         }
 
-        child.style.width =
-            maxDimension +
-            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
-            "px";
-        child.style.height =
-            maxDimension +
-            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
-            "px";
-        child.style.minWidth =
-            maxDimension +
-            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
-            "px";
-        child.style.minHeight =
-            maxDimension +
-            (maxDimension / 2) * (Number(child.style.zIndex) / maxIndex) +
-            "px";
+        const halfMaxDimension = maxDimension / 2;
+        const zIndexOverMaxIndex = zIndex / maxIndex;
+        const resultDimension = toPx(
+            maxDimension + halfMaxDimension * zIndexOverMaxIndex
+        );
+
+        child.style.width = resultDimension;
+        child.style.height = resultDimension;
+        child.style.minWidth = resultDimension;
+        child.style.minHeight = resultDimension;
     }
 
     if (
@@ -95,7 +95,7 @@ function cycleCarousel(index, offset, maxDimension) {
     }
 }
 
-function initialiseImageCarousel(index) {
+function initialiseImageCarousel(index: number): void {
     let imageCarouselElement = imageCarousels[index];
     let childCount = imageCarouselElement.children.length;
     let zIndexOffset = Math.floor(childCount / 2 - 0.5);
@@ -103,7 +103,7 @@ function initialiseImageCarousel(index) {
     let maxCarouselSize = 0;
     let margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft;
 
-    // Keep the max number of images in a carousel <= 5.
+    // Keep the max number of images in a carousel <= 5
     if (zIndexOffset > 2) {
         zIndexOffset = 2;
     }
@@ -149,7 +149,7 @@ function initialiseImageCarousel(index) {
         let newSize =
             maxImageSize + (maxImageSize / 2) * (zIndex / zIndexOffset);
         maxCarouselSize = maxCarouselSize < newSize ? newSize : maxCarouselSize;
-        let formattedSize = px(newSize);
+        let formattedSize = toPx(newSize);
 
         imageCarouselElement.children[i].style.width = formattedSize;
         imageCarouselElement.children[i].style.height = formattedSize;
@@ -158,10 +158,10 @@ function initialiseImageCarousel(index) {
     }
 
     for (let i = 0; i < imageCarouselElement.children.length; i++) {
-        imageCarouselElement.children[i].style.marginLeft = px(
+        imageCarouselElement.children[i].style.marginLeft = toPx(
             -maxCarouselSize / 4
         );
-        imageCarouselElement.children[i].style.marginRight = px(
+        imageCarouselElement.children[i].style.marginRight = toPx(
             -maxCarouselSize / 4
         );
     }
@@ -209,7 +209,7 @@ function initialiseImageCarousel(index) {
     );
 }
 
-function resetCarousel(index) {
+function resetCarousel(index: number): void {
     let imageCarouselElement = imageCarousels[index];
     currentButtonTheme =
         imageCarouselElement.querySelectorAll(".button")[0].classList.value;

@@ -18,6 +18,7 @@
     "@swc/jest": "^0.2.21",
     "@types/jest": "^28.1.1",
     "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "ts-jest": "^28.0.4",

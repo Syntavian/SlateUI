@@ -120,7 +120,7 @@ function initialiseImageCarousel(index) {
   var zIndexOffset = Math.floor(childCount / 2 - 0.5);
   var maxImageSize = 0;
   var maxCarouselSize = 0;
-  var margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft; // Keep the max number of images in a carousel <= 5.
+  var margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft; // Keep the max number of images in a carousel <= 5
 
   if (zIndexOffset > 2) {
     zIndexOffset = 2;

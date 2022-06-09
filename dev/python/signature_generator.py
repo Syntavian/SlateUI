@@ -1,6 +1,6 @@
 import os
 
-# The required Slate project structure to successfully build.
+# The required Slate project structure to successfully build
 SIGNATURE: dict[str, list[str]] = {
     r".": [
         "build",

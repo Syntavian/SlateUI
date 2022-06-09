@@ -19,7 +19,7 @@ def build_wrapper(
     _html: str, _slate_tag: Tag, _slate_tag_matches: list[Tag], _is_root: bool = False
 ) -> Wrapper | None:
     """Create a Wrapper instance"""
-    # Find and validate the wrapper.
+    # Find and validate the wrapper
     wrapper = get_wrapper(_slate_tag.text)
     if not wrapper:
         return None
