@@ -77,7 +77,7 @@ input[type="submit"] {
 @for $i from 1 through 5 {
     .button-round-#{$i} {
         @extend .button;
-        border-radius: #{$i / 2}em;
+        border-radius: #{calc($i / 2)}em;
     }
 }
 

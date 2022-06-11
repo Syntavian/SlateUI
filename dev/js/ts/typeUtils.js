@@ -1,0 +1,1 @@
+export function querySelectorAllResultToArray(b){let a=Array.from(b);if(a.every(a=>!!elementToHTMLElement(a)))return a}export function elementToHTMLElement(a){if(a instanceof HTMLElement)return a;throw new Error("elementToHTMLElement: element is not an HTMLElement")}

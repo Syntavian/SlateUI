@@ -11,8 +11,9 @@ from python.signature_generator import SIGNATURE, SIGNATURE_IGNORE
 from python.thread_handler import ThreadHandler
 from python.utils.string_utils import *
 
-if __name__ == "__main__":
-    # Verify the project structure
+
+def verify_signature():
+    """Verify the project structure"""
     for dirpath, dirnames, filenames in os.walk("."):
         if any([x in dirpath for x in SIGNATURE_IGNORE]):
             continue
@@ -27,13 +28,17 @@ if __name__ == "__main__":
             exit()
 
 
-    # Replace next with additional observers to run required processes
-    #
-    
-    # Run SASS to compile SCSS into CSS
-    # subprocess.Popen(["npx", "sass", f"{SCSS_PREBUILD_DIR}:{CSS_PREBUILD_DIR}", "--style", "compressed"])
+def build_css():
+    """Run SASS to compile SCSS into CSS then format the CSS for Slate to use"""
+    print("Building CSS...")
+    subprocess.call(["npm", "run", "build-css"])
 
-    # 
+if __name__ == "__main__":
+    verify_signature()
+
+    build_css()
+
+    #
     # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--out-file", f"{SLATE_DIR}/slate.js"])
 
     # Wait for SASS to complete then build Slate once on run

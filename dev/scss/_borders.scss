@@ -224,6 +224,6 @@
 
 @for $i from 1 through 10 {
     .border-radius-#{$i} {
-        border-radius: #{$i / 4}em;
+        border-radius: #{calc($i / 4)}em;
     }
 }
