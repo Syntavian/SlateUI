@@ -6,7 +6,7 @@ from python.utils.string_utils import *
 
 @debug
 def build_css(
-    _slate_css_dir: str, _css_in_dir: str, _css_out_dir: str, _style_selectors: set[str]
+    _slate_css_dir: str, _css_out_dir: str, _style_selectors: set[str]
 ) -> None:
     input_css_file = open(f"{_slate_css_dir}/slate.css", "r")
     output_css_file_text = ""
@@ -27,7 +27,7 @@ def build_css(
 
     for input_css_file_line in input_css_file.readlines():
         line = input_css_file_line.strip()
-        if len(line) > 0 and line[-1] == r"{":
+        if len(line) and line != "\n":
             matches = set(
                 [
                     (a.group(1), a.group(2))
@@ -90,9 +90,7 @@ def build_css(
                 is_in_media_block = False
 
     for media_selector, media_block in media_blocks.items():
-        output_css_file_text = (
-            output_css_file_text + media_selector + media_block + "} "
-        )
+        output_css_file_text = output_css_file_text + media_selector + media_block
 
     for keyframes_block in keyframes_blocks.values():
         output_css_file_text = output_css_file_text + keyframes_block

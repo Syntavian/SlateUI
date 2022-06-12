@@ -31,12 +31,13 @@ def verify_signature():
 def build_css():
     """Run SASS to compile SCSS into CSS then format the CSS for Slate to use"""
     print("Building CSS...")
-    subprocess.call(["npm", "run", "build-css"])
+    subprocess.call(["npx", "sass", "dev/scss:dev/css"])
+
 
 if __name__ == "__main__":
     verify_signature()
 
-    build_css()
+    # build_css()
 
     #
     # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--out-file", f"{SLATE_DIR}/slate.js"])
