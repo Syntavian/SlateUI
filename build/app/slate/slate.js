@@ -1,668 +1,190 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var switchButtons = document.querySelectorAll(".active,.inactive");
-
-function switchClicked(button) {
-  if (button.classList.contains("active") || button.classList.contains("inactive")) {
-    button.classList.toggle("active");
-    button.classList.toggle("inactive");
-  }
+let a = Array.from(document.querySelectorAll(".active,.inactive"));
+function b(a6) {
+    a6.addEventListener("click", (c)=>{
+        var b5;
+        ((b5 = a6).classList.contains("active") || b5.classList.contains("inactive")) && (b5.classList.toggle("active"), b5.classList.toggle("inactive"));
+    });
 }
-
-function initialiseSwitch(button) {
-  button.addEventListener("click", function (e) {
-    return switchClicked(button);
-  });
+for (let c of a)b(c);
+function getElementStylesAsNumberSum(...a7) {
+    return a7.reduce((a8, b6)=>a8 + pxToNumber(b6), 0);
 }
-
-var _iterator = _createForOfIteratorHelper(switchButtons),
-    _step;
-
-try {
-  for (_iterator.s(); !(_step = _iterator.n()).done;) {
-    var button = _step.value;
-    initialiseSwitch(button);
-  }
-} catch (err) {
-  _iterator.e(err);
-} finally {
-  _iterator.f();
+function pxToNumber(a9) {
+    return Number(a9.replace("px", ""));
 }
-},{}],2:[function(require,module,exports){
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var imageCarousels = document.querySelectorAll(".image-carousel");
-var currentButtonTheme = "";
-
-function px(value) {
-  return value + "px";
+function toPx(a10) {
+    return a10 + "px";
 }
-
-function cycleCarousel(index, offset, maxDimension) {
-  var imageCarouselElement = imageCarousels[index];
-  var maxIndex = 0;
-  var maxPosition = 0;
-
-  for (var i = 0; i < imageCarouselElement.querySelectorAll(".image,.placeholder").length; i++) {
-    var child = imageCarouselElement.querySelectorAll(".image,.placeholder")[i];
-
-    if (Number(child.style.zIndex) > maxIndex) {
-      maxIndex = Number(child.style.zIndex);
-      maxPosition = i;
+let b1 = document.querySelectorAll(".image-carousel"), e = "";
+function f(n, e2, k) {
+    let a11 = b1[n], g1 = 0, h = 0;
+    for(let i = 0; i < a11.querySelectorAll(".image,.placeholder").length; i++){
+        let l = a11.querySelectorAll(".image,.placeholder")[i];
+        Number(l.style.zIndex) > g1 && (g1 = Number(l.style.zIndex), h = i);
     }
-  }
-
-  if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset].classList.contains("placeholder")) {
-    return;
-  }
-
-  var pastMax = false;
-
-  var _iterator = _createForOfIteratorHelper(imageCarouselElement.querySelectorAll(".image,.placeholder")),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var _child = _step.value;
-
-      if (!pastMax) {
-        if (_child.style.zIndex == maxIndex || offset < 0 && Number(_child.style.zIndex) - offset == maxIndex) {
-          pastMax = true;
-        }
-
-        _child.style.zIndex = Number(_child.style.zIndex) - offset;
-      } else {
-        _child.style.zIndex = Number(_child.style.zIndex) + offset;
-      }
-
-      if (_child.style.zIndex < 0) {
-        _child.style.display = "none";
-      } else {
-        _child.style.display = "flex";
-      }
-
-      _child.style.width = maxDimension + maxDimension / 2 * (Number(_child.style.zIndex) / maxIndex) + "px";
-      _child.style.height = maxDimension + maxDimension / 2 * (Number(_child.style.zIndex) / maxIndex) + "px";
-      _child.style.minWidth = maxDimension + maxDimension / 2 * (Number(_child.style.zIndex) / maxIndex) + "px";
-      _child.style.minHeight = maxDimension + maxDimension / 2 * (Number(_child.style.zIndex) / maxIndex) + "px";
+    if (a11.querySelectorAll(".image,.placeholder")[h + e2].classList.contains("placeholder")) return;
+    let m = !1;
+    for (let c4 of Array.from(a11.querySelectorAll(".image,.placeholder"))){
+        let f2 = Number(c4.style.zIndex);
+        m ? c4.style.zIndex = String(f2 + e2) : ((f2 == g1 || e2 < 0 && f2 - e2 == g1) && (m = !0), c4.style.zIndex = String(f2 - e2)), f2 < 0 ? c4.style.display = "none" : c4.style.display = "flex";
+        let o = k / 2, p = f2 / g1, j = toPx(k + o * p);
+        c4.style.width = j, c4.style.height = j, c4.style.minWidth = j, c4.style.minHeight = j;
     }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset + 1].classList.contains("placeholder")) {
-    imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.add("disabled");
-  } else {
-    imageCarouselElement.children[imageCarouselElement.children.length - 1].classList.remove("disabled");
-  }
-
-  if (imageCarouselElement.querySelectorAll(".image,.placeholder")[maxPosition + offset - 1].classList.contains("placeholder")) {
-    imageCarouselElement.children[0].classList.add("disabled");
-  } else {
-    imageCarouselElement.children[0].classList.remove("disabled");
-  }
+    a11.querySelectorAll(".image,.placeholder")[h + e2 + 1].classList.contains("placeholder") ? a11.children[a11.children.length - 1].classList.add("disabled") : a11.children[a11.children.length - 1].classList.remove("disabled"), a11.querySelectorAll(".image,.placeholder")[h + e2 - 1].classList.contains("placeholder") ? a11.children[0].classList.add("disabled") : a11.children[0].classList.remove("disabled");
 }
-
-function initialiseImageCarousel(index) {
-  var imageCarouselElement = imageCarousels[index];
-  var childCount = imageCarouselElement.children.length;
-  var zIndexOffset = Math.floor(childCount / 2 - 0.5);
-  var maxImageSize = 0;
-  var maxCarouselSize = 0;
-  var margin = getComputedStyle(imageCarouselElement.children[0]).marginLeft; // Keep the max number of images in a carousel <= 5
-
-  if (zIndexOffset > 2) {
-    zIndexOffset = 2;
-  }
-
-  for (var i = 0; i < zIndexOffset; i++) {
-    var placeholder = document.createElement("div");
-    placeholder.classList.add("placeholder");
-    placeholder.style.marginLeft = margin;
-    placeholder.style.marginRight = margin;
-    imageCarouselElement.prepend(placeholder);
-    placeholder = document.createElement("div");
-    placeholder.classList.add("placeholder");
-    placeholder.style.marginLeft = margin;
-    placeholder.style.marginRight = margin;
-    imageCarouselElement.append(placeholder);
-  } // let carouselStyle = getComputedStyle(imageCarouselElement);
-
-
-  for (var _i = 0; _i < imageCarouselElement.children.length; _i++) {
-    var style = getComputedStyle(imageCarouselElement.children[_i]);
-
-    if (Number(style.height.replace("px", "")) > maxImageSize) {
-      maxImageSize = Number(style.height.replace("px", ""));
+function c1(w) {
+    let a12 = b1[w], j = Math.floor(a12.children.length / 2 - .5), k = 0, l = 0, m = getComputedStyle(a12.children[0]).marginLeft;
+    j > 2 && (j = 2);
+    for(let v = 0; v < j; v++){
+        let g2 = document.createElement("div");
+        g2.classList.add("placeholder"), g2.style.marginLeft = m, g2.style.marginRight = m, a12.prepend(g2), (g2 = document.createElement("div")).classList.add("placeholder"), g2.style.marginLeft = m, g2.style.marginRight = m, a12.append(g2);
     }
-
-    if (Number(style.width.replace("px", "")) > maxImageSize) {
-      maxImageSize = Number(style.width.replace("px", ""));
+    for(let s = 0; s < a12.children.length; s++){
+        let n = getComputedStyle(a12.children[s]);
+        Number(n.height.replace("px", "")) > k && (k = Number(n.height.replace("px", ""))), Number(n.width.replace("px", "")) > k && (k = Number(n.width.replace("px", "")));
     }
-  }
-
-  for (var _i2 = 0; _i2 < imageCarouselElement.children.length; _i2++) {
-    var zIndex = -Math.abs(_i2 - Math.floor(imageCarouselElement.children.length / 2)) + zIndexOffset;
-    imageCarouselElement.children[_i2].style.zIndex = zIndex;
-
-    if (zIndex < 0) {
-      imageCarouselElement.children[_i2].style.display = "none";
+    for(let c5 = 0; c5 < a12.children.length; c5++){
+        let t = -Math.abs(c5 - Math.floor(a12.children.length / 2)) + j;
+        a12.children[c5].style.zIndex = t, t < 0 && (a12.children[c5].style.display = "none");
+        let u = k + k / 2 * (t / j);
+        l = l < u ? u : l;
+        let o = toPx(u);
+        a12.children[c5].style.width = o, a12.children[c5].style.height = o, a12.children[c5].style.minWidth = o, a12.children[c5].style.minHeight = o;
     }
-
-    var newSize = maxImageSize + maxImageSize / 2 * (zIndex / zIndexOffset);
-    maxCarouselSize = maxCarouselSize < newSize ? newSize : maxCarouselSize;
-    var formattedSize = px(newSize);
-    imageCarouselElement.children[_i2].style.width = formattedSize;
-    imageCarouselElement.children[_i2].style.height = formattedSize;
-    imageCarouselElement.children[_i2].style.minWidth = formattedSize;
-    imageCarouselElement.children[_i2].style.minHeight = formattedSize;
-  }
-
-  for (var _i3 = 0; _i3 < imageCarouselElement.children.length; _i3++) {
-    imageCarouselElement.children[_i3].style.marginLeft = px(-maxCarouselSize / 4);
-    imageCarouselElement.children[_i3].style.marginRight = px(-maxCarouselSize / 4);
-  }
-
-  var leftButton = document.createElement("div");
-  var rightButton = document.createElement("div");
-  var leftButtonStyle = getComputedStyle(imageCarouselElement, "::before");
-  var rightButtonStyle = getComputedStyle(imageCarouselElement, "::after");
-  leftButton.textContent = leftButtonStyle.content.slice(1, leftButtonStyle.content.length - 1);
-
-  if (currentButtonTheme) {
-    leftButton.classList.value = currentButtonTheme;
-  } else {
-    leftButton.classList.add("button", "fill");
-  }
-
-  leftButton.style.fontSize = leftButtonStyle.fontSize;
-  leftButton.style.fontWeight = leftButtonStyle.fontWeight;
-  leftButton.style.zIndex = zIndexOffset + 1;
-  rightButton.textContent = rightButtonStyle.content.slice(1, rightButtonStyle.content.length - 1);
-
-  if (currentButtonTheme) {
-    rightButton.classList.value = currentButtonTheme;
-  } else {
-    rightButton.classList.add("button", "fill");
-  }
-
-  rightButton.style.fontSize = rightButtonStyle.fontSize;
-  rightButton.style.fontWeight = rightButtonStyle.fontWeight;
-  rightButton.style.zIndex = zIndexOffset + 1;
-  imageCarouselElement.prepend(leftButton);
-  imageCarouselElement.append(rightButton);
-  leftButton.addEventListener("click", function (e) {
-    return cycleCarousel(index, -1, maxImageSize);
-  });
-  rightButton.addEventListener("click", function (e) {
-    return cycleCarousel(index, 1, maxImageSize);
-  });
+    for(let p = 0; p < a12.children.length; p++)a12.children[p].style.marginLeft = toPx(-l / 4), a12.children[p].style.marginRight = toPx(-l / 4);
+    let h = document.createElement("div"), i = document.createElement("div"), q = getComputedStyle(a12, "::before"), r = getComputedStyle(a12, "::after");
+    h.textContent = q.content.slice(1, q.content.length - 1), e ? h.classList.value = e : h.classList.add("button", "fill"), h.style.fontSize = q.fontSize, h.style.fontWeight = q.fontWeight, h.style.zIndex = j + 1, i.textContent = r.content.slice(1, r.content.length - 1), e ? i.classList.value = e : i.classList.add("button", "fill"), i.style.fontSize = r.fontSize, i.style.fontWeight = r.fontWeight, i.style.zIndex = j + 1, a12.prepend(h), a12.append(i), h.addEventListener("click", (a)=>f(w, -1, k)), i.addEventListener("click", (a)=>f(w, 1, k));
 }
-
-function resetCarousel(index) {
-  var imageCarouselElement = imageCarousels[index];
-  currentButtonTheme = imageCarouselElement.querySelectorAll(".button")[0].classList.value;
-
-  var _iterator2 = _createForOfIteratorHelper(imageCarouselElement.querySelectorAll(".placeholder,.button")),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var child = _step2.value;
-      child.parentElement.removeChild(child);
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-
-  var _iterator3 = _createForOfIteratorHelper(imageCarouselElement.querySelectorAll(".image")),
-      _step3;
-
-  try {
-    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-      var _child2 = _step3.value;
-      _child2.style = "";
-    }
-  } catch (err) {
-    _iterator3.e(err);
-  } finally {
-    _iterator3.f();
-  }
-
-  initialiseImageCarousel(index);
+function g(d3) {
+    let a13 = b1[d3];
+    for (let f3 of (e = a13.querySelectorAll(".button")[0].classList.value, a13.querySelectorAll(".placeholder,.button")))f3.parentElement.removeChild(f3);
+    for (let g3 of a13.querySelectorAll(".image"))g3.style = "";
+    c1(d3);
 }
-
-function resetCarousels() {
-  for (var i = 0; i < imageCarousels.length; i++) {
-    resetCarousel(i);
-  }
-}
-
-for (var i = 0; i < imageCarousels.length; i++) {
-  initialiseImageCarousel(i);
-}
-
-window.addEventListener("resize", function (e) {
-  resetCarousels();
+for(let a1 = 0; a1 < b1.length; a1++)c1(a1);
+window.addEventListener("resize", (a14)=>{
+    !function() {
+        for(let a15 = 0; a15 < b1.length; a15++)g(a15);
+    }();
 });
-},{}],3:[function(require,module,exports){
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var containers = document.querySelectorAll(".layout-row-center-middle");
-
-function updateLayout() {
-  var _iterator = _createForOfIteratorHelper(containers),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var container = _step.value;
-      var containerChildren = container.children;
-
-      if (containerChildren.length % 2 === 0) {
-        console.warn("A layout center middle component has even children");
-      }
-
-      var centerElementIndex = Math.floor(containerChildren.length / 2);
-
-      for (var i = 0; i < containerChildren.length; i++) {
-        if (i !== centerElementIndex) {
-          containerChildren[i].style.width = '';
-          containerChildren[i].style.minWidth = '';
-          containerChildren[i].style.maxWidth = '';
+let b2 = document.querySelectorAll(".layout-row-center-middle");
+function a2() {
+    for (let g4 of b2){
+        let a16 = g4.children;
+        a16.length % 2 == 0 && console.warn("A layout center middle component has even children");
+        let e3 = Math.floor(a16.length / 2);
+        for(let c6 = 0; c6 < a16.length; c6++)c6 !== e3 && (a16[c6].style.width = "", a16[c6].style.minWidth = "", a16[c6].style.maxWidth = "");
+        let h = getComputedStyle(g4);
+        if ("row" === h.flexDirection) {
+            let i = Number(h.width.replace("px", "")), j = Number(getComputedStyle(a16[e3]).width.replace("px", "")), f4 = (i - j) / 2 / e3;
+            for(let d4 = 0; d4 < a16.length; d4++)d4 !== e3 && (a16[d4].style.width = f4 + "px", a16[d4].style.minWidth = f4 + "px", a16[d4].style.maxWidth = f4 + "px");
         }
-      }
-
-      var containerStyle = getComputedStyle(container);
-
-      if (containerStyle.flexDirection === 'row') {
-        var containerWidth = Number(containerStyle.width.replace("px", ''));
-        var centerWidth = Number(getComputedStyle(containerChildren[centerElementIndex]).width.replace("px", ''));
-        var outsideElementMaxWidth = (containerWidth - centerWidth) / 2 / centerElementIndex;
-
-        for (var _i = 0; _i < containerChildren.length; _i++) {
-          if (_i !== centerElementIndex) {
-            containerChildren[_i].style.width = outsideElementMaxWidth + "px";
-            containerChildren[_i].style.minWidth = outsideElementMaxWidth + "px";
-            containerChildren[_i].style.maxWidth = outsideElementMaxWidth + "px";
-          }
-        }
-      }
     }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
 }
-
-updateLayout();
-window.addEventListener("resize", function (e) {
-  updateLayout();
+a2(), window.addEventListener("resize", (b)=>{
+    a2();
 });
-},{}],4:[function(require,module,exports){
-"use strict";
-
-require("./theme_styles");
-
-require("./button_styles");
-
-require("./image_styles");
-
-require("./layout_styles");
-
-require("./scroll_styles");
-
-require("./sticky_styles");
-},{"./button_styles":1,"./image_styles":2,"./layout_styles":3,"./scroll_styles":5,"./sticky_styles":6,"./theme_styles":7}],5:[function(require,module,exports){
-var scrollBar = document.getElementById("scroll-bar");
-var scrollHandle = document.getElementById("scroll-handle");
-var isScrollBarActive = false;
-
-function updateScrollBar() {
-  if (scrollBar && scrollHandle) {
-    if (!isScrollBarActive) {
-      var scrollBarStyle = getComputedStyle(scrollBar);
-      scrollHandle.style.height = Number(scrollBarStyle.height.replace("px", "")) * window.innerHeight / document.body.scrollHeight + "px";
-      scrollHandle.style.top = Number(scrollBarStyle.height.replace("px", "")) * window.scrollY / document.body.scrollHeight + "px";
+let a3 = document.getElementById("scroll-bar"), b3 = document.getElementById("scroll-handle"), d = !1;
+function c2() {
+    if (a3 && b3 && !d) {
+        let c7 = getComputedStyle(a3);
+        b3.style.height = Number(c7.height.replace("px", "")) * window.innerHeight / document.body.scrollHeight + "px", b3.style.top = Number(c7.height.replace("px", "")) * window.scrollY / document.body.scrollHeight + "px";
     }
-  }
 }
-
-if (document.body.classList.contains("no-scrollbar")) {
-  if (!scrollBar) {
-    scrollBar = document.createElement("div");
-    scrollBar.id = "scroll-bar";
-    scrollBar.classList.add("scroll-bar");
-    document.body.appendChild(scrollBar);
-  }
-
-  if (!scrollHandle) {
-    scrollHandle = document.createElement("div");
-    scrollHandle.id = "scroll-handle";
-    scrollHandle.classList.add("scroll-handle");
-    scrollBar.appendChild(scrollHandle);
-  }
-}
-
-updateScrollBar();
-
-if (scrollBar && scrollHandle) {
-  window.addEventListener("resize", function (e) {
-    updateScrollBar();
-  });
-  scrollHandle.addEventListener("mousedown", function (e) {
-    if (e.button === 0) {
-      isScrollBarActive = true;
-    }
-  }, {
-    passive: false
-  });
-  document.addEventListener("mousemove", function (e) {
-    if (isScrollBarActive) {
-      e.preventDefault();
-      var scrollBarStyle = getComputedStyle(scrollBar);
-      var targetPosition = Number(scrollHandle.style.top.replace("px", "")) + e.movementY;
-      var targetMax = Number(scrollBarStyle.height.replace("px", "")) * (document.body.scrollHeight - window.innerHeight) / document.body.scrollHeight;
-
-      if (targetPosition < 0) {
-        targetPosition = 0;
-      } else if (targetPosition > targetMax) {
-        targetPosition = targetMax;
-      }
-
-      scrollHandle.style.top = targetPosition + "px";
-      window.scroll({
-        top: Number(scrollHandle.style.top.replace("px", "")) * document.body.scrollHeight / Number(scrollBarStyle.height.replace("px", "")),
-        left: 0,
-        behavior: "instant"
-      });
-    }
-  }, {
-    passive: false
-  });
-  document.addEventListener("mouseup", function (e) {
-    isScrollBarActive = false;
-  }, {
-    passive: false
-  });
-  document.addEventListener("scroll", function (e) {
-    updateScrollBar();
-  }, {
-    passive: false
-  });
-  var observer = new ResizeObserver(function () {
-    updateScrollBar();
-  });
-  document.querySelectorAll('textarea').forEach(function (element) {
-    observer.observe(element);
-  });
-}
-},{}],6:[function(require,module,exports){
-"use strict";
-
-var _utils = require("./utils.js");
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var sticky = document.querySelectorAll(".sticky");
-
-function updateBanners() {
-  var _iterator = _createForOfIteratorHelper(sticky),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var element = _step.value;
-      var elementStyle = getComputedStyle(element);
-
-      if (elementStyle.position != "fixed") {
-        if (element.getBoundingClientRect().top < 0) {
-          var placeholder = document.createElement("div");
-          placeholder.style.height = (0, _utils.getElementStylesAsNumberSum)(elementStyle.height) + "px";
-          placeholder.style.width = (0, _utils.getElementStylesAsNumberSum)(elementStyle.width, elementStyle.marginLeft, elementStyle.marginRight) + "px";
-          placeholder.style.display = elementStyle.display;
-          placeholder.className = "sticky-placeholder";
-          element.style.position = "fixed";
-          element.style.zIndex = 99;
-          elementStyle = getComputedStyle(element);
-          element.setAttribute("originalPosition", (0, _utils.getElementStyleAsNumber)(elementStyle.top));
-          element.style.top = "0px";
-          element.parentElement.insertBefore(placeholder, element);
+if (document.body.classList.contains("no-scrollbar") && (a3 || ((a3 = document.createElement("div")).id = "scroll-bar", a3.classList.add("scroll-bar"), document.body.appendChild(a3)), b3 || ((b3 = document.createElement("div")).id = "scroll-handle", b3.classList.add("scroll-handle"), a3.appendChild(b3))), c2(), a3 && b3) {
+    window.addEventListener("resize", (a)=>{
+        c2();
+    }), b3.addEventListener("mousedown", function(a17) {
+        0 === a17.button && (d = !0);
+    }, {
+        passive: !1
+    }), document.addEventListener("mousemove", function(e5) {
+        if (d) {
+            e5.preventDefault();
+            let f5 = getComputedStyle(a3), c8 = Number(b3.style.top.replace("px", "")) + e5.movementY, g5 = Number(f5.height.replace("px", "")) * (document.body.scrollHeight - window.innerHeight) / document.body.scrollHeight;
+            c8 < 0 ? c8 = 0 : c8 > g5 && (c8 = g5), b3.style.top = c8 + "px", window.scroll({
+                top: Number(b3.style.top.replace("px", "")) * document.body.scrollHeight / Number(f5.height.replace("px", "")),
+                left: 0,
+                behavior: "instant"
+            });
         }
-      } else {
-        element.style.top = "0px";
-        var _placeholder = element.parentElement.children[Array.prototype.indexOf.call(element.parentElement.children, element) - 1];
-        _placeholder.style.height = (0, _utils.getElementStylesAsNumberSum)(elementStyle.height) + "px";
-        _placeholder.style.width = (0, _utils.getElementStylesAsNumberSum)(elementStyle.width, elementStyle.marginLeft, elementStyle.marginRight) + "px";
-
-        if (window.scrollY <= Number(element.getAttribute("originalPosition"))) {
-          element.style.top = Number(element.getAttribute("originalPosition")) - window.scrollY + "px";
-        }
-      }
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
+    }, {
+        passive: !1
+    }), document.addEventListener("mouseup", function(a) {
+        d = !1;
+    }, {
+        passive: !1
+    }), document.addEventListener("scroll", function(a) {
+        c2();
+    }, {
+        passive: !1
+    });
+    let e4 = new ResizeObserver(()=>{
+        c2();
+    });
+    document.querySelectorAll("textarea").forEach((a18)=>{
+        e4.observe(a18);
+    });
 }
-
-function resetBanners() {
-  var _iterator2 = _createForOfIteratorHelper(sticky),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var element = _step2.value;
-      element.removeAttribute('style');
-      element.removeAttribute('originalPosition');
-
-      if (Array.prototype.indexOf.call(element.parentElement.children, element) - 1 >= 0) {
-        var placeholder = element.parentElement.children[Array.prototype.indexOf.call(element.parentElement.children, element) - 1];
-
-        if (placeholder.classList.contains("sticky-placeholder")) {
-          element.parentElement.removeChild(placeholder);
+let d1 = document.querySelectorAll(".sticky");
+function a4() {
+    for (let a19 of d1){
+        let e6 = getComputedStyle(a19);
+        if ("fixed" != e6.position) {
+            if (a19.getBoundingClientRect().top < 0) {
+                let f6 = document.createElement("div");
+                f6.style.height = getElementStylesAsNumberSum(e6.height) + "px", f6.style.width = getElementStylesAsNumberSum(e6.width, e6.marginLeft, e6.marginRight) + "px", f6.style.display = e6.display, f6.className = "sticky-placeholder", a19.style.position = "fixed", a19.style.zIndex = 99, e6 = getComputedStyle(a19), a19.setAttribute("originalPosition", pxToNumber(e6.top)), a19.style.top = "0px", a19.parentElement.insertBefore(f6, a19);
+            }
+        } else {
+            a19.style.top = "0px";
+            let g6 = a19.parentElement.children[Array.prototype.indexOf.call(a19.parentElement.children, a19) - 1];
+            g6.style.height = getElementStylesAsNumberSum(e6.height) + "px", g6.style.width = getElementStylesAsNumberSum(e6.width, e6.marginLeft, e6.marginRight) + "px", window.scrollY <= Number(a19.getAttribute("originalPosition")) && (a19.style.top = Number(a19.getAttribute("originalPosition")) - window.scrollY + "px");
         }
-      }
     }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-
-  updateBanners();
 }
-
-updateBanners();
-document.addEventListener("scroll", function (e) {
-  updateBanners();
+a4(), document.addEventListener("scroll", function(b) {
+    a4();
 }, {
-  passive: false
-});
-window.addEventListener("resize", function (e) {
-  resetBanners();
-}, {
-  passive: false
-});
-},{"./utils.js":8}],7:[function(require,module,exports){
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var elementQuery = "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border'],canvas,.canvas";
-var themeSwitchers = document.querySelectorAll(".theme-selector");
-var themedElements = document.querySelectorAll(elementQuery);
-var currentTheme = "";
-
-function switchElementThemes(newTheme) {
-  themedElements = document.querySelectorAll(elementQuery);
-
-  var _iterator = _createForOfIteratorHelper(themedElements),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var element = _step.value;
-      element.classList.remove(currentTheme);
-      element.classList.add(newTheme);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  currentTheme = newTheme;
-}
-
-function updateThemeSwitchers() {
-  var _iterator2 = _createForOfIteratorHelper(themeSwitchers),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var button = _step2.value;
-      var style = getComputedStyle(button);
-      var select = button.querySelector("select");
-      select.style.width = Number(style.width.replace("px", "")) + 18 + "px";
-      select.style.height = Number(style.height.replace("px", "")) + 18 + "px";
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-}
-
-function initialiseThemeSwitcher(button) {
-  var label = document.createElement("span");
-  label.textContent = getComputedStyle(button, "::before").content.replaceAll('"', '');
-  button.appendChild(label);
-  var themes = getComputedStyle(button, "::after").content;
-  var select = document.createElement("select");
-  var style = getComputedStyle(button);
-  select.style.width = style.width;
-  select.style.height = style.height;
-
-  var _iterator3 = _createForOfIteratorHelper(themes.replaceAll('\\"', '').replaceAll('"', '').replaceAll(' ', '').replaceAll('(', '').replaceAll(')', '').split(',')),
-      _step3;
-
-  try {
-    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-      var string = _step3.value;
-      var splitString = string.split(':');
-
-      if (splitString.length === 4) {
-        var text = splitString[0];
-        var option = document.createElement("option");
-
-        if (currentTheme === "") {
-          currentTheme = text;
+    passive: !1
+}), window.addEventListener("resize", function(b7) {
+    !function() {
+        for (let b8 of d1)if (b8.removeAttribute("style"), b8.removeAttribute("originalPosition"), Array.prototype.indexOf.call(b8.parentElement.children, b8) - 1 >= 0) {
+            let c9 = b8.parentElement.children[Array.prototype.indexOf.call(b8.parentElement.children, b8) - 1];
+            c9.classList.contains("sticky-placeholder") && b8.parentElement.removeChild(c9);
         }
-
-        text = text[0].toUpperCase() + text.slice(1);
-        option.textContent = text;
-        option.value = text;
-        select.appendChild(option);
-      }
-    }
-  } catch (err) {
-    _iterator3.e(err);
-  } finally {
-    _iterator3.f();
-  }
-
-  button.appendChild(select);
-  themedElements = document.querySelectorAll(elementQuery);
-
-  var _iterator4 = _createForOfIteratorHelper(themedElements),
-      _step4;
-
-  try {
-    for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-      var element = _step4.value;
-      element.classList.add(currentTheme);
-    }
-  } catch (err) {
-    _iterator4.e(err);
-  } finally {
-    _iterator4.f();
-  }
-
-  button.addEventListener("mouseleave", function (e) {
-    select.blur();
-  });
-  select.addEventListener("change", function (e) {
-    switchElementThemes(select.value.toLowerCase());
-  });
-  window.addEventListener("resize", function (e) {
-    updateThemeSwitchers();
-  });
-}
-
-var _iterator5 = _createForOfIteratorHelper(themeSwitchers),
-    _step5;
-
-try {
-  for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-    var button = _step5.value;
-    initialiseThemeSwitcher(button);
-  }
-} catch (err) {
-  _iterator5.e(err);
-} finally {
-  _iterator5.f();
-}
-},{}],8:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+        a4();
+    }();
+}, {
+    passive: !1
 });
-exports.getElementStyleAsNumber = getElementStyleAsNumber;
-exports.getElementStylesAsNumberSum = getElementStylesAsNumberSum;
-
-function getElementStyleAsNumber(style) {
-  return Number(style.replace("px", ""));
+const a5 = "body,div,p,span,a,h1,h2,h3,h4,h5,h6,select,button,.button,.fill,.box,.inline-box,.background,.break,.link,.gradient,.gradient-hover-animation,.form-input,[class^='.shadow'],input,.image,textarea,.scroll-handle,[class^='.border'],canvas,.canvas";
+let b4 = document.querySelectorAll(".theme-selector"), e1 = document.querySelectorAll(a5), f1 = "";
+function c3(c10) {
+    let i = document.createElement("span");
+    i.textContent = getComputedStyle(c10, "::before").content.replaceAll('"', ""), c10.appendChild(i);
+    let l = getComputedStyle(c10, "::after").content, g7 = document.createElement("select"), j = getComputedStyle(c10);
+    for (let m of (g7.style.width = j.width, g7.style.height = j.height, l.replaceAll('\\"', "").replaceAll('"', "").replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").split(","))){
+        let k = m.split(":");
+        if (4 === k.length) {
+            let d5 = k[0], h = document.createElement("option");
+            "" === f1 && (f1 = d5), d5 = d5[0].toUpperCase() + d5.slice(1), h.textContent = d5, h.value = d5, g7.appendChild(h);
+        }
+    }
+    for (let n of (c10.appendChild(g7), e1 = document.querySelectorAll(a5)))n.classList.add(f1);
+    c10.addEventListener("mouseleave", (a)=>{
+        g7.blur();
+    }), g7.addEventListener("change", (b9)=>{
+        !function(b10) {
+            for (let c11 of e1 = document.querySelectorAll(a5))c11.classList.remove(f1), c11.classList.add(b10);
+            f1 = b10;
+        }(g7.value.toLowerCase());
+    }), window.addEventListener("resize", (a20)=>{
+        !function() {
+            for (let a21 of b4){
+                let c12 = getComputedStyle(a21), d6 = a21.querySelector("select");
+                d6.style.width = Number(c12.width.replace("px", "")) + 18 + "px", d6.style.height = Number(c12.height.replace("px", "")) + 18 + "px";
+            }
+        }();
+    });
 }
-
-function getElementStylesAsNumberSum() {
-  var sum = 0;
-
-  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
-    styles[_key] = arguments[_key];
-  }
-
-  for (var _i = 0, _styles = styles; _i < _styles.length; _i++) {
-    var style = _styles[_i];
-    sum += Number(style.replace("px", ""));
-  }
-
-  return sum;
-}
-},{}]},{},[4]);
+for (let d2 of b4)c3(d2);

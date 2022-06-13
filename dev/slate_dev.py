@@ -4,8 +4,9 @@ import time
 
 from watchdog.observers import Observer
 
-from python.build import build
+from python.build import build_app
 from python.build_event_handler import ModifiedEventBuildEventHandler
+from python.debug import debug
 from python.directories import *
 from python.signature_generator import SIGNATURE, SIGNATURE_IGNORE
 from python.thread_handler import ThreadHandler
@@ -28,22 +29,26 @@ def verify_signature():
             exit()
 
 
+@debug
 def build_css():
     """Run SASS to compile SCSS into CSS then format the CSS for Slate to use"""
-    print("Building CSS...")
-    subprocess.call(["npx", "sass", "dev/scss:dev/css"])
+    subprocess.run(["npx", "sass", "dev/scss:dev/css"], shell=True)
+
+
+@debug
+def build_js():
+    """Run SWC to compile TS into JS lib"""
+    subprocess.run(["npx", "swc", "./dev/ts", "-d", "./dev/js"], shell=True)
+    subprocess.run(["npx", "spack"], shell=True)
 
 
 if __name__ == "__main__":
     verify_signature()
 
-    # build_css()
+    build_css()
+    build_js()
 
-    #
-    # subprocess.Popen(["npx", "babel", f"{JS_PREBUILD_DIR}", "--out-file", f"{SLATE_DIR}/slate.js"])
-
-    # Wait for SASS to complete then build Slate once on run
-    build()
+    build_app()
 
     exit()
 
@@ -58,7 +63,7 @@ if __name__ == "__main__":
     observer.schedule(event_handler, CSS_DIR)
     observer.start()
     # Create the thread handler for build threads
-    thread_handler = ThreadHandler(build)
+    thread_handler = ThreadHandler(build_app)
     try:
         while True:
             time.sleep(1)
