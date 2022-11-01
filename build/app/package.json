@@ -2,7 +2,6 @@
   "name": "slate_project",
   "version": "1.0.0",
   "description": "A project built with Slate UI",
-  "main": "js/app.js",
   "private": true,
   "scripts": {
     "start": "python slate/slate.py && node lib/app.js",
